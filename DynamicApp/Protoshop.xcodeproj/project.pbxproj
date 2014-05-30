@@ -1,0 +1,2241 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		078160EBCDDB4AAE82406B72 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35DBCE08DB614B69BFA15144 /* libPods.a */; };
+		34D73580286F4C8ABB27EF2E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35DBCE08DB614B69BFA15144 /* libPods.a */; };
+		47FC41D8873F4179B3510C5D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35DBCE08DB614B69BFA15144 /* libPods.a */; };
+		574ECCD31771867A0095CED4 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 574ECCD21771867A0095CED4 /* libxml2.2.dylib */; };
+		57DA29D11769C74D002C1F29 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DA29D01769C74D002C1F29 /* UIKit.framework */; };
+		57DA29D31769C74D002C1F29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DA29D21769C74D002C1F29 /* Foundation.framework */; };
+		57DA29D51769C74D002C1F29 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DA29D41769C74D002C1F29 /* CoreGraphics.framework */; };
+		57DA29DD1769C74D002C1F29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DA29DC1769C74D002C1F29 /* main.m */; };
+		57DA2AAA1769C7F2002C1F29 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DA2AA91769C7F2002C1F29 /* libz.dylib */; };
+		653AEA4B18E19A310052FF74 /* WXDSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712B518DA8FC9006B4D46 /* WXDSettingViewController.m */; };
+		653AEA4C18E19A310052FF74 /* wax.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8865018558C210043C42C /* wax.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653AEA4F18E19A310052FF74 /* ModalCloseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CD13E718B4AA41003B0D27 /* ModalCloseButton.m */; };
+		653AEA5018E19A310052FF74 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DA29DC1769C74D002C1F29 /* main.m */; };
+		653AEA5118E19A310052FF74 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8858E18558B050043C42C /* SVProgressHUD.m */; };
+		653AEA5218E19A310052FF74 /* WXDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D7129B18DA8FC9006B4D46 /* WXDLoginViewController.m */; };
+		653AEA5318E19A310052FF74 /* linit.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862B18558C210043C42C /* linit.c */; };
+		653AEA5418E19A310052FF74 /* wax_xml.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8861818558C210043C42C /* wax_xml.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653AEA5518E19A310052FF74 /* messageBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B886D9185594890043C42C /* messageBoxViewController.m */; };
+		653AEA5718E19A310052FF74 /* lzio.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8864C18558C210043C42C /* lzio.c */; };
+		653AEA5818E19A310052FF74 /* DKLiveBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CD13E518B4AA41003B0D27 /* DKLiveBlurView.m */; };
+		653AEA5918E19A310052FF74 /* ldump.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862618558C210043C42C /* ldump.c */; };
+		653AEA5A18E19A310052FF74 /* wax_CGContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B885C318558C210043C42C /* wax_CGContext.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653AEA5B18E19A310052FF74 /* yajl_gen.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B886BD185592E60043C42C /* yajl_gen.c */; };
+		653AEA5C18E19A310052FF74 /* WXDProjectInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E453718C8791700CF6348 /* WXDProjectInfo.m */; };
+		653AEA5D18E19A310052FF74 /* lobject.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863418558C210043C42C /* lobject.c */; };
+		653AEA5E18E19A310052FF74 /* yajl_parser.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B886C2185592E60043C42C /* yajl_parser.c */; };
+		653AEA5F18E19A310052FF74 /* lstate.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863B18558C210043C42C /* lstate.c */; };
+		653AEA6018E19A310052FF74 /* lcode.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8861F18558C210043C42C /* lcode.c */; };
+		653AEA6118E19A310052FF74 /* lvm.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8864A18558C210043C42C /* lvm.c */; };
+		653AEA6318E19A310052FF74 /* WXDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B886E41855973C0043C42C /* WXDAppDelegate.m */; };
+		653AEA6418E19A310052FF74 /* liolib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862C18558C210043C42C /* liolib.c */; };
+		653AEA6518E19A310052FF74 /* WXDFileKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E453B18C8803200CF6348 /* WXDFileKey.m */; };
+		653AEA6618E19A310052FF74 /* wax_instance.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8865818558C210043C42C /* wax_instance.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653AEA6718E19A310052FF74 /* lauxlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8861C18558C210043C42C /* lauxlib.c */; };
+		653AEA6818E19A310052FF74 /* loslib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863818558C210043C42C /* loslib.c */; };
+		653AEA6918E19A310052FF74 /* lstring.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863D18558C210043C42C /* lstring.c */; };
+		653AEA6A18E19A310052FF74 /* UIImage+Blur.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CD13E918B4AA41003B0D27 /* UIImage+Blur.m */; };
+		653AEA6C18E19A310052FF74 /* wax_server.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8865A18558C210043C42C /* wax_server.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653AEA6D18E19A310052FF74 /* WXDProjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712A418DA8FC9006B4D46 /* WXDProjectsViewController.m */; };
+		653AEA6E18E19A310052FF74 /* WXDBaseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6585CD6418D1B13500F7DB04 /* WXDBaseInfo.m */; };
+		653AEA6F18E19A310052FF74 /* yajl_lex.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B886BF185592E60043C42C /* yajl_lex.c */; };
+		653AEA7118E19A310052FF74 /* wax_CGTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B885C018558C210043C42C /* wax_CGTransform.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653AEA7318E19A310052FF74 /* WXDBaseResultInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6585CD6818D1B41300F7DB04 /* WXDBaseResultInfo.m */; };
+		653AEA7518E19A310052FF74 /* CTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B886EE185598BF0043C42C /* CTView.m */; };
+		653AEA7618E19A310052FF74 /* llex.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862D18558C210043C42C /* llex.c */; };
+		653AEA7818E19A310052FF74 /* wax_CTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B886F0185598BF0043C42C /* wax_CTView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653AEA7A18E19A310052FF74 /* WXDProjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D7129F18DA8FC9006B4D46 /* WXDProjectTableViewCell.m */; };
+		653AEA7B18E19A310052FF74 /* ldo.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862418558C210043C42C /* ldo.c */; };
+		653AEA7D18E19A310052FF74 /* lbaselib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8861E18558C210043C42C /* lbaselib.c */; };
+		653AEA7F18E19A310052FF74 /* lapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8861A18558C210043C42C /* lapi.c */; };
+		653AEA8018E19A310052FF74 /* WXDRequestCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 656FBF6418D6D9BD00E1F41E /* WXDRequestCommand.m */; };
+		653AEA8118E19A310052FF74 /* lopcodes.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863618558C210043C42C /* lopcodes.c */; };
+		653AEA8318E19A310052FF74 /* lundump.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8864818558C210043C42C /* lundump.c */; };
+		653AEA8418E19A310052FF74 /* wax_filesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B885D118558C210043C42C /* wax_filesystem.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653AEA8518E19A310052FF74 /* wax_json.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B885E818558C210043C42C /* wax_json.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653AEA8618E19A310052FF74 /* WXDUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 657C045818D2F369006BECAB /* WXDUserInfo.m */; };
+		653AEA8718E19A310052FF74 /* wax_struct.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8865D18558C210043C42C /* wax_struct.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653AEA8A18E19A310052FF74 /* lstrlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863F18558C210043C42C /* lstrlib.c */; };
+		653AEA8B18E19A310052FF74 /* ltm.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8864318558C210043C42C /* ltm.c */; };
+		653AEA8C18E19A310052FF74 /* lgc.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862918558C210043C42C /* lgc.c */; };
+		653AEA8E18E19A310052FF74 /* ltable.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8864018558C210043C42C /* ltable.c */; };
+		653AEA8F18E19A310052FF74 /* lfunc.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862718558C210043C42C /* lfunc.c */; };
+		653AEA9118E19A310052FF74 /* WXDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712C918DA9003006B4D46 /* WXDBaseViewController.m */; };
+		653AEA9318E19A310052FF74 /* yajl_encode.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B886BB185592E60043C42C /* yajl_encode.c */; };
+		653AEA9418E19A310052FF74 /* yajl_alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B886B5185592E60043C42C /* yajl_alloc.c */; };
+		653AEA9518E19A310052FF74 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CD13EB18B4AA41003B0D27 /* UIView+Screenshot.m */; };
+		653AEA9618E19A310052FF74 /* WXDSignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712A818DA8FC9006B4D46 /* WXDSignupViewController.m */; };
+		653AEA9718E19A310052FF74 /* WXDChangePswViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712AC18DA8FC9006B4D46 /* WXDChangePswViewController.m */; };
+		653AEA9918E19A310052FF74 /* WXDStringUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 6585CD6C18D1BA5B00F7DB04 /* WXDStringUtility.m */; };
+		653AEA9A18E19A310052FF74 /* print.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8864E18558C210043C42C /* print.c */; };
+		653AEA9B18E19A310052FF74 /* wax_gc.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8865418558C210043C42C /* wax_gc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653AEA9C18E19A310052FF74 /* wax_http.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B885DE18558C210043C42C /* wax_http.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653AEA9D18E19A310052FF74 /* wax_CTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B886DC185594890043C42C /* wax_CTViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653AEA9E18E19A310052FF74 /* DAProgressOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E452F18C86CDD00CF6348 /* DAProgressOverlayView.m */; };
+		653AEA9F18E19A310052FF74 /* yajl_buf.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B886B7185592E60043C42C /* yajl_buf.c */; };
+		653AEAA018E19A310052FF74 /* ltablib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8864218558C210043C42C /* ltablib.c */; };
+		653AEAA118E19A310052FF74 /* ldebug.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862218558C210043C42C /* ldebug.c */; };
+		653AEAA218E19A310052FF74 /* lparser.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863918558C210043C42C /* lparser.c */; };
+		653AEAA318E19A310052FF74 /* WXDGradualView.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E453318C86D6700CF6348 /* WXDGradualView.m */; };
+		653AEAA418E19A310052FF74 /* wax_class.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8865218558C210043C42C /* wax_class.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653AEAA518E19A310052FF74 /* CTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B886D7185594890043C42C /* CTViewController.m */; };
+		653AEAA618E19A310052FF74 /* ldblib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862118558C210043C42C /* ldblib.c */; };
+		653AEAA718E19A310052FF74 /* lmathlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863018558C210043C42C /* lmathlib.c */; };
+		653AEAA818E19A310052FF74 /* lmem.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863118558C210043C42C /* lmem.c */; };
+		653AEAA918E19A310052FF74 /* wax_helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8865618558C210043C42C /* wax_helpers.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653AEAAA18E19A310052FF74 /* yajl.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B886B4185592E60043C42C /* yajl.c */; };
+		653AEAAB18E19A310052FF74 /* loadlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863318558C210043C42C /* loadlib.c */; };
+		653AEAAC18E19A310052FF74 /* UIViewController+popUpViewYu.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CD13ED18B4AA41003B0D27 /* UIViewController+popUpViewYu.m */; };
+		653AEAAD18E19A310052FF74 /* wax_http_connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B885E018558C210043C42C /* wax_http_connection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653AEAAF18E19A310052FF74 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7DFADDD184EFD6D00F5E945 /* Security.framework */; };
+		653AEAB018E19A310052FF74 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7692B101817B5550076526D /* AudioToolbox.framework */; };
+		653AEAB118E19A310052FF74 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7692B0E1817B53E0076526D /* SystemConfiguration.framework */; };
+		653AEAB218E19A310052FF74 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7692B0A1817B4D00076526D /* AVFoundation.framework */; };
+		653AEAB318E19A310052FF74 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7692B081817B4C40076526D /* CFNetwork.framework */; };
+		653AEAB418E19A310052FF74 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BB7AA017F2CE15002B9222 /* Accelerate.framework */; };
+		653AEAB518E19A310052FF74 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BB7A9E17F2CE0C002B9222 /* QuartzCore.framework */; };
+		653AEAB618E19A310052FF74 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 574ECCD21771867A0095CED4 /* libxml2.2.dylib */; };
+		653AEAB718E19A310052FF74 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DA2AA91769C7F2002C1F29 /* libz.dylib */; };
+		653AEAB818E19A310052FF74 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DA29D01769C74D002C1F29 /* UIKit.framework */; };
+		653AEAB918E19A310052FF74 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DA29D21769C74D002C1F29 /* Foundation.framework */; };
+		653AEABA18E19A310052FF74 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DA29D41769C74D002C1F29 /* CoreGraphics.framework */; };
+		653AEABB18E19A310052FF74 /* libCrittercism_v4_3_2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 655B7EE618DC1FC90033FA68 /* libCrittercism_v4_3_2.a */; };
+		653AEABF18E19A310052FF74 /* Protoshop-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 57DA29D81769C74D002C1F29 /* Protoshop-Info.plist */; };
+		653AEAC018E19A310052FF74 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F7692B141817BC220076526D /* FontAwesome.ttf */; };
+		653AEAC118E19A310052FF74 /* Protoshop-text.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A1633B188EA63A00C3A984 /* Protoshop-text.png */; };
+		653AEAC218E19A310052FF74 /* icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 657A95BD1835F1B00035E15B /* icon-120.png */; };
+		653AEAC318E19A310052FF74 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 657A95C01835F1B00035E15B /* icon@2x.png */; };
+		653AEAC518E19A310052FF74 /* Checked.png in Resources */ = {isa = PBXBuildFile; fileRef = F711872618BB3C2D00D20749 /* Checked.png */; };
+		653AEAC618E19A310052FF74 /* dsym_upload.sh in Resources */ = {isa = PBXBuildFile; fileRef = 655B7EE518DC1FC90033FA68 /* dsym_upload.sh */; };
+		653AEAC718E19A310052FF74 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7DCCB901889105E004BAF65 /* Default-568h@2x.png */; };
+		653AEAC818E19A310052FF74 /* icon-dot.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B65584188D42D900FD10A2 /* icon-dot.png */; };
+		653AEAC918E19A310052FF74 /* goBack.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B65586188D561900FD10A2 /* goBack.png */; };
+		653AEACA18E19A310052FF74 /* WXDProjectsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D712A518DA8FC9006B4D46 /* WXDProjectsViewController.xib */; };
+		653AEACB18E19A310052FF74 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 65B8858C18558B050043C42C /* SVProgressHUD.bundle */; };
+		653AEACC18E19A310052FF74 /* Candara.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F7B6557B188D025900FD10A2 /* Candara.ttf */; };
+		653AEACE18E19A310052FF74 /* WXDChangePswViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D712AD18DA8FC9006B4D46 /* WXDChangePswViewController.xib */; };
+		653AEACF18E19A310052FF74 /* WXDSignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D712A918DA8FC9006B4D46 /* WXDSignupViewController.xib */; };
+		653AEAD018E19A310052FF74 /* messageBoxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65B886DA185594890043C42C /* messageBoxViewController.xib */; };
+		653AEAD118E19A310052FF74 /* Checked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F74C5D4018BC763F00C871ED /* Checked@2x.png */; };
+		653AEAD218E19A310052FF74 /* WXDProjectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D712A018DA8FC9006B4D46 /* WXDProjectTableViewCell.xib */; };
+		653AEAD318E19A310052FF74 /* WXDLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D7129C18DA8FC9006B4D46 /* WXDLoginViewController.xib */; };
+		653AEAD418E19A310052FF74 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 657A95BF1835F1B00035E15B /* icon.png */; };
+		653AEAD518E19A310052FF74 /* WXDSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D712B618DA8FC9006B4D46 /* WXDSettingViewController.xib */; };
+		653AEADE18E19A590052FF74 /* WXDSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712B518DA8FC9006B4D46 /* WXDSettingViewController.m */; };
+		653AEADF18E19A590052FF74 /* wax.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8865018558C210043C42C /* wax.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653AEAE218E19A590052FF74 /* ModalCloseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CD13E718B4AA41003B0D27 /* ModalCloseButton.m */; };
+		653AEAE318E19A590052FF74 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DA29DC1769C74D002C1F29 /* main.m */; };
+		653AEAE418E19A590052FF74 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8858E18558B050043C42C /* SVProgressHUD.m */; };
+		653AEAE518E19A590052FF74 /* WXDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D7129B18DA8FC9006B4D46 /* WXDLoginViewController.m */; };
+		653AEAE618E19A590052FF74 /* linit.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862B18558C210043C42C /* linit.c */; };
+		653AEAE718E19A590052FF74 /* wax_xml.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8861818558C210043C42C /* wax_xml.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653AEAE818E19A590052FF74 /* messageBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B886D9185594890043C42C /* messageBoxViewController.m */; };
+		653AEAEA18E19A590052FF74 /* lzio.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8864C18558C210043C42C /* lzio.c */; };
+		653AEAEB18E19A590052FF74 /* DKLiveBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CD13E518B4AA41003B0D27 /* DKLiveBlurView.m */; };
+		653AEAEC18E19A590052FF74 /* ldump.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862618558C210043C42C /* ldump.c */; };
+		653AEAED18E19A590052FF74 /* wax_CGContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B885C318558C210043C42C /* wax_CGContext.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653AEAEE18E19A590052FF74 /* yajl_gen.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B886BD185592E60043C42C /* yajl_gen.c */; };
+		653AEAEF18E19A590052FF74 /* WXDProjectInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E453718C8791700CF6348 /* WXDProjectInfo.m */; };
+		653AEAF018E19A590052FF74 /* lobject.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863418558C210043C42C /* lobject.c */; };
+		653AEAF118E19A590052FF74 /* yajl_parser.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B886C2185592E60043C42C /* yajl_parser.c */; };
+		653AEAF218E19A590052FF74 /* lstate.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863B18558C210043C42C /* lstate.c */; };
+		653AEAF318E19A590052FF74 /* lcode.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8861F18558C210043C42C /* lcode.c */; };
+		653AEAF418E19A590052FF74 /* lvm.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8864A18558C210043C42C /* lvm.c */; };
+		653AEAF618E19A590052FF74 /* WXDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B886E41855973C0043C42C /* WXDAppDelegate.m */; };
+		653AEAF718E19A590052FF74 /* liolib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862C18558C210043C42C /* liolib.c */; };
+		653AEAF818E19A590052FF74 /* WXDFileKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E453B18C8803200CF6348 /* WXDFileKey.m */; };
+		653AEAF918E19A590052FF74 /* wax_instance.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8865818558C210043C42C /* wax_instance.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653AEAFA18E19A590052FF74 /* lauxlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8861C18558C210043C42C /* lauxlib.c */; };
+		653AEAFB18E19A590052FF74 /* loslib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863818558C210043C42C /* loslib.c */; };
+		653AEAFC18E19A590052FF74 /* lstring.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863D18558C210043C42C /* lstring.c */; };
+		653AEAFD18E19A590052FF74 /* UIImage+Blur.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CD13E918B4AA41003B0D27 /* UIImage+Blur.m */; };
+		653AEAFF18E19A590052FF74 /* wax_server.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8865A18558C210043C42C /* wax_server.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653AEB0018E19A590052FF74 /* WXDProjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712A418DA8FC9006B4D46 /* WXDProjectsViewController.m */; };
+		653AEB0118E19A590052FF74 /* WXDBaseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6585CD6418D1B13500F7DB04 /* WXDBaseInfo.m */; };
+		653AEB0218E19A590052FF74 /* yajl_lex.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B886BF185592E60043C42C /* yajl_lex.c */; };
+		653AEB0418E19A590052FF74 /* wax_CGTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B885C018558C210043C42C /* wax_CGTransform.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653AEB0618E19A590052FF74 /* WXDBaseResultInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6585CD6818D1B41300F7DB04 /* WXDBaseResultInfo.m */; };
+		653AEB0818E19A590052FF74 /* CTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B886EE185598BF0043C42C /* CTView.m */; };
+		653AEB0918E19A590052FF74 /* llex.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862D18558C210043C42C /* llex.c */; };
+		653AEB0B18E19A590052FF74 /* wax_CTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B886F0185598BF0043C42C /* wax_CTView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653AEB0D18E19A590052FF74 /* WXDProjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D7129F18DA8FC9006B4D46 /* WXDProjectTableViewCell.m */; };
+		653AEB0E18E19A590052FF74 /* ldo.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862418558C210043C42C /* ldo.c */; };
+		653AEB1018E19A590052FF74 /* lbaselib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8861E18558C210043C42C /* lbaselib.c */; };
+		653AEB1218E19A590052FF74 /* lapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8861A18558C210043C42C /* lapi.c */; };
+		653AEB1318E19A590052FF74 /* WXDRequestCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 656FBF6418D6D9BD00E1F41E /* WXDRequestCommand.m */; };
+		653AEB1418E19A590052FF74 /* lopcodes.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863618558C210043C42C /* lopcodes.c */; };
+		653AEB1618E19A590052FF74 /* lundump.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8864818558C210043C42C /* lundump.c */; };
+		653AEB1718E19A590052FF74 /* wax_filesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B885D118558C210043C42C /* wax_filesystem.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653AEB1818E19A590052FF74 /* wax_json.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B885E818558C210043C42C /* wax_json.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653AEB1918E19A590052FF74 /* WXDUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 657C045818D2F369006BECAB /* WXDUserInfo.m */; };
+		653AEB1A18E19A590052FF74 /* wax_struct.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8865D18558C210043C42C /* wax_struct.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653AEB1D18E19A590052FF74 /* lstrlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863F18558C210043C42C /* lstrlib.c */; };
+		653AEB1E18E19A590052FF74 /* ltm.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8864318558C210043C42C /* ltm.c */; };
+		653AEB1F18E19A590052FF74 /* lgc.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862918558C210043C42C /* lgc.c */; };
+		653AEB2118E19A590052FF74 /* ltable.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8864018558C210043C42C /* ltable.c */; };
+		653AEB2218E19A590052FF74 /* lfunc.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862718558C210043C42C /* lfunc.c */; };
+		653AEB2418E19A590052FF74 /* WXDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712C918DA9003006B4D46 /* WXDBaseViewController.m */; };
+		653AEB2618E19A590052FF74 /* yajl_encode.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B886BB185592E60043C42C /* yajl_encode.c */; };
+		653AEB2718E19A590052FF74 /* yajl_alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B886B5185592E60043C42C /* yajl_alloc.c */; };
+		653AEB2818E19A590052FF74 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CD13EB18B4AA41003B0D27 /* UIView+Screenshot.m */; };
+		653AEB2918E19A590052FF74 /* WXDSignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712A818DA8FC9006B4D46 /* WXDSignupViewController.m */; };
+		653AEB2A18E19A590052FF74 /* WXDChangePswViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712AC18DA8FC9006B4D46 /* WXDChangePswViewController.m */; };
+		653AEB2C18E19A590052FF74 /* WXDStringUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 6585CD6C18D1BA5B00F7DB04 /* WXDStringUtility.m */; };
+		653AEB2D18E19A590052FF74 /* print.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8864E18558C210043C42C /* print.c */; };
+		653AEB2E18E19A590052FF74 /* wax_gc.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8865418558C210043C42C /* wax_gc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653AEB2F18E19A590052FF74 /* wax_http.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B885DE18558C210043C42C /* wax_http.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653AEB3018E19A590052FF74 /* wax_CTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B886DC185594890043C42C /* wax_CTViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653AEB3118E19A590052FF74 /* DAProgressOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E452F18C86CDD00CF6348 /* DAProgressOverlayView.m */; };
+		653AEB3218E19A590052FF74 /* yajl_buf.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B886B7185592E60043C42C /* yajl_buf.c */; };
+		653AEB3318E19A590052FF74 /* ltablib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8864218558C210043C42C /* ltablib.c */; };
+		653AEB3418E19A590052FF74 /* ldebug.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862218558C210043C42C /* ldebug.c */; };
+		653AEB3518E19A590052FF74 /* lparser.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863918558C210043C42C /* lparser.c */; };
+		653AEB3618E19A590052FF74 /* WXDGradualView.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E453318C86D6700CF6348 /* WXDGradualView.m */; };
+		653AEB3718E19A590052FF74 /* wax_class.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8865218558C210043C42C /* wax_class.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653AEB3818E19A590052FF74 /* CTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B886D7185594890043C42C /* CTViewController.m */; };
+		653AEB3918E19A590052FF74 /* ldblib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862118558C210043C42C /* ldblib.c */; };
+		653AEB3A18E19A590052FF74 /* lmathlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863018558C210043C42C /* lmathlib.c */; };
+		653AEB3B18E19A590052FF74 /* lmem.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863118558C210043C42C /* lmem.c */; };
+		653AEB3C18E19A590052FF74 /* wax_helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8865618558C210043C42C /* wax_helpers.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653AEB3D18E19A590052FF74 /* yajl.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B886B4185592E60043C42C /* yajl.c */; };
+		653AEB3E18E19A590052FF74 /* loadlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863318558C210043C42C /* loadlib.c */; };
+		653AEB3F18E19A590052FF74 /* UIViewController+popUpViewYu.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CD13ED18B4AA41003B0D27 /* UIViewController+popUpViewYu.m */; };
+		653AEB4018E19A590052FF74 /* wax_http_connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B885E018558C210043C42C /* wax_http_connection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653AEB4218E19A590052FF74 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7DFADDD184EFD6D00F5E945 /* Security.framework */; };
+		653AEB4318E19A590052FF74 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7692B101817B5550076526D /* AudioToolbox.framework */; };
+		653AEB4418E19A590052FF74 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7692B0E1817B53E0076526D /* SystemConfiguration.framework */; };
+		653AEB4518E19A590052FF74 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7692B0A1817B4D00076526D /* AVFoundation.framework */; };
+		653AEB4618E19A590052FF74 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7692B081817B4C40076526D /* CFNetwork.framework */; };
+		653AEB4718E19A590052FF74 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BB7AA017F2CE15002B9222 /* Accelerate.framework */; };
+		653AEB4818E19A590052FF74 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BB7A9E17F2CE0C002B9222 /* QuartzCore.framework */; };
+		653AEB4918E19A590052FF74 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 574ECCD21771867A0095CED4 /* libxml2.2.dylib */; };
+		653AEB4A18E19A590052FF74 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DA2AA91769C7F2002C1F29 /* libz.dylib */; };
+		653AEB4B18E19A590052FF74 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DA29D01769C74D002C1F29 /* UIKit.framework */; };
+		653AEB4C18E19A590052FF74 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DA29D21769C74D002C1F29 /* Foundation.framework */; };
+		653AEB4D18E19A590052FF74 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DA29D41769C74D002C1F29 /* CoreGraphics.framework */; };
+		653AEB4E18E19A590052FF74 /* libCrittercism_v4_3_2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 655B7EE618DC1FC90033FA68 /* libCrittercism_v4_3_2.a */; };
+		653AEB5218E19A590052FF74 /* Protoshop-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 57DA29D81769C74D002C1F29 /* Protoshop-Info.plist */; };
+		653AEB5318E19A590052FF74 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F7692B141817BC220076526D /* FontAwesome.ttf */; };
+		653AEB5418E19A590052FF74 /* Protoshop-text.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A1633B188EA63A00C3A984 /* Protoshop-text.png */; };
+		653AEB5518E19A590052FF74 /* icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 657A95BD1835F1B00035E15B /* icon-120.png */; };
+		653AEB5618E19A590052FF74 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 657A95C01835F1B00035E15B /* icon@2x.png */; };
+		653AEB5818E19A590052FF74 /* Checked.png in Resources */ = {isa = PBXBuildFile; fileRef = F711872618BB3C2D00D20749 /* Checked.png */; };
+		653AEB5918E19A590052FF74 /* dsym_upload.sh in Resources */ = {isa = PBXBuildFile; fileRef = 655B7EE518DC1FC90033FA68 /* dsym_upload.sh */; };
+		653AEB5A18E19A590052FF74 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7DCCB901889105E004BAF65 /* Default-568h@2x.png */; };
+		653AEB5B18E19A590052FF74 /* icon-dot.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B65584188D42D900FD10A2 /* icon-dot.png */; };
+		653AEB5C18E19A590052FF74 /* goBack.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B65586188D561900FD10A2 /* goBack.png */; };
+		653AEB5D18E19A590052FF74 /* WXDProjectsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D712A518DA8FC9006B4D46 /* WXDProjectsViewController.xib */; };
+		653AEB5E18E19A590052FF74 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 65B8858C18558B050043C42C /* SVProgressHUD.bundle */; };
+		653AEB5F18E19A590052FF74 /* Candara.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F7B6557B188D025900FD10A2 /* Candara.ttf */; };
+		653AEB6118E19A590052FF74 /* WXDChangePswViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D712AD18DA8FC9006B4D46 /* WXDChangePswViewController.xib */; };
+		653AEB6218E19A590052FF74 /* WXDSignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D712A918DA8FC9006B4D46 /* WXDSignupViewController.xib */; };
+		653AEB6318E19A590052FF74 /* messageBoxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65B886DA185594890043C42C /* messageBoxViewController.xib */; };
+		653AEB6418E19A590052FF74 /* Checked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F74C5D4018BC763F00C871ED /* Checked@2x.png */; };
+		653AEB6518E19A590052FF74 /* WXDProjectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D712A018DA8FC9006B4D46 /* WXDProjectTableViewCell.xib */; };
+		653AEB6618E19A590052FF74 /* WXDLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D7129C18DA8FC9006B4D46 /* WXDLoginViewController.xib */; };
+		653AEB6718E19A590052FF74 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 657A95BF1835F1B00035E15B /* icon.png */; };
+		653AEB6818E19A590052FF74 /* WXDSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D712B618DA8FC9006B4D46 /* WXDSettingViewController.xib */; };
+		655B7EE718DC1FC90033FA68 /* dsym_upload.sh in Resources */ = {isa = PBXBuildFile; fileRef = 655B7EE518DC1FC90033FA68 /* dsym_upload.sh */; };
+		655B7EE818DC1FC90033FA68 /* libCrittercism_v4_3_2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 655B7EE618DC1FC90033FA68 /* libCrittercism_v4_3_2.a */; };
+		655E453018C86CDD00CF6348 /* DAProgressOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E452F18C86CDD00CF6348 /* DAProgressOverlayView.m */; };
+		655E453418C86D6700CF6348 /* WXDGradualView.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E453318C86D6700CF6348 /* WXDGradualView.m */; };
+		655E453818C8791700CF6348 /* WXDProjectInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E453718C8791700CF6348 /* WXDProjectInfo.m */; };
+		655E453C18C8803200CF6348 /* WXDFileKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E453B18C8803200CF6348 /* WXDFileKey.m */; };
+		656FBF6518D6D9BD00E1F41E /* WXDRequestCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 656FBF6418D6D9BD00E1F41E /* WXDRequestCommand.m */; };
+		657A95C11835F1B00035E15B /* icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 657A95BD1835F1B00035E15B /* icon-120.png */; };
+		657A95C31835F1B00035E15B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 657A95BF1835F1B00035E15B /* icon.png */; };
+		657A95C41835F1B00035E15B /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 657A95C01835F1B00035E15B /* icon@2x.png */; };
+		657C045918D2F369006BECAB /* WXDUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 657C045818D2F369006BECAB /* WXDUserInfo.m */; };
+		658380E61935AB230028ED6E /* SSOAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7C1703118EBF358000111D1 /* SSOAuthViewController.xib */; };
+		658380E81935B47D0028ED6E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 658380E71935B47D0028ED6E /* Default.png */; };
+		658380E91935B47D0028ED6E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 658380E71935B47D0028ED6E /* Default.png */; };
+		658380EA1935B47D0028ED6E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 658380E71935B47D0028ED6E /* Default.png */; };
+		6585CD6518D1B13500F7DB04 /* WXDBaseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6585CD6418D1B13500F7DB04 /* WXDBaseInfo.m */; };
+		6585CD6918D1B41300F7DB04 /* WXDBaseResultInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6585CD6818D1B41300F7DB04 /* WXDBaseResultInfo.m */; };
+		6585CD6D18D1BA5B00F7DB04 /* WXDStringUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 6585CD6C18D1BA5B00F7DB04 /* WXDStringUtility.m */; };
+		65B8859918558B050043C42C /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 65B8858C18558B050043C42C /* SVProgressHUD.bundle */; };
+		65B8859A18558B050043C42C /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8858E18558B050043C42C /* SVProgressHUD.m */; };
+		65B8866418558C210043C42C /* wax_CGTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B885C018558C210043C42C /* wax_CGTransform.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		65B8866518558C210043C42C /* wax_CGContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B885C318558C210043C42C /* wax_CGContext.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		65B8866A18558C210043C42C /* wax_filesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B885D118558C210043C42C /* wax_filesystem.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		65B8866F18558C210043C42C /* wax_http.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B885DE18558C210043C42C /* wax_http.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		65B8867018558C210043C42C /* wax_http_connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B885E018558C210043C42C /* wax_http_connection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		65B8867418558C210043C42C /* wax_json.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B885E818558C210043C42C /* wax_json.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		65B8868818558C210043C42C /* wax_xml.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8861818558C210043C42C /* wax_xml.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		65B8868918558C210043C42C /* lapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8861A18558C210043C42C /* lapi.c */; };
+		65B8868A18558C210043C42C /* lauxlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8861C18558C210043C42C /* lauxlib.c */; };
+		65B8868B18558C210043C42C /* lbaselib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8861E18558C210043C42C /* lbaselib.c */; };
+		65B8868C18558C210043C42C /* lcode.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8861F18558C210043C42C /* lcode.c */; };
+		65B8868D18558C210043C42C /* ldblib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862118558C210043C42C /* ldblib.c */; };
+		65B8868E18558C210043C42C /* ldebug.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862218558C210043C42C /* ldebug.c */; };
+		65B8868F18558C210043C42C /* ldo.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862418558C210043C42C /* ldo.c */; };
+		65B8869018558C210043C42C /* ldump.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862618558C210043C42C /* ldump.c */; };
+		65B8869118558C210043C42C /* lfunc.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862718558C210043C42C /* lfunc.c */; };
+		65B8869218558C210043C42C /* lgc.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862918558C210043C42C /* lgc.c */; };
+		65B8869318558C210043C42C /* linit.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862B18558C210043C42C /* linit.c */; };
+		65B8869418558C210043C42C /* liolib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862C18558C210043C42C /* liolib.c */; };
+		65B8869518558C210043C42C /* llex.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862D18558C210043C42C /* llex.c */; };
+		65B8869618558C210043C42C /* lmathlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863018558C210043C42C /* lmathlib.c */; };
+		65B8869718558C210043C42C /* lmem.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863118558C210043C42C /* lmem.c */; };
+		65B8869818558C210043C42C /* loadlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863318558C210043C42C /* loadlib.c */; };
+		65B8869918558C210043C42C /* lobject.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863418558C210043C42C /* lobject.c */; };
+		65B8869A18558C210043C42C /* lopcodes.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863618558C210043C42C /* lopcodes.c */; };
+		65B8869B18558C210043C42C /* loslib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863818558C210043C42C /* loslib.c */; };
+		65B8869C18558C210043C42C /* lparser.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863918558C210043C42C /* lparser.c */; };
+		65B8869D18558C210043C42C /* lstate.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863B18558C210043C42C /* lstate.c */; };
+		65B8869E18558C210043C42C /* lstring.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863D18558C210043C42C /* lstring.c */; };
+		65B8869F18558C210043C42C /* lstrlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863F18558C210043C42C /* lstrlib.c */; };
+		65B886A018558C210043C42C /* ltable.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8864018558C210043C42C /* ltable.c */; };
+		65B886A118558C210043C42C /* ltablib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8864218558C210043C42C /* ltablib.c */; };
+		65B886A218558C210043C42C /* ltm.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8864318558C210043C42C /* ltm.c */; };
+		65B886A318558C210043C42C /* lundump.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8864818558C210043C42C /* lundump.c */; };
+		65B886A418558C210043C42C /* lvm.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8864A18558C210043C42C /* lvm.c */; };
+		65B886A518558C210043C42C /* lzio.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8864C18558C210043C42C /* lzio.c */; };
+		65B886A618558C210043C42C /* print.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8864E18558C210043C42C /* print.c */; };
+		65B886A718558C210043C42C /* wax.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8865018558C210043C42C /* wax.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		65B886A818558C210043C42C /* wax_class.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8865218558C210043C42C /* wax_class.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		65B886A918558C210043C42C /* wax_gc.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8865418558C210043C42C /* wax_gc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		65B886AA18558C210043C42C /* wax_helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8865618558C210043C42C /* wax_helpers.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		65B886AB18558C210043C42C /* wax_instance.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8865818558C210043C42C /* wax_instance.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		65B886AC18558C210043C42C /* wax_server.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8865A18558C210043C42C /* wax_server.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		65B886AD18558C210043C42C /* wax_struct.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8865D18558C210043C42C /* wax_struct.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		65B886C4185592E60043C42C /* yajl.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B886B4185592E60043C42C /* yajl.c */; };
+		65B886C5185592E60043C42C /* yajl_alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B886B5185592E60043C42C /* yajl_alloc.c */; };
+		65B886C6185592E60043C42C /* yajl_buf.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B886B7185592E60043C42C /* yajl_buf.c */; };
+		65B886C7185592E60043C42C /* yajl_encode.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B886BB185592E60043C42C /* yajl_encode.c */; };
+		65B886C8185592E60043C42C /* yajl_gen.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B886BD185592E60043C42C /* yajl_gen.c */; };
+		65B886C9185592E60043C42C /* yajl_lex.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B886BF185592E60043C42C /* yajl_lex.c */; };
+		65B886CA185592E60043C42C /* yajl_parser.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B886C2185592E60043C42C /* yajl_parser.c */; };
+		65B886DD185594890043C42C /* CTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B886D7185594890043C42C /* CTViewController.m */; };
+		65B886DE185594890043C42C /* messageBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B886D9185594890043C42C /* messageBoxViewController.m */; };
+		65B886DF185594890043C42C /* messageBoxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65B886DA185594890043C42C /* messageBoxViewController.xib */; };
+		65B886E0185594890043C42C /* wax_CTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B886DC185594890043C42C /* wax_CTViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		65B886E91855973C0043C42C /* WXDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B886E41855973C0043C42C /* WXDAppDelegate.m */; };
+		65B886F1185598BF0043C42C /* CTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B886EE185598BF0043C42C /* CTView.m */; };
+		65B886F2185598BF0043C42C /* wax_CTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B886F0185598BF0043C42C /* wax_CTView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		65D712B718DA8FC9006B4D46 /* WXDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D7129B18DA8FC9006B4D46 /* WXDLoginViewController.m */; };
+		65D712B818DA8FC9006B4D46 /* WXDLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D7129C18DA8FC9006B4D46 /* WXDLoginViewController.xib */; };
+		65D712B918DA8FC9006B4D46 /* WXDProjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D7129F18DA8FC9006B4D46 /* WXDProjectTableViewCell.m */; };
+		65D712BA18DA8FC9006B4D46 /* WXDProjectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D712A018DA8FC9006B4D46 /* WXDProjectTableViewCell.xib */; };
+		65D712BC18DA8FC9006B4D46 /* WXDProjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712A418DA8FC9006B4D46 /* WXDProjectsViewController.m */; };
+		65D712BD18DA8FC9006B4D46 /* WXDProjectsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D712A518DA8FC9006B4D46 /* WXDProjectsViewController.xib */; };
+		65D712BE18DA8FC9006B4D46 /* WXDSignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712A818DA8FC9006B4D46 /* WXDSignupViewController.m */; };
+		65D712BF18DA8FC9006B4D46 /* WXDSignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D712A918DA8FC9006B4D46 /* WXDSignupViewController.xib */; };
+		65D712C018DA8FC9006B4D46 /* WXDChangePswViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712AC18DA8FC9006B4D46 /* WXDChangePswViewController.m */; };
+		65D712C118DA8FC9006B4D46 /* WXDChangePswViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D712AD18DA8FC9006B4D46 /* WXDChangePswViewController.xib */; };
+		65D712C618DA8FC9006B4D46 /* WXDSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712B518DA8FC9006B4D46 /* WXDSettingViewController.m */; };
+		65D712C718DA8FC9006B4D46 /* WXDSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D712B618DA8FC9006B4D46 /* WXDSettingViewController.xib */; };
+		65D712CA18DA9003006B4D46 /* WXDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712C918DA9003006B4D46 /* WXDBaseViewController.m */; };
+		F711872818BB3C2D00D20749 /* Checked.png in Resources */ = {isa = PBXBuildFile; fileRef = F711872618BB3C2D00D20749 /* Checked.png */; };
+		F713AD6C1932E9AD0070C37A /* CTAuthEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1701D18EBF358000111D1 /* CTAuthEngine.m */; };
+		F713AD6D1932E9AD0070C37A /* CTLoginWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1701F18EBF358000111D1 /* CTLoginWebView.m */; };
+		F713AD6E1932E9AD0070C37A /* CTSSOLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1702218EBF358000111D1 /* CTSSOLoginView.m */; };
+		F713AD6F1932E9D70070C37A /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1702618EBF358000111D1 /* NSObject+SBJSON.m */; };
+		F713AD701932E9D70070C37A /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1702818EBF358000111D1 /* NSString+SBJSON.m */; };
+		F713AD711932E9D70070C37A /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1702A18EBF358000111D1 /* SBJsonBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F713AD721932E9D70070C37A /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1702C18EBF358000111D1 /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F713AD731932E9D70070C37A /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1702E18EBF358000111D1 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F713AD741932E9D70070C37A /* SSOAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1703018EBF358000111D1 /* SSOAuthViewController.m */; };
+		F713AD7519333B040070C37A /* WXDMainTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D631C91925A2E10065336A /* WXDMainTableView.m */; };
+		F713AD7619333B520070C37A /* WXDMTVLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D631CF1925A47B0065336A /* WXDMTVLoadingView.m */; };
+		F713AD7719333CDE0070C37A /* UINavigationController+hlyu.m in Sources */ = {isa = PBXBuildFile; fileRef = F742F1B419051BE900F00AA6 /* UINavigationController+hlyu.m */; };
+		F742F1B519051BE900F00AA6 /* UINavigationController+hlyu.m in Sources */ = {isa = PBXBuildFile; fileRef = F742F1B419051BE900F00AA6 /* UINavigationController+hlyu.m */; };
+		F74C5D4118BC763F00C871ED /* Checked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F74C5D4018BC763F00C871ED /* Checked@2x.png */; };
+		F7692B091817B4C40076526D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7692B081817B4C40076526D /* CFNetwork.framework */; };
+		F7692B0B1817B4D00076526D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7692B0A1817B4D00076526D /* AVFoundation.framework */; };
+		F7692B0F1817B53E0076526D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7692B0E1817B53E0076526D /* SystemConfiguration.framework */; };
+		F7692B111817B5550076526D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7692B101817B5550076526D /* AudioToolbox.framework */; };
+		F7692B271817BC220076526D /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F7692B141817BC220076526D /* FontAwesome.ttf */; };
+		F7A1633C188EA63A00C3A984 /* Protoshop-text.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A1633B188EA63A00C3A984 /* Protoshop-text.png */; };
+		F7B6557C188D025900FD10A2 /* Candara.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F7B6557B188D025900FD10A2 /* Candara.ttf */; };
+		F7B65585188D42D900FD10A2 /* icon-dot.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B65584188D42D900FD10A2 /* icon-dot.png */; };
+		F7B65587188D561900FD10A2 /* goBack.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B65586188D561900FD10A2 /* goBack.png */; };
+		F7BB7A9F17F2CE0C002B9222 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BB7A9E17F2CE0C002B9222 /* QuartzCore.framework */; };
+		F7BB7AA117F2CE15002B9222 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BB7AA017F2CE15002B9222 /* Accelerate.framework */; };
+		F7C1703218EBF358000111D1 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = F7C1701A18EBF358000111D1 /* close.png */; };
+		F7C1703318EBF358000111D1 /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7C1701B18EBF358000111D1 /* close@2x.png */; };
+		F7C1703418EBF358000111D1 /* CTAuthEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1701D18EBF358000111D1 /* CTAuthEngine.m */; };
+		F7C1703518EBF358000111D1 /* CTLoginWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1701F18EBF358000111D1 /* CTLoginWebView.m */; };
+		F7C1703618EBF358000111D1 /* CTSSOLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1702218EBF358000111D1 /* CTSSOLoginView.m */; };
+		F7C1703718EBF358000111D1 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1702618EBF358000111D1 /* NSObject+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F7C1703818EBF358000111D1 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1702818EBF358000111D1 /* NSString+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F7C1703918EBF358000111D1 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1702A18EBF358000111D1 /* SBJsonBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F7C1703A18EBF358000111D1 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1702C18EBF358000111D1 /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F7C1703B18EBF358000111D1 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1702E18EBF358000111D1 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F7C1703C18EBF358000111D1 /* SSOAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1703018EBF358000111D1 /* SSOAuthViewController.m */; };
+		F7C1703D18EBF358000111D1 /* SSOAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7C1703118EBF358000111D1 /* SSOAuthViewController.xib */; };
+		F7CD13EE18B4AA41003B0D27 /* DKLiveBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CD13E518B4AA41003B0D27 /* DKLiveBlurView.m */; };
+		F7CD13EF18B4AA41003B0D27 /* ModalCloseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CD13E718B4AA41003B0D27 /* ModalCloseButton.m */; };
+		F7CD13F018B4AA41003B0D27 /* UIImage+Blur.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CD13E918B4AA41003B0D27 /* UIImage+Blur.m */; };
+		F7CD13F118B4AA41003B0D27 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CD13EB18B4AA41003B0D27 /* UIView+Screenshot.m */; };
+		F7CD13F218B4AA41003B0D27 /* UIViewController+popUpViewYu.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CD13ED18B4AA41003B0D27 /* UIViewController+popUpViewYu.m */; };
+		F7D631CA1925A2E10065336A /* WXDMainTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D631C91925A2E10065336A /* WXDMainTableView.m */; };
+		F7D631D01925A47B0065336A /* WXDMTVLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D631CF1925A47B0065336A /* WXDMTVLoadingView.m */; };
+		F7DCCB911889105E004BAF65 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7DCCB901889105E004BAF65 /* Default-568h@2x.png */; };
+		F7DFADDE184EFD6D00F5E945 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7DFADDD184EFD6D00F5E945 /* Security.framework */; };
+		F7F15680193429DE0092D037 /* WXDAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F1567E193429DE0092D037 /* WXDAboutViewController.m */; };
+		F7F15681193429DE0092D037 /* WXDAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7F1567F193429DE0092D037 /* WXDAboutViewController.xib */; };
+		F7F1568219346E440092D037 /* WXDMainTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D631C91925A2E10065336A /* WXDMainTableView.m */; };
+		F7F1568319346E440092D037 /* WXDMTVLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D631CF1925A47B0065336A /* WXDMTVLoadingView.m */; };
+		F7F1568419346E440092D037 /* WXDAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F1567E193429DE0092D037 /* WXDAboutViewController.m */; };
+		F7F1568519346E440092D037 /* CTAuthEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1701D18EBF358000111D1 /* CTAuthEngine.m */; };
+		F7F1568619346E440092D037 /* CTLoginWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1701F18EBF358000111D1 /* CTLoginWebView.m */; };
+		F7F1568719346E440092D037 /* CTSSOLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1702218EBF358000111D1 /* CTSSOLoginView.m */; };
+		F7F1568819346E440092D037 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1702618EBF358000111D1 /* NSObject+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F7F1568919346E440092D037 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1702818EBF358000111D1 /* NSString+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F7F1568A19346E440092D037 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1702A18EBF358000111D1 /* SBJsonBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F7F1568B19346E440092D037 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1702C18EBF358000111D1 /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F7F1568C19346E440092D037 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1702E18EBF358000111D1 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F7F1568D19346E440092D037 /* SSOAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1703018EBF358000111D1 /* SSOAuthViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		35DBCE08DB614B69BFA15144 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		574ECCD21771867A0095CED4 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
+		57DA29CD1769C74D002C1F29 /* Protoshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Protoshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		57DA29D01769C74D002C1F29 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		57DA29D21769C74D002C1F29 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		57DA29D41769C74D002C1F29 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		57DA29D81769C74D002C1F29 /* Protoshop-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Protoshop-Info.plist"; sourceTree = "<group>"; };
+		57DA29DC1769C74D002C1F29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		57DA29DE1769C74D002C1F29 /* Protoshop-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Protoshop-Prefix.pch"; sourceTree = "<group>"; };
+		57DA2AA91769C7F2002C1F29 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		653AEAD918E19A310052FF74 /* Protoshop copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Protoshop copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		653AEB6C18E19A590052FF74 /* Protoshop copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Protoshop copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		653AEB6E18E19B630052FF74 /* Protoshop-Info-AdHoc.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Protoshop-Info-AdHoc.plist"; sourceTree = "<group>"; };
+		653AEB7018E19B6D0052FF74 /* Protoshop-Info-AppStore.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Protoshop-Info-AppStore.plist"; sourceTree = "<group>"; };
+		655B7EE218DC1FC90033FA68 /* CRFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRFilter.h; sourceTree = "<group>"; };
+		655B7EE318DC1FC90033FA68 /* Crittercism.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crittercism.h; sourceTree = "<group>"; };
+		655B7EE418DC1FC90033FA68 /* CrittercismDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrittercismDelegate.h; sourceTree = "<group>"; };
+		655B7EE518DC1FC90033FA68 /* dsym_upload.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = dsym_upload.sh; sourceTree = "<group>"; };
+		655B7EE618DC1FC90033FA68 /* libCrittercism_v4_3_2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCrittercism_v4_3_2.a; sourceTree = "<group>"; };
+		655E452E18C86CDD00CF6348 /* DAProgressOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAProgressOverlayView.h; sourceTree = "<group>"; };
+		655E452F18C86CDD00CF6348 /* DAProgressOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAProgressOverlayView.m; sourceTree = "<group>"; };
+		655E453218C86D6700CF6348 /* WXDGradualView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDGradualView.h; sourceTree = "<group>"; };
+		655E453318C86D6700CF6348 /* WXDGradualView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDGradualView.m; sourceTree = "<group>"; };
+		655E453618C8791700CF6348 /* WXDProjectInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDProjectInfo.h; sourceTree = "<group>"; };
+		655E453718C8791700CF6348 /* WXDProjectInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDProjectInfo.m; sourceTree = "<group>"; };
+		655E453A18C8803200CF6348 /* WXDFileKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDFileKey.h; sourceTree = "<group>"; };
+		655E453B18C8803200CF6348 /* WXDFileKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDFileKey.m; sourceTree = "<group>"; };
+		656FBF5918D69AFD00E1F41E /* WXDConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDConst.h; sourceTree = "<group>"; };
+		656FBF6318D6D9BD00E1F41E /* WXDRequestCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDRequestCommand.h; sourceTree = "<group>"; };
+		656FBF6418D6D9BD00E1F41E /* WXDRequestCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDRequestCommand.m; sourceTree = "<group>"; };
+		657A95BD1835F1B00035E15B /* icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-120.png"; sourceTree = "<group>"; };
+		657A95BF1835F1B00035E15B /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		657A95C01835F1B00035E15B /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		657C045718D2F369006BECAB /* WXDUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDUserInfo.h; sourceTree = "<group>"; };
+		657C045818D2F369006BECAB /* WXDUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDUserInfo.m; sourceTree = "<group>"; };
+		658380E71935B47D0028ED6E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		6585CD6318D1B13500F7DB04 /* WXDBaseInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDBaseInfo.h; sourceTree = "<group>"; };
+		6585CD6418D1B13500F7DB04 /* WXDBaseInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDBaseInfo.m; sourceTree = "<group>"; };
+		6585CD6718D1B41300F7DB04 /* WXDBaseResultInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDBaseResultInfo.h; sourceTree = "<group>"; };
+		6585CD6818D1B41300F7DB04 /* WXDBaseResultInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDBaseResultInfo.m; sourceTree = "<group>"; };
+		6585CD6B18D1BA5B00F7DB04 /* WXDStringUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDStringUtility.h; sourceTree = "<group>"; };
+		6585CD6C18D1BA5B00F7DB04 /* WXDStringUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDStringUtility.m; sourceTree = "<group>"; };
+		65B8858C18558B050043C42C /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		65B8858D18558B050043C42C /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		65B8858E18558B050043C42C /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		65B885BF18558C210043C42C /* wax_CGTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wax_CGTransform.h; sourceTree = "<group>"; };
+		65B885C018558C210043C42C /* wax_CGTransform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wax_CGTransform.m; sourceTree = "<group>"; };
+		65B885C218558C210043C42C /* wax_CGContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wax_CGContext.h; sourceTree = "<group>"; };
+		65B885C318558C210043C42C /* wax_CGContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wax_CGContext.m; sourceTree = "<group>"; };
+		65B885D018558C210043C42C /* wax_filesystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wax_filesystem.h; sourceTree = "<group>"; };
+		65B885D118558C210043C42C /* wax_filesystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wax_filesystem.m; sourceTree = "<group>"; };
+		65B885DD18558C210043C42C /* wax_http.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wax_http.h; sourceTree = "<group>"; };
+		65B885DE18558C210043C42C /* wax_http.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wax_http.m; sourceTree = "<group>"; };
+		65B885DF18558C210043C42C /* wax_http_connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wax_http_connection.h; sourceTree = "<group>"; };
+		65B885E018558C210043C42C /* wax_http_connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wax_http_connection.m; sourceTree = "<group>"; };
+		65B885E818558C210043C42C /* wax_json.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = wax_json.c; sourceTree = "<group>"; };
+		65B885E918558C210043C42C /* wax_json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wax_json.h; sourceTree = "<group>"; };
+		65B8861718558C210043C42C /* wax_xml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wax_xml.h; sourceTree = "<group>"; };
+		65B8861818558C210043C42C /* wax_xml.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wax_xml.m; sourceTree = "<group>"; };
+		65B8861A18558C210043C42C /* lapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lapi.c; sourceTree = "<group>"; };
+		65B8861B18558C210043C42C /* lapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lapi.h; sourceTree = "<group>"; };
+		65B8861C18558C210043C42C /* lauxlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lauxlib.c; sourceTree = "<group>"; };
+		65B8861D18558C210043C42C /* lauxlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lauxlib.h; sourceTree = "<group>"; };
+		65B8861E18558C210043C42C /* lbaselib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lbaselib.c; sourceTree = "<group>"; };
+		65B8861F18558C210043C42C /* lcode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lcode.c; sourceTree = "<group>"; };
+		65B8862018558C210043C42C /* lcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lcode.h; sourceTree = "<group>"; };
+		65B8862118558C210043C42C /* ldblib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ldblib.c; sourceTree = "<group>"; };
+		65B8862218558C210043C42C /* ldebug.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ldebug.c; sourceTree = "<group>"; };
+		65B8862318558C210043C42C /* ldebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ldebug.h; sourceTree = "<group>"; };
+		65B8862418558C210043C42C /* ldo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ldo.c; sourceTree = "<group>"; };
+		65B8862518558C210043C42C /* ldo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ldo.h; sourceTree = "<group>"; };
+		65B8862618558C210043C42C /* ldump.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ldump.c; sourceTree = "<group>"; };
+		65B8862718558C210043C42C /* lfunc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lfunc.c; sourceTree = "<group>"; };
+		65B8862818558C210043C42C /* lfunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lfunc.h; sourceTree = "<group>"; };
+		65B8862918558C210043C42C /* lgc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lgc.c; sourceTree = "<group>"; };
+		65B8862A18558C210043C42C /* lgc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lgc.h; sourceTree = "<group>"; };
+		65B8862B18558C210043C42C /* linit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = linit.c; sourceTree = "<group>"; };
+		65B8862C18558C210043C42C /* liolib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = liolib.c; sourceTree = "<group>"; };
+		65B8862D18558C210043C42C /* llex.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = llex.c; sourceTree = "<group>"; };
+		65B8862E18558C210043C42C /* llex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = llex.h; sourceTree = "<group>"; };
+		65B8862F18558C210043C42C /* llimits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = llimits.h; sourceTree = "<group>"; };
+		65B8863018558C210043C42C /* lmathlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lmathlib.c; sourceTree = "<group>"; };
+		65B8863118558C210043C42C /* lmem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lmem.c; sourceTree = "<group>"; };
+		65B8863218558C210043C42C /* lmem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lmem.h; sourceTree = "<group>"; };
+		65B8863318558C210043C42C /* loadlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = loadlib.c; sourceTree = "<group>"; };
+		65B8863418558C210043C42C /* lobject.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lobject.c; sourceTree = "<group>"; };
+		65B8863518558C210043C42C /* lobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lobject.h; sourceTree = "<group>"; };
+		65B8863618558C210043C42C /* lopcodes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lopcodes.c; sourceTree = "<group>"; };
+		65B8863718558C210043C42C /* lopcodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lopcodes.h; sourceTree = "<group>"; };
+		65B8863818558C210043C42C /* loslib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = loslib.c; sourceTree = "<group>"; };
+		65B8863918558C210043C42C /* lparser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lparser.c; sourceTree = "<group>"; };
+		65B8863A18558C210043C42C /* lparser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lparser.h; sourceTree = "<group>"; };
+		65B8863B18558C210043C42C /* lstate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lstate.c; sourceTree = "<group>"; };
+		65B8863C18558C210043C42C /* lstate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lstate.h; sourceTree = "<group>"; };
+		65B8863D18558C210043C42C /* lstring.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lstring.c; sourceTree = "<group>"; };
+		65B8863E18558C210043C42C /* lstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lstring.h; sourceTree = "<group>"; };
+		65B8863F18558C210043C42C /* lstrlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lstrlib.c; sourceTree = "<group>"; };
+		65B8864018558C210043C42C /* ltable.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ltable.c; sourceTree = "<group>"; };
+		65B8864118558C210043C42C /* ltable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ltable.h; sourceTree = "<group>"; };
+		65B8864218558C210043C42C /* ltablib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ltablib.c; sourceTree = "<group>"; };
+		65B8864318558C210043C42C /* ltm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ltm.c; sourceTree = "<group>"; };
+		65B8864418558C210043C42C /* ltm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ltm.h; sourceTree = "<group>"; };
+		65B8864518558C210043C42C /* lua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua.h; sourceTree = "<group>"; };
+		65B8864618558C210043C42C /* luaconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = luaconf.h; sourceTree = "<group>"; };
+		65B8864718558C210043C42C /* lualib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lualib.h; sourceTree = "<group>"; };
+		65B8864818558C210043C42C /* lundump.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lundump.c; sourceTree = "<group>"; };
+		65B8864918558C210043C42C /* lundump.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lundump.h; sourceTree = "<group>"; };
+		65B8864A18558C210043C42C /* lvm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lvm.c; sourceTree = "<group>"; };
+		65B8864B18558C210043C42C /* lvm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lvm.h; sourceTree = "<group>"; };
+		65B8864C18558C210043C42C /* lzio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lzio.c; sourceTree = "<group>"; };
+		65B8864D18558C210043C42C /* lzio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzio.h; sourceTree = "<group>"; };
+		65B8864E18558C210043C42C /* print.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = print.c; sourceTree = "<group>"; };
+		65B8864F18558C210043C42C /* wax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wax.h; sourceTree = "<group>"; };
+		65B8865018558C210043C42C /* wax.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wax.m; sourceTree = "<group>"; };
+		65B8865118558C210043C42C /* wax_class.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wax_class.h; sourceTree = "<group>"; };
+		65B8865218558C210043C42C /* wax_class.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wax_class.m; sourceTree = "<group>"; };
+		65B8865318558C210043C42C /* wax_gc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wax_gc.h; sourceTree = "<group>"; };
+		65B8865418558C210043C42C /* wax_gc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wax_gc.m; sourceTree = "<group>"; };
+		65B8865518558C210043C42C /* wax_helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wax_helpers.h; sourceTree = "<group>"; };
+		65B8865618558C210043C42C /* wax_helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wax_helpers.m; sourceTree = "<group>"; };
+		65B8865718558C210043C42C /* wax_instance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wax_instance.h; sourceTree = "<group>"; };
+		65B8865818558C210043C42C /* wax_instance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wax_instance.m; sourceTree = "<group>"; };
+		65B8865918558C210043C42C /* wax_server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wax_server.h; sourceTree = "<group>"; };
+		65B8865A18558C210043C42C /* wax_server.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wax_server.m; sourceTree = "<group>"; };
+		65B8865B18558C210043C42C /* wax_stdlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wax_stdlib.h; sourceTree = "<group>"; };
+		65B8865C18558C210043C42C /* wax_struct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wax_struct.h; sourceTree = "<group>"; };
+		65B8865D18558C210043C42C /* wax_struct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wax_struct.m; sourceTree = "<group>"; };
+		65B886AE18558CE40043C42C /* ProtocolLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtocolLoader.h; sourceTree = "<group>"; };
+		65B886B1185592E60043C42C /* yajl_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yajl_common.h; sourceTree = "<group>"; };
+		65B886B2185592E60043C42C /* yajl_gen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yajl_gen.h; sourceTree = "<group>"; };
+		65B886B3185592E60043C42C /* yajl_parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yajl_parse.h; path = api/yajl_parse.h; sourceTree = "<group>"; };
+		65B886B4185592E60043C42C /* yajl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yajl.c; sourceTree = "<group>"; };
+		65B886B5185592E60043C42C /* yajl_alloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yajl_alloc.c; sourceTree = "<group>"; };
+		65B886B6185592E60043C42C /* yajl_alloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yajl_alloc.h; sourceTree = "<group>"; };
+		65B886B7185592E60043C42C /* yajl_buf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yajl_buf.c; sourceTree = "<group>"; };
+		65B886B8185592E60043C42C /* yajl_buf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yajl_buf.h; sourceTree = "<group>"; };
+		65B886B9185592E60043C42C /* yajl_bytestack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yajl_bytestack.h; sourceTree = "<group>"; };
+		65B886BA185592E60043C42C /* yajl_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yajl_common.h; sourceTree = "<group>"; };
+		65B886BB185592E60043C42C /* yajl_encode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yajl_encode.c; sourceTree = "<group>"; };
+		65B886BC185592E60043C42C /* yajl_encode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yajl_encode.h; sourceTree = "<group>"; };
+		65B886BD185592E60043C42C /* yajl_gen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yajl_gen.c; sourceTree = "<group>"; };
+		65B886BE185592E60043C42C /* yajl_gen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yajl_gen.h; sourceTree = "<group>"; };
+		65B886BF185592E60043C42C /* yajl_lex.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yajl_lex.c; sourceTree = "<group>"; };
+		65B886C0185592E60043C42C /* yajl_lex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yajl_lex.h; sourceTree = "<group>"; };
+		65B886C2185592E60043C42C /* yajl_parser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yajl_parser.c; sourceTree = "<group>"; };
+		65B886C3185592E60043C42C /* yajl_parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yajl_parser.h; sourceTree = "<group>"; };
+		65B886D6185594890043C42C /* CTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTViewController.h; sourceTree = "<group>"; };
+		65B886D7185594890043C42C /* CTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTViewController.m; sourceTree = "<group>"; };
+		65B886D8185594890043C42C /* messageBoxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = messageBoxViewController.h; sourceTree = "<group>"; };
+		65B886D9185594890043C42C /* messageBoxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = messageBoxViewController.m; sourceTree = "<group>"; };
+		65B886DA185594890043C42C /* messageBoxViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = messageBoxViewController.xib; sourceTree = "<group>"; };
+		65B886DB185594890043C42C /* wax_CTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wax_CTViewController.h; sourceTree = "<group>"; };
+		65B886DC185594890043C42C /* wax_CTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wax_CTViewController.m; sourceTree = "<group>"; };
+		65B886E31855973C0043C42C /* WXDAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDAppDelegate.h; sourceTree = "<group>"; };
+		65B886E41855973C0043C42C /* WXDAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDAppDelegate.m; sourceTree = "<group>"; };
+		65B886ED185598BF0043C42C /* CTView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTView.h; sourceTree = "<group>"; };
+		65B886EE185598BF0043C42C /* CTView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTView.m; sourceTree = "<group>"; };
+		65B886EF185598BF0043C42C /* wax_CTView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wax_CTView.h; sourceTree = "<group>"; };
+		65B886F0185598BF0043C42C /* wax_CTView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wax_CTView.m; sourceTree = "<group>"; };
+		65B886FC18559D4B0043C42C /* WXDConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDConfig.h; sourceTree = "<group>"; };
+		65D7129A18DA8FC9006B4D46 /* WXDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDLoginViewController.h; sourceTree = "<group>"; };
+		65D7129B18DA8FC9006B4D46 /* WXDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDLoginViewController.m; sourceTree = "<group>"; };
+		65D7129C18DA8FC9006B4D46 /* WXDLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WXDLoginViewController.xib; sourceTree = "<group>"; };
+		65D7129E18DA8FC9006B4D46 /* WXDProjectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDProjectTableViewCell.h; sourceTree = "<group>"; };
+		65D7129F18DA8FC9006B4D46 /* WXDProjectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDProjectTableViewCell.m; sourceTree = "<group>"; };
+		65D712A018DA8FC9006B4D46 /* WXDProjectTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WXDProjectTableViewCell.xib; sourceTree = "<group>"; };
+		65D712A318DA8FC9006B4D46 /* WXDProjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDProjectsViewController.h; sourceTree = "<group>"; };
+		65D712A418DA8FC9006B4D46 /* WXDProjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDProjectsViewController.m; sourceTree = "<group>"; };
+		65D712A518DA8FC9006B4D46 /* WXDProjectsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WXDProjectsViewController.xib; sourceTree = "<group>"; };
+		65D712A718DA8FC9006B4D46 /* WXDSignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDSignupViewController.h; sourceTree = "<group>"; };
+		65D712A818DA8FC9006B4D46 /* WXDSignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDSignupViewController.m; sourceTree = "<group>"; };
+		65D712A918DA8FC9006B4D46 /* WXDSignupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WXDSignupViewController.xib; sourceTree = "<group>"; };
+		65D712AB18DA8FC9006B4D46 /* WXDChangePswViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDChangePswViewController.h; sourceTree = "<group>"; };
+		65D712AC18DA8FC9006B4D46 /* WXDChangePswViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDChangePswViewController.m; sourceTree = "<group>"; };
+		65D712AD18DA8FC9006B4D46 /* WXDChangePswViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WXDChangePswViewController.xib; sourceTree = "<group>"; };
+		65D712B418DA8FC9006B4D46 /* WXDSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDSettingViewController.h; sourceTree = "<group>"; };
+		65D712B518DA8FC9006B4D46 /* WXDSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDSettingViewController.m; sourceTree = "<group>"; };
+		65D712B618DA8FC9006B4D46 /* WXDSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WXDSettingViewController.xib; sourceTree = "<group>"; };
+		65D712C818DA9003006B4D46 /* WXDBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDBaseViewController.h; sourceTree = "<group>"; };
+		65D712C918DA9003006B4D46 /* WXDBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDBaseViewController.m; sourceTree = "<group>"; };
+		F711872618BB3C2D00D20749 /* Checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Checked.png; sourceTree = "<group>"; };
+		F732F721190A2FFE00BF14C6 /* Protoshop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Protoshop.entitlements; sourceTree = "<group>"; };
+		F742F1B319051BE900F00AA6 /* UINavigationController+hlyu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+hlyu.h"; sourceTree = "<group>"; };
+		F742F1B419051BE900F00AA6 /* UINavigationController+hlyu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+hlyu.m"; sourceTree = "<group>"; };
+		F74C5D4018BC763F00C871ED /* Checked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checked@2x.png"; sourceTree = "<group>"; };
+		F7692B081817B4C40076526D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		F7692B0A1817B4D00076526D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F7692B0E1817B53E0076526D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F7692B101817B5550076526D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F7692B141817BC220076526D /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		F7A1633B188EA63A00C3A984 /* Protoshop-text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Protoshop-text.png"; sourceTree = "<group>"; };
+		F7B6557B188D025900FD10A2 /* Candara.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Candara.ttf; sourceTree = "<group>"; };
+		F7B65584188D42D900FD10A2 /* icon-dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-dot.png"; sourceTree = "<group>"; };
+		F7B65586188D561900FD10A2 /* goBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goBack.png; sourceTree = "<group>"; };
+		F7BB7A9E17F2CE0C002B9222 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F7BB7AA017F2CE15002B9222 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		F7C1701918EBF358000111D1 /* authconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = authconfig.h; sourceTree = "<group>"; };
+		F7C1701A18EBF358000111D1 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		F7C1701B18EBF358000111D1 /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
+		F7C1701C18EBF358000111D1 /* CTAuthEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTAuthEngine.h; sourceTree = "<group>"; };
+		F7C1701D18EBF358000111D1 /* CTAuthEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTAuthEngine.m; sourceTree = "<group>"; };
+		F7C1701E18EBF358000111D1 /* CTLoginWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTLoginWebView.h; sourceTree = "<group>"; };
+		F7C1701F18EBF358000111D1 /* CTLoginWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTLoginWebView.m; sourceTree = "<group>"; };
+		F7C1702018EBF358000111D1 /* CTSSOAuthDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTSSOAuthDelegate.h; sourceTree = "<group>"; };
+		F7C1702118EBF358000111D1 /* CTSSOLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTSSOLoginView.h; sourceTree = "<group>"; };
+		F7C1702218EBF358000111D1 /* CTSSOLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTSSOLoginView.m; sourceTree = "<group>"; };
+		F7C1702418EBF358000111D1 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		F7C1702518EBF358000111D1 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		F7C1702618EBF358000111D1 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		F7C1702718EBF358000111D1 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		F7C1702818EBF358000111D1 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		F7C1702918EBF358000111D1 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		F7C1702A18EBF358000111D1 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		F7C1702B18EBF358000111D1 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		F7C1702C18EBF358000111D1 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		F7C1702D18EBF358000111D1 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		F7C1702E18EBF358000111D1 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		F7C1702F18EBF358000111D1 /* SSOAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSOAuthViewController.h; sourceTree = "<group>"; };
+		F7C1703018EBF358000111D1 /* SSOAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSOAuthViewController.m; sourceTree = "<group>"; };
+		F7C1703118EBF358000111D1 /* SSOAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSOAuthViewController.xib; sourceTree = "<group>"; };
+		F7CD13E418B4AA41003B0D27 /* DKLiveBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKLiveBlurView.h; sourceTree = "<group>"; };
+		F7CD13E518B4AA41003B0D27 /* DKLiveBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKLiveBlurView.m; sourceTree = "<group>"; };
+		F7CD13E618B4AA41003B0D27 /* ModalCloseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalCloseButton.h; sourceTree = "<group>"; };
+		F7CD13E718B4AA41003B0D27 /* ModalCloseButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalCloseButton.m; sourceTree = "<group>"; };
+		F7CD13E818B4AA41003B0D27 /* UIImage+Blur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Blur.h"; sourceTree = "<group>"; };
+		F7CD13E918B4AA41003B0D27 /* UIImage+Blur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Blur.m"; sourceTree = "<group>"; };
+		F7CD13EA18B4AA41003B0D27 /* UIView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Screenshot.h"; sourceTree = "<group>"; };
+		F7CD13EB18B4AA41003B0D27 /* UIView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Screenshot.m"; sourceTree = "<group>"; };
+		F7CD13EC18B4AA41003B0D27 /* UIViewController+popUpViewYu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+popUpViewYu.h"; sourceTree = "<group>"; };
+		F7CD13ED18B4AA41003B0D27 /* UIViewController+popUpViewYu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+popUpViewYu.m"; sourceTree = "<group>"; };
+		F7D631C81925A2E10065336A /* WXDMainTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDMainTableView.h; sourceTree = "<group>"; };
+		F7D631C91925A2E10065336A /* WXDMainTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDMainTableView.m; sourceTree = "<group>"; };
+		F7D631CE1925A47B0065336A /* WXDMTVLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDMTVLoadingView.h; sourceTree = "<group>"; };
+		F7D631CF1925A47B0065336A /* WXDMTVLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDMTVLoadingView.m; sourceTree = "<group>"; };
+		F7DCCB901889105E004BAF65 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F7DFADDD184EFD6D00F5E945 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F7ECC6921924B7E80015914B /* WXDAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDAnimation.h; sourceTree = "<group>"; };
+		F7F1567D193429DE0092D037 /* WXDAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDAboutViewController.h; sourceTree = "<group>"; };
+		F7F1567E193429DE0092D037 /* WXDAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDAboutViewController.m; sourceTree = "<group>"; };
+		F7F1567F193429DE0092D037 /* WXDAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WXDAboutViewController.xib; sourceTree = "<group>"; };
+		FF69D56ABB2241DCBA761319 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		57DA29CA1769C74D002C1F29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7DFADDE184EFD6D00F5E945 /* Security.framework in Frameworks */,
+				F7692B111817B5550076526D /* AudioToolbox.framework in Frameworks */,
+				F7692B0F1817B53E0076526D /* SystemConfiguration.framework in Frameworks */,
+				F7692B0B1817B4D00076526D /* AVFoundation.framework in Frameworks */,
+				F7692B091817B4C40076526D /* CFNetwork.framework in Frameworks */,
+				F7BB7AA117F2CE15002B9222 /* Accelerate.framework in Frameworks */,
+				F7BB7A9F17F2CE0C002B9222 /* QuartzCore.framework in Frameworks */,
+				574ECCD31771867A0095CED4 /* libxml2.2.dylib in Frameworks */,
+				57DA2AAA1769C7F2002C1F29 /* libz.dylib in Frameworks */,
+				57DA29D11769C74D002C1F29 /* UIKit.framework in Frameworks */,
+				57DA29D31769C74D002C1F29 /* Foundation.framework in Frameworks */,
+				57DA29D51769C74D002C1F29 /* CoreGraphics.framework in Frameworks */,
+				655B7EE818DC1FC90033FA68 /* libCrittercism_v4_3_2.a in Frameworks */,
+				078160EBCDDB4AAE82406B72 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		653AEAAE18E19A310052FF74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				653AEAAF18E19A310052FF74 /* Security.framework in Frameworks */,
+				653AEAB018E19A310052FF74 /* AudioToolbox.framework in Frameworks */,
+				653AEAB118E19A310052FF74 /* SystemConfiguration.framework in Frameworks */,
+				653AEAB218E19A310052FF74 /* AVFoundation.framework in Frameworks */,
+				653AEAB318E19A310052FF74 /* CFNetwork.framework in Frameworks */,
+				653AEAB418E19A310052FF74 /* Accelerate.framework in Frameworks */,
+				653AEAB518E19A310052FF74 /* QuartzCore.framework in Frameworks */,
+				653AEAB618E19A310052FF74 /* libxml2.2.dylib in Frameworks */,
+				653AEAB718E19A310052FF74 /* libz.dylib in Frameworks */,
+				653AEAB818E19A310052FF74 /* UIKit.framework in Frameworks */,
+				653AEAB918E19A310052FF74 /* Foundation.framework in Frameworks */,
+				653AEABA18E19A310052FF74 /* CoreGraphics.framework in Frameworks */,
+				653AEABB18E19A310052FF74 /* libCrittercism_v4_3_2.a in Frameworks */,
+				47FC41D8873F4179B3510C5D /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		653AEB4118E19A590052FF74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				653AEB4218E19A590052FF74 /* Security.framework in Frameworks */,
+				653AEB4318E19A590052FF74 /* AudioToolbox.framework in Frameworks */,
+				653AEB4418E19A590052FF74 /* SystemConfiguration.framework in Frameworks */,
+				653AEB4518E19A590052FF74 /* AVFoundation.framework in Frameworks */,
+				653AEB4618E19A590052FF74 /* CFNetwork.framework in Frameworks */,
+				653AEB4718E19A590052FF74 /* Accelerate.framework in Frameworks */,
+				653AEB4818E19A590052FF74 /* QuartzCore.framework in Frameworks */,
+				653AEB4918E19A590052FF74 /* libxml2.2.dylib in Frameworks */,
+				653AEB4A18E19A590052FF74 /* libz.dylib in Frameworks */,
+				653AEB4B18E19A590052FF74 /* UIKit.framework in Frameworks */,
+				653AEB4C18E19A590052FF74 /* Foundation.framework in Frameworks */,
+				653AEB4D18E19A590052FF74 /* CoreGraphics.framework in Frameworks */,
+				653AEB4E18E19A590052FF74 /* libCrittercism_v4_3_2.a in Frameworks */,
+				34D73580286F4C8ABB27EF2E /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		57DA29C41769C74D002C1F29 = {
+			isa = PBXGroup;
+			children = (
+				F732F721190A2FFE00BF14C6 /* Protoshop.entitlements */,
+				57DA29D61769C74D002C1F29 /* DynamicApp */,
+				65B8857418558B050043C42C /* libs */,
+				F7692B121817BC220076526D /* resource */,
+				57DA29CF1769C74D002C1F29 /* Frameworks */,
+				57DA29CE1769C74D002C1F29 /* Products */,
+				FF69D56ABB2241DCBA761319 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		57DA29CE1769C74D002C1F29 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				57DA29CD1769C74D002C1F29 /* Protoshop.app */,
+				653AEAD918E19A310052FF74 /* Protoshop copy.app */,
+				653AEB6C18E19A590052FF74 /* Protoshop copy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		57DA29CF1769C74D002C1F29 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				574ECCD21771867A0095CED4 /* libxml2.2.dylib */,
+				57DA2AA91769C7F2002C1F29 /* libz.dylib */,
+				F7DFADDD184EFD6D00F5E945 /* Security.framework */,
+				F7692B101817B5550076526D /* AudioToolbox.framework */,
+				F7692B0E1817B53E0076526D /* SystemConfiguration.framework */,
+				F7692B0A1817B4D00076526D /* AVFoundation.framework */,
+				F7692B081817B4C40076526D /* CFNetwork.framework */,
+				F7BB7AA017F2CE15002B9222 /* Accelerate.framework */,
+				F7BB7A9E17F2CE0C002B9222 /* QuartzCore.framework */,
+				57DA29D01769C74D002C1F29 /* UIKit.framework */,
+				57DA29D21769C74D002C1F29 /* Foundation.framework */,
+				57DA29D41769C74D002C1F29 /* CoreGraphics.framework */,
+				35DBCE08DB614B69BFA15144 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		57DA29D61769C74D002C1F29 /* DynamicApp */ = {
+			isa = PBXGroup;
+			children = (
+				65B886E31855973C0043C42C /* WXDAppDelegate.h */,
+				65B886E41855973C0043C42C /* WXDAppDelegate.m */,
+				65D7129718DA8FC9006B4D46 /* UI */,
+				656FBF6218D6D6B200E1F41E /* command */,
+				F7CD13D518B4989B003B0D27 /* Data */,
+				F7BF90D418B34F7000C437FE /* Utils */,
+				65B886FB18559D2B0043C42C /* config */,
+				57DA29D71769C74D002C1F29 /* Supporting Files */,
+			);
+			path = DynamicApp;
+			sourceTree = "<group>";
+		};
+		57DA29D71769C74D002C1F29 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				658380E71935B47D0028ED6E /* Default.png */,
+				653AEB7018E19B6D0052FF74 /* Protoshop-Info-AppStore.plist */,
+				653AEB6E18E19B630052FF74 /* Protoshop-Info-AdHoc.plist */,
+				F7DCCB901889105E004BAF65 /* Default-568h@2x.png */,
+				57DA29D81769C74D002C1F29 /* Protoshop-Info.plist */,
+				57DA29DC1769C74D002C1F29 /* main.m */,
+				57DA29DE1769C74D002C1F29 /* Protoshop-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		655B7EE118DC1FC90033FA68 /* CrittercismSDK */ = {
+			isa = PBXGroup;
+			children = (
+				655B7EE218DC1FC90033FA68 /* CRFilter.h */,
+				655B7EE318DC1FC90033FA68 /* Crittercism.h */,
+				655B7EE418DC1FC90033FA68 /* CrittercismDelegate.h */,
+				655B7EE518DC1FC90033FA68 /* dsym_upload.sh */,
+				655B7EE618DC1FC90033FA68 /* libCrittercism_v4_3_2.a */,
+			);
+			path = CrittercismSDK;
+			sourceTree = "<group>";
+		};
+		655E452D18C86CDD00CF6348 /* DAProgressOverlayView */ = {
+			isa = PBXGroup;
+			children = (
+				655E452E18C86CDD00CF6348 /* DAProgressOverlayView.h */,
+				655E452F18C86CDD00CF6348 /* DAProgressOverlayView.m */,
+			);
+			path = DAProgressOverlayView;
+			sourceTree = "<group>";
+		};
+		655E453118C86D6700CF6348 /* WXDGradualView */ = {
+			isa = PBXGroup;
+			children = (
+				655E453218C86D6700CF6348 /* WXDGradualView.h */,
+				655E453318C86D6700CF6348 /* WXDGradualView.m */,
+			);
+			path = WXDGradualView;
+			sourceTree = "<group>";
+		};
+		655E453518C8791700CF6348 /* WXDProjectInfo */ = {
+			isa = PBXGroup;
+			children = (
+				655E453618C8791700CF6348 /* WXDProjectInfo.h */,
+				655E453718C8791700CF6348 /* WXDProjectInfo.m */,
+			);
+			path = WXDProjectInfo;
+			sourceTree = "<group>";
+		};
+		655E453918C8803200CF6348 /* WXDFileKey */ = {
+			isa = PBXGroup;
+			children = (
+				655E453A18C8803200CF6348 /* WXDFileKey.h */,
+				655E453B18C8803200CF6348 /* WXDFileKey.m */,
+			);
+			path = WXDFileKey;
+			sourceTree = "<group>";
+		};
+		656FBF6218D6D6B200E1F41E /* command */ = {
+			isa = PBXGroup;
+			children = (
+				656FBF6318D6D9BD00E1F41E /* WXDRequestCommand.h */,
+				656FBF6418D6D9BD00E1F41E /* WXDRequestCommand.m */,
+			);
+			path = command;
+			sourceTree = "<group>";
+		};
+		657C045618D2F369006BECAB /* WXDUserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				657C045718D2F369006BECAB /* WXDUserInfo.h */,
+				657C045818D2F369006BECAB /* WXDUserInfo.m */,
+			);
+			path = WXDUserInfo;
+			sourceTree = "<group>";
+		};
+		6585CD6218D1B10E00F7DB04 /* WXDBaseInfo */ = {
+			isa = PBXGroup;
+			children = (
+				6585CD6318D1B13500F7DB04 /* WXDBaseInfo.h */,
+				6585CD6418D1B13500F7DB04 /* WXDBaseInfo.m */,
+			);
+			path = WXDBaseInfo;
+			sourceTree = "<group>";
+		};
+		6585CD6618D1B3DF00F7DB04 /* WXDBaseResultInfo */ = {
+			isa = PBXGroup;
+			children = (
+				6585CD6718D1B41300F7DB04 /* WXDBaseResultInfo.h */,
+				6585CD6818D1B41300F7DB04 /* WXDBaseResultInfo.m */,
+			);
+			path = WXDBaseResultInfo;
+			sourceTree = "<group>";
+		};
+		6585CD6A18D1BA2300F7DB04 /* WXDStringUtility */ = {
+			isa = PBXGroup;
+			children = (
+				6585CD6B18D1BA5B00F7DB04 /* WXDStringUtility.h */,
+				6585CD6C18D1BA5B00F7DB04 /* WXDStringUtility.m */,
+			);
+			path = WXDStringUtility;
+			sourceTree = "<group>";
+		};
+		65B8857418558B050043C42C /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				F7C1701818EBF358000111D1 /* SSOSDK */,
+				655B7EE118DC1FC90033FA68 /* CrittercismSDK */,
+				655E453118C86D6700CF6348 /* WXDGradualView */,
+				F7CD13E318B4AA41003B0D27 /* PopUpAPI */,
+				655E452D18C86CDD00CF6348 /* DAProgressOverlayView */,
+				65B8858B18558B050043C42C /* SVProgressHUD */,
+				65B885AF18558C200043C42C /* wax */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		65B8858B18558B050043C42C /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				65B8858C18558B050043C42C /* SVProgressHUD.bundle */,
+				65B8858D18558B050043C42C /* SVProgressHUD.h */,
+				65B8858E18558B050043C42C /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		65B885AF18558C200043C42C /* wax */ = {
+			isa = PBXGroup;
+			children = (
+				65B885B018558C200043C42C /* extensions */,
+				65B8861918558C210043C42C /* lua */,
+				65B8864F18558C210043C42C /* wax.h */,
+				65B8865018558C210043C42C /* wax.m */,
+				65B8865118558C210043C42C /* wax_class.h */,
+				65B8865218558C210043C42C /* wax_class.m */,
+				65B8865318558C210043C42C /* wax_gc.h */,
+				65B8865418558C210043C42C /* wax_gc.m */,
+				65B8865518558C210043C42C /* wax_helpers.h */,
+				65B8865618558C210043C42C /* wax_helpers.m */,
+				65B8865718558C210043C42C /* wax_instance.h */,
+				65B8865818558C210043C42C /* wax_instance.m */,
+				65B8865918558C210043C42C /* wax_server.h */,
+				65B8865A18558C210043C42C /* wax_server.m */,
+				65B8865B18558C210043C42C /* wax_stdlib.h */,
+				65B8865C18558C210043C42C /* wax_struct.h */,
+				65B8865D18558C210043C42C /* wax_struct.m */,
+				65B886AE18558CE40043C42C /* ProtocolLoader.h */,
+			);
+			path = wax;
+			sourceTree = "<group>";
+		};
+		65B885B018558C200043C42C /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				65B886EC185598BF0043C42C /* CTView */,
+				65B886D5185594890043C42C /* CTViewController */,
+				65B885BE18558C210043C42C /* CGAffine */,
+				65B885C118558C210043C42C /* CGContext */,
+				65B885CF18558C210043C42C /* filesystem */,
+				65B885DC18558C210043C42C /* HTTP */,
+				65B885E618558C210043C42C /* json */,
+				65B8861618558C210043C42C /* xml */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		65B885BE18558C210043C42C /* CGAffine */ = {
+			isa = PBXGroup;
+			children = (
+				65B885BF18558C210043C42C /* wax_CGTransform.h */,
+				65B885C018558C210043C42C /* wax_CGTransform.m */,
+			);
+			path = CGAffine;
+			sourceTree = "<group>";
+		};
+		65B885C118558C210043C42C /* CGContext */ = {
+			isa = PBXGroup;
+			children = (
+				65B885C218558C210043C42C /* wax_CGContext.h */,
+				65B885C318558C210043C42C /* wax_CGContext.m */,
+			);
+			path = CGContext;
+			sourceTree = "<group>";
+		};
+		65B885CF18558C210043C42C /* filesystem */ = {
+			isa = PBXGroup;
+			children = (
+				65B885D018558C210043C42C /* wax_filesystem.h */,
+				65B885D118558C210043C42C /* wax_filesystem.m */,
+			);
+			path = filesystem;
+			sourceTree = "<group>";
+		};
+		65B885DC18558C210043C42C /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				65B885DD18558C210043C42C /* wax_http.h */,
+				65B885DE18558C210043C42C /* wax_http.m */,
+				65B885DF18558C210043C42C /* wax_http_connection.h */,
+				65B885E018558C210043C42C /* wax_http_connection.m */,
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
+		65B885E618558C210043C42C /* json */ = {
+			isa = PBXGroup;
+			children = (
+				65B886AF185592E60043C42C /* yajl */,
+				65B885E818558C210043C42C /* wax_json.c */,
+				65B885E918558C210043C42C /* wax_json.h */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
+		65B8861618558C210043C42C /* xml */ = {
+			isa = PBXGroup;
+			children = (
+				65B8861718558C210043C42C /* wax_xml.h */,
+				65B8861818558C210043C42C /* wax_xml.m */,
+			);
+			path = xml;
+			sourceTree = "<group>";
+		};
+		65B8861918558C210043C42C /* lua */ = {
+			isa = PBXGroup;
+			children = (
+				65B8861A18558C210043C42C /* lapi.c */,
+				65B8861B18558C210043C42C /* lapi.h */,
+				65B8861C18558C210043C42C /* lauxlib.c */,
+				65B8861D18558C210043C42C /* lauxlib.h */,
+				65B8861E18558C210043C42C /* lbaselib.c */,
+				65B8861F18558C210043C42C /* lcode.c */,
+				65B8862018558C210043C42C /* lcode.h */,
+				65B8862118558C210043C42C /* ldblib.c */,
+				65B8862218558C210043C42C /* ldebug.c */,
+				65B8862318558C210043C42C /* ldebug.h */,
+				65B8862418558C210043C42C /* ldo.c */,
+				65B8862518558C210043C42C /* ldo.h */,
+				65B8862618558C210043C42C /* ldump.c */,
+				65B8862718558C210043C42C /* lfunc.c */,
+				65B8862818558C210043C42C /* lfunc.h */,
+				65B8862918558C210043C42C /* lgc.c */,
+				65B8862A18558C210043C42C /* lgc.h */,
+				65B8862B18558C210043C42C /* linit.c */,
+				65B8862C18558C210043C42C /* liolib.c */,
+				65B8862D18558C210043C42C /* llex.c */,
+				65B8862E18558C210043C42C /* llex.h */,
+				65B8862F18558C210043C42C /* llimits.h */,
+				65B8863018558C210043C42C /* lmathlib.c */,
+				65B8863118558C210043C42C /* lmem.c */,
+				65B8863218558C210043C42C /* lmem.h */,
+				65B8863318558C210043C42C /* loadlib.c */,
+				65B8863418558C210043C42C /* lobject.c */,
+				65B8863518558C210043C42C /* lobject.h */,
+				65B8863618558C210043C42C /* lopcodes.c */,
+				65B8863718558C210043C42C /* lopcodes.h */,
+				65B8863818558C210043C42C /* loslib.c */,
+				65B8863918558C210043C42C /* lparser.c */,
+				65B8863A18558C210043C42C /* lparser.h */,
+				65B8863B18558C210043C42C /* lstate.c */,
+				65B8863C18558C210043C42C /* lstate.h */,
+				65B8863D18558C210043C42C /* lstring.c */,
+				65B8863E18558C210043C42C /* lstring.h */,
+				65B8863F18558C210043C42C /* lstrlib.c */,
+				65B8864018558C210043C42C /* ltable.c */,
+				65B8864118558C210043C42C /* ltable.h */,
+				65B8864218558C210043C42C /* ltablib.c */,
+				65B8864318558C210043C42C /* ltm.c */,
+				65B8864418558C210043C42C /* ltm.h */,
+				65B8864518558C210043C42C /* lua.h */,
+				65B8864618558C210043C42C /* luaconf.h */,
+				65B8864718558C210043C42C /* lualib.h */,
+				65B8864818558C210043C42C /* lundump.c */,
+				65B8864918558C210043C42C /* lundump.h */,
+				65B8864A18558C210043C42C /* lvm.c */,
+				65B8864B18558C210043C42C /* lvm.h */,
+				65B8864C18558C210043C42C /* lzio.c */,
+				65B8864D18558C210043C42C /* lzio.h */,
+				65B8864E18558C210043C42C /* print.c */,
+			);
+			path = lua;
+			sourceTree = "<group>";
+		};
+		65B886AF185592E60043C42C /* yajl */ = {
+			isa = PBXGroup;
+			children = (
+				65B886B0185592E60043C42C /* api */,
+				65B886B4185592E60043C42C /* yajl.c */,
+				65B886B5185592E60043C42C /* yajl_alloc.c */,
+				65B886B6185592E60043C42C /* yajl_alloc.h */,
+				65B886B7185592E60043C42C /* yajl_buf.c */,
+				65B886B8185592E60043C42C /* yajl_buf.h */,
+				65B886B9185592E60043C42C /* yajl_bytestack.h */,
+				65B886BA185592E60043C42C /* yajl_common.h */,
+				65B886BB185592E60043C42C /* yajl_encode.c */,
+				65B886BC185592E60043C42C /* yajl_encode.h */,
+				65B886BD185592E60043C42C /* yajl_gen.c */,
+				65B886BE185592E60043C42C /* yajl_gen.h */,
+				65B886BF185592E60043C42C /* yajl_lex.c */,
+				65B886C0185592E60043C42C /* yajl_lex.h */,
+				65B886B3185592E60043C42C /* yajl_parse.h */,
+				65B886C2185592E60043C42C /* yajl_parser.c */,
+				65B886C3185592E60043C42C /* yajl_parser.h */,
+			);
+			path = yajl;
+			sourceTree = "<group>";
+		};
+		65B886B0185592E60043C42C /* api */ = {
+			isa = PBXGroup;
+			children = (
+				65B886B1185592E60043C42C /* yajl_common.h */,
+				65B886B2185592E60043C42C /* yajl_gen.h */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		65B886D5185594890043C42C /* CTViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F742F1B319051BE900F00AA6 /* UINavigationController+hlyu.h */,
+				F742F1B419051BE900F00AA6 /* UINavigationController+hlyu.m */,
+				65B886D6185594890043C42C /* CTViewController.h */,
+				65B886D7185594890043C42C /* CTViewController.m */,
+				65B886D8185594890043C42C /* messageBoxViewController.h */,
+				65B886D9185594890043C42C /* messageBoxViewController.m */,
+				65B886DA185594890043C42C /* messageBoxViewController.xib */,
+				65B886DB185594890043C42C /* wax_CTViewController.h */,
+				65B886DC185594890043C42C /* wax_CTViewController.m */,
+			);
+			path = CTViewController;
+			sourceTree = "<group>";
+		};
+		65B886EC185598BF0043C42C /* CTView */ = {
+			isa = PBXGroup;
+			children = (
+				F7ECC6921924B7E80015914B /* WXDAnimation.h */,
+				65B886ED185598BF0043C42C /* CTView.h */,
+				65B886EE185598BF0043C42C /* CTView.m */,
+				65B886EF185598BF0043C42C /* wax_CTView.h */,
+				65B886F0185598BF0043C42C /* wax_CTView.m */,
+			);
+			path = CTView;
+			sourceTree = "<group>";
+		};
+		65B886FB18559D2B0043C42C /* config */ = {
+			isa = PBXGroup;
+			children = (
+				65B886FC18559D4B0043C42C /* WXDConfig.h */,
+				656FBF5918D69AFD00E1F41E /* WXDConst.h */,
+			);
+			path = config;
+			sourceTree = SOURCE_ROOT;
+		};
+		65D7129718DA8FC9006B4D46 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				65D7129818DA8FC9006B4D46 /* UIBase */,
+				65D7129918DA8FC9006B4D46 /* WXDLoginViewController */,
+				65D7129D18DA8FC9006B4D46 /* WXDProjectViewController */,
+				65D712A618DA8FC9006B4D46 /* WXDRegisterViewController */,
+				65D712AA18DA8FC9006B4D46 /* WXDSettingViewController */,
+				F7F1567C193429A30092D037 /* WXDAboutViewController */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		65D7129818DA8FC9006B4D46 /* UIBase */ = {
+			isa = PBXGroup;
+			children = (
+				65D712C818DA9003006B4D46 /* WXDBaseViewController.h */,
+				65D712C918DA9003006B4D46 /* WXDBaseViewController.m */,
+			);
+			path = UIBase;
+			sourceTree = "<group>";
+		};
+		65D7129918DA8FC9006B4D46 /* WXDLoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				65D7129A18DA8FC9006B4D46 /* WXDLoginViewController.h */,
+				65D7129B18DA8FC9006B4D46 /* WXDLoginViewController.m */,
+				65D7129C18DA8FC9006B4D46 /* WXDLoginViewController.xib */,
+			);
+			path = WXDLoginViewController;
+			sourceTree = "<group>";
+		};
+		65D7129D18DA8FC9006B4D46 /* WXDProjectViewController */ = {
+			isa = PBXGroup;
+			children = (
+				65D7129E18DA8FC9006B4D46 /* WXDProjectTableViewCell.h */,
+				65D7129F18DA8FC9006B4D46 /* WXDProjectTableViewCell.m */,
+				65D712A018DA8FC9006B4D46 /* WXDProjectTableViewCell.xib */,
+				F7D631C81925A2E10065336A /* WXDMainTableView.h */,
+				F7D631C91925A2E10065336A /* WXDMainTableView.m */,
+				F7D631CE1925A47B0065336A /* WXDMTVLoadingView.h */,
+				F7D631CF1925A47B0065336A /* WXDMTVLoadingView.m */,
+				65D712A318DA8FC9006B4D46 /* WXDProjectsViewController.h */,
+				65D712A418DA8FC9006B4D46 /* WXDProjectsViewController.m */,
+				65D712A518DA8FC9006B4D46 /* WXDProjectsViewController.xib */,
+			);
+			path = WXDProjectViewController;
+			sourceTree = "<group>";
+		};
+		65D712A618DA8FC9006B4D46 /* WXDRegisterViewController */ = {
+			isa = PBXGroup;
+			children = (
+				65D712A718DA8FC9006B4D46 /* WXDSignupViewController.h */,
+				65D712A818DA8FC9006B4D46 /* WXDSignupViewController.m */,
+				65D712A918DA8FC9006B4D46 /* WXDSignupViewController.xib */,
+			);
+			path = WXDRegisterViewController;
+			sourceTree = "<group>";
+		};
+		65D712AA18DA8FC9006B4D46 /* WXDSettingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				65D712AB18DA8FC9006B4D46 /* WXDChangePswViewController.h */,
+				65D712AC18DA8FC9006B4D46 /* WXDChangePswViewController.m */,
+				65D712AD18DA8FC9006B4D46 /* WXDChangePswViewController.xib */,
+				65D712B418DA8FC9006B4D46 /* WXDSettingViewController.h */,
+				65D712B518DA8FC9006B4D46 /* WXDSettingViewController.m */,
+				65D712B618DA8FC9006B4D46 /* WXDSettingViewController.xib */,
+			);
+			path = WXDSettingViewController;
+			sourceTree = "<group>";
+		};
+		F7692B121817BC220076526D /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				F7692B131817BC220076526D /* font */,
+				F7692B151817BC220076526D /* images */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+		F7692B131817BC220076526D /* font */ = {
+			isa = PBXGroup;
+			children = (
+				F7B6557B188D025900FD10A2 /* Candara.ttf */,
+				F7692B141817BC220076526D /* FontAwesome.ttf */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
+		F7692B151817BC220076526D /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F711872618BB3C2D00D20749 /* Checked.png */,
+				F74C5D4018BC763F00C871ED /* Checked@2x.png */,
+				F7A1633B188EA63A00C3A984 /* Protoshop-text.png */,
+				F7B65586188D561900FD10A2 /* goBack.png */,
+				F7B65584188D42D900FD10A2 /* icon-dot.png */,
+				657A95BD1835F1B00035E15B /* icon-120.png */,
+				657A95BF1835F1B00035E15B /* icon.png */,
+				657A95C01835F1B00035E15B /* icon@2x.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		F7BF90D418B34F7000C437FE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6585CD6A18D1BA2300F7DB04 /* WXDStringUtility */,
+				655E453918C8803200CF6348 /* WXDFileKey */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F7C1701818EBF358000111D1 /* SSOSDK */ = {
+			isa = PBXGroup;
+			children = (
+				F7C1701918EBF358000111D1 /* authconfig.h */,
+				F7C1701A18EBF358000111D1 /* close.png */,
+				F7C1701B18EBF358000111D1 /* close@2x.png */,
+				F7C1701C18EBF358000111D1 /* CTAuthEngine.h */,
+				F7C1701D18EBF358000111D1 /* CTAuthEngine.m */,
+				F7C1701E18EBF358000111D1 /* CTLoginWebView.h */,
+				F7C1701F18EBF358000111D1 /* CTLoginWebView.m */,
+				F7C1702018EBF358000111D1 /* CTSSOAuthDelegate.h */,
+				F7C1702118EBF358000111D1 /* CTSSOLoginView.h */,
+				F7C1702218EBF358000111D1 /* CTSSOLoginView.m */,
+				F7C1702318EBF358000111D1 /* JSON */,
+				F7C1702F18EBF358000111D1 /* SSOAuthViewController.h */,
+				F7C1703018EBF358000111D1 /* SSOAuthViewController.m */,
+				F7C1703118EBF358000111D1 /* SSOAuthViewController.xib */,
+			);
+			path = SSOSDK;
+			sourceTree = "<group>";
+		};
+		F7C1702318EBF358000111D1 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				F7C1702418EBF358000111D1 /* JSON.h */,
+				F7C1702518EBF358000111D1 /* NSObject+SBJSON.h */,
+				F7C1702618EBF358000111D1 /* NSObject+SBJSON.m */,
+				F7C1702718EBF358000111D1 /* NSString+SBJSON.h */,
+				F7C1702818EBF358000111D1 /* NSString+SBJSON.m */,
+				F7C1702918EBF358000111D1 /* SBJsonBase.h */,
+				F7C1702A18EBF358000111D1 /* SBJsonBase.m */,
+				F7C1702B18EBF358000111D1 /* SBJsonParser.h */,
+				F7C1702C18EBF358000111D1 /* SBJsonParser.m */,
+				F7C1702D18EBF358000111D1 /* SBJsonWriter.h */,
+				F7C1702E18EBF358000111D1 /* SBJsonWriter.m */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		F7CD13D518B4989B003B0D27 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				6585CD6218D1B10E00F7DB04 /* WXDBaseInfo */,
+				6585CD6618D1B3DF00F7DB04 /* WXDBaseResultInfo */,
+				657C045618D2F369006BECAB /* WXDUserInfo */,
+				655E453518C8791700CF6348 /* WXDProjectInfo */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		F7CD13E318B4AA41003B0D27 /* PopUpAPI */ = {
+			isa = PBXGroup;
+			children = (
+				F7CD13E418B4AA41003B0D27 /* DKLiveBlurView.h */,
+				F7CD13E518B4AA41003B0D27 /* DKLiveBlurView.m */,
+				F7CD13E618B4AA41003B0D27 /* ModalCloseButton.h */,
+				F7CD13E718B4AA41003B0D27 /* ModalCloseButton.m */,
+				F7CD13E818B4AA41003B0D27 /* UIImage+Blur.h */,
+				F7CD13E918B4AA41003B0D27 /* UIImage+Blur.m */,
+				F7CD13EA18B4AA41003B0D27 /* UIView+Screenshot.h */,
+				F7CD13EB18B4AA41003B0D27 /* UIView+Screenshot.m */,
+				F7CD13EC18B4AA41003B0D27 /* UIViewController+popUpViewYu.h */,
+				F7CD13ED18B4AA41003B0D27 /* UIViewController+popUpViewYu.m */,
+			);
+			path = PopUpAPI;
+			sourceTree = "<group>";
+		};
+		F7F1567C193429A30092D037 /* WXDAboutViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F7F1567D193429DE0092D037 /* WXDAboutViewController.h */,
+				F7F1567E193429DE0092D037 /* WXDAboutViewController.m */,
+				F7F1567F193429DE0092D037 /* WXDAboutViewController.xib */,
+			);
+			path = WXDAboutViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		57DA29CC1769C74D002C1F29 /* Protoshop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57DA29F01769C74D002C1F29 /* Build configuration list for PBXNativeTarget "Protoshop" */;
+			buildPhases = (
+				8911C10D8E35409BB8C190FF /* Check Pods Manifest.lock */,
+				57DA29C91769C74D002C1F29 /* Sources */,
+				57DA29CA1769C74D002C1F29 /* Frameworks */,
+				57DA29CB1769C74D002C1F29 /* Resources */,
+				DE31F403FFAD415B9BF67966 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Protoshop;
+			productName = DynamicApp;
+			productReference = 57DA29CD1769C74D002C1F29 /* Protoshop.app */;
+			productType = "com.apple.product-type.application";
+		};
+		653AEA4818E19A310052FF74 /* Protoshop For AdHoc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 653AEAD618E19A310052FF74 /* Build configuration list for PBXNativeTarget "Protoshop For AdHoc" */;
+			buildPhases = (
+				25FA65352C2E453CAB452616 /* Check Pods Manifest.lock */,
+				653AEA4918E19A310052FF74 /* Sources */,
+				653AEAAE18E19A310052FF74 /* Frameworks */,
+				653AEABC18E19A310052FF74 /* Resources */,
+				8E12F4E5D14845FCBAE34108 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Protoshop For AdHoc";
+			productName = DynamicApp;
+			productReference = 653AEAD918E19A310052FF74 /* Protoshop copy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		653AEADB18E19A590052FF74 /* Protoshop For AppStore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 653AEB6918E19A590052FF74 /* Build configuration list for PBXNativeTarget "Protoshop For AppStore" */;
+			buildPhases = (
+				343FE11DFAC64202BF9A523C /* Check Pods Manifest.lock */,
+				653AEADC18E19A590052FF74 /* Sources */,
+				653AEB4118E19A590052FF74 /* Frameworks */,
+				653AEB4F18E19A590052FF74 /* Resources */,
+				7CC788A7DBD04986A7CD2711 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Protoshop For AppStore";
+			productName = DynamicApp;
+			productReference = 653AEB6C18E19A590052FF74 /* Protoshop copy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		57DA29C51769C74D002C1F29 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = kuolei;
+				TargetAttributes = {
+					57DA29CC1769C74D002C1F29 = {
+						DevelopmentTeam = RPQ7NNQCK8;
+					};
+					653AEA4818E19A310052FF74 = {
+						DevelopmentTeam = 9YDSLZ4LXQ;
+					};
+					653AEADB18E19A590052FF74 = {
+						DevelopmentTeam = 9YDSLZ4LXQ;
+					};
+				};
+			};
+			buildConfigurationList = 57DA29C81769C74D002C1F29 /* Build configuration list for PBXProject "Protoshop" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 57DA29C41769C74D002C1F29;
+			productRefGroup = 57DA29CE1769C74D002C1F29 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				57DA29CC1769C74D002C1F29 /* Protoshop */,
+				653AEA4818E19A310052FF74 /* Protoshop For AdHoc */,
+				653AEADB18E19A590052FF74 /* Protoshop For AppStore */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		57DA29CB1769C74D002C1F29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7C1703318EBF358000111D1 /* close@2x.png in Resources */,
+				F7692B271817BC220076526D /* FontAwesome.ttf in Resources */,
+				F7A1633C188EA63A00C3A984 /* Protoshop-text.png in Resources */,
+				657A95C11835F1B00035E15B /* icon-120.png in Resources */,
+				657A95C41835F1B00035E15B /* icon@2x.png in Resources */,
+				F711872818BB3C2D00D20749 /* Checked.png in Resources */,
+				655B7EE718DC1FC90033FA68 /* dsym_upload.sh in Resources */,
+				F7DCCB911889105E004BAF65 /* Default-568h@2x.png in Resources */,
+				F7C1703D18EBF358000111D1 /* SSOAuthViewController.xib in Resources */,
+				F7B65585188D42D900FD10A2 /* icon-dot.png in Resources */,
+				F7B65587188D561900FD10A2 /* goBack.png in Resources */,
+				65D712BD18DA8FC9006B4D46 /* WXDProjectsViewController.xib in Resources */,
+				65B8859918558B050043C42C /* SVProgressHUD.bundle in Resources */,
+				F7B6557C188D025900FD10A2 /* Candara.ttf in Resources */,
+				65D712C118DA8FC9006B4D46 /* WXDChangePswViewController.xib in Resources */,
+				65D712BF18DA8FC9006B4D46 /* WXDSignupViewController.xib in Resources */,
+				F7F15681193429DE0092D037 /* WXDAboutViewController.xib in Resources */,
+				65B886DF185594890043C42C /* messageBoxViewController.xib in Resources */,
+				F7C1703218EBF358000111D1 /* close.png in Resources */,
+				658380E81935B47D0028ED6E /* Default.png in Resources */,
+				F74C5D4118BC763F00C871ED /* Checked@2x.png in Resources */,
+				65D712BA18DA8FC9006B4D46 /* WXDProjectTableViewCell.xib in Resources */,
+				65D712B818DA8FC9006B4D46 /* WXDLoginViewController.xib in Resources */,
+				657A95C31835F1B00035E15B /* icon.png in Resources */,
+				65D712C718DA8FC9006B4D46 /* WXDSettingViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		653AEABC18E19A310052FF74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				658380E61935AB230028ED6E /* SSOAuthViewController.xib in Resources */,
+				653AEABF18E19A310052FF74 /* Protoshop-Info.plist in Resources */,
+				653AEAC018E19A310052FF74 /* FontAwesome.ttf in Resources */,
+				653AEAC118E19A310052FF74 /* Protoshop-text.png in Resources */,
+				653AEAC218E19A310052FF74 /* icon-120.png in Resources */,
+				653AEAC318E19A310052FF74 /* icon@2x.png in Resources */,
+				653AEAC518E19A310052FF74 /* Checked.png in Resources */,
+				653AEAC618E19A310052FF74 /* dsym_upload.sh in Resources */,
+				653AEAC718E19A310052FF74 /* Default-568h@2x.png in Resources */,
+				653AEAC818E19A310052FF74 /* icon-dot.png in Resources */,
+				653AEAC918E19A310052FF74 /* goBack.png in Resources */,
+				653AEACA18E19A310052FF74 /* WXDProjectsViewController.xib in Resources */,
+				653AEACB18E19A310052FF74 /* SVProgressHUD.bundle in Resources */,
+				658380E91935B47D0028ED6E /* Default.png in Resources */,
+				653AEACC18E19A310052FF74 /* Candara.ttf in Resources */,
+				653AEACE18E19A310052FF74 /* WXDChangePswViewController.xib in Resources */,
+				653AEACF18E19A310052FF74 /* WXDSignupViewController.xib in Resources */,
+				653AEAD018E19A310052FF74 /* messageBoxViewController.xib in Resources */,
+				653AEAD118E19A310052FF74 /* Checked@2x.png in Resources */,
+				653AEAD218E19A310052FF74 /* WXDProjectTableViewCell.xib in Resources */,
+				653AEAD318E19A310052FF74 /* WXDLoginViewController.xib in Resources */,
+				653AEAD418E19A310052FF74 /* icon.png in Resources */,
+				653AEAD518E19A310052FF74 /* WXDSettingViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		653AEB4F18E19A590052FF74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				653AEB5218E19A590052FF74 /* Protoshop-Info.plist in Resources */,
+				653AEB5318E19A590052FF74 /* FontAwesome.ttf in Resources */,
+				653AEB5418E19A590052FF74 /* Protoshop-text.png in Resources */,
+				653AEB5518E19A590052FF74 /* icon-120.png in Resources */,
+				653AEB5618E19A590052FF74 /* icon@2x.png in Resources */,
+				653AEB5818E19A590052FF74 /* Checked.png in Resources */,
+				653AEB5918E19A590052FF74 /* dsym_upload.sh in Resources */,
+				653AEB5A18E19A590052FF74 /* Default-568h@2x.png in Resources */,
+				653AEB5B18E19A590052FF74 /* icon-dot.png in Resources */,
+				653AEB5C18E19A590052FF74 /* goBack.png in Resources */,
+				653AEB5D18E19A590052FF74 /* WXDProjectsViewController.xib in Resources */,
+				653AEB5E18E19A590052FF74 /* SVProgressHUD.bundle in Resources */,
+				653AEB5F18E19A590052FF74 /* Candara.ttf in Resources */,
+				653AEB6118E19A590052FF74 /* WXDChangePswViewController.xib in Resources */,
+				653AEB6218E19A590052FF74 /* WXDSignupViewController.xib in Resources */,
+				653AEB6318E19A590052FF74 /* messageBoxViewController.xib in Resources */,
+				653AEB6418E19A590052FF74 /* Checked@2x.png in Resources */,
+				653AEB6518E19A590052FF74 /* WXDProjectTableViewCell.xib in Resources */,
+				653AEB6618E19A590052FF74 /* WXDLoginViewController.xib in Resources */,
+				653AEB6718E19A590052FF74 /* icon.png in Resources */,
+				653AEB6818E19A590052FF74 /* WXDSettingViewController.xib in Resources */,
+				658380EA1935B47D0028ED6E /* Default.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		25FA65352C2E453CAB452616 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		343FE11DFAC64202BF9A523C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7CC788A7DBD04986A7CD2711 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8911C10D8E35409BB8C190FF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8E12F4E5D14845FCBAE34108 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE31F403FFAD415B9BF67966 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		57DA29C91769C74D002C1F29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65D712C618DA8FC9006B4D46 /* WXDSettingViewController.m in Sources */,
+				65B886A718558C210043C42C /* wax.m in Sources */,
+				F742F1B519051BE900F00AA6 /* UINavigationController+hlyu.m in Sources */,
+				F7CD13EF18B4AA41003B0D27 /* ModalCloseButton.m in Sources */,
+				57DA29DD1769C74D002C1F29 /* main.m in Sources */,
+				65B8859A18558B050043C42C /* SVProgressHUD.m in Sources */,
+				65D712B718DA8FC9006B4D46 /* WXDLoginViewController.m in Sources */,
+				65B8869318558C210043C42C /* linit.c in Sources */,
+				65B8868818558C210043C42C /* wax_xml.m in Sources */,
+				65B886DE185594890043C42C /* messageBoxViewController.m in Sources */,
+				65B886A518558C210043C42C /* lzio.c in Sources */,
+				F7CD13EE18B4AA41003B0D27 /* DKLiveBlurView.m in Sources */,
+				F7D631CA1925A2E10065336A /* WXDMainTableView.m in Sources */,
+				65B8869018558C210043C42C /* ldump.c in Sources */,
+				65B8866518558C210043C42C /* wax_CGContext.m in Sources */,
+				65B886C8185592E60043C42C /* yajl_gen.c in Sources */,
+				655E453818C8791700CF6348 /* WXDProjectInfo.m in Sources */,
+				65B8869918558C210043C42C /* lobject.c in Sources */,
+				65B886CA185592E60043C42C /* yajl_parser.c in Sources */,
+				65B8869D18558C210043C42C /* lstate.c in Sources */,
+				F7C1703418EBF358000111D1 /* CTAuthEngine.m in Sources */,
+				65B8868C18558C210043C42C /* lcode.c in Sources */,
+				65B886A418558C210043C42C /* lvm.c in Sources */,
+				65B886E91855973C0043C42C /* WXDAppDelegate.m in Sources */,
+				65B8869418558C210043C42C /* liolib.c in Sources */,
+				655E453C18C8803200CF6348 /* WXDFileKey.m in Sources */,
+				65B886AB18558C210043C42C /* wax_instance.m in Sources */,
+				65B8868A18558C210043C42C /* lauxlib.c in Sources */,
+				65B8869B18558C210043C42C /* loslib.c in Sources */,
+				65B8869E18558C210043C42C /* lstring.c in Sources */,
+				F7D631D01925A47B0065336A /* WXDMTVLoadingView.m in Sources */,
+				F7C1703A18EBF358000111D1 /* SBJsonParser.m in Sources */,
+				F7CD13F018B4AA41003B0D27 /* UIImage+Blur.m in Sources */,
+				65B886AC18558C210043C42C /* wax_server.m in Sources */,
+				65D712BC18DA8FC9006B4D46 /* WXDProjectsViewController.m in Sources */,
+				6585CD6518D1B13500F7DB04 /* WXDBaseInfo.m in Sources */,
+				65B886C9185592E60043C42C /* yajl_lex.c in Sources */,
+				F7C1703818EBF358000111D1 /* NSString+SBJSON.m in Sources */,
+				65B8866418558C210043C42C /* wax_CGTransform.m in Sources */,
+				6585CD6918D1B41300F7DB04 /* WXDBaseResultInfo.m in Sources */,
+				F7C1703918EBF358000111D1 /* SBJsonBase.m in Sources */,
+				65B886F1185598BF0043C42C /* CTView.m in Sources */,
+				65B8869518558C210043C42C /* llex.c in Sources */,
+				F7C1703B18EBF358000111D1 /* SBJsonWriter.m in Sources */,
+				65B886F2185598BF0043C42C /* wax_CTView.m in Sources */,
+				65D712B918DA8FC9006B4D46 /* WXDProjectTableViewCell.m in Sources */,
+				65B8868F18558C210043C42C /* ldo.c in Sources */,
+				65B8868B18558C210043C42C /* lbaselib.c in Sources */,
+				65B8868918558C210043C42C /* lapi.c in Sources */,
+				656FBF6518D6D9BD00E1F41E /* WXDRequestCommand.m in Sources */,
+				65B8869A18558C210043C42C /* lopcodes.c in Sources */,
+				65B886A318558C210043C42C /* lundump.c in Sources */,
+				65B8866A18558C210043C42C /* wax_filesystem.m in Sources */,
+				65B8867418558C210043C42C /* wax_json.c in Sources */,
+				657C045918D2F369006BECAB /* WXDUserInfo.m in Sources */,
+				65B886AD18558C210043C42C /* wax_struct.m in Sources */,
+				65B8869F18558C210043C42C /* lstrlib.c in Sources */,
+				65B886A218558C210043C42C /* ltm.c in Sources */,
+				65B8869218558C210043C42C /* lgc.c in Sources */,
+				F7F15680193429DE0092D037 /* WXDAboutViewController.m in Sources */,
+				65B886A018558C210043C42C /* ltable.c in Sources */,
+				65B8869118558C210043C42C /* lfunc.c in Sources */,
+				F7C1703518EBF358000111D1 /* CTLoginWebView.m in Sources */,
+				65D712CA18DA9003006B4D46 /* WXDBaseViewController.m in Sources */,
+				65B886C7185592E60043C42C /* yajl_encode.c in Sources */,
+				65B886C5185592E60043C42C /* yajl_alloc.c in Sources */,
+				F7CD13F118B4AA41003B0D27 /* UIView+Screenshot.m in Sources */,
+				65D712BE18DA8FC9006B4D46 /* WXDSignupViewController.m in Sources */,
+				65D712C018DA8FC9006B4D46 /* WXDChangePswViewController.m in Sources */,
+				6585CD6D18D1BA5B00F7DB04 /* WXDStringUtility.m in Sources */,
+				65B886A618558C210043C42C /* print.c in Sources */,
+				65B886A918558C210043C42C /* wax_gc.m in Sources */,
+				65B8866F18558C210043C42C /* wax_http.m in Sources */,
+				65B886E0185594890043C42C /* wax_CTViewController.m in Sources */,
+				F7C1703618EBF358000111D1 /* CTSSOLoginView.m in Sources */,
+				655E453018C86CDD00CF6348 /* DAProgressOverlayView.m in Sources */,
+				65B886C6185592E60043C42C /* yajl_buf.c in Sources */,
+				65B886A118558C210043C42C /* ltablib.c in Sources */,
+				65B8868E18558C210043C42C /* ldebug.c in Sources */,
+				65B8869C18558C210043C42C /* lparser.c in Sources */,
+				655E453418C86D6700CF6348 /* WXDGradualView.m in Sources */,
+				65B886A818558C210043C42C /* wax_class.m in Sources */,
+				65B886DD185594890043C42C /* CTViewController.m in Sources */,
+				65B8868D18558C210043C42C /* ldblib.c in Sources */,
+				65B8869618558C210043C42C /* lmathlib.c in Sources */,
+				65B8869718558C210043C42C /* lmem.c in Sources */,
+				65B886AA18558C210043C42C /* wax_helpers.m in Sources */,
+				65B886C4185592E60043C42C /* yajl.c in Sources */,
+				65B8869818558C210043C42C /* loadlib.c in Sources */,
+				F7C1703C18EBF358000111D1 /* SSOAuthViewController.m in Sources */,
+				F7CD13F218B4AA41003B0D27 /* UIViewController+popUpViewYu.m in Sources */,
+				F7C1703718EBF358000111D1 /* NSObject+SBJSON.m in Sources */,
+				65B8867018558C210043C42C /* wax_http_connection.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		653AEA4918E19A310052FF74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7F1568219346E440092D037 /* WXDMainTableView.m in Sources */,
+				F7F1568319346E440092D037 /* WXDMTVLoadingView.m in Sources */,
+				F7F1568419346E440092D037 /* WXDAboutViewController.m in Sources */,
+				F7F1568519346E440092D037 /* CTAuthEngine.m in Sources */,
+				F7F1568619346E440092D037 /* CTLoginWebView.m in Sources */,
+				F7F1568719346E440092D037 /* CTSSOLoginView.m in Sources */,
+				F7F1568819346E440092D037 /* NSObject+SBJSON.m in Sources */,
+				F7F1568919346E440092D037 /* NSString+SBJSON.m in Sources */,
+				F7F1568A19346E440092D037 /* SBJsonBase.m in Sources */,
+				F7F1568B19346E440092D037 /* SBJsonParser.m in Sources */,
+				F7F1568C19346E440092D037 /* SBJsonWriter.m in Sources */,
+				F7F1568D19346E440092D037 /* SSOAuthViewController.m in Sources */,
+				653AEA4B18E19A310052FF74 /* WXDSettingViewController.m in Sources */,
+				653AEA4C18E19A310052FF74 /* wax.m in Sources */,
+				653AEA4F18E19A310052FF74 /* ModalCloseButton.m in Sources */,
+				653AEA5018E19A310052FF74 /* main.m in Sources */,
+				653AEA5118E19A310052FF74 /* SVProgressHUD.m in Sources */,
+				653AEA5218E19A310052FF74 /* WXDLoginViewController.m in Sources */,
+				653AEA5318E19A310052FF74 /* linit.c in Sources */,
+				653AEA5418E19A310052FF74 /* wax_xml.m in Sources */,
+				653AEA5518E19A310052FF74 /* messageBoxViewController.m in Sources */,
+				653AEA5718E19A310052FF74 /* lzio.c in Sources */,
+				653AEA5818E19A310052FF74 /* DKLiveBlurView.m in Sources */,
+				653AEA5918E19A310052FF74 /* ldump.c in Sources */,
+				653AEA5A18E19A310052FF74 /* wax_CGContext.m in Sources */,
+				653AEA5B18E19A310052FF74 /* yajl_gen.c in Sources */,
+				653AEA5C18E19A310052FF74 /* WXDProjectInfo.m in Sources */,
+				653AEA5D18E19A310052FF74 /* lobject.c in Sources */,
+				653AEA5E18E19A310052FF74 /* yajl_parser.c in Sources */,
+				653AEA5F18E19A310052FF74 /* lstate.c in Sources */,
+				653AEA6018E19A310052FF74 /* lcode.c in Sources */,
+				653AEA6118E19A310052FF74 /* lvm.c in Sources */,
+				653AEA6318E19A310052FF74 /* WXDAppDelegate.m in Sources */,
+				653AEA6418E19A310052FF74 /* liolib.c in Sources */,
+				653AEA6518E19A310052FF74 /* WXDFileKey.m in Sources */,
+				653AEA6618E19A310052FF74 /* wax_instance.m in Sources */,
+				653AEA6718E19A310052FF74 /* lauxlib.c in Sources */,
+				653AEA6818E19A310052FF74 /* loslib.c in Sources */,
+				653AEA6918E19A310052FF74 /* lstring.c in Sources */,
+				653AEA6A18E19A310052FF74 /* UIImage+Blur.m in Sources */,
+				653AEA6C18E19A310052FF74 /* wax_server.m in Sources */,
+				653AEA6D18E19A310052FF74 /* WXDProjectsViewController.m in Sources */,
+				653AEA6E18E19A310052FF74 /* WXDBaseInfo.m in Sources */,
+				653AEA6F18E19A310052FF74 /* yajl_lex.c in Sources */,
+				653AEA7118E19A310052FF74 /* wax_CGTransform.m in Sources */,
+				653AEA7318E19A310052FF74 /* WXDBaseResultInfo.m in Sources */,
+				653AEA7518E19A310052FF74 /* CTView.m in Sources */,
+				653AEA7618E19A310052FF74 /* llex.c in Sources */,
+				653AEA7818E19A310052FF74 /* wax_CTView.m in Sources */,
+				653AEA7A18E19A310052FF74 /* WXDProjectTableViewCell.m in Sources */,
+				653AEA7B18E19A310052FF74 /* ldo.c in Sources */,
+				653AEA7D18E19A310052FF74 /* lbaselib.c in Sources */,
+				653AEA7F18E19A310052FF74 /* lapi.c in Sources */,
+				653AEA8018E19A310052FF74 /* WXDRequestCommand.m in Sources */,
+				653AEA8118E19A310052FF74 /* lopcodes.c in Sources */,
+				653AEA8318E19A310052FF74 /* lundump.c in Sources */,
+				653AEA8418E19A310052FF74 /* wax_filesystem.m in Sources */,
+				653AEA8518E19A310052FF74 /* wax_json.c in Sources */,
+				653AEA8618E19A310052FF74 /* WXDUserInfo.m in Sources */,
+				653AEA8718E19A310052FF74 /* wax_struct.m in Sources */,
+				653AEA8A18E19A310052FF74 /* lstrlib.c in Sources */,
+				653AEA8B18E19A310052FF74 /* ltm.c in Sources */,
+				653AEA8C18E19A310052FF74 /* lgc.c in Sources */,
+				653AEA8E18E19A310052FF74 /* ltable.c in Sources */,
+				653AEA8F18E19A310052FF74 /* lfunc.c in Sources */,
+				653AEA9118E19A310052FF74 /* WXDBaseViewController.m in Sources */,
+				653AEA9318E19A310052FF74 /* yajl_encode.c in Sources */,
+				653AEA9418E19A310052FF74 /* yajl_alloc.c in Sources */,
+				653AEA9518E19A310052FF74 /* UIView+Screenshot.m in Sources */,
+				653AEA9618E19A310052FF74 /* WXDSignupViewController.m in Sources */,
+				653AEA9718E19A310052FF74 /* WXDChangePswViewController.m in Sources */,
+				653AEA9918E19A310052FF74 /* WXDStringUtility.m in Sources */,
+				653AEA9A18E19A310052FF74 /* print.c in Sources */,
+				653AEA9B18E19A310052FF74 /* wax_gc.m in Sources */,
+				653AEA9C18E19A310052FF74 /* wax_http.m in Sources */,
+				653AEA9D18E19A310052FF74 /* wax_CTViewController.m in Sources */,
+				653AEA9E18E19A310052FF74 /* DAProgressOverlayView.m in Sources */,
+				653AEA9F18E19A310052FF74 /* yajl_buf.c in Sources */,
+				653AEAA018E19A310052FF74 /* ltablib.c in Sources */,
+				653AEAA118E19A310052FF74 /* ldebug.c in Sources */,
+				653AEAA218E19A310052FF74 /* lparser.c in Sources */,
+				653AEAA318E19A310052FF74 /* WXDGradualView.m in Sources */,
+				653AEAA418E19A310052FF74 /* wax_class.m in Sources */,
+				653AEAA518E19A310052FF74 /* CTViewController.m in Sources */,
+				653AEAA618E19A310052FF74 /* ldblib.c in Sources */,
+				653AEAA718E19A310052FF74 /* lmathlib.c in Sources */,
+				653AEAA818E19A310052FF74 /* lmem.c in Sources */,
+				653AEAA918E19A310052FF74 /* wax_helpers.m in Sources */,
+				653AEAAA18E19A310052FF74 /* yajl.c in Sources */,
+				653AEAAB18E19A310052FF74 /* loadlib.c in Sources */,
+				653AEAAC18E19A310052FF74 /* UIViewController+popUpViewYu.m in Sources */,
+				653AEAAD18E19A310052FF74 /* wax_http_connection.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		653AEADC18E19A590052FF74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F713AD7719333CDE0070C37A /* UINavigationController+hlyu.m in Sources */,
+				F713AD7619333B520070C37A /* WXDMTVLoadingView.m in Sources */,
+				F713AD7519333B040070C37A /* WXDMainTableView.m in Sources */,
+				F713AD6F1932E9D70070C37A /* NSObject+SBJSON.m in Sources */,
+				F713AD701932E9D70070C37A /* NSString+SBJSON.m in Sources */,
+				F713AD711932E9D70070C37A /* SBJsonBase.m in Sources */,
+				F713AD721932E9D70070C37A /* SBJsonParser.m in Sources */,
+				F713AD731932E9D70070C37A /* SBJsonWriter.m in Sources */,
+				F713AD741932E9D70070C37A /* SSOAuthViewController.m in Sources */,
+				F713AD6C1932E9AD0070C37A /* CTAuthEngine.m in Sources */,
+				F713AD6D1932E9AD0070C37A /* CTLoginWebView.m in Sources */,
+				F713AD6E1932E9AD0070C37A /* CTSSOLoginView.m in Sources */,
+				653AEADE18E19A590052FF74 /* WXDSettingViewController.m in Sources */,
+				653AEADF18E19A590052FF74 /* wax.m in Sources */,
+				653AEAE218E19A590052FF74 /* ModalCloseButton.m in Sources */,
+				653AEAE318E19A590052FF74 /* main.m in Sources */,
+				653AEAE418E19A590052FF74 /* SVProgressHUD.m in Sources */,
+				653AEAE518E19A590052FF74 /* WXDLoginViewController.m in Sources */,
+				653AEAE618E19A590052FF74 /* linit.c in Sources */,
+				653AEAE718E19A590052FF74 /* wax_xml.m in Sources */,
+				653AEAE818E19A590052FF74 /* messageBoxViewController.m in Sources */,
+				653AEAEA18E19A590052FF74 /* lzio.c in Sources */,
+				653AEAEB18E19A590052FF74 /* DKLiveBlurView.m in Sources */,
+				653AEAEC18E19A590052FF74 /* ldump.c in Sources */,
+				653AEAED18E19A590052FF74 /* wax_CGContext.m in Sources */,
+				653AEAEE18E19A590052FF74 /* yajl_gen.c in Sources */,
+				653AEAEF18E19A590052FF74 /* WXDProjectInfo.m in Sources */,
+				653AEAF018E19A590052FF74 /* lobject.c in Sources */,
+				653AEAF118E19A590052FF74 /* yajl_parser.c in Sources */,
+				653AEAF218E19A590052FF74 /* lstate.c in Sources */,
+				653AEAF318E19A590052FF74 /* lcode.c in Sources */,
+				653AEAF418E19A590052FF74 /* lvm.c in Sources */,
+				653AEAF618E19A590052FF74 /* WXDAppDelegate.m in Sources */,
+				653AEAF718E19A590052FF74 /* liolib.c in Sources */,
+				653AEAF818E19A590052FF74 /* WXDFileKey.m in Sources */,
+				653AEAF918E19A590052FF74 /* wax_instance.m in Sources */,
+				653AEAFA18E19A590052FF74 /* lauxlib.c in Sources */,
+				653AEAFB18E19A590052FF74 /* loslib.c in Sources */,
+				653AEAFC18E19A590052FF74 /* lstring.c in Sources */,
+				653AEAFD18E19A590052FF74 /* UIImage+Blur.m in Sources */,
+				653AEAFF18E19A590052FF74 /* wax_server.m in Sources */,
+				653AEB0018E19A590052FF74 /* WXDProjectsViewController.m in Sources */,
+				653AEB0118E19A590052FF74 /* WXDBaseInfo.m in Sources */,
+				653AEB0218E19A590052FF74 /* yajl_lex.c in Sources */,
+				653AEB0418E19A590052FF74 /* wax_CGTransform.m in Sources */,
+				653AEB0618E19A590052FF74 /* WXDBaseResultInfo.m in Sources */,
+				653AEB0818E19A590052FF74 /* CTView.m in Sources */,
+				653AEB0918E19A590052FF74 /* llex.c in Sources */,
+				653AEB0B18E19A590052FF74 /* wax_CTView.m in Sources */,
+				653AEB0D18E19A590052FF74 /* WXDProjectTableViewCell.m in Sources */,
+				653AEB0E18E19A590052FF74 /* ldo.c in Sources */,
+				653AEB1018E19A590052FF74 /* lbaselib.c in Sources */,
+				653AEB1218E19A590052FF74 /* lapi.c in Sources */,
+				653AEB1318E19A590052FF74 /* WXDRequestCommand.m in Sources */,
+				653AEB1418E19A590052FF74 /* lopcodes.c in Sources */,
+				653AEB1618E19A590052FF74 /* lundump.c in Sources */,
+				653AEB1718E19A590052FF74 /* wax_filesystem.m in Sources */,
+				653AEB1818E19A590052FF74 /* wax_json.c in Sources */,
+				653AEB1918E19A590052FF74 /* WXDUserInfo.m in Sources */,
+				653AEB1A18E19A590052FF74 /* wax_struct.m in Sources */,
+				653AEB1D18E19A590052FF74 /* lstrlib.c in Sources */,
+				653AEB1E18E19A590052FF74 /* ltm.c in Sources */,
+				653AEB1F18E19A590052FF74 /* lgc.c in Sources */,
+				653AEB2118E19A590052FF74 /* ltable.c in Sources */,
+				653AEB2218E19A590052FF74 /* lfunc.c in Sources */,
+				653AEB2418E19A590052FF74 /* WXDBaseViewController.m in Sources */,
+				653AEB2618E19A590052FF74 /* yajl_encode.c in Sources */,
+				653AEB2718E19A590052FF74 /* yajl_alloc.c in Sources */,
+				653AEB2818E19A590052FF74 /* UIView+Screenshot.m in Sources */,
+				653AEB2918E19A590052FF74 /* WXDSignupViewController.m in Sources */,
+				653AEB2A18E19A590052FF74 /* WXDChangePswViewController.m in Sources */,
+				653AEB2C18E19A590052FF74 /* WXDStringUtility.m in Sources */,
+				653AEB2D18E19A590052FF74 /* print.c in Sources */,
+				653AEB2E18E19A590052FF74 /* wax_gc.m in Sources */,
+				653AEB2F18E19A590052FF74 /* wax_http.m in Sources */,
+				653AEB3018E19A590052FF74 /* wax_CTViewController.m in Sources */,
+				653AEB3118E19A590052FF74 /* DAProgressOverlayView.m in Sources */,
+				653AEB3218E19A590052FF74 /* yajl_buf.c in Sources */,
+				653AEB3318E19A590052FF74 /* ltablib.c in Sources */,
+				653AEB3418E19A590052FF74 /* ldebug.c in Sources */,
+				653AEB3518E19A590052FF74 /* lparser.c in Sources */,
+				653AEB3618E19A590052FF74 /* WXDGradualView.m in Sources */,
+				653AEB3718E19A590052FF74 /* wax_class.m in Sources */,
+				653AEB3818E19A590052FF74 /* CTViewController.m in Sources */,
+				653AEB3918E19A590052FF74 /* ldblib.c in Sources */,
+				653AEB3A18E19A590052FF74 /* lmathlib.c in Sources */,
+				653AEB3B18E19A590052FF74 /* lmem.c in Sources */,
+				653AEB3C18E19A590052FF74 /* wax_helpers.m in Sources */,
+				653AEB3D18E19A590052FF74 /* yajl.c in Sources */,
+				653AEB3E18E19A590052FF74 /* loadlib.c in Sources */,
+				653AEB3F18E19A590052FF74 /* UIViewController+popUpViewYu.m in Sources */,
+				653AEB4018E19A590052FF74 /* wax_http_connection.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		57DA29EE1769C74D002C1F29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hongli Yu (UU84SHLXC4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hongli Yu (UU84SHLXC4)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		57DA29EF1769C74D002C1F29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hongli Yu (UU84SHLXC4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hongli Yu (UU84SHLXC4)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		57DA29F11769C74D002C1F29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF69D56ABB2241DCBA761319 /* Pods.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv7s,
+				);
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = Protoshop.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DynamicApp/Protoshop-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					PROTOSHOP_DEBUG,
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = "$(SDK_ROOT)/usr/include/libxml2";
+				INFOPLIST_FILE = "DynamicApp/Protoshop-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs/CrittercismSDK",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+					"-framework",
+					CoreGraphics,
+					"-framework",
+					MobileCoreServices,
+					"-framework",
+					Security,
+					"-framework",
+					SystemConfiguration,
+				);
+				PRODUCT_NAME = Protoshop;
+				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "armv7s armv7";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		57DA29F21769C74D002C1F29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF69D56ABB2241DCBA761319 /* Pods.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv7s,
+				);
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = Protoshop.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DynamicApp/Protoshop-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SDK_ROOT)/usr/include/libxml2";
+				INFOPLIST_FILE = "DynamicApp/Protoshop-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs/CrittercismSDK",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+					"-framework",
+					CoreGraphics,
+					"-framework",
+					MobileCoreServices,
+					"-framework",
+					Security,
+					"-framework",
+					SystemConfiguration,
+				);
+				PRODUCT_NAME = Protoshop;
+				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "armv7s armv7";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		653AEAD718E19A310052FF74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF69D56ABB2241DCBA761319 /* Pods.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv7s,
+				);
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DynamicApp/Protoshop-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = "$(SDK_ROOT)/usr/include/libxml2";
+				INFOPLIST_FILE = "$(SRCROOT)/DynamicApp/Protoshop-Info-AdHoc.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs/CrittercismSDK",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "Protoshop copy";
+				PROVISIONING_PROFILE = "4A04ABA3-7099-4B5F-B51E-A2DB4A094007";
+				VALID_ARCHS = "armv7s armv7";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		653AEAD818E19A310052FF74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF69D56ABB2241DCBA761319 /* Pods.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv7s,
+				);
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DynamicApp/Protoshop-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SDK_ROOT)/usr/include/libxml2";
+				INFOPLIST_FILE = "$(SRCROOT)/DynamicApp/Protoshop-Info-AdHoc.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs/CrittercismSDK",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "Protoshop copy";
+				PROVISIONING_PROFILE = "4A04ABA3-7099-4B5F-B51E-A2DB4A094007";
+				VALID_ARCHS = "armv7s armv7";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		653AEB6A18E19A590052FF74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF69D56ABB2241DCBA761319 /* Pods.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv7s,
+				);
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DynamicApp/Protoshop-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					PROTOSHOP_WWW,
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = "$(SDK_ROOT)/usr/include/libxml2";
+				INFOPLIST_FILE = "$(SRCROOT)/DynamicApp/Protoshop-Info-AppStore.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs/CrittercismSDK",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "Protoshop copy";
+				PROVISIONING_PROFILE = "EC9272EC-78F1-4756-8471-71A00E59D2BA";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)";
+				VALID_ARCHS = "armv7s armv7";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		653AEB6B18E19A590052FF74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF69D56ABB2241DCBA761319 /* Pods.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv7s,
+				);
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DynamicApp/Protoshop-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SDK_ROOT)/usr/include/libxml2";
+				INFOPLIST_FILE = "$(SRCROOT)/DynamicApp/Protoshop-Info-AppStore.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs/CrittercismSDK",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "Protoshop copy";
+				PROVISIONING_PROFILE = "EC9272EC-78F1-4756-8471-71A00E59D2BA";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)";
+				VALID_ARCHS = "armv7s armv7";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		57DA29C81769C74D002C1F29 /* Build configuration list for PBXProject "Protoshop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57DA29EE1769C74D002C1F29 /* Debug */,
+				57DA29EF1769C74D002C1F29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57DA29F01769C74D002C1F29 /* Build configuration list for PBXNativeTarget "Protoshop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57DA29F11769C74D002C1F29 /* Debug */,
+				57DA29F21769C74D002C1F29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		653AEAD618E19A310052FF74 /* Build configuration list for PBXNativeTarget "Protoshop For AdHoc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				653AEAD718E19A310052FF74 /* Debug */,
+				653AEAD818E19A310052FF74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		653AEB6918E19A590052FF74 /* Build configuration list for PBXNativeTarget "Protoshop For AppStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				653AEB6A18E19A590052FF74 /* Debug */,
+				653AEB6B18E19A590052FF74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 57DA29C51769C74D002C1F29 /* Project object */;
+}
