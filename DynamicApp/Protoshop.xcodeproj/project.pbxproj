@@ -590,6 +590,10 @@
 		F7692B101817B5550076526D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		F7692B141817BC220076526D /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
 		F7A1633B188EA63A00C3A984 /* Protoshop-text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Protoshop-text.png"; sourceTree = "<group>"; };
+		F7AF9EDB194051E0007BFD06 /* libPods-AFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-AFNetworking.a"; path = "Pods/build/Debug-iphoneos/libPods-AFNetworking.a"; sourceTree = "<group>"; };
+		F7AF9EDD194051E4007BFD06 /* libPods-Reachability.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Reachability.a"; path = "Pods/build/Debug-iphoneos/libPods-Reachability.a"; sourceTree = "<group>"; };
+		F7AF9EE2194053AF007BFD06 /* libPods-AFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-AFNetworking.a"; path = "Pods/build/Debug-iphoneos/libPods-AFNetworking.a"; sourceTree = "<group>"; };
+		F7AF9EE4194053D7007BFD06 /* libPods-AFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-AFNetworking.a"; path = "Pods/build/Debug-iphoneos/libPods-AFNetworking.a"; sourceTree = "<group>"; };
 		F7B6557B188D025900FD10A2 /* Candara.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Candara.ttf; sourceTree = "<group>"; };
 		F7B65584188D42D900FD10A2 /* icon-dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-dot.png"; sourceTree = "<group>"; };
 		F7B65586188D561900FD10A2 /* goBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goBack.png; sourceTree = "<group>"; };
@@ -735,6 +739,10 @@
 		57DA29CF1769C74D002C1F29 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F7AF9EE4194053D7007BFD06 /* libPods-AFNetworking.a */,
+				F7AF9EE2194053AF007BFD06 /* libPods-AFNetworking.a */,
+				F7AF9EDD194051E4007BFD06 /* libPods-Reachability.a */,
+				F7AF9EDB194051E0007BFD06 /* libPods-AFNetworking.a */,
 				574ECCD21771867A0095CED4 /* libxml2.2.dylib */,
 				57DA2AA91769C7F2002C1F29 /* libz.dylib */,
 				F7DFADDD184EFD6D00F5E945 /* Security.framework */,
@@ -1908,6 +1916,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv7,
+					armv7s,
+				);
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -1933,6 +1945,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -1940,6 +1953,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv7,
+					armv7s,
+				);
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -1959,6 +1976,7 @@
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -1973,9 +1991,8 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_ENTITLEMENTS = Protoshop.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hongli Yu (UU84SHLXC4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hongli Yu (UU84SHLXC4)";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1991,8 +2008,9 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/libs/CrittercismSDK",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 				);
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lz",
@@ -2006,7 +2024,8 @@
 					SystemConfiguration,
 				);
 				PRODUCT_NAME = Protoshop;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "3F613A62-5B95-4FFA-9691-3C04053E0F42";
+				SDKROOT = iphoneos7.1;
 				VALID_ARCHS = "armv7s armv7";
 				WRAPPER_EXTENSION = app;
 			};
@@ -2023,9 +2042,8 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_ENTITLEMENTS = Protoshop.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hongli Yu (UU84SHLXC4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hongli Yu (UU84SHLXC4)";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2036,8 +2054,9 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/libs/CrittercismSDK",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 				);
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lz",
@@ -2051,7 +2070,8 @@
 					SystemConfiguration,
 				);
 				PRODUCT_NAME = Protoshop;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "3F613A62-5B95-4FFA-9691-3C04053E0F42";
+				SDKROOT = iphoneos7.1;
 				VALID_ARCHS = "armv7s armv7";
 				WRAPPER_EXTENSION = app;
 			};
@@ -2154,9 +2174,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/libs/CrittercismSDK",
 				);
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "Protoshop copy";
-				PROVISIONING_PROFILE = "EC9272EC-78F1-4756-8471-71A00E59D2BA";
+				PROVISIONING_PROFILE = "A76DEF40-AF74-439A-80F7-FF9857CB215C";
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)";
 				VALID_ARCHS = "armv7s armv7";
 				WRAPPER_EXTENSION = app;
@@ -2189,7 +2209,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "Protoshop copy";
-				PROVISIONING_PROFILE = "EC9272EC-78F1-4756-8471-71A00E59D2BA";
+				PROVISIONING_PROFILE = "A76DEF40-AF74-439A-80F7-FF9857CB215C";
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)";
 				VALID_ARCHS = "armv7s armv7";
 				WRAPPER_EXTENSION = app;

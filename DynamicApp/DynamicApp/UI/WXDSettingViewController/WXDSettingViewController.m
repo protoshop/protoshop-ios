@@ -287,18 +287,20 @@
 }
 
 -(void)pressOnLogoutConfirmBtn:(id)sender{
-    BACK(^{
-         [USER_DEFAULT setObject:nil forKey:@"userEmail"];
-         [USER_DEFAULT setObject:nil forKey:@"userPassword"];
-         [USER_DEFAULT setObject:nil forKey:@"userNickname"];
-         [USER_DEFAULT synchronize];
-         if ([WXDreach isReachable]==YES) {
-             if ([CTAuthEngine logout]) {
-                 DLog(@"Logout Success.");
-             }
-         }
-            MAIN(^{[self.navigationController popToRootViewControllerAnimated:YES];});
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [USER_DEFAULT setObject:nil forKey:@"userEmail"];
+        [USER_DEFAULT setObject:nil forKey:@"userPassword"];
+        [USER_DEFAULT setObject:nil forKey:@"userNickname"];
+        [USER_DEFAULT synchronize];
+        if ([WXDreach isReachable]==YES) {
+            if ([CTAuthEngine logout]) {
+                DLog(@"Logout Success.");
+            }
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.navigationController popToRootViewControllerAnimated:YES];
         });
+    });
 }
 
 -(void)nickNameConfirmed{
