@@ -396,6 +396,7 @@
     [SVProgressHUD showWithStatus:@"正在刷新列表"];
     [self performSelector:@selector(loadData:) withObject:@"1" afterDelay:1.0];
 }
+
 - (IBAction)goSetting:(id)sender {
     WXDSettingViewController *settingVC = [[WXDSettingViewController alloc]initWithNavTitle:@"Setting"];
     settingVC.WXDNavVC = self.navigationController;

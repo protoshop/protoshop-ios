@@ -2156,8 +2156,8 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2176,7 +2176,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "Protoshop copy";
-				PROVISIONING_PROFILE = "A76DEF40-AF74-439A-80F7-FF9857CB215C";
+				PROVISIONING_PROFILE = "22E959B5-5617-4B40-A7A5-3BB8B6BF895E";
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)";
 				VALID_ARCHS = "armv7s armv7";
 				WRAPPER_EXTENSION = app;
@@ -2194,12 +2194,17 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DynamicApp/Protoshop-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					PROTOSHOP_WWW,
+				);
 				HEADER_SEARCH_PATHS = "$(SDK_ROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "$(SRCROOT)/DynamicApp/Protoshop-Info-AppStore.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -2209,7 +2214,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "Protoshop copy";
-				PROVISIONING_PROFILE = "A76DEF40-AF74-439A-80F7-FF9857CB215C";
+				PROVISIONING_PROFILE = "22E959B5-5617-4B40-A7A5-3BB8B6BF895E";
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)";
 				VALID_ARCHS = "armv7s armv7";
 				WRAPPER_EXTENSION = app;

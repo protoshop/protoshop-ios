@@ -14,6 +14,7 @@
 #import "WXDSignupViewController.h"
 #import "WXDUserInfo.h"
 #import "CTAuthEngine.h"
+#import "WXDRequestCommand.h"
 
 @interface WXDLoginViewController ()<UITextFieldDelegate,CTSSOAuthDelegate>
 @property (strong, nonatomic) IBOutlet UIButton *SSOLoginBtn;

@@ -168,7 +168,10 @@
 }
 
 -(void)tapOnceOnAccountView:(UITapGestureRecognizer *)gesture{
-    if (isWritingFeedBack == YES) {
+    if ([self.userNicknameContent isFirstResponder]==YES) {
+        [self.userNicknameContent resignFirstResponder];
+    }
+    if (isWritingFeedBack == YES && [feedBackTextView isFirstResponder]==YES) {
         [self restoreFeedBack];
     }
 }

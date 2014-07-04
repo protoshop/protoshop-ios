@@ -34,7 +34,7 @@
 {
     _shareBtn.hidden = YES;
     _shareBtn.enabled = NO;
-    _projectIconImageView.layer.cornerRadius = 12.;
+    _projectIconImageView.layer.cornerRadius = 2.0;
     _projectIconImageView.layer.masksToBounds = YES;
     _projectIconImageView.layer.borderWidth = 0;
     _blueDotImageView.hidden = NO;

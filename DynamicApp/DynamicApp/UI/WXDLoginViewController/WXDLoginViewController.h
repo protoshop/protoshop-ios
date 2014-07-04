@@ -10,7 +10,6 @@
 //  修改时间：2014年5月13日
 
 #import <UIKit/UIKit.h>
-#import "WXDRequestCommand.h"
 
 @interface WXDLoginViewController : WXDBaseViewController
 
