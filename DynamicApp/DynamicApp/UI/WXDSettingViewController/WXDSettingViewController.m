@@ -291,9 +291,9 @@
 
 -(void)pressOnLogoutConfirmBtn:(id)sender{
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [USER_DEFAULT setObject:nil forKey:@"userEmail"];
-        [USER_DEFAULT setObject:nil forKey:@"userPassword"];
-        [USER_DEFAULT setObject:nil forKey:@"userNickname"];
+        [USER_DEFAULT removeObjectForKey:@"userEmail"];
+        [USER_DEFAULT removeObjectForKey:@"userPassword"];
+        [USER_DEFAULT removeObjectForKey:@"userNickname"];
         [USER_DEFAULT synchronize];
         if ([WXDreach isReachable]==YES) {
             if ([CTAuthEngine logout]) {
