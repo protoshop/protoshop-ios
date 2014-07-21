@@ -410,7 +410,7 @@
 		57DA29DE1769C74D002C1F29 /* Protoshop-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Protoshop-Prefix.pch"; sourceTree = "<group>"; };
 		57DA2AA91769C7F2002C1F29 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		653AEAD918E19A310052FF74 /* Protoshop copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Protoshop copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		653AEB6C18E19A590052FF74 /* Protoshop copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Protoshop copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		653AEB6C18E19A590052FF74 /* Protoshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Protoshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		653AEB6E18E19B630052FF74 /* Protoshop-Info-AdHoc.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Protoshop-Info-AdHoc.plist"; sourceTree = "<group>"; };
 		653AEB7018E19B6D0052FF74 /* Protoshop-Info-AppStore.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Protoshop-Info-AppStore.plist"; sourceTree = "<group>"; };
 		655B7EE218DC1FC90033FA68 /* CRFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRFilter.h; sourceTree = "<group>"; };
@@ -731,7 +731,7 @@
 			children = (
 				57DA29CD1769C74D002C1F29 /* Protoshop.app */,
 				653AEAD918E19A310052FF74 /* Protoshop copy.app */,
-				653AEB6C18E19A590052FF74 /* Protoshop copy.app */,
+				653AEB6C18E19A590052FF74 /* Protoshop.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1381,7 +1381,7 @@
 			);
 			name = "Protoshop For AppStore";
 			productName = DynamicApp;
-			productReference = 653AEB6C18E19A590052FF74 /* Protoshop copy.app */;
+			productReference = 653AEB6C18E19A590052FF74 /* Protoshop.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -2175,7 +2175,7 @@
 					"$(PROJECT_DIR)/libs/CrittercismSDK",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "Protoshop copy";
+				PRODUCT_NAME = Protoshop;
 				PROVISIONING_PROFILE = "22E959B5-5617-4B40-A7A5-3BB8B6BF895E";
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)";
 				VALID_ARCHS = "armv7s armv7";
@@ -2213,7 +2213,7 @@
 					"$(PROJECT_DIR)/libs/CrittercismSDK",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_NAME = "Protoshop copy";
+				PRODUCT_NAME = Protoshop;
 				PROVISIONING_PROFILE = "22E959B5-5617-4B40-A7A5-3BB8B6BF895E";
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)";
 				VALID_ARCHS = "armv7s armv7";
