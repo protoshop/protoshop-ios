@@ -23,6 +23,8 @@
 #define FeedBackShowInterval 0.6
 #define FeedBackHideInterval 0.4
 
+#import "WXDNewSettingViewController.h"
+
 @interface WXDSettingViewController ()<UITextViewDelegate,UIAlertViewDelegate,UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UIView *accountView;
 @property (strong, nonatomic) IBOutlet UILabel *userEmailLabel;

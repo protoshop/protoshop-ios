@@ -10,7 +10,7 @@
 //  修改时间：2014年5月13日
 
 #import "WXDProjectsViewController.h"
-#import "WXDSettingViewController.h"
+#import "WXDNewSettingViewController.h"
 #import "WXDProjectTableViewCell.h"
 
 /** model*/
@@ -398,7 +398,7 @@
 }
 
 - (IBAction)goSetting:(id)sender {
-    WXDSettingViewController *settingVC = [[WXDSettingViewController alloc]initWithNavTitle:@"Setting"];
+    WXDNewSettingViewController *settingVC = [[WXDNewSettingViewController alloc]initWithNavTitle:@"Setting"];
     settingVC.WXDNavVC = self.navigationController;
     [settingVC initParams];
     [self.navigationController pushViewController:settingVC animated:YES];

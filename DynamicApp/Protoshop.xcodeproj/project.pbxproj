@@ -335,6 +335,18 @@
 		65D712C618DA8FC9006B4D46 /* WXDSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712B518DA8FC9006B4D46 /* WXDSettingViewController.m */; };
 		65D712C718DA8FC9006B4D46 /* WXDSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D712B618DA8FC9006B4D46 /* WXDSettingViewController.xib */; };
 		65D712CA18DA9003006B4D46 /* WXDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712C918DA9003006B4D46 /* WXDBaseViewController.m */; };
+		696AF877197E1FFB00164721 /* WXDNewSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 696AF875197E1FFB00164721 /* WXDNewSettingViewController.m */; };
+		696AF878197E1FFB00164721 /* WXDNewSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 696AF876197E1FFB00164721 /* WXDNewSettingViewController.xib */; };
+		696AF87C197E207400164721 /* WXDSettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 696AF87A197E207400164721 /* WXDSettingTableViewCell.m */; };
+		696AF87D197E207400164721 /* WXDSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 696AF87B197E207400164721 /* WXDSettingTableViewCell.xib */; };
+		69D39DF7197F553F00539D29 /* FeedBackTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D39DF5197F553F00539D29 /* FeedBackTableViewCell.m */; };
+		69D39DF8197F553F00539D29 /* FeedBackTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69D39DF6197F553F00539D29 /* FeedBackTableViewCell.xib */; };
+		69D39DF9197F7F3B00539D29 /* WXDNewSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 696AF875197E1FFB00164721 /* WXDNewSettingViewController.m */; };
+		69D39DFA197F7F4800539D29 /* WXDNewSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 696AF876197E1FFB00164721 /* WXDNewSettingViewController.xib */; };
+		69D39DFB197F7F6100539D29 /* WXDSettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 696AF87A197E207400164721 /* WXDSettingTableViewCell.m */; };
+		69D39DFC197F7F6100539D29 /* FeedBackTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D39DF5197F553F00539D29 /* FeedBackTableViewCell.m */; };
+		69D39DFD197F7F7200539D29 /* WXDSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 696AF87B197E207400164721 /* WXDSettingTableViewCell.xib */; };
+		69D39DFE197F7F7200539D29 /* FeedBackTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69D39DF6197F553F00539D29 /* FeedBackTableViewCell.xib */; };
 		F711872818BB3C2D00D20749 /* Checked.png in Resources */ = {isa = PBXBuildFile; fileRef = F711872618BB3C2D00D20749 /* Checked.png */; };
 		F713AD6C1932E9AD0070C37A /* CTAuthEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1701D18EBF358000111D1 /* CTAuthEngine.m */; };
 		F713AD6D1932E9AD0070C37A /* CTLoginWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1701F18EBF358000111D1 /* CTLoginWebView.m */; };
@@ -579,6 +591,15 @@
 		65D712B618DA8FC9006B4D46 /* WXDSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WXDSettingViewController.xib; sourceTree = "<group>"; };
 		65D712C818DA9003006B4D46 /* WXDBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDBaseViewController.h; sourceTree = "<group>"; };
 		65D712C918DA9003006B4D46 /* WXDBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDBaseViewController.m; sourceTree = "<group>"; };
+		696AF874197E1FFB00164721 /* WXDNewSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDNewSettingViewController.h; sourceTree = "<group>"; };
+		696AF875197E1FFB00164721 /* WXDNewSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDNewSettingViewController.m; sourceTree = "<group>"; };
+		696AF876197E1FFB00164721 /* WXDNewSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WXDNewSettingViewController.xib; sourceTree = "<group>"; };
+		696AF879197E207400164721 /* WXDSettingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDSettingTableViewCell.h; sourceTree = "<group>"; };
+		696AF87A197E207400164721 /* WXDSettingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDSettingTableViewCell.m; sourceTree = "<group>"; };
+		696AF87B197E207400164721 /* WXDSettingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WXDSettingTableViewCell.xib; sourceTree = "<group>"; };
+		69D39DF4197F553F00539D29 /* FeedBackTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedBackTableViewCell.h; sourceTree = "<group>"; };
+		69D39DF5197F553F00539D29 /* FeedBackTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedBackTableViewCell.m; sourceTree = "<group>"; };
+		69D39DF6197F553F00539D29 /* FeedBackTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedBackTableViewCell.xib; sourceTree = "<group>"; };
 		F711872618BB3C2D00D20749 /* Checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Checked.png; sourceTree = "<group>"; };
 		F732F721190A2FFE00BF14C6 /* Protoshop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Protoshop.entitlements; sourceTree = "<group>"; };
 		F742F1B319051BE900F00AA6 /* UINavigationController+hlyu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+hlyu.h"; sourceTree = "<group>"; };
@@ -1201,6 +1222,15 @@
 				65D712B418DA8FC9006B4D46 /* WXDSettingViewController.h */,
 				65D712B518DA8FC9006B4D46 /* WXDSettingViewController.m */,
 				65D712B618DA8FC9006B4D46 /* WXDSettingViewController.xib */,
+				696AF874197E1FFB00164721 /* WXDNewSettingViewController.h */,
+				696AF875197E1FFB00164721 /* WXDNewSettingViewController.m */,
+				696AF876197E1FFB00164721 /* WXDNewSettingViewController.xib */,
+				696AF879197E207400164721 /* WXDSettingTableViewCell.h */,
+				696AF87A197E207400164721 /* WXDSettingTableViewCell.m */,
+				696AF87B197E207400164721 /* WXDSettingTableViewCell.xib */,
+				69D39DF4197F553F00539D29 /* FeedBackTableViewCell.h */,
+				69D39DF5197F553F00539D29 /* FeedBackTableViewCell.m */,
+				69D39DF6197F553F00539D29 /* FeedBackTableViewCell.xib */,
 			);
 			path = WXDSettingViewController;
 			sourceTree = "<group>";
@@ -1430,12 +1460,15 @@
 			files = (
 				F7C1703318EBF358000111D1 /* close@2x.png in Resources */,
 				F7692B271817BC220076526D /* FontAwesome.ttf in Resources */,
+				696AF87D197E207400164721 /* WXDSettingTableViewCell.xib in Resources */,
 				F7A1633C188EA63A00C3A984 /* Protoshop-text.png in Resources */,
 				657A95C11835F1B00035E15B /* icon-120.png in Resources */,
 				657A95C41835F1B00035E15B /* icon@2x.png in Resources */,
+				69D39DF8197F553F00539D29 /* FeedBackTableViewCell.xib in Resources */,
 				F711872818BB3C2D00D20749 /* Checked.png in Resources */,
 				655B7EE718DC1FC90033FA68 /* dsym_upload.sh in Resources */,
 				F7DCCB911889105E004BAF65 /* Default-568h@2x.png in Resources */,
+				696AF878197E1FFB00164721 /* WXDNewSettingViewController.xib in Resources */,
 				F7C1703D18EBF358000111D1 /* SSOAuthViewController.xib in Resources */,
 				F7B65585188D42D900FD10A2 /* icon-dot.png in Resources */,
 				F7B65587188D561900FD10A2 /* goBack.png in Resources */,
@@ -1490,6 +1523,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69D39DFD197F7F7200539D29 /* WXDSettingTableViewCell.xib in Resources */,
+				69D39DFE197F7F7200539D29 /* FeedBackTableViewCell.xib in Resources */,
+				69D39DFA197F7F4800539D29 /* WXDNewSettingViewController.xib in Resources */,
 				653AEB5218E19A590052FF74 /* Protoshop-Info.plist in Resources */,
 				653AEB5318E19A590052FF74 /* FontAwesome.ttf in Resources */,
 				653AEB5418E19A590052FF74 /* Protoshop-text.png in Resources */,
@@ -1627,6 +1663,7 @@
 				65B886DE185594890043C42C /* messageBoxViewController.m in Sources */,
 				65B886A518558C210043C42C /* lzio.c in Sources */,
 				F7CD13EE18B4AA41003B0D27 /* DKLiveBlurView.m in Sources */,
+				696AF877197E1FFB00164721 /* WXDNewSettingViewController.m in Sources */,
 				F7D631CA1925A2E10065336A /* WXDMainTableView.m in Sources */,
 				65B8869018558C210043C42C /* ldump.c in Sources */,
 				65B8866518558C210043C42C /* wax_CGContext.m in Sources */,
@@ -1647,6 +1684,7 @@
 				65B8869E18558C210043C42C /* lstring.c in Sources */,
 				F7D631D01925A47B0065336A /* WXDMTVLoadingView.m in Sources */,
 				F7C1703A18EBF358000111D1 /* SBJsonParser.m in Sources */,
+				696AF87C197E207400164721 /* WXDSettingTableViewCell.m in Sources */,
 				F7CD13F018B4AA41003B0D27 /* UIImage+Blur.m in Sources */,
 				65B886AC18558C210043C42C /* wax_server.m in Sources */,
 				65D712BC18DA8FC9006B4D46 /* WXDProjectsViewController.m in Sources */,
@@ -1703,6 +1741,7 @@
 				65B8869718558C210043C42C /* lmem.c in Sources */,
 				65B886AA18558C210043C42C /* wax_helpers.m in Sources */,
 				65B886C4185592E60043C42C /* yajl.c in Sources */,
+				69D39DF7197F553F00539D29 /* FeedBackTableViewCell.m in Sources */,
 				65B8869818558C210043C42C /* loadlib.c in Sources */,
 				F7C1703C18EBF358000111D1 /* SSOAuthViewController.m in Sources */,
 				F7CD13F218B4AA41003B0D27 /* UIViewController+popUpViewYu.m in Sources */,
@@ -1814,6 +1853,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69D39DFB197F7F6100539D29 /* WXDSettingTableViewCell.m in Sources */,
+				69D39DFC197F7F6100539D29 /* FeedBackTableViewCell.m in Sources */,
+				69D39DF9197F7F3B00539D29 /* WXDNewSettingViewController.m in Sources */,
 				F713AD7719333CDE0070C37A /* UINavigationController+hlyu.m in Sources */,
 				F713AD7619333B520070C37A /* WXDMTVLoadingView.m in Sources */,
 				F713AD7519333B040070C37A /* WXDMainTableView.m in Sources */,
