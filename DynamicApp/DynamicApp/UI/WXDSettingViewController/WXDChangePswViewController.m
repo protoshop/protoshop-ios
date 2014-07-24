@@ -10,6 +10,7 @@
 //  修改时间：2014年5月14日
 
 #import "WXDChangePswViewController.h"
+#import "SVProgressHUD.h"
 
 @interface WXDChangePswViewController ()<UITextFieldDelegate,UIAlertViewDelegate>
 @property (strong, nonatomic) IBOutlet UIView *changePswView;
@@ -66,15 +67,19 @@
 }
 
 #pragma mark - --------------------按钮事件--------------------
--(void)changePsw{
+-(void)changePsw
+{
+    [SVProgressHUD showWithStatus:@"请稍后..."];
     WXDRequestCommand *command = [WXDRequestCommand sharedWXDRequestCommand];
     [command command_update_password:_theNewPswTF.text
                          oldPassword:_currentPswTF.text
                       retypePassword:_retpyePswTF.text
                                token:[[NSUserDefaults standardUserDefaults]objectForKey:@"userToken"]
                              success:^(NSInteger state) {
+                                 [SVProgressHUD dismiss];
                                  SHOW_ALERT(@"修改成功",@"密码修改成功");
                              } failure:^(NSError *error) {
+                                 [SVProgressHUD dismiss];
                                  if (error != nil) {
                                      SHOW_ALERT(@"提示信息",(NSString *)[error.userInfo objectForKey:NSLocalizedDescriptionKey]);
                                  }
