@@ -15,6 +15,7 @@
 #import "WXDUserInfo.h"
 #import "CTAuthEngine.h"
 #import "WXDRequestCommand.h"
+#import "SVProgressHUD.h"
 
 @interface WXDLoginViewController ()<UITextFieldDelegate,CTSSOAuthDelegate>
 @property (strong, nonatomic) IBOutlet UIButton *SSOLoginBtn;
@@ -85,19 +86,23 @@
 }
 
 - (void)loginAction:(id)sender {
+    [SVProgressHUD showWithStatus:@"请稍后..."];
     WXDRequestCommand *requestCommand = [WXDRequestCommand sharedWXDRequestCommand];
     [requestCommand command_login:_userEmailTF.text
                          password:_userPasswordTF.text
                           success:^(WXDUserInfo *userInfo) {
+                              [SVProgressHUD dismiss];
                               [USER_DEFAULT setObject:userInfo.email forKey:@"userEmail"];
                               [USER_DEFAULT setObject:userInfo.name forKey:@"userName"];
                               [USER_DEFAULT setObject:userInfo.token forKey:@"userToken"];
                               [USER_DEFAULT setObject:userInfo.nickname forKey:@"userNickname"];
                               [USER_DEFAULT synchronize];
+                              [SVProgressHUD dismiss];
                               WXDProjectsViewController *mainVC = [[WXDProjectsViewController alloc]init];
                               [self.navigationController pushViewController:mainVC animated:NO];
                           }
                           failure:^(NSError *error) {
+                              [SVProgressHUD dismiss];
                               [self lockAnimationForView:self.loginView];
                           }];
 }
