@@ -17,8 +17,21 @@
     self.arrowLabel.font = [UIFont fontWithName:@"FontAwesome" size:20];
     self.textView.delegate = self;
     self.textView.text = @"";
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotificationAction) name:@"DismissKeyBoard" object:nil];
+    
 }
 
+-(void)handleNotificationAction
+{
+    [self.textView resignFirstResponder];
+    if (self.feedBackEndEditBlock) {
+        self.feedBackEndEditBlock();
+    }
+}
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"DismissKeyBoard" object:nil];
+}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];

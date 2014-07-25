@@ -15,7 +15,7 @@ typedef enum {
 
 typedef void (^doActionBlock)();
 
-@interface WXDSettingTableViewCell : UITableViewCell
+@interface WXDSettingTableViewCell : UITableViewCell<UITextFieldDelegate>
 {
     BOOL _isShowConfirmButton;
     UIButton *_confirmButton;
@@ -31,4 +31,5 @@ typedef void (^doActionBlock)();
 @property (weak, nonatomic) IBOutlet UILabel *iconLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *arrowLabel;
+@property (weak, nonatomic) IBOutlet UITextField *editTextField;
 @end

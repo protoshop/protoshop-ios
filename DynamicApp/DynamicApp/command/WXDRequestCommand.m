@@ -390,7 +390,7 @@ DEFINE_SINGLETON_FOR_CLASS(WXDRequestCommand)
     }
     
     NSDictionary *parameters = [NSDictionary dictionaryWithObjectsAndKeys:token, @"token", email, @"email", content,@"content",@"1",@"source",nil];
-    NSURLSessionDataTask * sessionTask = [sessionManager POST:__update_user_info_request
+    NSURLSessionDataTask * sessionTask = [sessionManager POST:__feedback_requrest
                                                    parameters:parameters
                                                       success:^(NSURLSessionDataTask *__unused task, id responseObject){
                                                           if (success) {

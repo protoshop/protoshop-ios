@@ -118,20 +118,25 @@
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
--(void)sendFeedBack:(NSString *)context{
+-(void)sendFeedBack:(NSString *)context withCell:(FeedBackTableViewCell *)cell{
+    
     if (context.length == 0) {
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Message" message:@"Context is Empyt." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Message" message:@"Context is Empty." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
+        return;
     }
+    
+    __weak WXDNewSettingViewController *_weakSelf = self;
     WXDRequestCommand *requestCommand = [WXDRequestCommand sharedWXDRequestCommand];
-    [requestCommand command_update_userinfo:[USER_DEFAULT objectForKey:@"userToken"]
-                                   username:[USER_DEFAULT objectForKey:@"userName"]
-                                   nickname:[USER_DEFAULT objectForKey:@"userNickname"]
-                                    success:^(NSInteger state) {
-                                    }
-                                    failure:^(NSError *error) {
-                                        
-                                    }];
+    [requestCommand command_send_feedback:[USER_DEFAULT objectForKey:@"userToken"] email:[USER_DEFAULT objectForKey:@"userName"] content:context success:^(NSInteger state) {
+        cell.textView.text = @"请留下您宝贵的意见和建议";
+        _isShowFeedBack = NO;
+        [_weakSelf.mainTableView reloadData];
+
+    } failure:^(NSError *error) {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Message" message:error.localizedDescription delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }];
 }
 
 
@@ -218,23 +223,16 @@
             cell = (FeedBackTableViewCell *)[[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([FeedBackTableViewCell class]) owner:nil options:nil] objectAtIndex:0];
         }
         [cell showFeedBackTextField:^(NSString *context) {
-            [self sendFeedBack:context];
+            [self sendFeedBack:context withCell:cell];
         } startEdit:^{
             
             [UIView animateWithDuration:0.1 animations:^{
-                self.mainTableView.frame = CGRectMake(0, 0, 320, 360);
                 self.mainTableView.contentOffset = CGPointMake(0, 170);
             } completion:^(BOOL finished) {
                 
             }];
             
         } endEdit:^{
-            [UIView animateWithDuration:0.1 animations:^{
-                self.mainTableView.frame = CGRectMake(0, 0, 320, 568);
-            } completion:^(BOOL finished) {
-                _isShowFeedBack = NO;
-                [tableView reloadData];
-            }];
             
         }];
         cell.iconLabel.text =@"";
@@ -299,7 +297,18 @@
         default:
             break;
     }
-    cell.titleLabel.text = title;
+    if (indexPath.section == 0 && indexPath.row == 1) {
+        cell.titleLabel.hidden = YES;
+        cell.textLabel.text = @"";
+        cell.editTextField.hidden = NO;
+        cell.textLabel.text = @"";
+        cell.editTextField.text = title;
+    } else {
+        cell.titleLabel.hidden = NO;
+        cell.titleLabel.text = title;
+        cell.editTextField.text = @"";
+        cell.editTextField.hidden = YES;
+    }
     cell.iconLabel.text = icon;
     if (indexPath.section == 4) {
         
@@ -341,6 +350,10 @@
     
 }
 
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"DismissKeyBoard" object:nil];
+}
 #pragma mark - --------------------属性相关--------------------
 
 #pragma mark - --------------------接口API--------------------

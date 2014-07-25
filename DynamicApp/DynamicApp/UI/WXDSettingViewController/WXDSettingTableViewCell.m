@@ -7,6 +7,7 @@
 //
 
 #import "WXDSettingTableViewCell.h"
+#import "WXDRequestCommand.h"
 
 @implementation WXDSettingTableViewCell
 
@@ -23,7 +24,20 @@
     [_confirmButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [_confirmButton addTarget:self action:@selector(confirmAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.contentView addSubview:_confirmButton];
+    
+    [self.editTextField setDelegate:self];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotificationAction) name:@"DismissKeyBoard" object:nil];
 
+}
+
+-(void)handleNotificationAction
+{
+    [self.editTextField resignFirstResponder];
+}
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"DismissKeyBoard" object:nil];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -83,5 +97,31 @@
             });
         });
     }
+}
+#pragma mark ---------textFieldDelegate----------
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    return YES;
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self.editTextField resignFirstResponder];
+    [self changeNickName];
+    return YES;
+}
+-(void)changeNickName
+{
+    WXDRequestCommand *requestCommand = [WXDRequestCommand sharedWXDRequestCommand];
+    [requestCommand command_update_userinfo:[USER_DEFAULT objectForKey:@"userToken"]
+                                   username:[USER_DEFAULT objectForKey:@"userName"]
+                                   nickname:self.editTextField.text
+                                    success:^(NSInteger state) {
+                                        [self.editTextField resignFirstResponder];
+                                        [USER_DEFAULT setObject:self.editTextField.text forKey:@"userNickname"];
+                                        [USER_DEFAULT synchronize];
+                                    }
+                                    failure:^(NSError *error) {
+                                        SHOW_ALERT(@"更新用户信息错误", [error localizedDescription]);
+                                    }];
+
 }
 @end

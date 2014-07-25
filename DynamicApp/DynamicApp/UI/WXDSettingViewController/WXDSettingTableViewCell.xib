@@ -34,10 +34,18 @@
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="SHu-P8-zly">
+                        <rect key="frame" x="64" y="8" width="201" height="30"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
                 </subviews>
             </tableViewCellContentView>
             <connections>
                 <outlet property="arrowLabel" destination="dKD-eD-hjd" id="Rnm-2R-INJ"/>
+                <outlet property="editTextField" destination="SHu-P8-zly" id="umN-8f-SGk"/>
                 <outlet property="iconLabel" destination="T9c-gH-odt" id="74R-JQ-LZo"/>
                 <outlet property="titleLabel" destination="01l-zw-8gi" id="Cz6-xd-thU"/>
             </connections>
