@@ -297,6 +297,11 @@
         default:
             break;
     }
+    if (indexPath.section == 0 && indexPath.row == 0) {
+        cell.titleLabel.textColor = [UIColor colorWithRed:180.0/255.0 green:180.0/255.0 blue:180.0/255.0 alpha:1];
+    } else {
+        cell.titleLabel.textColor = [UIColor colorWithRed:60.0/255.0 green:60.0/255.0 blue:60.0/255.0 alpha:1];
+    }
     if (indexPath.section == 0 && indexPath.row == 1) {
         cell.titleLabel.hidden = YES;
         cell.textLabel.text = @"";

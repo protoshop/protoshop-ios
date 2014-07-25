@@ -18,6 +18,7 @@ typedef void (^feedBackBlock)(NSString *context);
 @property (weak, nonatomic) IBOutlet UILabel *arrowLabel;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property (weak, nonatomic) IBOutlet UIButton *sendButton;
 
 @property (nonatomic,copy) feedBackBlock feedBackBlock;
 @property (nonatomic,copy) actionBlock feedBackStartEditBlock;

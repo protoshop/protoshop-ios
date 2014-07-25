@@ -18,7 +18,7 @@
     self.textView.delegate = self;
     self.textView.text = @"";
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotificationAction) name:@"DismissKeyBoard" object:nil];
-    
+    [self.sendButton setTitleColor:[UIColor colorWithRed:235.0/255.0 green:138.0/255.0 blue:37.0/255.0 alpha:0.4] forState:UIControlStateNormal];
 }
 
 -(void)handleNotificationAction
@@ -74,6 +74,11 @@
 
 - (void)textViewDidChange:(UITextView *)textView
 {
+    if (textView.text.length == 0) {
+        [self.sendButton setTitleColor:[UIColor colorWithRed:235.0/255.0 green:138.0/255.0 blue:37.0/255.0 alpha:0.4] forState:UIControlStateNormal];
+    } else {
+        [self.sendButton setTitleColor:[UIColor colorWithRed:235.0/255.0 green:138.0/255.0 blue:37.0/255.0 alpha:1.0] forState:UIControlStateNormal];
+    }
     if (textView.text.length <= 240) {
         self.statusLabel.text = [NSString stringWithFormat:@"%d",240 - textView.text.length];
     } else {
@@ -81,6 +86,9 @@
     }
 }
 - (IBAction)sendMessageAction:(id)sender {
+    if (self.textView.text.length == 0 ||[self.textView.text isEqualToString:@"请留下您宝贵的意见和建议"]) {
+        return;
+    }
     [self.textView resignFirstResponder];
     if (self.feedBackBlock) {
         self.feedBackBlock(self.textView.text);
