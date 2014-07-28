@@ -14,21 +14,21 @@
 @implementation WXDAppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    WXDreach = [Reachability reachabilityWithHostname:__reachability_path];
-    WXDreach.reachableBlock = ^(Reachability * reachability)
+    Reachability *reachability = [Reachability reachabilityWithHostname:__reachability_path];
+    reachability.reachableBlock = ^(Reachability * reachability)
     {
         dispatch_async(dispatch_get_main_queue(), ^{
             DLog(@"Block Says Reachable");
         });
     };
-    WXDreach.unreachableBlock = ^(Reachability * reachability)
+    reachability.unreachableBlock = ^(Reachability * reachability)
     {
         dispatch_async(dispatch_get_main_queue(), ^{
             DLog(@"Block Says Unreachable");
             [[[UIAlertView alloc] initWithTitle:@"网络状况" message:@"失去连接" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
         });
     };
-    [WXDreach startNotifier];
+    [reachability startNotifier];
     
     WXDLoginViewController *loginViewController = [[WXDLoginViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginViewController];
@@ -42,7 +42,9 @@
 /**
  *  打印log到documents目录
  */
-- (void)redirectLogToDocumentFolder{
+- (void)redirectLogToDocumentFolder
+{
+#ifndef PROTOSHOP_WWW
     NSString *fileName = [NSString stringWithFormat:@"dr.log"];
     NSString *logFilePath = [DOCUMENTS_DIRECTORY stringByAppendingPathComponent:fileName];
     /**
@@ -55,6 +57,7 @@
      */
     freopen([logFilePath cStringUsingEncoding:NSASCIIStringEncoding], "a+", stdout);
     freopen([logFilePath cStringUsingEncoding:NSASCIIStringEncoding], "a+", stderr);
+#endif
 }
 
 /**

@@ -10,7 +10,6 @@
 #import "Reachability.h"
 #import "WXDRequestCommand.h"
 
-Reachability *WXDreach;
 @class WXDProjectsViewController;
 @interface WXDAppDelegate : UIResponder <UIApplicationDelegate>
 @property (strong, nonatomic) UIWindow *window;
