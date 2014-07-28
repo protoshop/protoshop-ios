@@ -10,6 +10,7 @@
 //  修改时间：2014年5月13日
 
 #import "WXDBaseViewController.h"
+#import "Reachability.h"
 
 @interface WXDBaseViewController ()
 
@@ -29,6 +30,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        // Add Reachability Observer
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityDidChange:) name:kReachabilityChangedNotification object:nil];
     }
     return self;
 }
@@ -63,6 +66,19 @@
 -(void)initParams{
     self.WXDNavVC.navigationBar.barTintColor = [UIColor colorWithRed:11/255.0 green:81/255.0 blue:179/255.0 alpha:1.0];
     [self.WXDNavVC.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName, nil]];
+}
+
+#pragma mark - ------------------Reachability Observer----------------------------
+/***/
+-(void) reachabilityDidChange:(NSNotification *)notification
+{
+    Reachability *reachability = (Reachability *)[notification object];
+    
+    if ([reachability isReachable]) {
+        DLog(@"reachable.");
+    } else {
+        [[[UIAlertView alloc] initWithTitle:@"网络状况" message:@"尚未连接网络！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
+    }
 }
 
 /*
