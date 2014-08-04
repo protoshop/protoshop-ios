@@ -11,10 +11,11 @@
 
 #import "WXDBaseViewController.h"
 #import "Reachability.h"
+#import "SVProgressHUD.h"
 
 @interface WXDBaseViewController ()
-
 @end
+
 @implementation WXDBaseViewController
 #pragma mark - --------------------初始化--------------------
 - (id)initWithNavTitle:(NSString*)title{
@@ -76,10 +77,29 @@
     
     if ([reachability isReachable]) {
         DLog(@"reachable.");
+        bReachability = YES;
     } else {
+        bReachability = NO;
         [[[UIAlertView alloc] initWithTitle:@"网络状况" message:@"尚未连接网络！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
     }
 }
+
+#pragma mark SVProgressHUD dismiss
+-(void) showHUD
+{
+    [SVProgressHUD show];
+}
+
+-(void) showHUDWithMessage:(NSString *)message
+{
+    [SVProgressHUD showWithStatus:message];
+}
+
+- (void)dismissHUD
+{
+	[SVProgressHUD dismiss];
+}
+
 
 /*
 #pragma mark - Navigation
