@@ -17,7 +17,6 @@
 		57DA29D51769C74D002C1F29 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DA29D41769C74D002C1F29 /* CoreGraphics.framework */; };
 		57DA29DD1769C74D002C1F29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DA29DC1769C74D002C1F29 /* main.m */; };
 		57DA2AAA1769C7F2002C1F29 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DA2AA91769C7F2002C1F29 /* libz.dylib */; };
-		653AEADE18E19A590052FF74 /* WXDSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712B518DA8FC9006B4D46 /* WXDSettingViewController.m */; };
 		653AEADF18E19A590052FF74 /* wax.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8865018558C210043C42C /* wax.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		653AEAE218E19A590052FF74 /* ModalCloseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CD13E718B4AA41003B0D27 /* ModalCloseButton.m */; };
 		653AEAE318E19A590052FF74 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DA29DC1769C74D002C1F29 /* main.m */; };
@@ -128,7 +127,6 @@
 		653AEB6518E19A590052FF74 /* WXDProjectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D712A018DA8FC9006B4D46 /* WXDProjectTableViewCell.xib */; };
 		653AEB6618E19A590052FF74 /* WXDLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D7129C18DA8FC9006B4D46 /* WXDLoginViewController.xib */; };
 		653AEB6718E19A590052FF74 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 657A95BF1835F1B00035E15B /* icon.png */; };
-		653AEB6818E19A590052FF74 /* WXDSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D712B618DA8FC9006B4D46 /* WXDSettingViewController.xib */; };
 		655E453018C86CDD00CF6348 /* DAProgressOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E452F18C86CDD00CF6348 /* DAProgressOverlayView.m */; };
 		655E453418C86D6700CF6348 /* WXDGradualView.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E453318C86D6700CF6348 /* WXDGradualView.m */; };
 		655E453818C8791700CF6348 /* WXDProjectInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E453718C8791700CF6348 /* WXDProjectInfo.m */; };
@@ -213,8 +211,6 @@
 		65D712BF18DA8FC9006B4D46 /* WXDSignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D712A918DA8FC9006B4D46 /* WXDSignupViewController.xib */; };
 		65D712C018DA8FC9006B4D46 /* WXDChangePswViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712AC18DA8FC9006B4D46 /* WXDChangePswViewController.m */; };
 		65D712C118DA8FC9006B4D46 /* WXDChangePswViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D712AD18DA8FC9006B4D46 /* WXDChangePswViewController.xib */; };
-		65D712C618DA8FC9006B4D46 /* WXDSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712B518DA8FC9006B4D46 /* WXDSettingViewController.m */; };
-		65D712C718DA8FC9006B4D46 /* WXDSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D712B618DA8FC9006B4D46 /* WXDSettingViewController.xib */; };
 		65D712CA18DA9003006B4D46 /* WXDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712C918DA9003006B4D46 /* WXDBaseViewController.m */; };
 		696AF877197E1FFB00164721 /* WXDNewSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 696AF875197E1FFB00164721 /* WXDNewSettingViewController.m */; };
 		696AF878197E1FFB00164721 /* WXDNewSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 696AF876197E1FFB00164721 /* WXDNewSettingViewController.xib */; };
@@ -453,9 +449,6 @@
 		65D712AB18DA8FC9006B4D46 /* WXDChangePswViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDChangePswViewController.h; sourceTree = "<group>"; };
 		65D712AC18DA8FC9006B4D46 /* WXDChangePswViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDChangePswViewController.m; sourceTree = "<group>"; };
 		65D712AD18DA8FC9006B4D46 /* WXDChangePswViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WXDChangePswViewController.xib; sourceTree = "<group>"; };
-		65D712B418DA8FC9006B4D46 /* WXDSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDSettingViewController.h; sourceTree = "<group>"; };
-		65D712B518DA8FC9006B4D46 /* WXDSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDSettingViewController.m; sourceTree = "<group>"; };
-		65D712B618DA8FC9006B4D46 /* WXDSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WXDSettingViewController.xib; sourceTree = "<group>"; };
 		65D712C818DA9003006B4D46 /* WXDBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDBaseViewController.h; sourceTree = "<group>"; };
 		65D712C918DA9003006B4D46 /* WXDBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDBaseViewController.m; sourceTree = "<group>"; };
 		696AF874197E1FFB00164721 /* WXDNewSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDNewSettingViewController.h; sourceTree = "<group>"; };
@@ -1063,9 +1056,6 @@
 				65D712AB18DA8FC9006B4D46 /* WXDChangePswViewController.h */,
 				65D712AC18DA8FC9006B4D46 /* WXDChangePswViewController.m */,
 				65D712AD18DA8FC9006B4D46 /* WXDChangePswViewController.xib */,
-				65D712B418DA8FC9006B4D46 /* WXDSettingViewController.h */,
-				65D712B518DA8FC9006B4D46 /* WXDSettingViewController.m */,
-				65D712B618DA8FC9006B4D46 /* WXDSettingViewController.xib */,
 				696AF874197E1FFB00164721 /* WXDNewSettingViewController.h */,
 				696AF875197E1FFB00164721 /* WXDNewSettingViewController.m */,
 				696AF876197E1FFB00164721 /* WXDNewSettingViewController.xib */,
@@ -1305,7 +1295,6 @@
 				65D712BA18DA8FC9006B4D46 /* WXDProjectTableViewCell.xib in Resources */,
 				65D712B818DA8FC9006B4D46 /* WXDLoginViewController.xib in Resources */,
 				657A95C31835F1B00035E15B /* icon.png in Resources */,
-				65D712C718DA8FC9006B4D46 /* WXDSettingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1335,7 +1324,6 @@
 				653AEB6518E19A590052FF74 /* WXDProjectTableViewCell.xib in Resources */,
 				653AEB6618E19A590052FF74 /* WXDLoginViewController.xib in Resources */,
 				653AEB6718E19A590052FF74 /* icon.png in Resources */,
-				653AEB6818E19A590052FF74 /* WXDSettingViewController.xib in Resources */,
 				658380EA1935B47D0028ED6E /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1410,7 +1398,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65D712C618DA8FC9006B4D46 /* WXDSettingViewController.m in Sources */,
 				65B886A718558C210043C42C /* wax.m in Sources */,
 				F742F1B519051BE900F00AA6 /* UINavigationController+hlyu.m in Sources */,
 				F7CD13EF18B4AA41003B0D27 /* ModalCloseButton.m in Sources */,
@@ -1528,7 +1515,6 @@
 				F713AD6C1932E9AD0070C37A /* CTAuthEngine.m in Sources */,
 				F713AD6D1932E9AD0070C37A /* CTLoginWebView.m in Sources */,
 				F713AD6E1932E9AD0070C37A /* CTSSOLoginView.m in Sources */,
-				653AEADE18E19A590052FF74 /* WXDSettingViewController.m in Sources */,
 				653AEADF18E19A590052FF74 /* wax.m in Sources */,
 				653AEAE218E19A590052FF74 /* ModalCloseButton.m in Sources */,
 				653AEAE318E19A590052FF74 /* main.m in Sources */,
