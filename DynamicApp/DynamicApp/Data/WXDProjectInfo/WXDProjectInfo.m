@@ -40,11 +40,12 @@
     self.createTime = [WXDStringUtility toString:[dictionary objectForKey:@"createTime"]];
     self.editTime = [WXDStringUtility toString:[dictionary objectForKey:@"editTime"]];
     self.isPublic = [WXDStringUtility toString:[dictionary objectForKey:@"isPublic"]];
-    self.hasDL = NO;
+    self.bDownload = NO;
+    self.appPath = @"";
 }
 
 -(void)debugPrint{
-    DLog(@"debugPrint begins \n appDesc:%@,appID:%@,appIcon:%@,appName:%@,appOwner:%@,appOwnerNickname:%@,appPlatform:%@,createTime:%@,editTime:%@,isPublic:%@,hasDL:%i \n debugPrint ends",self.appDesc,self.appID,self.appIcon,self.appName,self.appOwner,self.appOwnerNickname,self.appPlatform,self.createTime,self.editTime,self.isPublic,self.hasDL);
+    DLog(@"debugPrint begins \n appDesc:%@,appID:%@,appIcon:%@,appName:%@,appOwner:%@,appOwnerNickname:%@,appPlatform:%@,createTime:%@,editTime:%@,isPublic:%@,hasDL:%i \n debugPrint ends",self.appDesc,self.appID,self.appIcon,self.appName,self.appOwner,self.appOwnerNickname,self.appPlatform,self.createTime,self.editTime,self.isPublic,self.bDownload);
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
@@ -59,7 +60,7 @@
     [aCoder encodeObject:self.createTime forKey:@"createTime"];
     [aCoder encodeObject:self.editTime forKey:@"editTime"];
     [aCoder encodeObject:self.isPublic forKey:@"isPublic"];
-    [aCoder encodeBool:self.hasDL forKey:@"hasDL"];
+    [aCoder encodeBool:self.bDownload forKey:@"bDownload"];
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder
@@ -77,9 +78,27 @@
         self.createTime = [aDecoder decodeObjectForKey:@"createTime"];
         self.editTime = [aDecoder decodeObjectForKey:@"editTime"];
         self.isPublic = [aDecoder decodeObjectForKey:@"isPublic"];
-        self.hasDL = [aDecoder decodeBoolForKey:@"hasDL"];
+        self.bDownload = [aDecoder decodeBoolForKey:@"bDownload"];
     }
     return self;
 }
 
+-(id) copyWithZone:(NSZone *)zone
+{
+    WXDProjectInfo* copy = [[[self class] alloc] init];
+    if (copy) {
+        copy.appDesc = [self.appDesc copy];
+        copy.appID = [self.appID copy];
+        copy.appIcon = [self.appIcon copy];
+        copy.appName = [self.appName copy];
+        copy.appOwner = [self.appOwner copy];
+        copy.appOwnerNickname = [self.appOwnerNickname copy];
+        copy.appPlatform = [self.appPlatform copy];
+        copy.createTime = [self.createTime copy];
+        copy.editTime = [self.editTime copy];
+        copy.isPublic = [self.isPublic copy];
+        copy.bDownload = self.bDownload;
+    }
+    return copy;
+}
 @end
