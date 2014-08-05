@@ -99,7 +99,7 @@
     while ((filename = [e nextObject])) {
         [fileManager removeItemAtPath:[userDocDir stringByAppendingPathComponent:filename] error:NULL];
     }
-    [USER_DEFAULT setObject:nil forKey:[NSString stringWithFormat:@"theLastListInfo%@",[USER_DEFAULT objectForKey:@"userEmail"]]];
+    [USER_DEFAULT setObject:nil forKey:[NSString stringWithFormat:__Protoshop_Project_List,[USER_DEFAULT objectForKey:@"userEmail"]]];
     [USER_DEFAULT synchronize];
     for (UIViewController *tempVC in [self.navigationController viewControllers]) {
         NSRange subRange = [tempVC.description rangeOfString:@"WXDProjectsViewController"];
@@ -107,6 +107,7 @@
         }
     }
     
+    [[NSNotificationCenter defaultCenter] postNotificationName:__Protoshop_Clear_Cache object:nil];
 }
 
 -(void)logoutAction

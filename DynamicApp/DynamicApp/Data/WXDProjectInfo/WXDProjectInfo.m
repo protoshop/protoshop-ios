@@ -61,6 +61,7 @@
     [aCoder encodeObject:self.editTime forKey:@"editTime"];
     [aCoder encodeObject:self.isPublic forKey:@"isPublic"];
     [aCoder encodeBool:self.bDownload forKey:@"bDownload"];
+    [aCoder encodeObject:self.appPath forKey:@"appPath"];
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder
@@ -79,6 +80,7 @@
         self.editTime = [aDecoder decodeObjectForKey:@"editTime"];
         self.isPublic = [aDecoder decodeObjectForKey:@"isPublic"];
         self.bDownload = [aDecoder decodeBoolForKey:@"bDownload"];
+        self.appPath = [aDecoder decodeObjectForKey:@"appPath"];
     }
     return self;
 }
@@ -98,6 +100,7 @@
         copy.editTime = [self.editTime copy];
         copy.isPublic = [self.isPublic copy];
         copy.bDownload = self.bDownload;
+        copy.appPath = [self.appPath copy];
     }
     return copy;
 }

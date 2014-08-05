@@ -17,7 +17,6 @@
 
 /** model*/
 #import "WXDProjectInfo.h"
-#import "WXDFileKey.h"
 
 
 /** 第三方API*/
@@ -41,6 +40,21 @@
  * 加载本地缓存数据
  */
 -(void) loadDataFromLocation;
+
+/**
+ * the observer of project list changed
+ */
+-(void) projectListChanged:(NSNotification *) notification;
+
+/**
+ * the observer for recieving the notification of reloading tablecell
+ */
+-(void) reloadTableCell:(NSNotification *) notification;
+
+/**
+ * The observer for recieving the notification of clear cache
+ */
+-(void) clearCache:(NSNotification *) notification;
 
 @property (strong, nonatomic) IBOutlet UISearchBar *projectSearchBar;
 @property (strong, nonatomic) IBOutlet WXDMainTableView *mainTableView;
@@ -90,8 +104,11 @@
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(resignSearchBar:)];
     [_topTitleView addGestureRecognizer:tapGesture];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(projectListChanged:) name:__Protoshop_Project_State_Changed object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTableCell:) name:__Protoshop_Reload_TableCell object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clearCache:) name:__Protoshop_Clear_Cache object:nil];
+    
     _beClearCache = NO;
-    [SVProgressHUD showWithStatus:@"正在获取工程列表"];
     [self loadDataFromLocation];
     [self loadDataFromOnline];
 }
@@ -127,7 +144,7 @@
                                               token:[USER_DEFAULT objectForKey:@"userToken"]
                                             success:^(NSMutableArray *projectsarr) {
                                                 [self mergeOnlineIntoLocation:projectsarr];
-                                                [self.mainTableView reloadData];
+                                                [_mainTableView reloadData];
                                                 [self dismissHUD];
                                             } failure:^(NSError *error) {
                                                 [self dismissHUD];
@@ -139,7 +156,7 @@
 
 -(void) loadDataFromLocation
 {
-    NSData *decodedObject = [USER_DEFAULT objectForKey:[NSString stringWithFormat:@"ProjectListInfoFor%@",[USER_DEFAULT objectForKey:@"userEmail"]]];
+    NSData *decodedObject = [USER_DEFAULT objectForKey:[NSString stringWithFormat:__Protoshop_Project_List,[USER_DEFAULT objectForKey:@"userEmail"]]];
     if (decodedObject == nil) {
         return;
     }
@@ -165,7 +182,6 @@
                         onlineItem.bDownload = NO;
                     }
                 }
-                
             }
         }
         
@@ -174,12 +190,60 @@
         _projectInfoList = [[NSMutableArray alloc] initWithArray:onlineProjectsInfoList copyItems:YES];
     }
     
-    [_mainTableView reloadData];
-    
     NSData *encodeObject = [NSKeyedArchiver archivedDataWithRootObject:_projectInfoList];
-    [USER_DEFAULT setObject:encodeObject forKey:[NSString stringWithFormat:@"ProjectListInfoFor%@",[USER_DEFAULT objectForKey:@"userEmail"]]];
+    [USER_DEFAULT setObject:encodeObject forKey:[NSString stringWithFormat:__Protoshop_Project_List,[USER_DEFAULT objectForKey:@"userEmail"]]];
     [USER_DEFAULT synchronize];
 
+}
+
+
+-(void) projectListChanged:(NSNotification *)notification
+{
+    NSData *encodeObject = [NSKeyedArchiver archivedDataWithRootObject:_projectInfoList];
+    [USER_DEFAULT setObject:encodeObject forKey:[NSString stringWithFormat:__Protoshop_Project_List,[USER_DEFAULT objectForKey:@"userEmail"]]];
+    [USER_DEFAULT synchronize];
+}
+
+-(void) reloadTableCell:(NSNotification *)notification
+{
+    NSString *appID = (NSString *)[notification object];
+    NSUInteger index = -1;
+    
+    if (_searchedProjectInfoList != nil && [_searchedProjectInfoList count] > 0) {
+        for (int i = 0; i < [_searchedProjectInfoList count]; i++) {
+            WXDProjectInfo *projectInfo = (WXDProjectInfo *)[_searchedProjectInfoList objectAtIndex:i];
+            if ([appID isEqualToString:projectInfo.appID]) {
+                index = i;
+                break;
+            }
+        }
+
+    } else {
+        for (int i = 0; i < [_projectInfoList count]; i++) {
+            WXDProjectInfo *projectInfo = (WXDProjectInfo *)[_projectInfoList objectAtIndex:i];
+            if ([appID isEqualToString:projectInfo.appID]) {
+                index = i;
+                break;
+            }
+        }
+    
+    }
+    
+    if (index != -1) {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
+        [_mainTableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath, nil] withRowAnimation:UITableViewRowAnimationNone];
+    }
+    
+}
+
+-(void) clearCache:(NSNotification *) notification
+{
+    for (int i = 0; i < [_projectInfoList count]; i++) {
+        WXDProjectInfo *projectInfo = [_projectInfoList objectAtIndex:i];
+        projectInfo.bDownload = NO;
+        projectInfo.appPath = @"";
+    }
+    [_mainTableView reloadData];
 }
 
 #pragma mark - --------------------按钮事件--------------------
@@ -253,6 +317,7 @@
             ret = [_projectInfoList count];
         }
     }
+    DLog(@"table number: %d", ret);
     return ret;
 }
 
@@ -266,7 +331,7 @@
     }
     WXDProjectInfo *projectInfo = nil;
     
-    if (_searchedProjectInfoList == nil && [_searchedProjectInfoList count] != 0) {
+    if (_searchedProjectInfoList == nil || [_searchedProjectInfoList count] < 1) {
         if (_projectInfoList != nil && [_projectInfoList count] != 0) {
             projectInfo = (WXDProjectInfo *)[_projectInfoList objectAtIndex:indexPath.row];
             cell.projectInfo = projectInfo;
@@ -298,34 +363,14 @@
 {
     if ([_projectSearchBar isFirstResponder]==YES) {
         [_projectSearchBar resignFirstResponder];
-        if ([_projectSearchBar.text isEqualToString:@""]==YES) {
-            filteredArray = nil;
-            [self.mainTableView reloadData];
-        }
-        return;
-    }
-    theChosenIndex = [NSNumber numberWithInteger:indexPath.row];
-    WXDProjectInfo *infoCell;
-    if ([filteredArray count] != 0) {
-        infoCell = filteredArray[indexPath.row];
-    }else{
-        infoCell = theListInfo[indexPath.row];
     }
 
-    if (infoCell.hasDL == YES) {
-        [self searchDynamicGroup];
-        [self getIntoTheApp];
-    }else if (infoCell.hasDL == NO){
-        for (WXDProjectTableViewCell *cell in tableView.visibleCells) {
-            if ([cell.appID isEqualToString:infoCell.appID]== YES ) {
-                progressOverlayView = [[DAProgressOverlayView alloc] initWithFrame:cell.projectIconImageView.bounds];
-                [cell.projectIconImageView addSubview:progressOverlayView];
-                [progressOverlayView displayOperationWillTriggerAnimation];
-            }
-        }
-//        [self.view setUserInteractionEnabled:NO];//下载期间，不能进行其他操作
-        [self DownLoadZipFile];
+    
+    WXDProjectTableViewCell *cell = (WXDProjectTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+    if (cell != nil) {
+        [cell downloadProjectPackage];
     }
+    
 }
 
 @end

@@ -32,6 +32,7 @@
     if (self) {
         // Custom initialization
         // Add Reachability Observer
+        bReachability = YES;
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityDidChange:) name:kReachabilityChangedNotification object:nil];
     }
     return self;
@@ -41,6 +42,21 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    Reachability *reachability = [Reachability reachabilityWithHostname:__reachability_path];
+    reachability.reachableBlock = ^(Reachability * reachability)
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            bReachability = YES;
+        });
+    };
+    reachability.unreachableBlock = ^(Reachability * reachability)
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            bReachability = NO;
+            [[[UIAlertView alloc] initWithTitle:@"网络状况" message:@"失去连接" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
+        });
+    };
+
 }
 
 #pragma mark - --------------------System--------------------

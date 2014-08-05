@@ -36,7 +36,7 @@
 @property (strong, nonatomic) DAProgressOverlayView *progressView;
 @property (strong, nonatomic) NSString *appPath;
 
--(void) unzipApp;
+-(void) unzipApp:(NSString *) zipFile;
 @end
 
 @implementation WXDProjectTableViewCell
@@ -65,6 +65,10 @@
     _projectIconImageView.layer.masksToBounds = YES;
     _projectIconImageView.layer.borderWidth = 0;
     _blueDotImageView.hidden = NO;
+    _progressView = [[DAProgressOverlayView alloc] initWithFrame:_projectIconImageView.bounds];
+    _progressView.hidden = YES;
+    [_projectIconImageView addSubview:_progressView];
+
     //self.SyncBtn.titleLabel.font = [UIFont fontWithName:@"FontAwesome" size:36];//分享
 }
 
@@ -73,6 +77,14 @@
  */
 -(void) downloadProjectPackage
 {
+    if (_projectInfo.bDownload == YES) {
+        [self gotoApp];
+        return;
+    };
+    
+    _progressView.hidden = NO;
+    [_progressView displayOperationWillTriggerAnimation];
+
     WXDRequestCommand *requestCommand = [WXDRequestCommand sharedWXDRequestCommand];
     [requestCommand command_create_zip_url:_projectInfo.appID
                                      token:[USER_DEFAULT objectForKey:@"userToken"]
@@ -85,13 +97,25 @@
                                        NSURLSessionDownloadTask *downloadTask = [session downloadTaskWithRequest:request
                                                                                                         progress:&progress
                                                                                                      destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
+                                                                                                         NSString *filePath = [targetPath resourceSpecifier];
+                                                                                                         
+                                                                                                         [self unzipApp:[filePath stringByReplacingOccurrencesOfString:@"%20" withString:@" "]];
+                                                                                                         [_progressView displayOperationDidFinishAnimation];
+                                                                                                         double delayInSeconds = _progressView.stateChangeAnimationDuration;
+                                                                                                         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+                                                                                                         dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+                                                                                                             _progressView.progress = 0.;
+                                                                                                             _progressView.hidden = YES;
+                                                                                                         });
                                                                                                          return [NSURL fileURLWithPath:@"/tmp/robots.txt"];
                                                                                                      }
-                                                                                               completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) { }];
+                                                                                               completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
+                                                                                                   DLog(@"error");
+                                                                                               }];
                                        [downloadTask resume];
                                        
                                        [session setDownloadTaskDidWriteDataBlock:^(NSURLSession *session, NSURLSessionDownloadTask *downloadTask, int64_t bytesWritten, int64_t totalBytesWritten, int64_t totalBytesExpectedToWrite) {
-                                           float progress = (float)bytesWritten /(float)totalBytesExpectedToWrite;
+                                           float progress = (float)totalBytesWritten /(float)totalBytesExpectedToWrite;
                                            _progressView.progress = progress;
                                        }];
                                    }
@@ -108,40 +132,36 @@
                                    }];
 }
 
--(void) unzipApp
+-(void) unzipApp:(NSString *)zipFile
 {
     NSString *userEmail = [USER_DEFAULT objectForKey:@"userEmail"];
     ZipArchive *zip = [[ZipArchive alloc] init];
     BOOL result;
-    NSArray *contentOfFolder = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:DOCUMENTS_DIRECTORY error:NULL];
-    for (NSString *aPath in contentOfFolder) {
-        NSString * fullPath = [DOCUMENTS_DIRECTORY stringByAppendingPathComponent:aPath];
-        BOOL isDir = NO;
-        if ([[NSFileManager defaultManager] fileExistsAtPath:fullPath isDirectory:&isDir])
-        {
-            if (isDir != YES && [fullPath rangeOfString:@".zip"].location != NSNotFound ) {
-                if ([zip UnzipOpenFile:fullPath]) {
-                    /**
-                     *  目录的名字是用户邮件
-                     */
-                    NSString *userDocDir = [NSString stringWithFormat:@"%@/%@",DOCUMENTS_DIRECTORY,userEmail];
-                    result = [zip UnzipFileTo:userDocDir overWrite:YES];
-                    if (!result) {
-                        DLog(@"解压失败");
-                    }
-                    else
-                    {
-                        DLog(@"解压成功");
-                        [[NSFileManager defaultManager] removeItemAtPath:fullPath error:nil];
-                    }
-                    [zip UnzipCloseFile];
-                }
-            }
+    if ([zip UnzipOpenFile:zipFile]) {
+        /**
+         *  目录的名字是用户邮件
+         */
+        NSString *userDocDir = [NSString stringWithFormat:@"%@/%@",DOCUMENTS_DIRECTORY,userEmail];
+        result = [zip UnzipFileTo:userDocDir overWrite:YES];
+        if (!result) {
+            NSLog(@"解压失败");
         }
+        else
+        {
+            DLog(@"解压成功");
+            _projectInfo.appPath = [NSString stringWithFormat:@"%@/%@", userDocDir, _projectInfo.appID];
+            _projectInfo.bDownload = YES;
+            _blueDotImageView.hidden = NO;
+            [[NSNotificationCenter defaultCenter] postNotificationName:__Protoshop_Project_State_Changed object:nil];
+            [[NSNotificationCenter defaultCenter] postNotificationName:__Protoshop_Reload_TableCell object:_projectInfo.appID];
+
+        }
+        [zip UnzipCloseFile];
     }
+
     NSString *uselessFiles =[DOCUMENTS_DIRECTORY stringByAppendingPathComponent:@"__MACOSX"];
     [[NSFileManager defaultManager] removeItemAtPath:uselessFiles error:nil];
-
+    
 }
 
 /*
@@ -149,10 +169,9 @@
  */
 -(void) gotoApp
 {
-    NSString *dir = nil;
     wax_end();
-    if (dir != nil) {
-        NSString *pp = [[NSString alloc ] initWithFormat:@"%@/?.lua;%@/?/init.lua;", dir, dir];
+    if (_projectInfo.appPath != nil) {
+        NSString *pp = [[NSString alloc ] initWithFormat:@"%@/?.lua;%@/?/init.lua;", _projectInfo.appPath, _projectInfo.appPath];
         setenv(LUA_PATH, [pp UTF8String], 1);
         wax_start("patch", luaopen_wax_http, luaopen_wax_json,luaopen_wax_CTViewController,nil);
     }else{

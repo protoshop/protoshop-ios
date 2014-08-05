@@ -38,7 +38,6 @@
 		653AEAF418E19A590052FF74 /* lvm.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8864A18558C210043C42C /* lvm.c */; };
 		653AEAF618E19A590052FF74 /* WXDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B886E41855973C0043C42C /* WXDAppDelegate.m */; };
 		653AEAF718E19A590052FF74 /* liolib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862C18558C210043C42C /* liolib.c */; };
-		653AEAF818E19A590052FF74 /* WXDFileKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E453B18C8803200CF6348 /* WXDFileKey.m */; };
 		653AEAF918E19A590052FF74 /* wax_instance.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8865818558C210043C42C /* wax_instance.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		653AEAFA18E19A590052FF74 /* lauxlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8861C18558C210043C42C /* lauxlib.c */; };
 		653AEAFB18E19A590052FF74 /* loslib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863818558C210043C42C /* loslib.c */; };
@@ -130,7 +129,6 @@
 		655E453018C86CDD00CF6348 /* DAProgressOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E452F18C86CDD00CF6348 /* DAProgressOverlayView.m */; };
 		655E453418C86D6700CF6348 /* WXDGradualView.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E453318C86D6700CF6348 /* WXDGradualView.m */; };
 		655E453818C8791700CF6348 /* WXDProjectInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E453718C8791700CF6348 /* WXDProjectInfo.m */; };
-		655E453C18C8803200CF6348 /* WXDFileKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E453B18C8803200CF6348 /* WXDFileKey.m */; };
 		656FBF6518D6D9BD00E1F41E /* WXDRequestCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 656FBF6418D6D9BD00E1F41E /* WXDRequestCommand.m */; };
 		657A95C11835F1B00035E15B /* icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 657A95BD1835F1B00035E15B /* icon-120.png */; };
 		657A95C31835F1B00035E15B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 657A95BF1835F1B00035E15B /* icon.png */; };
@@ -299,8 +297,6 @@
 		655E453318C86D6700CF6348 /* WXDGradualView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDGradualView.m; sourceTree = "<group>"; };
 		655E453618C8791700CF6348 /* WXDProjectInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDProjectInfo.h; sourceTree = "<group>"; };
 		655E453718C8791700CF6348 /* WXDProjectInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDProjectInfo.m; sourceTree = "<group>"; };
-		655E453A18C8803200CF6348 /* WXDFileKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDFileKey.h; sourceTree = "<group>"; };
-		655E453B18C8803200CF6348 /* WXDFileKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDFileKey.m; sourceTree = "<group>"; };
 		656FBF5918D69AFD00E1F41E /* WXDConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDConst.h; sourceTree = "<group>"; };
 		656FBF6318D6D9BD00E1F41E /* WXDRequestCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDRequestCommand.h; sourceTree = "<group>"; };
 		656FBF6418D6D9BD00E1F41E /* WXDRequestCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDRequestCommand.m; sourceTree = "<group>"; };
@@ -684,15 +680,6 @@
 				655E453718C8791700CF6348 /* WXDProjectInfo.m */,
 			);
 			path = WXDProjectInfo;
-			sourceTree = "<group>";
-		};
-		655E453918C8803200CF6348 /* WXDFileKey */ = {
-			isa = PBXGroup;
-			children = (
-				655E453A18C8803200CF6348 /* WXDFileKey.h */,
-				655E453B18C8803200CF6348 /* WXDFileKey.m */,
-			);
-			path = WXDFileKey;
 			sourceTree = "<group>";
 		};
 		656FBF6218D6D6B200E1F41E /* command */ = {
@@ -1106,7 +1093,6 @@
 			isa = PBXGroup;
 			children = (
 				6585CD6A18D1BA2300F7DB04 /* WXDStringUtility */,
-				655E453918C8803200CF6348 /* WXDFileKey */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1423,7 +1409,6 @@
 				65B886A418558C210043C42C /* lvm.c in Sources */,
 				65B886E91855973C0043C42C /* WXDAppDelegate.m in Sources */,
 				65B8869418558C210043C42C /* liolib.c in Sources */,
-				655E453C18C8803200CF6348 /* WXDFileKey.m in Sources */,
 				65B886AB18558C210043C42C /* wax_instance.m in Sources */,
 				65B8868A18558C210043C42C /* lauxlib.c in Sources */,
 				65B8869B18558C210043C42C /* loslib.c in Sources */,
@@ -1536,7 +1521,6 @@
 				653AEAF418E19A590052FF74 /* lvm.c in Sources */,
 				653AEAF618E19A590052FF74 /* WXDAppDelegate.m in Sources */,
 				653AEAF718E19A590052FF74 /* liolib.c in Sources */,
-				653AEAF818E19A590052FF74 /* WXDFileKey.m in Sources */,
 				653AEAF918E19A590052FF74 /* wax_instance.m in Sources */,
 				653AEAFA18E19A590052FF74 /* lauxlib.c in Sources */,
 				653AEAFB18E19A590052FF74 /* loslib.c in Sources */,
@@ -1795,7 +1779,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Protoshop;
-				PROVISIONING_PROFILE = "22E959B5-5617-4B40-A7A5-3BB8B6BF895E";
+				PROVISIONING_PROFILE = "71ED657E-87E6-4E4A-8052-0466FC452CB8";
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)";
 				VALID_ARCHS = "armv7s armv7";
 				WRAPPER_EXTENSION = app;
@@ -1832,7 +1816,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = Protoshop;
-				PROVISIONING_PROFILE = "22E959B5-5617-4B40-A7A5-3BB8B6BF895E";
+				PROVISIONING_PROFILE = "71ED657E-87E6-4E4A-8052-0466FC452CB8";
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)";
 				VALID_ARCHS = "armv7s armv7";
 				WRAPPER_EXTENSION = app;
