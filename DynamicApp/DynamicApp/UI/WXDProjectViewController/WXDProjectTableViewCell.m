@@ -116,7 +116,9 @@
                                        
                                        [session setDownloadTaskDidWriteDataBlock:^(NSURLSession *session, NSURLSessionDownloadTask *downloadTask, int64_t bytesWritten, int64_t totalBytesWritten, int64_t totalBytesExpectedToWrite) {
                                            float progress = (float)totalBytesWritten /(float)totalBytesExpectedToWrite;
-                                           _progressView.progress = progress;
+                                           [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                                               _progressView.progress = progress;
+                                           }];
                                        }];
                                    }
                                    failure:^(NSError *error) {
