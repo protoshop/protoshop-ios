@@ -121,6 +121,16 @@ static NSUInteger animationStep = 0;
     animationStep++;
 }
 
+
+/**
+ Animation delegate method called when the animation's finished: restore the transform and reenable user interaction.
+ */
+- (void)animationDidStop:(CAAnimation *)theAnimation finished:(BOOL)flag
+{
+    [self clear];
+}
+
+
 /**
  stop indicator animation
  */
@@ -148,6 +158,7 @@ static NSUInteger animationStep = 0;
     animationGroup.duration = 1.0;
     animationGroup.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     animationGroup.repeatCount = 1.0;
+    animationGroup.delegate = self;
     
     [self.layer addAnimation:animationGroup forKey:nil];
 }
