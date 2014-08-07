@@ -85,7 +85,12 @@ static NSString *const __Protoshop_Reload_TableCell = @"Protoshop_Reload_TableCe
 /**
  The Notification for clear cache
  */
-static NSString *const __Protoshop_Clear_Cache = @"__Protoshop_Clear_Cache";
+static NSString *const __Protoshop_Clear_Cache = @"Protoshop_Clear_Cache";
+
+/**
+ The Notification for cancle download
+ */
+static NSString *const __Protoshop_Cancle_Download = @"Protoshop_Cancle_Download";
 
 #endif //__PROTOSHOP_WXDCONST_H__
 

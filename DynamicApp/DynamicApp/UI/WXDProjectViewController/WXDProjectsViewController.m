@@ -231,7 +231,7 @@
     
     if (index != -1) {
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
-        [_mainTableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath, nil] withRowAnimation:UITableViewRowAnimationNone];
+        [_mainTableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath, nil] withRowAnimation:UITableViewRowAnimationAutomatic];
     }
     
 }
@@ -248,6 +248,7 @@
 
 #pragma mark - --------------------按钮事件--------------------
 - (IBAction)refreshClickOn:(id)sender {
+    [[NSNotificationCenter defaultCenter] postNotificationName:__Protoshop_Cancle_Download object:nil];
     [self loadDataFromOnline];
 }
 
