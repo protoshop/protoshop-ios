@@ -199,6 +199,10 @@
 		65B886E91855973C0043C42C /* WXDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B886E41855973C0043C42C /* WXDAppDelegate.m */; };
 		65B886F1185598BF0043C42C /* CTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B886EE185598BF0043C42C /* CTView.m */; };
 		65B886F2185598BF0043C42C /* wax_CTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B886F0185598BF0043C42C /* wax_CTView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		65BB9E2C19934BB500620B8E /* WXDActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BB9E2B19934BB500620B8E /* WXDActivityIndicator.m */; };
+		65BB9E2D19934BB500620B8E /* WXDActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BB9E2B19934BB500620B8E /* WXDActivityIndicator.m */; };
+		65BB9E3019934C1E00620B8E /* WXDPullTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BB9E2F19934C1E00620B8E /* WXDPullTableView.m */; };
+		65BB9E3119934C1E00620B8E /* WXDPullTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BB9E2F19934C1E00620B8E /* WXDPullTableView.m */; };
 		65D712B718DA8FC9006B4D46 /* WXDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D7129B18DA8FC9006B4D46 /* WXDLoginViewController.m */; };
 		65D712B818DA8FC9006B4D46 /* WXDLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D7129C18DA8FC9006B4D46 /* WXDLoginViewController.xib */; };
 		65D712B918DA8FC9006B4D46 /* WXDProjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D7129F18DA8FC9006B4D46 /* WXDProjectTableViewCell.m */; };
@@ -430,6 +434,10 @@
 		65B886EF185598BF0043C42C /* wax_CTView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wax_CTView.h; sourceTree = "<group>"; };
 		65B886F0185598BF0043C42C /* wax_CTView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wax_CTView.m; sourceTree = "<group>"; };
 		65B886FC18559D4B0043C42C /* WXDConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDConfig.h; sourceTree = "<group>"; };
+		65BB9E2A19934BB500620B8E /* WXDActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDActivityIndicator.h; sourceTree = "<group>"; };
+		65BB9E2B19934BB500620B8E /* WXDActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDActivityIndicator.m; sourceTree = "<group>"; };
+		65BB9E2E19934C1E00620B8E /* WXDPullTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDPullTableView.h; sourceTree = "<group>"; };
+		65BB9E2F19934C1E00620B8E /* WXDPullTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDPullTableView.m; sourceTree = "<group>"; };
 		65D7129A18DA8FC9006B4D46 /* WXDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDLoginViewController.h; sourceTree = "<group>"; };
 		65D7129B18DA8FC9006B4D46 /* WXDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDLoginViewController.m; sourceTree = "<group>"; };
 		65D7129C18DA8FC9006B4D46 /* WXDLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WXDLoginViewController.xib; sourceTree = "<group>"; };
@@ -730,6 +738,8 @@
 		65B8857418558B050043C42C /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				65BB9E29199330BA00620B8E /* WXDActivityIndicator */,
+				65BB9E28199330B100620B8E /* WXDPullTableView */,
 				F7C1701818EBF358000111D1 /* SSOSDK */,
 				655B7EE118DC1FC90033FA68 /* CrittercismSDK */,
 				655E453118C86D6700CF6348 /* WXDGradualView */,
@@ -977,6 +987,24 @@
 			);
 			path = config;
 			sourceTree = SOURCE_ROOT;
+		};
+		65BB9E28199330B100620B8E /* WXDPullTableView */ = {
+			isa = PBXGroup;
+			children = (
+				65BB9E2E19934C1E00620B8E /* WXDPullTableView.h */,
+				65BB9E2F19934C1E00620B8E /* WXDPullTableView.m */,
+			);
+			path = WXDPullTableView;
+			sourceTree = "<group>";
+		};
+		65BB9E29199330BA00620B8E /* WXDActivityIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				65BB9E2A19934BB500620B8E /* WXDActivityIndicator.h */,
+				65BB9E2B19934BB500620B8E /* WXDActivityIndicator.m */,
+			);
+			path = WXDActivityIndicator;
+			sourceTree = "<group>";
 		};
 		65D7129718DA8FC9006B4D46 /* UI */ = {
 			isa = PBXGroup;
@@ -1384,6 +1412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65BB9E3019934C1E00620B8E /* WXDPullTableView.m in Sources */,
 				65B886A718558C210043C42C /* wax.m in Sources */,
 				F742F1B519051BE900F00AA6 /* UINavigationController+hlyu.m in Sources */,
 				F7CD13EF18B4AA41003B0D27 /* ModalCloseButton.m in Sources */,
@@ -1440,6 +1469,7 @@
 				65B8867418558C210043C42C /* wax_json.c in Sources */,
 				657C045918D2F369006BECAB /* WXDUserInfo.m in Sources */,
 				65B886AD18558C210043C42C /* wax_struct.m in Sources */,
+				65BB9E2C19934BB500620B8E /* WXDActivityIndicator.m in Sources */,
 				65B8869F18558C210043C42C /* lstrlib.c in Sources */,
 				65B886A218558C210043C42C /* ltm.c in Sources */,
 				65B8869218558C210043C42C /* lgc.c in Sources */,
@@ -1487,6 +1517,7 @@
 			files = (
 				69D39DFB197F7F6100539D29 /* WXDSettingTableViewCell.m in Sources */,
 				69D39DFC197F7F6100539D29 /* FeedBackTableViewCell.m in Sources */,
+				65BB9E3119934C1E00620B8E /* WXDPullTableView.m in Sources */,
 				69D39DF9197F7F3B00539D29 /* WXDNewSettingViewController.m in Sources */,
 				F713AD7719333CDE0070C37A /* UINavigationController+hlyu.m in Sources */,
 				F713AD7619333B520070C37A /* WXDMTVLoadingView.m in Sources */,
@@ -1531,6 +1562,7 @@
 				653AEB0118E19A590052FF74 /* WXDBaseInfo.m in Sources */,
 				653AEB0218E19A590052FF74 /* yajl_lex.c in Sources */,
 				653AEB0418E19A590052FF74 /* wax_CGTransform.m in Sources */,
+				65BB9E2D19934BB500620B8E /* WXDActivityIndicator.m in Sources */,
 				653AEB0618E19A590052FF74 /* WXDBaseResultInfo.m in Sources */,
 				653AEB0818E19A590052FF74 /* CTView.m in Sources */,
 				653AEB0918E19A590052FF74 /* llex.c in Sources */,
