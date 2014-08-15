@@ -8,8 +8,8 @@
 
 #import "WXDActivityIndicator.h"
 
-static NSUInteger step = 0;
-static NSUInteger animationStep = 0;
+static int step = 0;
+static int animationStep = 0;
 
 @interface WXDActivityIndicator ()
 
@@ -62,10 +62,10 @@ static NSUInteger animationStep = 0;
         
         if (_timer.isValid) {
             for (int i = 1 ; i < 11; ++i) {
-                CGContextSetStrokeColorWithColor(ctx, [[self getColorForStage:animationStep+i WithAlpha:0.1 *i] CGColor]);
-                point = [self pointOnOuterCirecleWithAngel:animationStep+i];
+                CGContextSetStrokeColorWithColor(ctx, [[self getColorForStage:animationStep + i WithAlpha:0.1 *i] CGColor]);
+                point = [self pointOnOuterCirecleWithAngel:animationStep + i];
                 CGContextMoveToPoint(ctx, point.x, point.y);
-                point = [self pointOnInnerCirecleWithAngel:animationStep+i];
+                point = [self pointOnInnerCirecleWithAngel:animationStep + i];
                 CGContextAddLineToPoint( ctx, point.x, point.y);
                 CGContextStrokePath(ctx);
             }
