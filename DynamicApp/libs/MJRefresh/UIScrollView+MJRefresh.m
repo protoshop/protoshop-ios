@@ -104,7 +104,7 @@ static char MJRefreshFooterViewKey;
  */
 - (void)headerBeginRefreshing
 {
-    [self.header.activityView startAnimation];
+   // [self.header.activityView startAnimation];
     [self.header beginRefreshing];
 }
 

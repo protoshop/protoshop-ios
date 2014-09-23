@@ -62,7 +62,7 @@
         WXDActivityIndicator *activityView = [[WXDActivityIndicator alloc] initWithFrame:CGRectMake( ([UIScreen mainScreen ].bounds.size.width-20)/2, (self.frame.size.height-20)/2-6, 40, 40)];
         //activityView.bounds = self.arrowImage.bounds;
         //activityView.autoresizingMask = self.arrowImage.autoresizingMask;
-        [self addSubview:_activityView = activityView];
+        //[self addSubview:_activityView = activityView];
     }
     return _activityView;
 }
@@ -78,6 +78,7 @@
         // 2.设置默认状态
         self.state = MJRefreshStateNormal;
     }
+    self.hidden = YES;
     return self;
 }
 
@@ -219,14 +220,14 @@
         {
             
             if (self.state == MJRefreshStateRefreshing) {
-                [self.activityView clear];
+               // [self.activityView clear];
                 [UIView animateWithDuration:MJRefreshSlowAnimationDuration * 0.6 animations:^{
-                   // self.activityView.alpha = 0.0;
+                    self.activityView.alpha = 0.0;
                 } completion:^(BOOL finished) {
                     // 停止转圈圈
-                    [self.activityView clear];
+                  //  [self.activityView stopAnimation];
                     // 恢复alpha
-                  //  self.activityView.alpha = 1.0;
+                    self.activityView.alpha = 1.0;
                     
                 }];
                 //这里不清楚
@@ -245,7 +246,7 @@
                 self.arrowImage.hidden = NO;
                 
                 // 停止转圈圈
-                [self.activityView clear];
+             //   [self.activityView stopAnimation];
                
             }
 			break;
@@ -259,7 +260,7 @@
 		case MJRefreshStateRefreshing:
         {
             // 开始转圈圈
-			//[self.activityView startAnimation];
+		//	[self.activityView startAnimation];
             // 隐藏箭头
             
 			self.arrowImage.hidden = YES;

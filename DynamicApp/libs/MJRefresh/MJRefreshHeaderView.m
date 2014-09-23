@@ -53,6 +53,8 @@
         self.refreshingText = MJRefreshHeaderRefreshing;
        
     }
+    //self.backgroundColor = [UIColor clearColor];
+    self.hidden = YES;
     return self;
 }
 
@@ -145,15 +147,18 @@
  */
 - (void)adjustStateWithContentOffset
 {
-     [self.activityView step];
+    
+    
+//    [self.activityView step];
     // 当前的contentOffset
     CGFloat currentOffsetY = self.scrollView.mj_contentOffsetY;
     // 头部控件刚好出现的offsetY
     CGFloat happenOffsetY = - self.scrollViewOriginalInset.top;
+    CGFloat normalOffsetY = happenOffsetY - self.mj_height;
     
-//    if (currentOffsetY == happenOffsetY) {
-//        [self.activityView step];
-//    }
+    
+    
+    
     
     // 如果是向上滚动到看不见头部控件，直接返回
     if (currentOffsetY >= happenOffsetY){
@@ -161,12 +166,25 @@
         return;
     }
    
+    
+   
+    
     if (self.scrollView.isDragging) {
         // 普通 和 即将刷新 的临界点
+        CGFloat curY = currentOffsetY - 7;
+        if (curY  >= normalOffsetY-36 &&curY < -36) {
+           // [self.activityView clear];
+         //   [self.activityView step];
+            NSLog(@"normal:%f,mj_hight:%f",curY,normalOffsetY);
+            
+        }
+
+        
         CGFloat normal2pullingOffsetY = happenOffsetY - self.mj_height;
         
         if (self.state == MJRefreshStateNormal && currentOffsetY < normal2pullingOffsetY) {
             // 转为即将刷新状态
+        //    [self.activityView clear];
             
             self.state = MJRefreshStatePulling;
         } else if (self.state == MJRefreshStatePulling && currentOffsetY >= normal2pullingOffsetY) {
@@ -176,6 +194,7 @@
         }
     } else if (self.state == MJRefreshStatePulling) {// 即将刷新 && 手松开
         // 开始刷新
+      //  [self.activityView startAnimation];
         self.state = MJRefreshStateRefreshing;
     }
 }
@@ -222,9 +241,13 @@
 		case MJRefreshStatePulling: // 松开可立即刷新
         {
             // 执行动画
+//            [UIView animateWithDuration:MJRefreshFastAnimationDuration animations:^{
+//                self.arrowImage.transform = CGAffineTransformMakeRotation(M_PI);
+//            }];
             [UIView animateWithDuration:MJRefreshFastAnimationDuration animations:^{
-                self.arrowImage.transform = CGAffineTransformMakeRotation(M_PI);
-            }];
+            [self.activityView startAnimation];
+                 }];
+            
 			break;
         }
             

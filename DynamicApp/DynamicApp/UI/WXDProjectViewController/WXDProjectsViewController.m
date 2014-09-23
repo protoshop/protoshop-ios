@@ -24,8 +24,13 @@
 #import "AFNetworking.h"
 #import "Reachability.h"
 #import "DAProgressOverlayView.h"
+#import "MJRefresh.h"
+#import "WXDActivityIndicator.h"
 
-@interface WXDProjectsViewController ()<WXDMainTableViewDelegate, UIAlertViewDelegate>
+@interface WXDProjectsViewController ()<UIAlertViewDelegate,UITableViewDataSource,UITableViewDelegate>{
+    float    offset;
+}
+
 /**
  *  合并服务器工程列表和本地缓存列表
  */
@@ -56,8 +61,10 @@
  */
 -(void) clearCache:(NSNotification *) notification;
 
+- (void)headerRereshing;
+
 @property (strong, nonatomic) IBOutlet UISearchBar *projectSearchBar;
-@property (strong, nonatomic) IBOutlet WXDMainTableView *mainTableView;
+@property (strong, nonatomic) UITableView *mainTableView;
 @property (strong, nonatomic) IBOutlet UIView *topTitleView;
 @property (strong, nonatomic) IBOutlet UILabel *topTitleLabel;
 @property (strong, nonatomic) IBOutlet UIButton *refreshBtn;
@@ -65,7 +72,7 @@
 @property (strong, nonatomic) NSMutableArray *projectInfoList; //当前工程列表列表
 @property (strong, nonatomic) NSMutableArray *searchedProjectInfoList; //搜索以后符合条件的列表表单
 @property (assign, nonatomic) BOOL beClearCache; //清理缓存需要刷新
-
+@property (strong, nonatomic) WXDActivityIndicator *actIndicator;
 @end
 
 @implementation WXDProjectsViewController
@@ -91,13 +98,31 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [WXDMainTableView class];
+    offset = 0.f;
+   // [WXDMainTableView class];
+
+    self.actIndicator = [[WXDActivityIndicator alloc]initWithFrame:CGRectMake(150, 94, 30, 30)];
+    [self.view addSubview:self.actIndicator];
+    
+    self.mainTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 88, self.view.frame.size.width, self.view.frame.size.height)];
+    self.mainTableView.delegate = self;
+    self.mainTableView.dataSource = self;
+    self.mainTableView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:self.mainTableView];
+    
     
     _projectInfoList = [[NSMutableArray alloc] init];
     _searchedProjectInfoList = [[NSMutableArray alloc] init];
     
-    _mainTableView.MTVDelegate = self;
-    [_mainTableView setInitParamsWith:_mainTableView.frame style:UITableViewStylePlain];
+    
+    self.baseView = [[UIButton alloc] initWithFrame:CGRectMake(0, 88, self.view.frame.size.width,self.view.frame.size.height)];
+    [self.baseView setBackgroundColor:[UIColor blackColor]];
+    [self.baseView setAlpha:0.4f];
+    self.baseView.hidden = YES;
+    [self.baseView addTarget:self action:@selector(ClickControlAction:)forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.baseView];
+    
+
     SET_FONT(_refreshBtn.titleLabel,@"FontAwesome",24.0);
     SET_FONT(_settingBtn.titleLabel,@"FontAwesome",24.0);
     
@@ -110,8 +135,11 @@
     
     _beClearCache = NO;
     [self loadDataFromLocation];
-    [self loadDataFromOnline];
+    //[self loadDataFromOnline];
+    [self setupRefresh];
 }
+
+
 
 -(void)resignSearchBar:(UITapGestureRecognizer *)gesture{
     if ([_projectSearchBar isFirstResponder]==YES) {
@@ -123,6 +151,46 @@
         return;
     }
 }
+
+//背景消失键盘消失
+- (void) ClickControlAction:(id)sender{
+   
+    self.baseView.hidden = YES;
+    [self.projectSearchBar resignFirstResponder];
+    
+}
+
+
+- (void)headerRereshing
+{
+    [self loadDataFromOnline];
+}
+
+
+- (void)setupRefresh
+{
+    // 1.下拉刷新(进入刷新状态就会调用self的headerRereshing)
+    if ([self.mainTableView respondsToSelector:@selector(addHeaderWithTarget:action:)]) {
+        [self.mainTableView addHeaderWithTarget:self action:@selector(headerRereshing)];
+
+    }
+
+    [self.mainTableView headerBeginRefreshing];
+    
+    // 2.上拉加载更多(进入刷新状态就会调用self的footerRereshing)
+    //[self.tableView addFooterWithTarget:self action:@selector(footerRereshing)];
+    
+    // 设置文字(也可以不设置,默认的文字在MJRefreshConst中修改)
+    self.mainTableView.headerPullToRefreshText = @"下拉可以刷新了";
+    self.mainTableView.headerReleaseToRefreshText = @"松开马上刷新了";
+    self.mainTableView.headerRefreshingText = @"正在努力刷新中";
+    
+    self.mainTableView.footerPullToRefreshText = @"上拉可以加载更多数据了";
+    self.mainTableView.footerReleaseToRefreshText = @"松开马上加载更多数据了";
+    self.mainTableView.footerRefreshingText = @"哥正在帮你加载中,不客气";
+}
+
+
 
 #pragma mark - --------------------System--------------------
 - (void)didReceiveMemoryWarning
@@ -137,6 +205,8 @@
 {
     if (bReachability == NO) {
         [self loadDataFromLocation];
+        [self.mainTableView headerEndRefreshing];
+
     } else {
         [self showHUD];
         WXDRequestCommand *requestCommand = [WXDRequestCommand sharedWXDRequestCommand];
@@ -145,9 +215,11 @@
                                             success:^(NSMutableArray *projectsarr) {
                                                 [self mergeOnlineIntoLocation:projectsarr];
                                                 [_mainTableView reloadData];
+                                                [self.mainTableView headerEndRefreshing];
                                                 [self dismissHUD];
                                             } failure:^(NSError *error) {
                                                 [self dismissHUD];
+                                                [self.mainTableView headerEndRefreshing];
                                                 SHOW_ALERT(@"获取工程列表失败",[error localizedDescription]);
                                             }];
     }
@@ -261,6 +333,14 @@
 
 #pragma mark - --------------------代理方法--------------------
 #pragma mark - UISearchBarDelegate
+
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
+    self.baseView.hidden = NO;
+    return YES;
+    
+}
+
+
 -(void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar{
     //TODO
 }
@@ -271,7 +351,9 @@
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
+    
     [searchBar resignFirstResponder];
+    self.baseView.hidden = YES;
     NSString *searchText = searchBar.text;
     NSPredicate *predicateString = [NSPredicate predicateWithFormat:@"%K contains[cd] %@", @"appName", searchText];
     _searchedProjectInfoList = [NSMutableArray arrayWithArray:[_projectInfoList filteredArrayUsingPredicate:predicateString]];
@@ -281,6 +363,15 @@
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
+    
+    //NSString *searchText = searchBar.text;
+    NSPredicate *predicateString = [NSPredicate predicateWithFormat:@"%K contains[cd] %@", @"appName", searchText];
+    _searchedProjectInfoList = [NSMutableArray arrayWithArray:[_projectInfoList filteredArrayUsingPredicate:predicateString]];
+    if ([_searchedProjectInfoList count] > 0) {
+        [self.mainTableView reloadData];
+    }
+
+    
     if ([searchText isEqualToString:@""] == YES) {
         [_searchedProjectInfoList removeAllObjects];
         _searchedProjectInfoList = nil;
@@ -289,23 +380,40 @@
 }
 
 #pragma mark - WXDMainTableViewDelegate
-- (void)WXDMainTableViewDidStartRefreshing:(WXDMainTableView *)tableView{
-    [self loadDataFromOnline];
-}
+//- (void)WXDMainTableViewDidStartRefreshing:(WXDMainTableView *)tableView{
+//    [self loadDataFromOnline];
+//}
+//
+//- (NSDate *)WXDMainTableViewRefreshingFinishedDate{
+//    NSDate *now = [NSDate date];
+//    return now;
+//}
 
-- (NSDate *)WXDMainTableViewRefreshingFinishedDate{
-    NSDate *now = [NSDate date];
-    return now;
-}
+
 
 #pragma mark - Scroll
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-     [self.mainTableView tableViewDidScroll:scrollView];
+    CGFloat yOffset   = self.mainTableView.contentOffset.y;
+    if (yOffset < -30) {
+        [self.actIndicator step];
+    }
+    if (yOffset < -6 && yOffset > -66 ) {
+
+        BOOL bStep = (self.mainTableView.contentOffset.y + offset < -6.f) ? YES:NO;
+        //NSLog(@"ttt:%f",-(scrollView.contentOffset.y) + offset);
+        if (bStep) {
+            [self.actIndicator step];
+            offset = -self.mainTableView.contentOffset.y;
+        }
+        NSLog(@"offset:%f, scrollview.offset=%f", offset,self.mainTableView.contentOffset.y);
+    }
 }
 
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-    [self.mainTableView tableViewDidEndDragging:scrollView];
-}
+//- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+//    [self.mainTableView tableViewDidEndDragging:scrollView];
+//}
+
+
 
 #pragma mark UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -372,6 +480,10 @@
         [cell downloadProjectPackage];
     }
     
+}
+- (IBAction)searchKeyboardHide:(id)sender {
+    
+    [self.projectSearchBar resignFirstResponder];
 }
 
 @end
