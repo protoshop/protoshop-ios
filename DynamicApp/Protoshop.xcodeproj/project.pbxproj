@@ -218,6 +218,22 @@
 		696AF878197E1FFB00164721 /* WXDNewSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 696AF876197E1FFB00164721 /* WXDNewSettingViewController.xib */; };
 		696AF87C197E207400164721 /* WXDSettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 696AF87A197E207400164721 /* WXDSettingTableViewCell.m */; };
 		696AF87D197E207400164721 /* WXDSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 696AF87B197E207400164721 /* WXDSettingTableViewCell.xib */; };
+		698DAC4119C83E780032541A /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 698DAC3119C83E780032541A /* MJRefresh.bundle */; };
+		698DAC4219C83E780032541A /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 698DAC3119C83E780032541A /* MJRefresh.bundle */; };
+		698DAC4319C83E780032541A /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 698DAC3419C83E780032541A /* MJRefreshBaseView.m */; };
+		698DAC4419C83E780032541A /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 698DAC3419C83E780032541A /* MJRefreshBaseView.m */; };
+		698DAC4519C83E780032541A /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 698DAC3619C83E780032541A /* MJRefreshConst.m */; };
+		698DAC4619C83E780032541A /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 698DAC3619C83E780032541A /* MJRefreshConst.m */; };
+		698DAC4719C83E780032541A /* MJRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 698DAC3819C83E780032541A /* MJRefreshFooterView.m */; };
+		698DAC4819C83E780032541A /* MJRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 698DAC3819C83E780032541A /* MJRefreshFooterView.m */; };
+		698DAC4919C83E780032541A /* MJRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 698DAC3A19C83E780032541A /* MJRefreshHeaderView.m */; };
+		698DAC4A19C83E780032541A /* MJRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 698DAC3A19C83E780032541A /* MJRefreshHeaderView.m */; };
+		698DAC4B19C83E780032541A /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 698DAC3C19C83E780032541A /* UIScrollView+MJExtension.m */; };
+		698DAC4C19C83E780032541A /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 698DAC3C19C83E780032541A /* UIScrollView+MJExtension.m */; };
+		698DAC4D19C83E780032541A /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 698DAC3E19C83E780032541A /* UIScrollView+MJRefresh.m */; };
+		698DAC4E19C83E780032541A /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 698DAC3E19C83E780032541A /* UIScrollView+MJRefresh.m */; };
+		698DAC4F19C83E780032541A /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 698DAC4019C83E780032541A /* UIView+MJExtension.m */; };
+		698DAC5019C83E780032541A /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 698DAC4019C83E780032541A /* UIView+MJExtension.m */; };
 		69D39DF7197F553F00539D29 /* FeedBackTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D39DF5197F553F00539D29 /* FeedBackTableViewCell.m */; };
 		69D39DF8197F553F00539D29 /* FeedBackTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69D39DF6197F553F00539D29 /* FeedBackTableViewCell.xib */; };
 		69D39DF9197F7F3B00539D29 /* WXDNewSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 696AF875197E1FFB00164721 /* WXDNewSettingViewController.m */; };
@@ -461,6 +477,22 @@
 		696AF879197E207400164721 /* WXDSettingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDSettingTableViewCell.h; sourceTree = "<group>"; };
 		696AF87A197E207400164721 /* WXDSettingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDSettingTableViewCell.m; sourceTree = "<group>"; };
 		696AF87B197E207400164721 /* WXDSettingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WXDSettingTableViewCell.xib; sourceTree = "<group>"; };
+		698DAC3119C83E780032541A /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
+		698DAC3219C83E780032541A /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
+		698DAC3319C83E780032541A /* MJRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBaseView.h; sourceTree = "<group>"; };
+		698DAC3419C83E780032541A /* MJRefreshBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBaseView.m; sourceTree = "<group>"; };
+		698DAC3519C83E780032541A /* MJRefreshConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshConst.h; sourceTree = "<group>"; };
+		698DAC3619C83E780032541A /* MJRefreshConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConst.m; sourceTree = "<group>"; };
+		698DAC3719C83E780032541A /* MJRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshFooterView.h; sourceTree = "<group>"; };
+		698DAC3819C83E780032541A /* MJRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshFooterView.m; sourceTree = "<group>"; };
+		698DAC3919C83E780032541A /* MJRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshHeaderView.h; sourceTree = "<group>"; };
+		698DAC3A19C83E780032541A /* MJRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshHeaderView.m; sourceTree = "<group>"; };
+		698DAC3B19C83E780032541A /* UIScrollView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJExtension.h"; sourceTree = "<group>"; };
+		698DAC3C19C83E780032541A /* UIScrollView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJExtension.m"; sourceTree = "<group>"; };
+		698DAC3D19C83E780032541A /* UIScrollView+MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJRefresh.h"; sourceTree = "<group>"; };
+		698DAC3E19C83E780032541A /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
+		698DAC3F19C83E780032541A /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
+		698DAC4019C83E780032541A /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		69D39DF4197F553F00539D29 /* FeedBackTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedBackTableViewCell.h; sourceTree = "<group>"; };
 		69D39DF5197F553F00539D29 /* FeedBackTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedBackTableViewCell.m; sourceTree = "<group>"; };
 		69D39DF6197F553F00539D29 /* FeedBackTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedBackTableViewCell.xib; sourceTree = "<group>"; };
@@ -738,6 +770,7 @@
 		65B8857418558B050043C42C /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				698DAC3019C83E780032541A /* MJRefresh */,
 				65BB9E29199330BA00620B8E /* WXDActivityIndicator */,
 				65BB9E28199330B100620B8E /* WXDPullTableView */,
 				F7C1701818EBF358000111D1 /* SSOSDK */,
@@ -1084,6 +1117,29 @@
 			path = WXDSettingViewController;
 			sourceTree = "<group>";
 		};
+		698DAC3019C83E780032541A /* MJRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				698DAC3119C83E780032541A /* MJRefresh.bundle */,
+				698DAC3219C83E780032541A /* MJRefresh.h */,
+				698DAC3319C83E780032541A /* MJRefreshBaseView.h */,
+				698DAC3419C83E780032541A /* MJRefreshBaseView.m */,
+				698DAC3519C83E780032541A /* MJRefreshConst.h */,
+				698DAC3619C83E780032541A /* MJRefreshConst.m */,
+				698DAC3719C83E780032541A /* MJRefreshFooterView.h */,
+				698DAC3819C83E780032541A /* MJRefreshFooterView.m */,
+				698DAC3919C83E780032541A /* MJRefreshHeaderView.h */,
+				698DAC3A19C83E780032541A /* MJRefreshHeaderView.m */,
+				698DAC3B19C83E780032541A /* UIScrollView+MJExtension.h */,
+				698DAC3C19C83E780032541A /* UIScrollView+MJExtension.m */,
+				698DAC3D19C83E780032541A /* UIScrollView+MJRefresh.h */,
+				698DAC3E19C83E780032541A /* UIScrollView+MJRefresh.m */,
+				698DAC3F19C83E780032541A /* UIView+MJExtension.h */,
+				698DAC4019C83E780032541A /* UIView+MJExtension.m */,
+			);
+			path = MJRefresh;
+			sourceTree = "<group>";
+		};
 		F7692B121817BC220076526D /* resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -1300,6 +1356,7 @@
 				65B8859918558B050043C42C /* SVProgressHUD.bundle in Resources */,
 				F7B6557C188D025900FD10A2 /* Candara.ttf in Resources */,
 				65D712C118DA8FC9006B4D46 /* WXDChangePswViewController.xib in Resources */,
+				698DAC4119C83E780032541A /* MJRefresh.bundle in Resources */,
 				65D712BF18DA8FC9006B4D46 /* WXDSignupViewController.xib in Resources */,
 				F7F15681193429DE0092D037 /* WXDAboutViewController.xib in Resources */,
 				65B886DF185594890043C42C /* messageBoxViewController.xib in Resources */,
@@ -1330,6 +1387,7 @@
 				653AEB5C18E19A590052FF74 /* goBack.png in Resources */,
 				653AEB5D18E19A590052FF74 /* WXDProjectsViewController.xib in Resources */,
 				653AEB5E18E19A590052FF74 /* SVProgressHUD.bundle in Resources */,
+				698DAC4219C83E780032541A /* MJRefresh.bundle in Resources */,
 				653AEB5F18E19A590052FF74 /* Candara.ttf in Resources */,
 				653AEB6118E19A590052FF74 /* WXDChangePswViewController.xib in Resources */,
 				653AEB6218E19A590052FF74 /* WXDSignupViewController.xib in Resources */,
@@ -1418,6 +1476,7 @@
 				F7CD13EF18B4AA41003B0D27 /* ModalCloseButton.m in Sources */,
 				57DA29DD1769C74D002C1F29 /* main.m in Sources */,
 				65B8859A18558B050043C42C /* SVProgressHUD.m in Sources */,
+				698DAC4919C83E780032541A /* MJRefreshHeaderView.m in Sources */,
 				65D712B718DA8FC9006B4D46 /* WXDLoginViewController.m in Sources */,
 				65B8869318558C210043C42C /* linit.c in Sources */,
 				65B8868818558C210043C42C /* wax_xml.m in Sources */,
@@ -1436,6 +1495,7 @@
 				F7C1703418EBF358000111D1 /* CTAuthEngine.m in Sources */,
 				65B8868C18558C210043C42C /* lcode.c in Sources */,
 				65B886A418558C210043C42C /* lvm.c in Sources */,
+				698DAC4519C83E780032541A /* MJRefreshConst.m in Sources */,
 				65B886E91855973C0043C42C /* WXDAppDelegate.m in Sources */,
 				65B8869418558C210043C42C /* liolib.c in Sources */,
 				65B886AB18558C210043C42C /* wax_instance.m in Sources */,
@@ -1454,12 +1514,14 @@
 				65B8866418558C210043C42C /* wax_CGTransform.m in Sources */,
 				6585CD6918D1B41300F7DB04 /* WXDBaseResultInfo.m in Sources */,
 				F7C1703918EBF358000111D1 /* SBJsonBase.m in Sources */,
+				698DAC4D19C83E780032541A /* UIScrollView+MJRefresh.m in Sources */,
 				65B886F1185598BF0043C42C /* CTView.m in Sources */,
 				65B8869518558C210043C42C /* llex.c in Sources */,
 				F7C1703B18EBF358000111D1 /* SBJsonWriter.m in Sources */,
 				65B886F2185598BF0043C42C /* wax_CTView.m in Sources */,
 				65D712B918DA8FC9006B4D46 /* WXDProjectTableViewCell.m in Sources */,
 				65B8868F18558C210043C42C /* ldo.c in Sources */,
+				698DAC4F19C83E780032541A /* UIView+MJExtension.m in Sources */,
 				65B8868B18558C210043C42C /* lbaselib.c in Sources */,
 				65B8868918558C210043C42C /* lapi.c in Sources */,
 				656FBF6518D6D9BD00E1F41E /* WXDRequestCommand.m in Sources */,
@@ -1477,6 +1539,7 @@
 				65B886A018558C210043C42C /* ltable.c in Sources */,
 				65B8869118558C210043C42C /* lfunc.c in Sources */,
 				F7C1703518EBF358000111D1 /* CTLoginWebView.m in Sources */,
+				698DAC4719C83E780032541A /* MJRefreshFooterView.m in Sources */,
 				65D712CA18DA9003006B4D46 /* WXDBaseViewController.m in Sources */,
 				65B886C7185592E60043C42C /* yajl_encode.c in Sources */,
 				65B886C5185592E60043C42C /* yajl_alloc.c in Sources */,
@@ -1484,6 +1547,7 @@
 				65D712BE18DA8FC9006B4D46 /* WXDSignupViewController.m in Sources */,
 				65D712C018DA8FC9006B4D46 /* WXDChangePswViewController.m in Sources */,
 				6585CD6D18D1BA5B00F7DB04 /* WXDStringUtility.m in Sources */,
+				698DAC4B19C83E780032541A /* UIScrollView+MJExtension.m in Sources */,
 				65B886A618558C210043C42C /* print.c in Sources */,
 				65B886A918558C210043C42C /* wax_gc.m in Sources */,
 				65B8866F18558C210043C42C /* wax_http.m in Sources */,
@@ -1502,6 +1566,7 @@
 				65B8869718558C210043C42C /* lmem.c in Sources */,
 				65B886AA18558C210043C42C /* wax_helpers.m in Sources */,
 				65B886C4185592E60043C42C /* yajl.c in Sources */,
+				698DAC4319C83E780032541A /* MJRefreshBaseView.m in Sources */,
 				69D39DF7197F553F00539D29 /* FeedBackTableViewCell.m in Sources */,
 				65B8869818558C210043C42C /* loadlib.c in Sources */,
 				F7C1703C18EBF358000111D1 /* SSOAuthViewController.m in Sources */,
@@ -1519,6 +1584,7 @@
 				69D39DFC197F7F6100539D29 /* FeedBackTableViewCell.m in Sources */,
 				65BB9E3119934C1E00620B8E /* WXDPullTableView.m in Sources */,
 				69D39DF9197F7F3B00539D29 /* WXDNewSettingViewController.m in Sources */,
+				698DAC4C19C83E780032541A /* UIScrollView+MJExtension.m in Sources */,
 				F713AD7719333CDE0070C37A /* UINavigationController+hlyu.m in Sources */,
 				F713AD7619333B520070C37A /* WXDMTVLoadingView.m in Sources */,
 				F713AD7519333B040070C37A /* WXDMainTableView.m in Sources */,
@@ -1527,6 +1593,7 @@
 				F713AD711932E9D70070C37A /* SBJsonBase.m in Sources */,
 				F713AD721932E9D70070C37A /* SBJsonParser.m in Sources */,
 				F713AD731932E9D70070C37A /* SBJsonWriter.m in Sources */,
+				698DAC5019C83E780032541A /* UIView+MJExtension.m in Sources */,
 				F713AD741932E9D70070C37A /* SSOAuthViewController.m in Sources */,
 				F713AD6C1932E9AD0070C37A /* CTAuthEngine.m in Sources */,
 				F713AD6D1932E9AD0070C37A /* CTLoginWebView.m in Sources */,
@@ -1539,6 +1606,7 @@
 				653AEAE618E19A590052FF74 /* linit.c in Sources */,
 				653AEAE718E19A590052FF74 /* wax_xml.m in Sources */,
 				653AEAE818E19A590052FF74 /* messageBoxViewController.m in Sources */,
+				698DAC4A19C83E780032541A /* MJRefreshHeaderView.m in Sources */,
 				653AEAEA18E19A590052FF74 /* lzio.c in Sources */,
 				653AEAEB18E19A590052FF74 /* DKLiveBlurView.m in Sources */,
 				653AEAEC18E19A590052FF74 /* ldump.c in Sources */,
@@ -1549,14 +1617,17 @@
 				653AEAF118E19A590052FF74 /* yajl_parser.c in Sources */,
 				653AEAF218E19A590052FF74 /* lstate.c in Sources */,
 				653AEAF318E19A590052FF74 /* lcode.c in Sources */,
+				698DAC4819C83E780032541A /* MJRefreshFooterView.m in Sources */,
 				653AEAF418E19A590052FF74 /* lvm.c in Sources */,
 				653AEAF618E19A590052FF74 /* WXDAppDelegate.m in Sources */,
 				653AEAF718E19A590052FF74 /* liolib.c in Sources */,
 				653AEAF918E19A590052FF74 /* wax_instance.m in Sources */,
 				653AEAFA18E19A590052FF74 /* lauxlib.c in Sources */,
+				698DAC4619C83E780032541A /* MJRefreshConst.m in Sources */,
 				653AEAFB18E19A590052FF74 /* loslib.c in Sources */,
 				653AEAFC18E19A590052FF74 /* lstring.c in Sources */,
 				653AEAFD18E19A590052FF74 /* UIImage+Blur.m in Sources */,
+				698DAC4419C83E780032541A /* MJRefreshBaseView.m in Sources */,
 				653AEAFF18E19A590052FF74 /* wax_server.m in Sources */,
 				653AEB0018E19A590052FF74 /* WXDProjectsViewController.m in Sources */,
 				653AEB0118E19A590052FF74 /* WXDBaseInfo.m in Sources */,
@@ -1575,6 +1646,7 @@
 				653AEB1418E19A590052FF74 /* lopcodes.c in Sources */,
 				653AEB1618E19A590052FF74 /* lundump.c in Sources */,
 				653AEB1718E19A590052FF74 /* wax_filesystem.m in Sources */,
+				698DAC4E19C83E780032541A /* UIScrollView+MJRefresh.m in Sources */,
 				653AEB1818E19A590052FF74 /* wax_json.c in Sources */,
 				653AEB1918E19A590052FF74 /* WXDUserInfo.m in Sources */,
 				653AEB1A18E19A590052FF74 /* wax_struct.m in Sources */,
