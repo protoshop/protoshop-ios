@@ -55,6 +55,8 @@ static int animationStep = 0;
     CGPoint point;
     
     CGContextRef ctx = UIGraphicsGetCurrentContext();
+    CGContextFlush(ctx);
+
     if (_isCleared == YES) {
         CGContextFlush(ctx);
     } else {
@@ -63,6 +65,8 @@ static int animationStep = 0;
         if (_timer.isValid) {
             for (int i = 1 ; i < 11; ++i) {
                 CGContextSetStrokeColorWithColor(ctx, [[self getColorForStage:animationStep + i WithAlpha:0.1 *i] CGColor]);
+                
+            //     CGContextSetStrokeColorWithColor(ctx, [[UIColor darkGrayColor] CGColor]);
                 point = [self pointOnOuterCirecleWithAngel:animationStep + i];
                 CGContextMoveToPoint(ctx, point.x, point.y);
                 point = [self pointOnInnerCirecleWithAngel:animationStep + i];
@@ -71,20 +75,30 @@ static int animationStep = 0;
             }
         } else {
             for (int i = 1; i < step; ++i) {
-                CGContextSetStrokeColorWithColor(ctx, [[self getColorForStage:step + i WithAlpha:1.0] CGColor]);
-                point = [self pointOnOuterCirecleWithAngel:step + i];
+                int j = step ;
+                if (j> 10) {
+                    j = 10;
+                }
+                CGContextSetStrokeColorWithColor(ctx, [[self getColorForStage:j+i WithAlpha:1.0] CGColor]);
+               // CGContextSetStrokeColorWithColor(ctx, [[UIColor darkGrayColor] CGColor]);
+                
+                point = [self pointOnOuterCirecleWithAngel:j+i];
                 CGContextMoveToPoint(ctx, point.x, point.y);
-                point = [self pointOnInnerCirecleWithAngel:step + i];
+                point = [self pointOnInnerCirecleWithAngel:j+i];
                 CGContextAddLineToPoint( ctx, point.x, point.y);
                 CGContextStrokePath(ctx);
             }
 
         }
         
-        step++;
+//        step++;
         animationStep++;
     }
 }
+
+
+
+
 
 /**
  Clear the view context
@@ -104,6 +118,14 @@ static int animationStep = 0;
 -(void) step
 {
     _isCleared = NO;
+    step++;
+    [self setNeedsDisplay];
+}
+
+-(void) unstep
+{
+    _isCleared = NO;
+    step--;
     [self setNeedsDisplay];
 }
 
@@ -165,20 +187,27 @@ static int animationStep = 0;
 
 -(UIColor *) getColorForStage:(int) currentStage WithAlpha:(double) alpha
 {
-    int max = 20;
-    int cycle = currentStage % max;
+//    int max = 20;
+//    int cycle = currentStage % max;
     
-    if (cycle < max/4) {
-        return [UIColor colorWithRed:66.0/255.0 green:72.0/255.0 blue:101.0/255.0 alpha:alpha];
-    } else if (cycle < max/4*2) {
-        return [UIColor colorWithRed:238.0/255.0 green:90.0/255.0 blue:40.0/255.0 alpha:alpha];
-    } else if (cycle < max/4*3) {
-        return [UIColor colorWithRed:33.0/255.0 green:31.0/255.0 blue:31.0/255.0 alpha:alpha];
-        
-    } else  {
-        return [UIColor colorWithRed:251.0/255.0 green:184.0/255.0 blue:18.0/255.0 alpha:alpha];
-    }
+//    [UIColor darkGrayColor];
     
+//    CGFloat alpha = 1.0 - (stepIndex % _steps) * (1.0 / _steps);
+//    
+//    return [UIColor colorWithCGColor:CGColorCreateCopyWithAlpha(_color.CGColor, alpha)];
+//    if (cycle < max/4) {
+//        return [UIColor colorWithRed:66.0/255.0 green:72.0/255.0 blue:101.0/255.0 alpha:alpha];
+//    } else if (cycle < max/4*2) {
+//        return [UIColor colorWithRed:238.0/255.0 green:90.0/255.0 blue:40.0/255.0 alpha:alpha];
+//    } else if (cycle < max/4*3) {
+//        return [UIColor colorWithRed:33.0/255.0 green:31.0/255.0 blue:31.0/255.0 alpha:alpha];
+//        
+//    } else  {
+//        return [UIColor colorWithRed:251.0/255.0 green:184.0/255.0 blue:18.0/255.0 alpha:alpha];
+//    }
+   return [UIColor colorWithRed:66.0/255.0 green:72.0/255.0 blue:101.0/255.0 alpha:alpha];
+    
+  
 }
 
 -(CGPoint) pointOnInnerCirecleWithAngel:(int) angel

@@ -12,6 +12,7 @@
 
 -(void) clear;
 -(void) step;
+-(void) unstep;
 -(void) startAnimation;
 -(void) stopAnimation;
 
