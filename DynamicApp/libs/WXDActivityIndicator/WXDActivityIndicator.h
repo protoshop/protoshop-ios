@@ -11,8 +11,8 @@
 @interface WXDActivityIndicator : UIView
 
 -(void) clear;
--(void) step;
--(void) unstep;
+-(void) progress:(NSInteger) progress;
+-(void) unprogress:(NSInteger) progress;
 -(void) startAnimation;
 -(void) stopAnimation;
 
