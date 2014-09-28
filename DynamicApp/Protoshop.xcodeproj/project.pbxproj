@@ -214,6 +214,26 @@
 		65D712C018DA8FC9006B4D46 /* WXDChangePswViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712AC18DA8FC9006B4D46 /* WXDChangePswViewController.m */; };
 		65D712C118DA8FC9006B4D46 /* WXDChangePswViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D712AD18DA8FC9006B4D46 /* WXDChangePswViewController.xib */; };
 		65D712CA18DA9003006B4D46 /* WXDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712C918DA9003006B4D46 /* WXDBaseViewController.m */; };
+		69376DDB19D188F60050A0BF /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69376DD119D188F60050A0BF /* EGORefreshTableHeaderView.m */; };
+		69376DDC19D188F60050A0BF /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69376DD119D188F60050A0BF /* EGORefreshTableHeaderView.m */; };
+		69376DDD19D188F60050A0BF /* blackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DD319D188F60050A0BF /* blackArrow.png */; };
+		69376DDE19D188F60050A0BF /* blackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DD319D188F60050A0BF /* blackArrow.png */; };
+		69376DDF19D188F60050A0BF /* blackArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DD419D188F60050A0BF /* blackArrow@2x.png */; };
+		69376DE019D188F60050A0BF /* blackArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DD419D188F60050A0BF /* blackArrow@2x.png */; };
+		69376DE119D188F60050A0BF /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DD519D188F60050A0BF /* blueArrow.png */; };
+		69376DE219D188F60050A0BF /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DD519D188F60050A0BF /* blueArrow.png */; };
+		69376DE319D188F60050A0BF /* blueArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DD619D188F60050A0BF /* blueArrow@2x.png */; };
+		69376DE419D188F60050A0BF /* blueArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DD619D188F60050A0BF /* blueArrow@2x.png */; };
+		69376DE519D188F60050A0BF /* grayArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DD719D188F60050A0BF /* grayArrow.png */; };
+		69376DE619D188F60050A0BF /* grayArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DD719D188F60050A0BF /* grayArrow.png */; };
+		69376DE719D188F60050A0BF /* grayArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DD819D188F60050A0BF /* grayArrow@2x.png */; };
+		69376DE819D188F60050A0BF /* grayArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DD819D188F60050A0BF /* grayArrow@2x.png */; };
+		69376DE919D188F60050A0BF /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DD919D188F60050A0BF /* whiteArrow.png */; };
+		69376DEA19D188F60050A0BF /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DD919D188F60050A0BF /* whiteArrow.png */; };
+		69376DEB19D188F60050A0BF /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DDA19D188F60050A0BF /* whiteArrow@2x.png */; };
+		69376DEC19D188F60050A0BF /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DDA19D188F60050A0BF /* whiteArrow@2x.png */; };
+		69376DEF19D19E110050A0BF /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69376DEE19D19E110050A0BF /* CircleView.m */; };
+		69376DF019D19E110050A0BF /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69376DEE19D19E110050A0BF /* CircleView.m */; };
 		696AF877197E1FFB00164721 /* WXDNewSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 696AF875197E1FFB00164721 /* WXDNewSettingViewController.m */; };
 		696AF878197E1FFB00164721 /* WXDNewSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 696AF876197E1FFB00164721 /* WXDNewSettingViewController.xib */; };
 		696AF87C197E207400164721 /* WXDSettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 696AF87A197E207400164721 /* WXDSettingTableViewCell.m */; };
@@ -471,6 +491,18 @@
 		65D712AD18DA8FC9006B4D46 /* WXDChangePswViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WXDChangePswViewController.xib; sourceTree = "<group>"; };
 		65D712C818DA9003006B4D46 /* WXDBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDBaseViewController.h; sourceTree = "<group>"; };
 		65D712C918DA9003006B4D46 /* WXDBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDBaseViewController.m; sourceTree = "<group>"; };
+		69376DD019D188F60050A0BF /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
+		69376DD119D188F60050A0BF /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
+		69376DD319D188F60050A0BF /* blackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackArrow.png; sourceTree = "<group>"; };
+		69376DD419D188F60050A0BF /* blackArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackArrow@2x.png"; sourceTree = "<group>"; };
+		69376DD519D188F60050A0BF /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
+		69376DD619D188F60050A0BF /* blueArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueArrow@2x.png"; sourceTree = "<group>"; };
+		69376DD719D188F60050A0BF /* grayArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grayArrow.png; sourceTree = "<group>"; };
+		69376DD819D188F60050A0BF /* grayArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grayArrow@2x.png"; sourceTree = "<group>"; };
+		69376DD919D188F60050A0BF /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
+		69376DDA19D188F60050A0BF /* whiteArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteArrow@2x.png"; sourceTree = "<group>"; };
+		69376DED19D19E110050A0BF /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
+		69376DEE19D19E110050A0BF /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
 		696AF874197E1FFB00164721 /* WXDNewSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDNewSettingViewController.h; sourceTree = "<group>"; };
 		696AF875197E1FFB00164721 /* WXDNewSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDNewSettingViewController.m; sourceTree = "<group>"; };
 		696AF876197E1FFB00164721 /* WXDNewSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WXDNewSettingViewController.xib; sourceTree = "<group>"; };
@@ -770,6 +802,7 @@
 		65B8857418558B050043C42C /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				69376DCD19D188F60050A0BF /* EGOTableViewPullRefresh */,
 				698DAC3019C83E780032541A /* MJRefresh */,
 				65BB9E29199330BA00620B8E /* WXDActivityIndicator */,
 				65BB9E28199330B100620B8E /* WXDPullTableView */,
@@ -1117,6 +1150,49 @@
 			path = WXDSettingViewController;
 			sourceTree = "<group>";
 		};
+		69376DCD19D188F60050A0BF /* EGOTableViewPullRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				69376DCE19D188F60050A0BF /* Classes */,
+				69376DD219D188F60050A0BF /* Resources */,
+			);
+			path = EGOTableViewPullRefresh;
+			sourceTree = "<group>";
+		};
+		69376DCE19D188F60050A0BF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				69376DCF19D188F60050A0BF /* View */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		69376DCF19D188F60050A0BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				69376DED19D19E110050A0BF /* CircleView.h */,
+				69376DEE19D19E110050A0BF /* CircleView.m */,
+				69376DD019D188F60050A0BF /* EGORefreshTableHeaderView.h */,
+				69376DD119D188F60050A0BF /* EGORefreshTableHeaderView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		69376DD219D188F60050A0BF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				69376DD319D188F60050A0BF /* blackArrow.png */,
+				69376DD419D188F60050A0BF /* blackArrow@2x.png */,
+				69376DD519D188F60050A0BF /* blueArrow.png */,
+				69376DD619D188F60050A0BF /* blueArrow@2x.png */,
+				69376DD719D188F60050A0BF /* grayArrow.png */,
+				69376DD819D188F60050A0BF /* grayArrow@2x.png */,
+				69376DD919D188F60050A0BF /* whiteArrow.png */,
+				69376DDA19D188F60050A0BF /* whiteArrow@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		698DAC3019C83E780032541A /* MJRefresh */ = {
 			isa = PBXGroup;
 			children = (
@@ -1346,12 +1422,17 @@
 				657A95C11835F1B00035E15B /* icon-120.png in Resources */,
 				657A95C41835F1B00035E15B /* icon@2x.png in Resources */,
 				69D39DF8197F553F00539D29 /* FeedBackTableViewCell.xib in Resources */,
+				69376DDF19D188F60050A0BF /* blackArrow@2x.png in Resources */,
 				F711872818BB3C2D00D20749 /* Checked.png in Resources */,
 				F7DCCB911889105E004BAF65 /* Default-568h@2x.png in Resources */,
+				69376DE319D188F60050A0BF /* blueArrow@2x.png in Resources */,
 				696AF878197E1FFB00164721 /* WXDNewSettingViewController.xib in Resources */,
+				69376DEB19D188F60050A0BF /* whiteArrow@2x.png in Resources */,
 				F7C1703D18EBF358000111D1 /* SSOAuthViewController.xib in Resources */,
+				69376DE919D188F60050A0BF /* whiteArrow.png in Resources */,
 				F7B65585188D42D900FD10A2 /* icon-dot.png in Resources */,
 				F7B65587188D561900FD10A2 /* goBack.png in Resources */,
+				69376DE719D188F60050A0BF /* grayArrow@2x.png in Resources */,
 				65D712BD18DA8FC9006B4D46 /* WXDProjectsViewController.xib in Resources */,
 				65B8859918558B050043C42C /* SVProgressHUD.bundle in Resources */,
 				F7B6557C188D025900FD10A2 /* Candara.ttf in Resources */,
@@ -1364,7 +1445,10 @@
 				658380E81935B47D0028ED6E /* Default.png in Resources */,
 				F74C5D4118BC763F00C871ED /* Checked@2x.png in Resources */,
 				65D712BA18DA8FC9006B4D46 /* WXDProjectTableViewCell.xib in Resources */,
+				69376DDD19D188F60050A0BF /* blackArrow.png in Resources */,
+				69376DE119D188F60050A0BF /* blueArrow.png in Resources */,
 				65D712B818DA8FC9006B4D46 /* WXDLoginViewController.xib in Resources */,
+				69376DE519D188F60050A0BF /* grayArrow.png in Resources */,
 				657A95C31835F1B00035E15B /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1376,14 +1460,19 @@
 				69D39DFD197F7F7200539D29 /* WXDSettingTableViewCell.xib in Resources */,
 				69D39DFE197F7F7200539D29 /* FeedBackTableViewCell.xib in Resources */,
 				69D39DFA197F7F4800539D29 /* WXDNewSettingViewController.xib in Resources */,
+				69376DE819D188F60050A0BF /* grayArrow@2x.png in Resources */,
 				653AEB5218E19A590052FF74 /* Protoshop-Info.plist in Resources */,
 				653AEB5318E19A590052FF74 /* FontAwesome.ttf in Resources */,
 				653AEB5418E19A590052FF74 /* Protoshop-text.png in Resources */,
 				653AEB5518E19A590052FF74 /* icon-120.png in Resources */,
+				69376DEA19D188F60050A0BF /* whiteArrow.png in Resources */,
+				69376DDE19D188F60050A0BF /* blackArrow.png in Resources */,
 				653AEB5618E19A590052FF74 /* icon@2x.png in Resources */,
 				653AEB5818E19A590052FF74 /* Checked.png in Resources */,
 				653AEB5A18E19A590052FF74 /* Default-568h@2x.png in Resources */,
 				653AEB5B18E19A590052FF74 /* icon-dot.png in Resources */,
+				69376DE619D188F60050A0BF /* grayArrow.png in Resources */,
+				69376DE019D188F60050A0BF /* blackArrow@2x.png in Resources */,
 				653AEB5C18E19A590052FF74 /* goBack.png in Resources */,
 				653AEB5D18E19A590052FF74 /* WXDProjectsViewController.xib in Resources */,
 				653AEB5E18E19A590052FF74 /* SVProgressHUD.bundle in Resources */,
@@ -1392,8 +1481,11 @@
 				653AEB6118E19A590052FF74 /* WXDChangePswViewController.xib in Resources */,
 				653AEB6218E19A590052FF74 /* WXDSignupViewController.xib in Resources */,
 				653AEB6318E19A590052FF74 /* messageBoxViewController.xib in Resources */,
+				69376DE219D188F60050A0BF /* blueArrow.png in Resources */,
 				653AEB6418E19A590052FF74 /* Checked@2x.png in Resources */,
+				69376DEC19D188F60050A0BF /* whiteArrow@2x.png in Resources */,
 				653AEB6518E19A590052FF74 /* WXDProjectTableViewCell.xib in Resources */,
+				69376DE419D188F60050A0BF /* blueArrow@2x.png in Resources */,
 				653AEB6618E19A590052FF74 /* WXDLoginViewController.xib in Resources */,
 				653AEB6718E19A590052FF74 /* icon.png in Resources */,
 				658380EA1935B47D0028ED6E /* Default.png in Resources */,
@@ -1481,6 +1573,7 @@
 				65B8869318558C210043C42C /* linit.c in Sources */,
 				65B8868818558C210043C42C /* wax_xml.m in Sources */,
 				65B886DE185594890043C42C /* messageBoxViewController.m in Sources */,
+				69376DEF19D19E110050A0BF /* CircleView.m in Sources */,
 				65B886A518558C210043C42C /* lzio.c in Sources */,
 				F7CD13EE18B4AA41003B0D27 /* DKLiveBlurView.m in Sources */,
 				696AF877197E1FFB00164721 /* WXDNewSettingViewController.m in Sources */,
@@ -1546,6 +1639,7 @@
 				F7CD13F118B4AA41003B0D27 /* UIView+Screenshot.m in Sources */,
 				65D712BE18DA8FC9006B4D46 /* WXDSignupViewController.m in Sources */,
 				65D712C018DA8FC9006B4D46 /* WXDChangePswViewController.m in Sources */,
+				69376DDB19D188F60050A0BF /* EGORefreshTableHeaderView.m in Sources */,
 				6585CD6D18D1BA5B00F7DB04 /* WXDStringUtility.m in Sources */,
 				698DAC4B19C83E780032541A /* UIScrollView+MJExtension.m in Sources */,
 				65B886A618558C210043C42C /* print.c in Sources */,
@@ -1640,6 +1734,7 @@
 				653AEB0B18E19A590052FF74 /* wax_CTView.m in Sources */,
 				653AEB0D18E19A590052FF74 /* WXDProjectTableViewCell.m in Sources */,
 				653AEB0E18E19A590052FF74 /* ldo.c in Sources */,
+				69376DF019D19E110050A0BF /* CircleView.m in Sources */,
 				653AEB1018E19A590052FF74 /* lbaselib.c in Sources */,
 				653AEB1218E19A590052FF74 /* lapi.c in Sources */,
 				653AEB1318E19A590052FF74 /* WXDRequestCommand.m in Sources */,
@@ -1674,6 +1769,7 @@
 				653AEB3618E19A590052FF74 /* WXDGradualView.m in Sources */,
 				653AEB3718E19A590052FF74 /* wax_class.m in Sources */,
 				653AEB3818E19A590052FF74 /* CTViewController.m in Sources */,
+				69376DDC19D188F60050A0BF /* EGORefreshTableHeaderView.m in Sources */,
 				653AEB3918E19A590052FF74 /* ldblib.c in Sources */,
 				653AEB3A18E19A590052FF74 /* lmathlib.c in Sources */,
 				653AEB3B18E19A590052FF74 /* lmem.c in Sources */,

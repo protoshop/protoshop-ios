@@ -26,9 +26,13 @@
 #import "DAProgressOverlayView.h"
 #import "MJRefresh.h"
 #import "WXDActivityIndicator.h"
-
-@interface WXDProjectsViewController ()<UIAlertViewDelegate,UITableViewDataSource,UITableViewDelegate>{
+#import "EGORefreshTableHeaderView.h"
+@interface WXDProjectsViewController ()<UIAlertViewDelegate,UITableViewDataSource,UITableViewDelegate,EGORefreshTableHeaderDelegate>{
     float    offset;
+    EGORefreshTableHeaderView *_refreshHeaderView;
+    BOOL _reloading;
+    UIView *emptyBg;
+    
 }
 
 /**
@@ -99,18 +103,29 @@
 {
     [super viewDidLoad];
     offset = 0.f;
+    
    // [WXDMainTableView class];
 
-    self.actIndicator = [[WXDActivityIndicator alloc]initWithFrame:CGRectMake(150, 94, 30, 30)];
-    [self.view addSubview:self.actIndicator];
     
-    self.mainTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 88, self.view.frame.size.width, self.view.frame.size.height)];
+    self.mainTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 88, self.view.frame.size.width, self.view.frame.size.height-88)];
     self.mainTableView.delegate = self;
     self.mainTableView.dataSource = self;
     self.mainTableView.backgroundColor = [UIColor clearColor];
+
     [self.view addSubview:self.mainTableView];
     
     
+    
+    if (_refreshHeaderView == nil) {
+		
+		EGORefreshTableHeaderView *view = [[EGORefreshTableHeaderView alloc] initWithFrame:self.mainTableView.frame];
+		view.delegate = self;
+		[self.view insertSubview:view belowSubview:self.mainTableView];
+		_refreshHeaderView = view;
+				
+	}
+
+   
     _projectInfoList = [[NSMutableArray alloc] init];
     _searchedProjectInfoList = [[NSMutableArray alloc] init];
     
@@ -135,8 +150,8 @@
     
     _beClearCache = NO;
     [self loadDataFromLocation];
-    //[self loadDataFromOnline];
-    [self setupRefresh];
+    [self loadDataFromOnline];
+    //[self setupRefresh];
 }
 
 
@@ -205,21 +220,29 @@
 {
     if (bReachability == NO) {
         [self loadDataFromLocation];
-        [self.mainTableView headerEndRefreshing];
-
+      
     } else {
         [self showHUD];
+        //[self reloadTableViewDataSource];
         WXDRequestCommand *requestCommand = [WXDRequestCommand sharedWXDRequestCommand];
         [requestCommand command_fetch_projects_list:@"ios"
                                               token:[USER_DEFAULT objectForKey:@"userToken"]
                                             success:^(NSMutableArray *projectsarr) {
                                                 [self mergeOnlineIntoLocation:projectsarr];
                                                 [_mainTableView reloadData];
-                                                [self.mainTableView headerEndRefreshing];
+                                                [_refreshHeaderView.circleView stopAnimation];
+                                                
                                                 [self dismissHUD];
+                                                [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:0.0];
+                                                
+                                                
                                             } failure:^(NSError *error) {
+                                                [_mainTableView reloadData];
+                                                 [_refreshHeaderView.circleView stopAnimation];
+                                                
                                                 [self dismissHUD];
-                                                [self.mainTableView headerEndRefreshing];
+                                                [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:0.0];
+                                                
                                                 SHOW_ALERT(@"获取工程列表失败",[error localizedDescription]);
                                             }];
     }
@@ -379,40 +402,6 @@
     }
 }
 
-#pragma mark - WXDMainTableViewDelegate
-//- (void)WXDMainTableViewDidStartRefreshing:(WXDMainTableView *)tableView{
-//    [self loadDataFromOnline];
-//}
-//
-//- (NSDate *)WXDMainTableViewRefreshingFinishedDate{
-//    NSDate *now = [NSDate date];
-//    return now;
-//}
-
-
-
-#pragma mark - Scroll
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    CGFloat yOffset   = self.mainTableView.contentOffset.y;
-    if (yOffset < -30) {
-        [self.actIndicator step];
-    }
-    if (yOffset < -6 && yOffset > -66 ) {
-
-        BOOL bStep = (self.mainTableView.contentOffset.y + offset < -6.f) ? YES:NO;
-        //NSLog(@"ttt:%f",-(scrollView.contentOffset.y) + offset);
-        if (bStep) {
-            [self.actIndicator step];
-            offset = -self.mainTableView.contentOffset.y;
-        }
-        NSLog(@"offset:%f, scrollview.offset=%f", offset,self.mainTableView.contentOffset.y);
-    }
-}
-
-//- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-//    [self.mainTableView tableViewDidEndDragging:scrollView];
-//}
-
 
 
 #pragma mark UITableViewDataSource
@@ -426,7 +415,8 @@
             ret = [_projectInfoList count];
         }
     }
-    DLog(@"table number: %d", ret);
+    
+   
     return ret;
 }
 
@@ -484,6 +474,76 @@
 - (IBAction)searchKeyboardHide:(id)sender {
     
     [self.projectSearchBar resignFirstResponder];
+}
+
+
+#pragma mark -
+#pragma mark Data Source Loading / Reloading Methods
+
+- (void)reloadTableViewDataSource{
+	
+	//  should be calling your tableviews data source model to reload
+	//  put here just for demo
+	_reloading = YES;
+	
+}
+
+- (void)doneLoadingTableViewData{
+	
+	//  model should call this when its done loading
+	_reloading = NO;
+    
+    
+	[_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:self.mainTableView];
+	
+}
+
+
+#pragma mark -
+#pragma mark UIScrollViewDelegate Methods
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    [_refreshHeaderView egoRefreshScrollViewWillBeginScroll:scrollView];
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+	
+	[_refreshHeaderView egoRefreshScrollViewDidScroll:scrollView];
+    
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+	//_reloading = NO;
+	[_refreshHeaderView egoRefreshScrollViewDidEndDragging:scrollView];
+	
+}
+
+#pragma mark -
+#pragma mark EGORefreshTableHeaderDelegate Methods
+
+- (void)egoRefreshTableHeaderDidTriggerRefresh:(EGORefreshTableHeaderView*)view{
+	
+	[self reloadTableViewDataSource];
+    [self loadDataFromOnline];
+	
+	
+}
+
+- (BOOL)egoRefreshTableHeaderDataSourceIsLoading:(EGORefreshTableHeaderView*)view{
+	
+	return _reloading; // should return if data source model is reloading
+	
+}
+
+- (NSDate*)egoRefreshTableHeaderDataSourceLastUpdated:(EGORefreshTableHeaderView*)view{
+	
+	return [NSDate date]; // should return date data source was last changed
+	
+}
+
+- (void)viewDidUnload {
+	_refreshHeaderView=nil;
 }
 
 @end

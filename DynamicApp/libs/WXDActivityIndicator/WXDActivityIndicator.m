@@ -8,14 +8,14 @@
 
 #import "WXDActivityIndicator.h"
 
-static int step = 0;
-static int animationStep = 0;
-
 @interface WXDActivityIndicator ()
 
 @property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, assign) BOOL isAnimating;
 @property (nonatomic, assign) BOOL isCleared;
+@property (nonatomic, assign) BOOL isUnstep;
+
+
 @end
 
 @implementation WXDActivityIndicator
@@ -27,6 +27,7 @@ static int animationStep = 0;
         // Initialization code
         self.backgroundColor = [UIColor clearColor];
         _isCleared = NO;
+        _isUnstep = NO;
     }
     return self;
 }
@@ -38,6 +39,7 @@ static int animationStep = 0;
         // Initialization code
         self.backgroundColor = [UIColor clearColor];
         _isCleared = NO;
+        _isUnstep = NO;
     }
     
     return self;
@@ -58,46 +60,60 @@ static int animationStep = 0;
     CGContextFlush(ctx);
 
     if (_isCleared == YES) {
-        CGContextFlush(ctx);
+        CGContextClearRect(ctx, self.bounds);
     } else {
         CGContextSetLineWidth(ctx, 2.0);
         
         if (_timer.isValid) {
-            for (int i = 1 ; i < 11; ++i) {
-                CGContextSetStrokeColorWithColor(ctx, [[self getColorForStage:animationStep + i WithAlpha:0.1 *i] CGColor]);
+            for (NSInteger i = 1 ; i < 11; ++i) {
+                CGContextSetStrokeColorWithColor(ctx, [[self getColorForStage:_animationStep + i WithAlpha:0.1 *i] CGColor]);
                 
-            //     CGContextSetStrokeColorWithColor(ctx, [[UIColor darkGrayColor] CGColor]);
-                point = [self pointOnOuterCirecleWithAngel:animationStep + i];
+                point = [self pointOnOuterCirecleWithAngel:_animationStep + i];
                 CGContextMoveToPoint(ctx, point.x, point.y);
-                point = [self pointOnInnerCirecleWithAngel:animationStep + i];
+                point = [self pointOnInnerCirecleWithAngel:_animationStep + i];
                 CGContextAddLineToPoint( ctx, point.x, point.y);
                 CGContextStrokePath(ctx);
             }
+            _animationStep++;
         } else {
-            for (int i = 1; i < step; ++i) {
-                int j = step ;
-                if (j> 10) {
-                    j = 10;
+            if (!_isUnstep) {
+                if (_step < 12) {
+                    for (NSInteger i = 1 ; i < _step; ++i) {
+                        CGContextSetStrokeColorWithColor(ctx, [[self getColorForStage:_animationStep + i WithAlpha:0.1 *i] CGColor]);
+                        
+                        point = [self pointOnOuterCirecleWithAngel:_animationStep + i];
+                        CGContextMoveToPoint(ctx, point.x, point.y);
+                        point = [self pointOnInnerCirecleWithAngel:_animationStep + i];
+                        CGContextAddLineToPoint( ctx, point.x, point.y);
+                        CGContextStrokePath(ctx);
+                    }
+                } else {
+                    for (NSInteger i = 1 ; i < 11; ++i) {
+                        CGContextSetStrokeColorWithColor(ctx, [[self getColorForStage:_animationStep + i WithAlpha:0.1 *i] CGColor]);
+                        
+                        point = [self pointOnOuterCirecleWithAngel:_animationStep + i];
+                        CGContextMoveToPoint(ctx, point.x, point.y);
+                        point = [self pointOnInnerCirecleWithAngel:_animationStep + i];
+                        CGContextAddLineToPoint( ctx, point.x, point.y);
+                        CGContextStrokePath(ctx);
+                    }
                 }
-                CGContextSetStrokeColorWithColor(ctx, [[self getColorForStage:j+i WithAlpha:1.0] CGColor]);
-               // CGContextSetStrokeColorWithColor(ctx, [[UIColor darkGrayColor] CGColor]);
-                
-                point = [self pointOnOuterCirecleWithAngel:j+i];
-                CGContextMoveToPoint(ctx, point.x, point.y);
-                point = [self pointOnInnerCirecleWithAngel:j+i];
-                CGContextAddLineToPoint( ctx, point.x, point.y);
-                CGContextStrokePath(ctx);
+                _animationStep++;
+            } else {
+                for (NSInteger i = 1 ; i < 11; ++i) {
+                    CGContextSetStrokeColorWithColor(ctx, [[self getColorForStage:_animationStep + i WithAlpha:0.1 *i] CGColor]);
+                    
+                    point = [self pointOnOuterCirecleWithAngel:_animationStep + i];
+                    CGContextMoveToPoint(ctx, point.x, point.y);
+                    point = [self pointOnInnerCirecleWithAngel:_animationStep + i];
+                    CGContextAddLineToPoint( ctx, point.x, point.y);
+                    CGContextStrokePath(ctx);
+                }
+                _animationStep--;
             }
-
         }
-        
-//        step++;
-        animationStep++;
     }
 }
-
-
-
 
 
 /**
@@ -105,8 +121,8 @@ static int animationStep = 0;
  */
 -(void) clear
 {
-    step = 0;
-    animationStep = 0;
+    _step = 0;
+    _animationStep = 0;
     _isCleared = YES;
     [self setNeedsDisplay];
 }
@@ -115,17 +131,18 @@ static int animationStep = 0;
 /**
  the animation step by step
  */
--(void) step
+-(void) progress:(NSInteger) progress
 {
     _isCleared = NO;
-    step++;
+    _step = progress;
+    _isUnstep = NO;
     [self setNeedsDisplay];
 }
 
--(void) unstep
+-(void) unprogress:(NSInteger) progress
 {
     _isCleared = NO;
-    step--;
+    _isUnstep = YES;
     [self setNeedsDisplay];
 }
 
@@ -135,12 +152,12 @@ static int animationStep = 0;
 -(void) startAnimation
 {
     _isCleared = NO;
+    _isUnstep = NO;
     if (!_timer.isValid) {
         _timer = [NSTimer timerWithTimeInterval:0.1 target:self selector:@selector(setNeedsDisplay) userInfo:nil repeats:YES];
         [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
     }
     self.hidden = NO;
-    animationStep++;
 }
 
 
@@ -185,7 +202,7 @@ static int animationStep = 0;
     [self.layer addAnimation:animationGroup forKey:nil];
 }
 
--(UIColor *) getColorForStage:(int) currentStage WithAlpha:(double) alpha
+-(UIColor *) getColorForStage:(NSInteger) currentStage WithAlpha:(double) alpha
 {
 //    int max = 20;
 //    int cycle = currentStage % max;
@@ -210,7 +227,7 @@ static int animationStep = 0;
   
 }
 
--(CGPoint) pointOnInnerCirecleWithAngel:(int) angel
+-(CGPoint) pointOnInnerCirecleWithAngel:(NSInteger) angel
 {
     double r = self.frame.size.height/2/2;
     double cx = self.frame.size.width/2;
@@ -220,7 +237,7 @@ static int animationStep = 0;
     return CGPointMake(x, y);
 }
 
--(CGPoint) pointOnOuterCirecleWithAngel:(int) angel
+-(CGPoint) pointOnOuterCirecleWithAngel:(NSInteger) angel
 {
     double r = self.frame.size.height/2;
     double cx = self.frame.size.width/2;

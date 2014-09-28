@@ -15,4 +15,6 @@
 /** App的主控制器*/
 @interface WXDProjectsViewController : WXDBaseViewController
 @property(nonatomic,strong)UIButton *baseView;//背景触发键盘消失
+-(void)reloadTableViewDataSource;
+-(void)doneLoadingTableViewData;
 @end
