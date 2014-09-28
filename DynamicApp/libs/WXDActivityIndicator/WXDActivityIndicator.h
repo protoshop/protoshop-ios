@@ -15,6 +15,5 @@
 -(void) unprogress:(NSInteger) progress;
 -(void) startAnimation;
 -(void) stopAnimation;
-@property (nonatomic, assign) NSInteger step;
-@property (nonatomic, assign) NSInteger animationStep;
+
 @end

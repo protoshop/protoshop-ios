@@ -15,6 +15,9 @@
 @property (nonatomic, assign) BOOL isCleared;
 @property (nonatomic, assign) BOOL isUnstep;
 
+@property (nonatomic, assign) NSInteger step;
+@property (nonatomic, assign) NSInteger animationStep;
+
 
 @end
 
