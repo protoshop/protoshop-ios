@@ -74,7 +74,7 @@ static NSInteger __progress;
 		_statusLabel=label;
 		//[label release];
     
-		WXDActivityIndicator *circleView = [[WXDActivityIndicator alloc] initWithFrame:CGRectMake((self.frame.size.width-15)/2, 5, 30, 30)];
+		XHActivityCircleIndicatorView *circleView = [[XHActivityCircleIndicatorView alloc] initWithFrame:CGRectMake((self.frame.size.width-15)/2, 20, 30, 30)];
         _circleView = circleView;
         
         
@@ -132,7 +132,7 @@ static NSInteger __progress;
 		 /*触摸屏幕下拉状态超过界限*/
 			_statusLabel.text = NSLocalizedString(@"Release to refresh...", @"Release to refresh status");
             _statePulling = NO;
-            [_circleView startAnimation];
+            [_circleView beginRefreshing];
 					
     }
             
@@ -147,7 +147,7 @@ static NSInteger __progress;
 			} else {
 //                _circleView.transform = CGAffineTransformIdentity;
                 
-                [_circleView clear];
+                [_circleView endRefreshing];
                 //[_circleView setNeedsDisplay];
             }
 			
@@ -170,6 +170,8 @@ static NSInteger __progress;
 			[CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions]; 
 			_arrowImage.hidden = YES;
 			[CATransaction commit];
+            
+            
            // statePulling = NO;
            			break;
 //		default:{
@@ -202,7 +204,7 @@ static NSInteger __progress;
 	if (_state == EGOOPullRefreshLoading) {
 		
 		CGFloat offset = MAX(scrollView.contentOffset.y * -1, 0);
-		offset = MIN(offset, 60);
+		offset = MIN(offset, 50);
 		scrollView.contentInset = UIEdgeInsetsMake(offset, 0.0f, 0.0f, 0.0f);
 		
 	} else if (scrollView.isDragging) {
@@ -213,30 +215,19 @@ static NSInteger __progress;
 		}
         
 		
-		if (_state == EGOOPullRefreshPulling && scrollView.contentOffset.y > -60.0f && scrollView.contentOffset.y < 0.0f && !_loading) {
+		if (_state == EGOOPullRefreshPulling && scrollView.contentOffset.y > -50.0f && scrollView.contentOffset.y < 0.0f && !_loading) {
 			[self setState:EGOOPullRefreshNormal];
 		} else if (_state == EGOOPullRefreshNormal && scrollView.contentOffset.y < 0.0f && !_loading ) {
             
-            
-            
-          
-                float moveY = fabsf(scrollView.contentOffset.y);
+                float moveY = fabsf(scrollView.contentOffset.y+10);
         
-                if (moveY > 60){
-                    moveY = 60;
+                if (moveY > 50){
+                    moveY = 50;
                 }
                 //刷新
-                NSInteger progress = moveY / 6 ;
-                
-                    NSLog(@"progress=%d",progress);
-                __progress = progress;
-                
-            
-                    __progress ++;
-                    [_circleView progress:__progress];
-                             
-            
-            if (scrollView.contentOffset.y < -60.0f) {
+                CGFloat progress = moveY / 36.0 ;
+            self.circleView.timeOffset = progress;
+            if (scrollView.contentOffset.y < -50.0f) {
                 [self setState:EGOOPullRefreshPulling];
             }
         }
@@ -257,7 +248,7 @@ static NSInteger __progress;
 		_loading = [_delegate egoRefreshTableHeaderDataSourceIsLoading:self];
 	}
 	
-	if (scrollView.contentOffset.y <= - 65.0f && !_loading) {
+	if (scrollView.contentOffset.y <= - 50.0f && !_loading) {
 		
 		if ([_delegate respondsToSelector:@selector(egoRefreshTableHeaderDidTriggerRefresh:)]) {
 			[_delegate egoRefreshTableHeaderDidTriggerRefresh:self];
@@ -266,7 +257,7 @@ static NSInteger __progress;
 		[self setState:EGOOPullRefreshLoading];
 		[UIView beginAnimations:nil context:NULL];
 		[UIView setAnimationDuration:0.2];
-		scrollView.contentInset = UIEdgeInsetsMake(60.0f, 0.0f, 0.0f, 0.0f);
+		scrollView.contentInset = UIEdgeInsetsMake(50.0f, 0.0f, 0.0f, 0.0f);
 		[UIView commitAnimations];
 		
 	}
@@ -282,8 +273,8 @@ static NSInteger __progress;
     double delayInSeconds = 0.7;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        [_circleView clear];
-        [_circleView.layer removeAllAnimations];
+        [_circleView endRefreshing];//end
+        //[_circleView.layer removeAllAnimations];
         
     });
 }

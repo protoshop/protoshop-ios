@@ -27,7 +27,7 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 #import "CircleView.h"
-#import "WXDActivityIndicator.h"
+#import "XHActivityCircleIndicatorView.h"
 typedef enum{
 	EGOOPullRefreshPulling = 0,
 	EGOOPullRefreshNormal,
@@ -50,7 +50,7 @@ typedef enum{
 }
 @property(nonatomic,assign)BOOL statePulling;
 @property(nonatomic,strong) id <EGORefreshTableHeaderDelegate> delegate;
-@property(nonatomic,strong)WXDActivityIndicator *circleView;
+@property(nonatomic,strong)XHActivityCircleIndicatorView *circleView;
 - (void)refreshLastUpdatedDate;
 - (void)egoRefreshScrollViewWillBeginScroll:(UIScrollView *)scrollView;
 - (void)egoRefreshScrollViewDidScroll:(UIScrollView *)scrollView;

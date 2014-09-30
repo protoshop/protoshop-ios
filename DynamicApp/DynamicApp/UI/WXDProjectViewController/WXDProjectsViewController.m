@@ -24,8 +24,6 @@
 #import "AFNetworking.h"
 #import "Reachability.h"
 #import "DAProgressOverlayView.h"
-#import "MJRefresh.h"
-#import "WXDActivityIndicator.h"
 #import "EGORefreshTableHeaderView.h"
 @interface WXDProjectsViewController ()<UIAlertViewDelegate,UITableViewDataSource,UITableViewDelegate,EGORefreshTableHeaderDelegate>{
     float    offset;
@@ -76,7 +74,6 @@
 @property (strong, nonatomic) NSMutableArray *projectInfoList; //当前工程列表列表
 @property (strong, nonatomic) NSMutableArray *searchedProjectInfoList; //搜索以后符合条件的列表表单
 @property (assign, nonatomic) BOOL beClearCache; //清理缓存需要刷新
-@property (strong, nonatomic) WXDActivityIndicator *actIndicator;
 @end
 
 @implementation WXDProjectsViewController
@@ -182,31 +179,6 @@
 }
 
 
-- (void)setupRefresh
-{
-    // 1.下拉刷新(进入刷新状态就会调用self的headerRereshing)
-    if ([self.mainTableView respondsToSelector:@selector(addHeaderWithTarget:action:)]) {
-        [self.mainTableView addHeaderWithTarget:self action:@selector(headerRereshing)];
-
-    }
-
-    [self.mainTableView headerBeginRefreshing];
-    
-    // 2.上拉加载更多(进入刷新状态就会调用self的footerRereshing)
-    //[self.tableView addFooterWithTarget:self action:@selector(footerRereshing)];
-    
-    // 设置文字(也可以不设置,默认的文字在MJRefreshConst中修改)
-    self.mainTableView.headerPullToRefreshText = @"下拉可以刷新了";
-    self.mainTableView.headerReleaseToRefreshText = @"松开马上刷新了";
-    self.mainTableView.headerRefreshingText = @"正在努力刷新中";
-    
-    self.mainTableView.footerPullToRefreshText = @"上拉可以加载更多数据了";
-    self.mainTableView.footerReleaseToRefreshText = @"松开马上加载更多数据了";
-    self.mainTableView.footerRefreshingText = @"哥正在帮你加载中,不客气";
-}
-
-
-
 #pragma mark - --------------------System--------------------
 - (void)didReceiveMemoryWarning
 {
@@ -230,7 +202,8 @@
                                             success:^(NSMutableArray *projectsarr) {
                                                 [self mergeOnlineIntoLocation:projectsarr];
                                                 [_mainTableView reloadData];
-                                                [_refreshHeaderView.circleView stopAnimation];
+                                                [_refreshHeaderView.circleView endRefreshing];//endtt
+                                                [_refreshHeaderView.circleView.layer removeAllAnimations];
                                                 
                                                 [self dismissHUD];
                                                 [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:0.0];
@@ -238,8 +211,8 @@
                                                 
                                             } failure:^(NSError *error) {
                                                 [_mainTableView reloadData];
-                                                 [_refreshHeaderView.circleView stopAnimation];
-                                                
+                                                 [_refreshHeaderView.circleView endRefreshing];//endtt
+                                                [_refreshHeaderView.circleView.layer removeAllAnimations];
                                                 [self dismissHUD];
                                                 [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:0.0];
                                                 
