@@ -146,7 +146,7 @@ static NSInteger __progress;
 				[CATransaction commit];
 			} else {
 //                _circleView.transform = CGAffineTransformIdentity;
-                
+                [[NSNotificationCenter defaultCenter] postNotificationName:__Protoshop_Cancle_Download object:nil];
                 [_circleView endRefreshing];
                 //[_circleView setNeedsDisplay];
             }
@@ -273,6 +273,7 @@ static NSInteger __progress;
     double delayInSeconds = 0.7;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [[NSNotificationCenter defaultCenter] postNotificationName:__Protoshop_Cancle_Download object:nil];
         [_circleView endRefreshing];//end
         //[_circleView.layer removeAllAnimations];
         

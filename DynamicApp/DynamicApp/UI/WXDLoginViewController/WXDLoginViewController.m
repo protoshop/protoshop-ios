@@ -99,6 +99,14 @@
                               [USER_DEFAULT synchronize];
                               [SVProgressHUD dismiss];
                               WXDProjectsViewController *mainVC = [[WXDProjectsViewController alloc]init];
+//                              if (!self.noFirstLog) {
+//                                  [self.navigationController pushViewController:mainVC animated:NO];
+//                              }else{
+//                                  [self dismissViewControllerAnimated:YES completion:^{
+//                                      NSLog(@"push login");
+//                                  }];
+//                              }
+                              
                               [self.navigationController pushViewController:mainVC animated:NO];
                           }
                           failure:^(NSError *error) {

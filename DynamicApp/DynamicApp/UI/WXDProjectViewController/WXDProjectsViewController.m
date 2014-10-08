@@ -17,14 +17,13 @@
 
 /** model*/
 #import "WXDProjectInfo.h"
-
-
 /** 第三方API*/
 #import "SVProgressHUD.h"
 #import "AFNetworking.h"
 #import "Reachability.h"
 #import "DAProgressOverlayView.h"
 #import "EGORefreshTableHeaderView.h"
+#import "WXDLoginViewController.h"
 @interface WXDProjectsViewController ()<UIAlertViewDelegate,UITableViewDataSource,UITableViewDelegate,EGORefreshTableHeaderDelegate>{
     float    offset;
     EGORefreshTableHeaderView *_refreshHeaderView;
@@ -207,8 +206,14 @@
                                                 
                                                 [self dismissHUD];
                                                 [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:0.0];
-                                                
-                                                
+//                                                WXDLoginViewController *loginVC = [[WXDLoginViewController alloc]init];
+//                                                loginVC.noFirstLog = YES;
+//                                                [self presentViewController:loginVC animated:YES completion:^{//备注2
+//                                                    NSLog(@"show loginVC!");
+//                                                }];
+//
+//                                                [self.navigationController popToRootViewControllerAnimated:YES];
+                                             
                                             } failure:^(NSError *error) {
                                                 [_mainTableView reloadData];
                                                  [_refreshHeaderView.circleView endRefreshing];//endtt
@@ -216,7 +221,11 @@
                                                 [self dismissHUD];
                                                 [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:0.0];
                                                 
-                                                SHOW_ALERT(@"获取工程列表失败",[error localizedDescription]);
+                                                
+                                                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"获取工程列表失败" message:[error localizedDescription] delegate:self cancelButtonTitle:@"确定" otherButtonTitles: nil];
+                                                alert.tag = 1000;
+                                                [alert show];
+                                                //SHOW_ALERT(@"获取工程列表失败",[error localizedDescription]);
                                             }];
     }
 
@@ -519,4 +528,18 @@
 	_refreshHeaderView=nil;
 }
 
+
+#pragma mark -
+#pragma mark UIAlertView Delegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+//    WXDLoginViewController *loginVC = [[WXDLoginViewController alloc]init];
+//    loginVC.noFirstLog = YES;
+//    [self presentViewController:loginVC animated:YES completion:^{//备注2
+//        NSLog(@"show loginVC!");
+//    }];
+    if (alertView.tag == 1000) {
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
+    
+}
 @end
