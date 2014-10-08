@@ -90,9 +90,13 @@ PopupViewAnimation animationTypeLocal;
         DKLiveBlurView *backgroundView = [[DKLiveBlurView alloc]initWithFrame: sourceView.bounds];
         backgroundView.tag = BackgroundViewTag;
         [backgroundView setAutoresizingMask:UIViewAutoresizingFlexibleHeight];
-        backgroundView.originalImage = [sourceView screenshot];
-        backgroundView.isGlassEffectOn = YES;
-        [backgroundView setBlurLevel:0.9];//只要模糊，不需要看清字
+        float quality = .8f;
+//        backgroundView.isGlassEffectOn = YES;
+//        [backgroundView setBlurLevel:0.9];//只要模糊，不需要看清字
+        UIImage *image = [sourceView screenshot];
+        NSData *imageData = UIImageJPEGRepresentation(image, quality);
+
+        backgroundView.originalImage = [UIImage imageWithData:imageData];
         
         [overlayView addSubview:backgroundView];
     }else{
