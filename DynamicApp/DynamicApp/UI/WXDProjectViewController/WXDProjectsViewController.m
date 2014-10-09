@@ -141,7 +141,7 @@
     [_topTitleView addGestureRecognizer:tapGesture];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(projectListChanged:) name:__Protoshop_Project_State_Changed object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTableCell:) name:__Protoshop_Reload_TableCell object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTableCell:) name:__Protoshop_Reload_TableCell object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clearCache:) name:__Protoshop_Clear_Cache object:nil];
     
     _beClearCache = NO;
@@ -283,33 +283,33 @@
 
 -(void) reloadTableCell:(NSNotification *)notification
 {
-    NSString *appID = (NSString *)[notification object];
-    NSUInteger index = -1;
-    
-    if (_searchedProjectInfoList != nil && [_searchedProjectInfoList count] > 0) {
-        for (int i = 0; i < [_searchedProjectInfoList count]; i++) {
-            WXDProjectInfo *projectInfo = (WXDProjectInfo *)[_searchedProjectInfoList objectAtIndex:i];
-            if ([appID isEqualToString:projectInfo.appID]) {
-                index = i;
-                break;
-            }
-        }
-
-    } else {
-        for (int i = 0; i < [_projectInfoList count]; i++) {
-            WXDProjectInfo *projectInfo = (WXDProjectInfo *)[_projectInfoList objectAtIndex:i];
-            if ([appID isEqualToString:projectInfo.appID]) {
-                index = i;
-                break;
-            }
-        }
-    
-    }
-    
-    if (index != -1) {
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
-        [_mainTableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath, nil] withRowAnimation:UITableViewRowAnimationAutomatic];
-    }
+//    NSString *appID = (NSString *)[notification object];
+//    NSUInteger index = -1;
+//    
+//    if (_searchedProjectInfoList != nil && [_searchedProjectInfoList count] > 0) {
+//        for (int i = 0; i < [_searchedProjectInfoList count]; i++) {
+//            WXDProjectInfo *projectInfo = (WXDProjectInfo *)[_searchedProjectInfoList objectAtIndex:i];
+//            if ([appID isEqualToString:projectInfo.appID]) {
+//                index = i;
+//                break;
+//            }
+//        }
+//
+//    } else {
+//        for (int i = 0; i < [_projectInfoList count]; i++) {
+//            WXDProjectInfo *projectInfo = (WXDProjectInfo *)[_projectInfoList objectAtIndex:i];
+//            if ([appID isEqualToString:projectInfo.appID]) {
+//                index = i;
+//                break;
+//            }
+//        }
+//    
+//    }
+//    
+//    if (index != -1) {
+//        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
+////        [_mainTableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath, nil] withRowAnimation:UITableViewRowAnimationAutomatic];
+//    }
     
 }
 
