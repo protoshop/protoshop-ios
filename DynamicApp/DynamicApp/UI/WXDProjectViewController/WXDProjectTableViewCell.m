@@ -36,6 +36,7 @@
 @property (strong, nonatomic) DAProgressOverlayView *progressView;
 @property (strong, nonatomic) NSString *appPath;
 @property (strong, nonatomic) NSURLSessionDownloadTask *downloadTask;
+@property (assign, nonatomic) BOOL bDownloading;
 
 -(void) unzipApp:(NSString *) zipFile;
 /**
@@ -74,7 +75,8 @@
     _progressView = [[DAProgressOverlayView alloc] initWithFrame:_projectIconImageView.bounds];
     _progressView.hidden = YES;
     [_projectIconImageView addSubview:_progressView];
-
+    _bDownloading = NO;
+    
     //self.SyncBtn.titleLabel.font = [UIFont fontWithName:@"FontAwesome" size:36];//分享
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cancelDownloadTask:) name:__Protoshop_Cancle_Download object:nil];
 }
@@ -101,9 +103,14 @@
 -(void) downloadProjectPackage
 {
     if (_projectInfo.bDownload == YES) {
+        _bDownloading = NO;
         [self gotoApp];
         return;
     };
+    
+    if (_bDownloading == YES) {
+        return;
+    }
     
     _progressView.hidden = NO;
     [_progressView displayOperationWillTriggerAnimation];
@@ -112,6 +119,8 @@
     [requestCommand command_create_zip_url:_projectInfo.appID
                                      token:[USER_DEFAULT objectForKey:@"userToken"]
                                    success:^(NSString *zipPath) {
+                                       _bDownloading = YES;
+                                       
                                        NSURL *url = [NSURL URLWithString:zipPath];
                                        NSURLRequest *request = [NSURLRequest requestWithURL:url];
                                        AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
@@ -120,6 +129,7 @@
                                        _downloadTask = [session downloadTaskWithRequest:request
                                                                                progress:&progress
                                                                             destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
+                                                                                
                                                                                  NSString *filePath = [targetPath resourceSpecifier];
                                                                                  
                                                                                  [self unzipApp:[filePath stringByReplacingOccurrencesOfString:@"%20" withString:@" "]];
@@ -178,7 +188,7 @@
             DLog(@"解压成功");
             _projectInfo.appPath = [NSString stringWithFormat:@"%@/%@", userDocDir, _projectInfo.appID];
             _projectInfo.bDownload = YES;
-            _blueDotImageView.hidden = NO;
+            _blueDotImageView.hidden = YES;
             [[NSNotificationCenter defaultCenter] postNotificationName:__Protoshop_Project_State_Changed object:nil];
             [[NSNotificationCenter defaultCenter] postNotificationName:__Protoshop_Reload_TableCell object:_projectInfo.appID];
 
