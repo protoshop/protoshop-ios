@@ -57,7 +57,8 @@
     _userEmailTF.leftView.userInteractionEnabled = NO;
     _userEmailTF.leftViewMode = UITextFieldViewModeAlways;
     _userEmailTF.clearButtonMode = UITextFieldViewModeWhileEditing;
-    
+    [_userEmailTF becomeFirstResponder];
+
     _userPasswordTF.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 16.0, 0)];
     _userPasswordTF.leftView.userInteractionEnabled = NO;
     _userPasswordTF.leftViewMode = UITextFieldViewModeAlways;
