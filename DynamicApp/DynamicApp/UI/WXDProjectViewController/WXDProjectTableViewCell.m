@@ -35,7 +35,7 @@
 
 @property (strong, nonatomic) DAProgressOverlayView *progressView;
 @property (strong, nonatomic) NSString *appPath;
-@property (strong, nonatomic) NSURLSessionDownloadTask *downloadTask;
+@property (assign, nonatomic) NSURLSessionDownloadTask *downloadTask;
 @property (assign, nonatomic) BOOL bDownloading;
 
 -(void) unzipApp:(NSString *) zipFile;
@@ -85,7 +85,7 @@
 {
     if (_downloadTask != nil && _downloadTask.state == NSURLSessionTaskStateRunning) {
         [_downloadTask cancel];
-        
+        _downloadTask = nil;
         [_progressView displayOperationDidFinishAnimation];
         double delayInSeconds = _progressView.stateChangeAnimationDuration;
         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
@@ -126,27 +126,30 @@
                                        AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
                                        NSProgress *progress = nil;
                                        
-                                       _downloadTask = [session downloadTaskWithRequest:request
-                                                                               progress:&progress
-                                                                            destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
+                                       NSURLSessionDownloadTask *downloadTask = [session downloadTaskWithRequest:request
+                                                                                                        progress:&progress
+                                                                                                     destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
                                                                                 
-                                                                                 NSString *filePath = [targetPath resourceSpecifier];
+                                                                                                         NSString *filePath = [targetPath resourceSpecifier];
                                                                                  
-                                                                                 [self unzipApp:[filePath stringByReplacingOccurrencesOfString:@"%20" withString:@" "]];
-                                                                                 [_progressView displayOperationDidFinishAnimation];
-                                                                                 double delayInSeconds = _progressView.stateChangeAnimationDuration;
-                                                                                 dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
-                                                                                 dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-                                                                                     _progressView.progress = 0.;
-                                                                                     _progressView.hidden = YES;
-                                                                                 });
-                                                                                 return [NSURL fileURLWithPath:@"/tmp/robots.txt"];
-                                                                             }
-                                                                      completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
-                                                                           DLog(@"error");
-                                                                       }];
-                                       [_downloadTask resume];
-                                       
+                                                                                                         [self unzipApp:[filePath stringByReplacingOccurrencesOfString:@"%20" withString:@" "]];
+                                                                                                         [_progressView displayOperationDidFinishAnimation];
+                                                                                                         double delayInSeconds = _progressView.stateChangeAnimationDuration;
+                                                                                                         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+                                                                                                         dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+                                                                                                             _progressView.progress = 0.;
+                                                                                                             _progressView.hidden = YES;
+                                                                                                         });
+                                                                                                         return [NSURL fileURLWithPath:@"/tmp/robots.txt"];
+                                                                                                     }
+                                                                                               completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
+                                                                                                   DLog(@"error");
+                                                                                               }];
+                                       [downloadTask resume];
+                                       [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                                           _downloadTask = downloadTask;
+                                       }];
+
                                        [session setDownloadTaskDidWriteDataBlock:^(NSURLSession *session, NSURLSessionDownloadTask *downloadTask, int64_t bytesWritten, int64_t totalBytesWritten, int64_t totalBytesExpectedToWrite) {
                                            float progress = (float)totalBytesWritten /(float)totalBytesExpectedToWrite;
                                            __weak DAProgressOverlayView *weakView = _progressView;
