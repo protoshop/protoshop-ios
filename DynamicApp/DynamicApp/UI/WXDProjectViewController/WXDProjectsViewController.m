@@ -506,6 +506,7 @@
 
 - (void)egoRefreshTableHeaderDidTriggerRefresh:(EGORefreshTableHeaderView*)view{
 	
+    [[NSNotificationCenter defaultCenter] postNotificationName:__Protoshop_Cancle_Download object:nil];
 	[self reloadTableViewDataSource];
     [self loadDataFromOnline];
 	
