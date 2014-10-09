@@ -533,13 +533,9 @@
 #pragma mark -
 #pragma mark UIAlertView Delegate
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-//    WXDLoginViewController *loginVC = [[WXDLoginViewController alloc]init];
-//    loginVC.noFirstLog = YES;
-//    [self presentViewController:loginVC animated:YES completion:^{//备注2
-//        NSLog(@"show loginVC!");
-//    }];
+      WXDLoginViewController *loginVC = [[WXDLoginViewController alloc]init];
     if (alertView.tag == 1000) {
-        [self.navigationController popToRootViewControllerAnimated:YES];
+            [self.navigationController pushViewController:loginVC animated:YES];
     }
     
 }

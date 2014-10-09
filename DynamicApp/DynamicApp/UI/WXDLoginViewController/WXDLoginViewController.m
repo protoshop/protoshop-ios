@@ -44,10 +44,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    if ([USER_DEFAULT objectForKey:@"userEmail"]!=nil && [USER_DEFAULT objectForKey:@"userToken"]!=nil) {
-        WXDProjectsViewController *mainViewController = [[WXDProjectsViewController alloc]init];
-        [self.navigationController pushViewController:mainViewController animated:YES];
-    }
+//    if ([USER_DEFAULT objectForKey:@"userEmail"]!=nil && [USER_DEFAULT objectForKey:@"userToken"]!=nil) {
+//        WXDProjectsViewController *mainViewController = [[WXDProjectsViewController alloc]init];
+//        [self.navigationController pushViewController:mainViewController animated:YES];
+//    }
     if (isSSOLoginHidden == YES) {
         [_SSOLoginBtn setHidden:YES];
     }
@@ -98,16 +98,14 @@
                               [USER_DEFAULT setObject:userInfo.nickname forKey:@"userNickname"];
                               [USER_DEFAULT synchronize];
                               [SVProgressHUD dismiss];
-                              WXDProjectsViewController *mainVC = [[WXDProjectsViewController alloc]init];
-//                              if (!self.noFirstLog) {
-//                                  [self.navigationController pushViewController:mainVC animated:NO];
-//                              }else{
-//                                  [self dismissViewControllerAnimated:YES completion:^{
-//                                      NSLog(@"push login");
-//                                  }];
-//                              }
                               
-                              [self.navigationController pushViewController:mainVC animated:NO];
+                              WXDProjectsViewController *mainVC = [[WXDProjectsViewController alloc]init];
+                              if ([((UINavigationController *)(self.view.window.rootViewController)).viewControllers[0] isKindOfClass:[WXDLoginViewController class]]) {
+                                UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:mainVC];
+                                self.view.window.rootViewController = nav;
+                              }
+                             [self.navigationController popToRootViewControllerAnimated:YES];
+
                           }
                           failure:^(NSError *error) {
                               [SVProgressHUD dismiss];

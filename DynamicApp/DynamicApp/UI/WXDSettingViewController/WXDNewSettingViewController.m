@@ -11,7 +11,7 @@
 #import "UIApplication+SSAppURLs.h"
 #import "WXDChangePswViewController.h"
 #import "FeedBackTableViewCell.h"
-
+#import "WXDLoginViewController.h"
 @interface WXDNewSettingViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     BOOL _isShowFeedBack;
@@ -116,7 +116,9 @@
     [USER_DEFAULT removeObjectForKey:@"userPassword"];
     [USER_DEFAULT removeObjectForKey:@"userNickname"];
     [USER_DEFAULT synchronize];
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    WXDLoginViewController *login = [[WXDLoginViewController alloc]init];
+    [self.navigationController pushViewController:login animated:YES];
+    //[self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 -(void)sendFeedBack:(NSString *)context withCell:(FeedBackTableViewCell *)cell{

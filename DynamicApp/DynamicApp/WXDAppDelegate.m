@@ -30,8 +30,16 @@
     };
     [reachability startNotifier];
     
-    WXDLoginViewController *loginViewController = [[WXDLoginViewController alloc] init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+    UINavigationController *nav = [[UINavigationController alloc]init];
+        
+    if ([USER_DEFAULT objectForKey:@"userEmail"]!=nil && [USER_DEFAULT objectForKey:@"userToken"]!=nil) {
+        WXDProjectsViewController *mainViewController = [[WXDProjectsViewController alloc]init];
+        [nav pushViewController:mainViewController animated:NO];
+    }else {
+        WXDLoginViewController *loginViewController = [[WXDLoginViewController alloc] init];
+        [nav pushViewController:loginViewController animated:NO];
+    }
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];

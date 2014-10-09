@@ -12,5 +12,5 @@
 #import <UIKit/UIKit.h>
 
 @interface WXDLoginViewController : WXDBaseViewController
-@property (nonatomic,assign)BOOL noFirstLog;
+@property (nonatomic,assign)BOOL firstLogin;
 @end
