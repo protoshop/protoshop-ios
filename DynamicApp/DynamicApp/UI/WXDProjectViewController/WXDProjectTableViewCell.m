@@ -139,6 +139,7 @@
                                                                                                          dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
                                                                                                              _progressView.progress = 0.;
                                                                                                              _progressView.hidden = YES;
+                                                                                                             _blueDotImageView.hidden = YES;
                                                                                                          });
                                                                                                          return [NSURL fileURLWithPath:@"/tmp/robots.txt"];
                                                                                                      }
@@ -189,7 +190,7 @@
         else
         {
             DLog(@"解压成功");
-            _projectInfo.appPath = [NSString stringWithFormat:@"%@/%@", userDocDir, _projectInfo.appID];
+            _projectInfo.appPath = [NSString stringWithFormat:@"%@/%@", userEmail, _projectInfo.appID];
             _projectInfo.bDownload = YES;
             _blueDotImageView.hidden = YES;
             [[NSNotificationCenter defaultCenter] postNotificationName:__Protoshop_Project_State_Changed object:nil];
@@ -211,7 +212,9 @@
 {
     wax_end();
     if (_projectInfo.appPath != nil) {
-        NSString *pp = [[NSString alloc ] initWithFormat:@"%@/?.lua;%@/?/init.lua;", _projectInfo.appPath, _projectInfo.appPath];
+        NSString *userDocDir = [NSString stringWithFormat:@"%@/%@",DOCUMENTS_DIRECTORY,_projectInfo.appPath];
+
+        NSString *pp = [[NSString alloc ] initWithFormat:@"%@/?.lua;%@/?/init.lua;", userDocDir, userDocDir];
         setenv(LUA_PATH, [pp UTF8String], 1);
         wax_start("patch", luaopen_wax_http, luaopen_wax_json,luaopen_wax_CTViewController,nil);
     }else{
