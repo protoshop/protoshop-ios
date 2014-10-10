@@ -212,6 +212,8 @@
 		65D712CA18DA9003006B4D46 /* WXDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712C918DA9003006B4D46 /* WXDBaseViewController.m */; };
 		691EE5EF19D94C3500B1FE10 /* XHActivityCircleIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 691EE5EE19D94C3500B1FE10 /* XHActivityCircleIndicatorView.m */; };
 		691EE5F019D94C3500B1FE10 /* XHActivityCircleIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 691EE5EE19D94C3500B1FE10 /* XHActivityCircleIndicatorView.m */; };
+		6924CD5519E66BFD00D7C0CD /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6924CD5419E66BFD00D7C0CD /* ionicons.ttf */; };
+		6924CD5619E66BFD00D7C0CD /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6924CD5419E66BFD00D7C0CD /* ionicons.ttf */; };
 		69376DDB19D188F60050A0BF /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69376DD119D188F60050A0BF /* EGORefreshTableHeaderView.m */; };
 		69376DDC19D188F60050A0BF /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69376DD119D188F60050A0BF /* EGORefreshTableHeaderView.m */; };
 		69376DDD19D188F60050A0BF /* blackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DD319D188F60050A0BF /* blackArrow.png */; };
@@ -472,6 +474,7 @@
 		65D712C918DA9003006B4D46 /* WXDBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDBaseViewController.m; sourceTree = "<group>"; };
 		691EE5ED19D94C3500B1FE10 /* XHActivityCircleIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHActivityCircleIndicatorView.h; sourceTree = "<group>"; };
 		691EE5EE19D94C3500B1FE10 /* XHActivityCircleIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHActivityCircleIndicatorView.m; sourceTree = "<group>"; };
+		6924CD5419E66BFD00D7C0CD /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
 		69376DD019D188F60050A0BF /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
 		69376DD119D188F60050A0BF /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
 		69376DD319D188F60050A0BF /* blackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackArrow.png; sourceTree = "<group>"; };
@@ -1168,6 +1171,7 @@
 		F7692B131817BC220076526D /* font */ = {
 			isa = PBXGroup;
 			children = (
+				6924CD5419E66BFD00D7C0CD /* ionicons.ttf */,
 				F7B6557B188D025900FD10A2 /* Candara.ttf */,
 				F7692B141817BC220076526D /* FontAwesome.ttf */,
 			);
@@ -1366,6 +1370,7 @@
 				F711872818BB3C2D00D20749 /* Checked.png in Resources */,
 				F7DCCB911889105E004BAF65 /* Default-568h@2x.png in Resources */,
 				69376DE319D188F60050A0BF /* blueArrow@2x.png in Resources */,
+				6924CD5519E66BFD00D7C0CD /* ionicons.ttf in Resources */,
 				696AF878197E1FFB00164721 /* WXDNewSettingViewController.xib in Resources */,
 				69376DEB19D188F60050A0BF /* whiteArrow@2x.png in Resources */,
 				F7C1703D18EBF358000111D1 /* SSOAuthViewController.xib in Resources */,
@@ -1406,6 +1411,7 @@
 				653AEB5518E19A590052FF74 /* icon-120.png in Resources */,
 				69376DEA19D188F60050A0BF /* whiteArrow.png in Resources */,
 				69376DDE19D188F60050A0BF /* blackArrow.png in Resources */,
+				6924CD5619E66BFD00D7C0CD /* ionicons.ttf in Resources */,
 				653AEB5618E19A590052FF74 /* icon@2x.png in Resources */,
 				653AEB5818E19A590052FF74 /* Checked.png in Resources */,
 				653AEB5A18E19A590052FF74 /* Default-568h@2x.png in Resources */,

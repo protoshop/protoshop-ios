@@ -39,6 +39,7 @@
 	<array>
 		<string>Candara.ttf</string>
 		<string>FontAwesome.ttf</string>
+		<string>ionicons.ttf</string>
 	</array>
 	<key>UILaunchImages</key>
 	<array>

@@ -104,6 +104,8 @@
                               if ([((UINavigationController *)(self.view.window.rootViewController)).viewControllers[0] isKindOfClass:[WXDLoginViewController class]]) {
                                 UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:mainVC];
                                 self.view.window.rootViewController = nav;
+                                [USER_DEFAULT setBool:YES forKey:@"firstLogin"];
+                                [USER_DEFAULT synchronize];//用以判断是否是第一次运行
                               }
                              [self.navigationController popToRootViewControllerAnimated:YES];
 

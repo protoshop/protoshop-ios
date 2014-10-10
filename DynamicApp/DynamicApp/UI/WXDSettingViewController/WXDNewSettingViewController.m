@@ -115,6 +115,9 @@
     [USER_DEFAULT removeObjectForKey:@"userEmail"];
     [USER_DEFAULT removeObjectForKey:@"userPassword"];
     [USER_DEFAULT removeObjectForKey:@"userNickname"];
+    [USER_DEFAULT setBool:YES forKey:@"firstLogin"];
+    //用以判断是否是第一次运行
+
     [USER_DEFAULT synchronize];
     WXDLoginViewController *login = [[WXDLoginViewController alloc]init];
     [self.navigationController pushViewController:login animated:YES];
