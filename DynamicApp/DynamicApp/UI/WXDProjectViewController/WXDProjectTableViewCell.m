@@ -35,7 +35,7 @@
 
 @property (strong, nonatomic) DAProgressOverlayView *progressView;
 @property (strong, nonatomic) NSString *appPath;
-@property (assign, nonatomic) NSURLSessionDownloadTask *downloadTask;
+@property (strong, nonatomic) NSURLSessionDownloadTask *downloadTask;//此出属性要strong,如果用assign会崩溃
 @property (assign, nonatomic) BOOL bDownloading;
 
 -(void) unzipApp:(NSString *) zipFile;
@@ -83,8 +83,10 @@
 
 -(void) cancelDownloadTask:(NSNotification*) notification
 {
+
     if (_downloadTask != nil && _downloadTask.state == NSURLSessionTaskStateRunning) {
         [_downloadTask cancel];
+        
         _downloadTask = nil;
         [_progressView displayOperationDidFinishAnimation];
         double delayInSeconds = _progressView.stateChangeAnimationDuration;
@@ -147,6 +149,7 @@
                                                                                                    DLog(@"error");
                                                                                                }];
                                        [downloadTask resume];
+                                       
                                        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                                            _downloadTask = downloadTask;
                                        }];
@@ -168,8 +171,7 @@
                                            _progressView.progress = 0.;
                                            _progressView.hidden = YES;
                                        });
-                                       
-                                       
+  
                                    }];
 }
 
