@@ -35,7 +35,7 @@
 
 @property (strong, nonatomic) DAProgressOverlayView *progressView;
 @property (strong, nonatomic) NSString *appPath;
-@property (strong, nonatomic) NSURLSessionDownloadTask *downloadTask;//此出属性要strong,如果用assign会崩溃
+@property (assign, nonatomic) NSURLSessionDownloadTask *downloadTask;
 @property (assign, nonatomic) BOOL bDownloading;
 
 -(void) unzipApp:(NSString *) zipFile;
@@ -143,10 +143,12 @@
                                                                                                              _progressView.hidden = YES;
                                                                                                              _blueDotImageView.hidden = YES;
                                                                                                          });
+                                                                                                         _downloadTask = nil;
                                                                                                          return [NSURL fileURLWithPath:@"/tmp/robots.txt"];
                                                                                                      }
                                                                                                completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
                                                                                                    DLog(@"error");
+                                                                                                   _downloadTask = nil;
                                                                                                }];
                                        [downloadTask resume];
                                        
