@@ -18,7 +18,7 @@
     self.arrowLabel.font = [UIFont fontWithName:@"FontAwesome" size:20];
     _isShowConfirmButton = NO;
     
-    _confirmButton = [[UIButton alloc]initWithFrame:CGRectMake(320, 0, 0, 44)];
+    _confirmButton = [[UIButton alloc]initWithFrame:CGRectMake(320, 0, 100, 44)];
     _confirmButton.backgroundColor = [UIColor redColor];
     [_confirmButton setTitle:@"Confirm" forState:UIControlStateNormal];
     [_confirmButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -51,7 +51,7 @@
 {
     if (_isShowConfirmButton) {
         [UIView animateWithDuration:0.4 animations:^{
-            _confirmButton.frame = CGRectMake(320, 0, 0, 44);
+            _confirmButton.frame = CGRectMake(320, 0, 100, 44);
         } completion:^(BOOL finished) {
             [_confirmButton setTitle:@"Confirm" forState:UIControlStateNormal];
         }];
@@ -79,7 +79,7 @@
         self.block();
         [acView removeFromSuperview];
         [UIView animateWithDuration:0.2 animations:^{
-            button.backgroundColor = [UIColor greenColor];
+            button.backgroundColor = [UIColor colorWithRed:4.f/255.f green:127.f/255.f blue:64.f/255.f alpha:1.f];
             [button setTitle:@"OK" forState:UIControlStateNormal];
         }];
        
