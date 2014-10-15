@@ -1332,7 +1332,7 @@
 						DevelopmentTeam = RPQ7NNQCK8;
 					};
 					653AEADB18E19A590052FF74 = {
-						DevelopmentTeam = RPQ7NNQCK8;
+						DevelopmentTeam = 9YDSLZ4LXQ;
 					};
 				};
 			};
@@ -1791,8 +1791,8 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Hongli Yu (UU84SHLXC4)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hongli Yu (UU84SHLXC4)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1822,9 +1822,13 @@
 					Security,
 					"-framework",
 					SystemConfiguration,
+					"-l\"Pods-ZipArchive\"",
+					"-l\"Pods-SSAppURLs\"",
+					"-l\"Pods-Reachability\"",
+					"-l\"Pods-AFNetworking\"",
 				);
 				PRODUCT_NAME = Protoshop;
-				PROVISIONING_PROFILE = "3F613A62-5B95-4FFA-9691-3C04053E0F42";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos7.1;
 				VALID_ARCHS = "armv7s armv7";
 				WRAPPER_EXTENSION = app;
@@ -1842,8 +1846,8 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Hongli Yu (UU84SHLXC4)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hongli Yu (UU84SHLXC4)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1868,9 +1872,13 @@
 					Security,
 					"-framework",
 					SystemConfiguration,
+					"-l\"Pods-ZipArchive\"",
+					"-l\"Pods-SSAppURLs\"",
+					"-l\"Pods-Reachability\"",
+					"-l\"Pods-AFNetworking\"",
 				);
 				PRODUCT_NAME = Protoshop;
-				PROVISIONING_PROFILE = "3F613A62-5B95-4FFA-9691-3C04053E0F42";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos7.1;
 				VALID_ARCHS = "armv7s armv7";
 				WRAPPER_EXTENSION = app;
@@ -1889,7 +1897,7 @@
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1907,7 +1915,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Protoshop;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "E545BDED-7F2A-4A34-8573-335E54264ABE";
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)";
 				VALID_ARCHS = "armv7s armv7";
 				WRAPPER_EXTENSION = app;
@@ -1926,7 +1934,7 @@
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1944,7 +1952,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = Protoshop;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "E545BDED-7F2A-4A34-8573-335E54264ABE";
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)";
 				VALID_ARCHS = "armv7s armv7";
 				WRAPPER_EXTENSION = app;
