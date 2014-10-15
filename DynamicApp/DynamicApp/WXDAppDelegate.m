@@ -10,6 +10,8 @@
 #import "WXDProjectsViewController.h"
 #import "WXDLoginViewController.h"
 #import "WXDUserInfo.h"
+#import "Crittercism.h"
+
 
 @implementation WXDAppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -29,6 +31,8 @@
         });
     };
     [reachability startNotifier];
+    
+    [Crittercism enableWithAppID:@"53cccb25b573f109b8000007"];
     
     UINavigationController *nav = [[UINavigationController alloc]init];
         
