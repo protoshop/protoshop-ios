@@ -241,7 +241,7 @@
         } endEdit:^{
             
         }];
-        cell.iconLabel.text =@"";
+        cell.iconLabel.text =@"";
         cell.titleLabel.text = @"Feedback";
         if (_isShowFeedBack) {
             cell.arrowLabel.text = @"";
@@ -262,10 +262,10 @@
         {
             if (indexPath.row == 0) {
                 title = [USER_DEFAULT objectForKey:@"userEmail"];
-                icon = @"";
+                icon = @"";
             } else {
                 title = [USER_DEFAULT objectForKey:@"userNickname"];
-                icon = @"";
+                icon = @"";
             }
             cell.arrowLabel.hidden = YES;
         }
@@ -275,28 +275,28 @@
         {
             cell.arrowLabel.hidden = NO;
             title = @"Change Password";
-            icon = @"";
+            icon = @"";
         }
             
             break;
         case 2:
             cell.arrowLabel.hidden = YES;
             title = @"Clear Cache";
-            icon = @"";
+            icon = @"";
             
             break;
         case 3:
         {
             cell.arrowLabel.hidden = NO;
             title = @"Donate";
-            icon = @"";
+            icon = @"";
         }
             break;
         case 5:
         {
             cell.arrowLabel.hidden = YES;
             title = @"Logout";
-            icon = @"";
+            icon = @"";
         }
             break;
             

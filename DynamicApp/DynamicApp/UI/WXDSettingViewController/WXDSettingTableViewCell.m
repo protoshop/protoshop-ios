@@ -14,7 +14,7 @@
 - (void)awakeFromNib
 {
     // Initialization code
-    self.iconLabel.font = [UIFont fontWithName:@"FontAwesome" size:24];
+    self.iconLabel.font = [UIFont fontWithName:@"Ionicons" size:24];
     self.arrowLabel.font = [UIFont fontWithName:@"FontAwesome" size:20];
     _isShowConfirmButton = NO;
     
