@@ -73,20 +73,20 @@
         pointOut.alpha = 0.7;
         UILabel *point1 = [[UILabel alloc]initWithFrame:CGRectMake((self.view.frame.size.width-40)/2-20, 18, 40, 40)];
         UILabel *point2 = [[UILabel alloc]initWithFrame:CGRectMake((self.view.frame.size.width-40)/2+25, 10, 40, 40)];
-        point1.font =  [UIFont fontWithName:@"ionicons" size:40.0f];
+        point1.font =  [UIFont fontWithName:@"ionicons" size:42.0f];
         point1.text = @"";
         point1.textColor = [UIColor whiteColor];
         point1.backgroundColor = [UIColor blackColor];
         point2.backgroundColor = [UIColor blackColor];
-        point2.font =  [UIFont fontWithName:@"ionicons" size:40.0f];
+        point2.font =  [UIFont fontWithName:@"ionicons" size:42.0f];
         point2.text = @"";
         point2.textColor = [UIColor whiteColor];
         [pointOut addSubview:point1];
         [pointOut addSubview:point2];
         
-        UILabel *textLb = [[UILabel alloc]initWithFrame:CGRectMake(pointOut.frame.origin.x-30, pointOut.frame.size.width - 30,260,10)];
+        UILabel *textLb = [[UILabel alloc]initWithFrame:CGRectMake(pointOut.frame.origin.x-30, pointOut.frame.size.width - 30,260,20)];
         textLb.text = @"two finger tap to view player controls";
-        textLb.font = [UIFont systemFontOfSize:13.0];
+        textLb.font = [UIFont systemFontOfSize:14.0];
         textLb.textColor = [UIColor whiteColor];
         textLb.textAlignment = UIBaselineAdjustmentAlignCenters;
         textLb.center = CGPointMake(pointOut.bounds.size.width/2,pointOut.bounds.size.height - 30);
