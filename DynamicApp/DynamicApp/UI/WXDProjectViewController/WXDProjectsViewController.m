@@ -107,7 +107,6 @@
     self.mainTableView.delegate = self;
     self.mainTableView.dataSource = self;
     self.mainTableView.backgroundColor = [UIColor clearColor];
-
     [self.view addSubview:self.mainTableView];
     
     
@@ -134,8 +133,8 @@
     [self.view addSubview:self.baseView];
     
 
-    SET_FONT(_refreshBtn.titleLabel,@"FontAwesome",24.0);
-    SET_FONT(_settingBtn.titleLabel,@"FontAwesome",24.0);
+    SET_FONT(_refreshBtn.titleLabel,@"Ionicons",24.0);
+    SET_FONT(_settingBtn.titleLabel,@"Ionicons",26.0);
     
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(resignSearchBar:)];
     [_topTitleView addGestureRecognizer:tapGesture];
