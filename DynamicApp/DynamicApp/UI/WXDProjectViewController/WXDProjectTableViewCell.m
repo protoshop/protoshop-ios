@@ -186,7 +186,7 @@
         /**
          *  目录的名字是用户邮件
          */
-        NSString *userDocDir = [NSString stringWithFormat:@"%@/%@",DOCUMENTS_DIRECTORY,userEmail];
+        NSString *userDocDir = [NSString stringWithFormat:@"%@/%@",CACHES_DIRECTORY,userEmail];
         result = [zip UnzipFileTo:userDocDir overWrite:YES];
         if (!result) {
             NSLog(@"解压失败");
@@ -204,7 +204,7 @@
         [zip UnzipCloseFile];
     }
 
-    NSString *uselessFiles =[DOCUMENTS_DIRECTORY stringByAppendingPathComponent:@"__MACOSX"];
+    NSString *uselessFiles =[CACHES_DIRECTORY stringByAppendingPathComponent:@"__MACOSX"];
     [[NSFileManager defaultManager] removeItemAtPath:uselessFiles error:nil];
     
 }
@@ -216,7 +216,7 @@
 {
     wax_end();
     if (_projectInfo.appPath != nil) {
-        NSString *userDocDir = [NSString stringWithFormat:@"%@/%@",DOCUMENTS_DIRECTORY,_projectInfo.appPath];
+        NSString *userDocDir = [NSString stringWithFormat:@"%@/%@",CACHES_DIRECTORY,_projectInfo.appPath];
 
         NSString *pp = [[NSString alloc ] initWithFormat:@"%@/?.lua;%@/?/init.lua;", userDocDir, userDocDir];
         setenv(LUA_PATH, [pp UTF8String], 1);

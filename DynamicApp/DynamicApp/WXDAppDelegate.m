@@ -47,7 +47,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
-    DLog(@"%@",DOCUMENTS_DIRECTORY);
+    DLog(@"%@",CACHES_DIRECTORY);
     return YES;
 }
 
@@ -58,7 +58,7 @@
 {
 #ifndef PROTOSHOP_WWW
     NSString *fileName = [NSString stringWithFormat:@"dr.log"];
-    NSString *logFilePath = [DOCUMENTS_DIRECTORY stringByAppendingPathComponent:fileName];
+    NSString *logFilePath = [CACHES_DIRECTORY stringByAppendingPathComponent:fileName];
     /**
      *  先删除已经存在的文件
      */
