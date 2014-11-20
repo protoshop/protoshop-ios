@@ -127,7 +127,7 @@ static NSString* const kXHRotationAnimation = @"XHRotationAnimation";
 }
 
 - (void)endRefreshing {
-    [UIView animateWithDuration:0.3 animations:^{
+    [UIView animateWithDuration:1.0 animations:^{
         self.animationLayer.transform = CATransform3DMakeScale(0.1, 0.1, 0.1);
         self.animationLayer.opacity = 0.8f;
     } completion:^(BOOL finished) {

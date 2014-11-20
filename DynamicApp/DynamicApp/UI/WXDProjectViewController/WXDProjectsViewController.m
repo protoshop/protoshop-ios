@@ -29,7 +29,7 @@
     EGORefreshTableHeaderView *_refreshHeaderView;
     BOOL _reloading;
     UIView *emptyBg;
-    
+    UIView *overlayView;
 }
 
 /**
@@ -109,7 +109,10 @@
     self.mainTableView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:self.mainTableView];
     
-    
+    overlayView = [[UIView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    [[UIApplication sharedApplication].keyWindow addSubview:overlayView];
+    //
+    overlayView.hidden = YES;
     
     if (_refreshHeaderView == nil) {
 		
@@ -192,7 +195,8 @@
         [self loadDataFromLocation];
       
     } else {
-        [self showHUD];
+        //[self showHUD];
+        overlayView.hidden = NO;
         //[self reloadTableViewDataSource];
         WXDRequestCommand *requestCommand = [WXDRequestCommand sharedWXDRequestCommand];
         [requestCommand command_fetch_projects_list:@"ios"
@@ -202,8 +206,8 @@
                                                 [_mainTableView reloadData];
                                                 [_refreshHeaderView.circleView endRefreshing];//endtt
                                                 [_refreshHeaderView.circleView.layer removeAllAnimations];
-                                                
-                                                [self dismissHUD];
+                                                //[self dismissHUD];
+                                                overlayView.hidden = YES;
                                                 [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:0.0];
 //                                                WXDLoginViewController *loginVC = [[WXDLoginViewController alloc]init];
 //                                                loginVC.noFirstLog = YES;
@@ -217,7 +221,8 @@
                                                 [_mainTableView reloadData];
                                                  [_refreshHeaderView.circleView endRefreshing];//endtt
                                                 [_refreshHeaderView.circleView.layer removeAllAnimations];
-                                                [self dismissHUD];
+                                                overlayView.hidden = YES;
+                                                //[self dismissHUD];
                                                 [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:0.0];
                                                 
                                                 

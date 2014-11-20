@@ -144,7 +144,7 @@ static NSInteger __progress;
 				[CATransaction setAnimationDuration:FLIP_ANIMATION_DURATION];
 				_arrowImage.transform = CATransform3DIdentity;
 				[CATransaction commit];
-			} else {
+            } else {
 //                _circleView.transform = CGAffineTransformIdentity;
                 [_circleView endRefreshing];
                 //[_circleView setNeedsDisplay];
@@ -164,7 +164,8 @@ static NSInteger __progress;
 		case EGOOPullRefreshLoading:
 		/*触摸手指松开，完成下拉操作的状态*/         	
 			_statusLabel.text = NSLocalizedString(@"Loading...", @"Loading Status");
-			[_activityView startAnimating];
+			//[_activityView startAnimating];
+            [_circleView endRefreshing];
 			[CATransaction begin];
 			[CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions]; 
 			_arrowImage.hidden = YES;
@@ -244,6 +245,7 @@ static NSInteger __progress;
 	
 	BOOL _loading = NO;
 	if ([_delegate respondsToSelector:@selector(egoRefreshTableHeaderDataSourceIsLoading:)]) {
+       
 		_loading = [_delegate egoRefreshTableHeaderDataSourceIsLoading:self];
 	}
 	
@@ -263,16 +265,17 @@ static NSInteger __progress;
 }
 
 - (void)egoRefreshScrollViewDataSourceDidFinishedLoading:(UIScrollView *)scrollView {	
-	
+	[_circleView endRefreshing];
 	[UIView beginAnimations:nil context:NULL];
 	[UIView setAnimationDuration:.3];
 	[scrollView setContentInset:UIEdgeInsetsMake(0.0f, 0.0f, 0.0f, 0.0f)];
 	[UIView commitAnimations];
 
-    double delayInSeconds = 0.7;
+    double delayInSeconds = 1.;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        [_circleView endRefreshing];//end
+        
+       //end
         //[_circleView.layer removeAllAnimations];
         
     });
