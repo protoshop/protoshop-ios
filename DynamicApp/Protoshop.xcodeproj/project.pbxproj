@@ -8,129 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		078160EBCDDB4AAE82406B72 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35DBCE08DB614B69BFA15144 /* libPods.a */; };
+		1844878E1980EC5C0087A0DC /* libCrittercism_v4_3_4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1844878D1980EC5C0087A0DC /* libCrittercism_v4_3_4.a */; };
+		1844878F1980EC5C0087A0DC /* libCrittercism_v4_3_4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1844878D1980EC5C0087A0DC /* libCrittercism_v4_3_4.a */; };
 		34D73580286F4C8ABB27EF2E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35DBCE08DB614B69BFA15144 /* libPods.a */; };
-		47FC41D8873F4179B3510C5D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35DBCE08DB614B69BFA15144 /* libPods.a */; };
 		574ECCD31771867A0095CED4 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 574ECCD21771867A0095CED4 /* libxml2.2.dylib */; };
 		57DA29D11769C74D002C1F29 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DA29D01769C74D002C1F29 /* UIKit.framework */; };
 		57DA29D31769C74D002C1F29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DA29D21769C74D002C1F29 /* Foundation.framework */; };
 		57DA29D51769C74D002C1F29 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DA29D41769C74D002C1F29 /* CoreGraphics.framework */; };
 		57DA29DD1769C74D002C1F29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DA29DC1769C74D002C1F29 /* main.m */; };
 		57DA2AAA1769C7F2002C1F29 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DA2AA91769C7F2002C1F29 /* libz.dylib */; };
-		653AEA4B18E19A310052FF74 /* WXDSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712B518DA8FC9006B4D46 /* WXDSettingViewController.m */; };
-		653AEA4C18E19A310052FF74 /* wax.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8865018558C210043C42C /* wax.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		653AEA4F18E19A310052FF74 /* ModalCloseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CD13E718B4AA41003B0D27 /* ModalCloseButton.m */; };
-		653AEA5018E19A310052FF74 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DA29DC1769C74D002C1F29 /* main.m */; };
-		653AEA5118E19A310052FF74 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8858E18558B050043C42C /* SVProgressHUD.m */; };
-		653AEA5218E19A310052FF74 /* WXDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D7129B18DA8FC9006B4D46 /* WXDLoginViewController.m */; };
-		653AEA5318E19A310052FF74 /* linit.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862B18558C210043C42C /* linit.c */; };
-		653AEA5418E19A310052FF74 /* wax_xml.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8861818558C210043C42C /* wax_xml.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		653AEA5518E19A310052FF74 /* messageBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B886D9185594890043C42C /* messageBoxViewController.m */; };
-		653AEA5718E19A310052FF74 /* lzio.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8864C18558C210043C42C /* lzio.c */; };
-		653AEA5818E19A310052FF74 /* DKLiveBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CD13E518B4AA41003B0D27 /* DKLiveBlurView.m */; };
-		653AEA5918E19A310052FF74 /* ldump.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862618558C210043C42C /* ldump.c */; };
-		653AEA5A18E19A310052FF74 /* wax_CGContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B885C318558C210043C42C /* wax_CGContext.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		653AEA5B18E19A310052FF74 /* yajl_gen.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B886BD185592E60043C42C /* yajl_gen.c */; };
-		653AEA5C18E19A310052FF74 /* WXDProjectInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E453718C8791700CF6348 /* WXDProjectInfo.m */; };
-		653AEA5D18E19A310052FF74 /* lobject.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863418558C210043C42C /* lobject.c */; };
-		653AEA5E18E19A310052FF74 /* yajl_parser.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B886C2185592E60043C42C /* yajl_parser.c */; };
-		653AEA5F18E19A310052FF74 /* lstate.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863B18558C210043C42C /* lstate.c */; };
-		653AEA6018E19A310052FF74 /* lcode.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8861F18558C210043C42C /* lcode.c */; };
-		653AEA6118E19A310052FF74 /* lvm.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8864A18558C210043C42C /* lvm.c */; };
-		653AEA6318E19A310052FF74 /* WXDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B886E41855973C0043C42C /* WXDAppDelegate.m */; };
-		653AEA6418E19A310052FF74 /* liolib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862C18558C210043C42C /* liolib.c */; };
-		653AEA6518E19A310052FF74 /* WXDFileKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E453B18C8803200CF6348 /* WXDFileKey.m */; };
-		653AEA6618E19A310052FF74 /* wax_instance.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8865818558C210043C42C /* wax_instance.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		653AEA6718E19A310052FF74 /* lauxlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8861C18558C210043C42C /* lauxlib.c */; };
-		653AEA6818E19A310052FF74 /* loslib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863818558C210043C42C /* loslib.c */; };
-		653AEA6918E19A310052FF74 /* lstring.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863D18558C210043C42C /* lstring.c */; };
-		653AEA6A18E19A310052FF74 /* UIImage+Blur.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CD13E918B4AA41003B0D27 /* UIImage+Blur.m */; };
-		653AEA6C18E19A310052FF74 /* wax_server.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8865A18558C210043C42C /* wax_server.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		653AEA6D18E19A310052FF74 /* WXDProjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712A418DA8FC9006B4D46 /* WXDProjectsViewController.m */; };
-		653AEA6E18E19A310052FF74 /* WXDBaseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6585CD6418D1B13500F7DB04 /* WXDBaseInfo.m */; };
-		653AEA6F18E19A310052FF74 /* yajl_lex.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B886BF185592E60043C42C /* yajl_lex.c */; };
-		653AEA7118E19A310052FF74 /* wax_CGTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B885C018558C210043C42C /* wax_CGTransform.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		653AEA7318E19A310052FF74 /* WXDBaseResultInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6585CD6818D1B41300F7DB04 /* WXDBaseResultInfo.m */; };
-		653AEA7518E19A310052FF74 /* CTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B886EE185598BF0043C42C /* CTView.m */; };
-		653AEA7618E19A310052FF74 /* llex.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862D18558C210043C42C /* llex.c */; };
-		653AEA7818E19A310052FF74 /* wax_CTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B886F0185598BF0043C42C /* wax_CTView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		653AEA7A18E19A310052FF74 /* WXDProjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D7129F18DA8FC9006B4D46 /* WXDProjectTableViewCell.m */; };
-		653AEA7B18E19A310052FF74 /* ldo.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862418558C210043C42C /* ldo.c */; };
-		653AEA7D18E19A310052FF74 /* lbaselib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8861E18558C210043C42C /* lbaselib.c */; };
-		653AEA7F18E19A310052FF74 /* lapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8861A18558C210043C42C /* lapi.c */; };
-		653AEA8018E19A310052FF74 /* WXDRequestCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 656FBF6418D6D9BD00E1F41E /* WXDRequestCommand.m */; };
-		653AEA8118E19A310052FF74 /* lopcodes.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863618558C210043C42C /* lopcodes.c */; };
-		653AEA8318E19A310052FF74 /* lundump.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8864818558C210043C42C /* lundump.c */; };
-		653AEA8418E19A310052FF74 /* wax_filesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B885D118558C210043C42C /* wax_filesystem.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		653AEA8518E19A310052FF74 /* wax_json.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B885E818558C210043C42C /* wax_json.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		653AEA8618E19A310052FF74 /* WXDUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 657C045818D2F369006BECAB /* WXDUserInfo.m */; };
-		653AEA8718E19A310052FF74 /* wax_struct.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8865D18558C210043C42C /* wax_struct.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		653AEA8A18E19A310052FF74 /* lstrlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863F18558C210043C42C /* lstrlib.c */; };
-		653AEA8B18E19A310052FF74 /* ltm.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8864318558C210043C42C /* ltm.c */; };
-		653AEA8C18E19A310052FF74 /* lgc.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862918558C210043C42C /* lgc.c */; };
-		653AEA8E18E19A310052FF74 /* ltable.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8864018558C210043C42C /* ltable.c */; };
-		653AEA8F18E19A310052FF74 /* lfunc.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862718558C210043C42C /* lfunc.c */; };
-		653AEA9118E19A310052FF74 /* WXDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712C918DA9003006B4D46 /* WXDBaseViewController.m */; };
-		653AEA9318E19A310052FF74 /* yajl_encode.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B886BB185592E60043C42C /* yajl_encode.c */; };
-		653AEA9418E19A310052FF74 /* yajl_alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B886B5185592E60043C42C /* yajl_alloc.c */; };
-		653AEA9518E19A310052FF74 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CD13EB18B4AA41003B0D27 /* UIView+Screenshot.m */; };
-		653AEA9618E19A310052FF74 /* WXDSignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712A818DA8FC9006B4D46 /* WXDSignupViewController.m */; };
-		653AEA9718E19A310052FF74 /* WXDChangePswViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712AC18DA8FC9006B4D46 /* WXDChangePswViewController.m */; };
-		653AEA9918E19A310052FF74 /* WXDStringUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 6585CD6C18D1BA5B00F7DB04 /* WXDStringUtility.m */; };
-		653AEA9A18E19A310052FF74 /* print.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8864E18558C210043C42C /* print.c */; };
-		653AEA9B18E19A310052FF74 /* wax_gc.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8865418558C210043C42C /* wax_gc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		653AEA9C18E19A310052FF74 /* wax_http.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B885DE18558C210043C42C /* wax_http.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		653AEA9D18E19A310052FF74 /* wax_CTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B886DC185594890043C42C /* wax_CTViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		653AEA9E18E19A310052FF74 /* DAProgressOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E452F18C86CDD00CF6348 /* DAProgressOverlayView.m */; };
-		653AEA9F18E19A310052FF74 /* yajl_buf.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B886B7185592E60043C42C /* yajl_buf.c */; };
-		653AEAA018E19A310052FF74 /* ltablib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8864218558C210043C42C /* ltablib.c */; };
-		653AEAA118E19A310052FF74 /* ldebug.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862218558C210043C42C /* ldebug.c */; };
-		653AEAA218E19A310052FF74 /* lparser.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863918558C210043C42C /* lparser.c */; };
-		653AEAA318E19A310052FF74 /* WXDGradualView.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E453318C86D6700CF6348 /* WXDGradualView.m */; };
-		653AEAA418E19A310052FF74 /* wax_class.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8865218558C210043C42C /* wax_class.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		653AEAA518E19A310052FF74 /* CTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B886D7185594890043C42C /* CTViewController.m */; };
-		653AEAA618E19A310052FF74 /* ldblib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862118558C210043C42C /* ldblib.c */; };
-		653AEAA718E19A310052FF74 /* lmathlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863018558C210043C42C /* lmathlib.c */; };
-		653AEAA818E19A310052FF74 /* lmem.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863118558C210043C42C /* lmem.c */; };
-		653AEAA918E19A310052FF74 /* wax_helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8865618558C210043C42C /* wax_helpers.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		653AEAAA18E19A310052FF74 /* yajl.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B886B4185592E60043C42C /* yajl.c */; };
-		653AEAAB18E19A310052FF74 /* loadlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863318558C210043C42C /* loadlib.c */; };
-		653AEAAC18E19A310052FF74 /* UIViewController+popUpViewYu.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CD13ED18B4AA41003B0D27 /* UIViewController+popUpViewYu.m */; };
-		653AEAAD18E19A310052FF74 /* wax_http_connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B885E018558C210043C42C /* wax_http_connection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		653AEAAF18E19A310052FF74 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7DFADDD184EFD6D00F5E945 /* Security.framework */; };
-		653AEAB018E19A310052FF74 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7692B101817B5550076526D /* AudioToolbox.framework */; };
-		653AEAB118E19A310052FF74 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7692B0E1817B53E0076526D /* SystemConfiguration.framework */; };
-		653AEAB218E19A310052FF74 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7692B0A1817B4D00076526D /* AVFoundation.framework */; };
-		653AEAB318E19A310052FF74 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7692B081817B4C40076526D /* CFNetwork.framework */; };
-		653AEAB418E19A310052FF74 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BB7AA017F2CE15002B9222 /* Accelerate.framework */; };
-		653AEAB518E19A310052FF74 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BB7A9E17F2CE0C002B9222 /* QuartzCore.framework */; };
-		653AEAB618E19A310052FF74 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 574ECCD21771867A0095CED4 /* libxml2.2.dylib */; };
-		653AEAB718E19A310052FF74 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DA2AA91769C7F2002C1F29 /* libz.dylib */; };
-		653AEAB818E19A310052FF74 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DA29D01769C74D002C1F29 /* UIKit.framework */; };
-		653AEAB918E19A310052FF74 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DA29D21769C74D002C1F29 /* Foundation.framework */; };
-		653AEABA18E19A310052FF74 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DA29D41769C74D002C1F29 /* CoreGraphics.framework */; };
-		653AEABB18E19A310052FF74 /* libCrittercism_v4_3_2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 655B7EE618DC1FC90033FA68 /* libCrittercism_v4_3_2.a */; };
-		653AEABF18E19A310052FF74 /* Protoshop-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 57DA29D81769C74D002C1F29 /* Protoshop-Info.plist */; };
-		653AEAC018E19A310052FF74 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F7692B141817BC220076526D /* FontAwesome.ttf */; };
-		653AEAC118E19A310052FF74 /* Protoshop-text.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A1633B188EA63A00C3A984 /* Protoshop-text.png */; };
-		653AEAC218E19A310052FF74 /* icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 657A95BD1835F1B00035E15B /* icon-120.png */; };
-		653AEAC318E19A310052FF74 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 657A95C01835F1B00035E15B /* icon@2x.png */; };
-		653AEAC518E19A310052FF74 /* Checked.png in Resources */ = {isa = PBXBuildFile; fileRef = F711872618BB3C2D00D20749 /* Checked.png */; };
-		653AEAC618E19A310052FF74 /* dsym_upload.sh in Resources */ = {isa = PBXBuildFile; fileRef = 655B7EE518DC1FC90033FA68 /* dsym_upload.sh */; };
-		653AEAC718E19A310052FF74 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7DCCB901889105E004BAF65 /* Default-568h@2x.png */; };
-		653AEAC818E19A310052FF74 /* icon-dot.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B65584188D42D900FD10A2 /* icon-dot.png */; };
-		653AEAC918E19A310052FF74 /* goBack.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B65586188D561900FD10A2 /* goBack.png */; };
-		653AEACA18E19A310052FF74 /* WXDProjectsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D712A518DA8FC9006B4D46 /* WXDProjectsViewController.xib */; };
-		653AEACB18E19A310052FF74 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 65B8858C18558B050043C42C /* SVProgressHUD.bundle */; };
-		653AEACC18E19A310052FF74 /* Candara.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F7B6557B188D025900FD10A2 /* Candara.ttf */; };
-		653AEACE18E19A310052FF74 /* WXDChangePswViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D712AD18DA8FC9006B4D46 /* WXDChangePswViewController.xib */; };
-		653AEACF18E19A310052FF74 /* WXDSignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D712A918DA8FC9006B4D46 /* WXDSignupViewController.xib */; };
-		653AEAD018E19A310052FF74 /* messageBoxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65B886DA185594890043C42C /* messageBoxViewController.xib */; };
-		653AEAD118E19A310052FF74 /* Checked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F74C5D4018BC763F00C871ED /* Checked@2x.png */; };
-		653AEAD218E19A310052FF74 /* WXDProjectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D712A018DA8FC9006B4D46 /* WXDProjectTableViewCell.xib */; };
-		653AEAD318E19A310052FF74 /* WXDLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D7129C18DA8FC9006B4D46 /* WXDLoginViewController.xib */; };
-		653AEAD418E19A310052FF74 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 657A95BF1835F1B00035E15B /* icon.png */; };
-		653AEAD518E19A310052FF74 /* WXDSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D712B618DA8FC9006B4D46 /* WXDSettingViewController.xib */; };
-		653AEADE18E19A590052FF74 /* WXDSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712B518DA8FC9006B4D46 /* WXDSettingViewController.m */; };
 		653AEADF18E19A590052FF74 /* wax.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8865018558C210043C42C /* wax.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		653AEAE218E19A590052FF74 /* ModalCloseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CD13E718B4AA41003B0D27 /* ModalCloseButton.m */; };
 		653AEAE318E19A590052FF74 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DA29DC1769C74D002C1F29 /* main.m */; };
@@ -152,7 +38,6 @@
 		653AEAF418E19A590052FF74 /* lvm.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8864A18558C210043C42C /* lvm.c */; };
 		653AEAF618E19A590052FF74 /* WXDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B886E41855973C0043C42C /* WXDAppDelegate.m */; };
 		653AEAF718E19A590052FF74 /* liolib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8862C18558C210043C42C /* liolib.c */; };
-		653AEAF818E19A590052FF74 /* WXDFileKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E453B18C8803200CF6348 /* WXDFileKey.m */; };
 		653AEAF918E19A590052FF74 /* wax_instance.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8865818558C210043C42C /* wax_instance.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		653AEAFA18E19A590052FF74 /* lauxlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8861C18558C210043C42C /* lauxlib.c */; };
 		653AEAFB18E19A590052FF74 /* loslib.c in Sources */ = {isa = PBXBuildFile; fileRef = 65B8863818558C210043C42C /* loslib.c */; };
@@ -222,14 +107,12 @@
 		653AEB4B18E19A590052FF74 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DA29D01769C74D002C1F29 /* UIKit.framework */; };
 		653AEB4C18E19A590052FF74 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DA29D21769C74D002C1F29 /* Foundation.framework */; };
 		653AEB4D18E19A590052FF74 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DA29D41769C74D002C1F29 /* CoreGraphics.framework */; };
-		653AEB4E18E19A590052FF74 /* libCrittercism_v4_3_2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 655B7EE618DC1FC90033FA68 /* libCrittercism_v4_3_2.a */; };
 		653AEB5218E19A590052FF74 /* Protoshop-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 57DA29D81769C74D002C1F29 /* Protoshop-Info.plist */; };
 		653AEB5318E19A590052FF74 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F7692B141817BC220076526D /* FontAwesome.ttf */; };
 		653AEB5418E19A590052FF74 /* Protoshop-text.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A1633B188EA63A00C3A984 /* Protoshop-text.png */; };
 		653AEB5518E19A590052FF74 /* icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 657A95BD1835F1B00035E15B /* icon-120.png */; };
 		653AEB5618E19A590052FF74 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 657A95C01835F1B00035E15B /* icon@2x.png */; };
 		653AEB5818E19A590052FF74 /* Checked.png in Resources */ = {isa = PBXBuildFile; fileRef = F711872618BB3C2D00D20749 /* Checked.png */; };
-		653AEB5918E19A590052FF74 /* dsym_upload.sh in Resources */ = {isa = PBXBuildFile; fileRef = 655B7EE518DC1FC90033FA68 /* dsym_upload.sh */; };
 		653AEB5A18E19A590052FF74 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7DCCB901889105E004BAF65 /* Default-568h@2x.png */; };
 		653AEB5B18E19A590052FF74 /* icon-dot.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B65584188D42D900FD10A2 /* icon-dot.png */; };
 		653AEB5C18E19A590052FF74 /* goBack.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B65586188D561900FD10A2 /* goBack.png */; };
@@ -243,21 +126,15 @@
 		653AEB6518E19A590052FF74 /* WXDProjectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D712A018DA8FC9006B4D46 /* WXDProjectTableViewCell.xib */; };
 		653AEB6618E19A590052FF74 /* WXDLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D7129C18DA8FC9006B4D46 /* WXDLoginViewController.xib */; };
 		653AEB6718E19A590052FF74 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 657A95BF1835F1B00035E15B /* icon.png */; };
-		653AEB6818E19A590052FF74 /* WXDSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D712B618DA8FC9006B4D46 /* WXDSettingViewController.xib */; };
-		655B7EE718DC1FC90033FA68 /* dsym_upload.sh in Resources */ = {isa = PBXBuildFile; fileRef = 655B7EE518DC1FC90033FA68 /* dsym_upload.sh */; };
-		655B7EE818DC1FC90033FA68 /* libCrittercism_v4_3_2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 655B7EE618DC1FC90033FA68 /* libCrittercism_v4_3_2.a */; };
 		655E453018C86CDD00CF6348 /* DAProgressOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E452F18C86CDD00CF6348 /* DAProgressOverlayView.m */; };
 		655E453418C86D6700CF6348 /* WXDGradualView.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E453318C86D6700CF6348 /* WXDGradualView.m */; };
 		655E453818C8791700CF6348 /* WXDProjectInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E453718C8791700CF6348 /* WXDProjectInfo.m */; };
-		655E453C18C8803200CF6348 /* WXDFileKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E453B18C8803200CF6348 /* WXDFileKey.m */; };
 		656FBF6518D6D9BD00E1F41E /* WXDRequestCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 656FBF6418D6D9BD00E1F41E /* WXDRequestCommand.m */; };
 		657A95C11835F1B00035E15B /* icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 657A95BD1835F1B00035E15B /* icon-120.png */; };
 		657A95C31835F1B00035E15B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 657A95BF1835F1B00035E15B /* icon.png */; };
 		657A95C41835F1B00035E15B /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 657A95C01835F1B00035E15B /* icon@2x.png */; };
 		657C045918D2F369006BECAB /* WXDUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 657C045818D2F369006BECAB /* WXDUserInfo.m */; };
-		658380E61935AB230028ED6E /* SSOAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7C1703118EBF358000111D1 /* SSOAuthViewController.xib */; };
 		658380E81935B47D0028ED6E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 658380E71935B47D0028ED6E /* Default.png */; };
-		658380E91935B47D0028ED6E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 658380E71935B47D0028ED6E /* Default.png */; };
 		658380EA1935B47D0028ED6E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 658380E71935B47D0028ED6E /* Default.png */; };
 		6585CD6518D1B13500F7DB04 /* WXDBaseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6585CD6418D1B13500F7DB04 /* WXDBaseInfo.m */; };
 		6585CD6918D1B41300F7DB04 /* WXDBaseResultInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6585CD6818D1B41300F7DB04 /* WXDBaseResultInfo.m */; };
@@ -332,9 +209,43 @@
 		65D712BF18DA8FC9006B4D46 /* WXDSignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D712A918DA8FC9006B4D46 /* WXDSignupViewController.xib */; };
 		65D712C018DA8FC9006B4D46 /* WXDChangePswViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712AC18DA8FC9006B4D46 /* WXDChangePswViewController.m */; };
 		65D712C118DA8FC9006B4D46 /* WXDChangePswViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D712AD18DA8FC9006B4D46 /* WXDChangePswViewController.xib */; };
-		65D712C618DA8FC9006B4D46 /* WXDSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712B518DA8FC9006B4D46 /* WXDSettingViewController.m */; };
-		65D712C718DA8FC9006B4D46 /* WXDSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D712B618DA8FC9006B4D46 /* WXDSettingViewController.xib */; };
 		65D712CA18DA9003006B4D46 /* WXDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D712C918DA9003006B4D46 /* WXDBaseViewController.m */; };
+		691EE5EF19D94C3500B1FE10 /* XHActivityCircleIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 691EE5EE19D94C3500B1FE10 /* XHActivityCircleIndicatorView.m */; };
+		691EE5F019D94C3500B1FE10 /* XHActivityCircleIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 691EE5EE19D94C3500B1FE10 /* XHActivityCircleIndicatorView.m */; };
+		6924CD5519E66BFD00D7C0CD /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6924CD5419E66BFD00D7C0CD /* ionicons.ttf */; };
+		6924CD5619E66BFD00D7C0CD /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6924CD5419E66BFD00D7C0CD /* ionicons.ttf */; };
+		69376DDB19D188F60050A0BF /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69376DD119D188F60050A0BF /* EGORefreshTableHeaderView.m */; };
+		69376DDC19D188F60050A0BF /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69376DD119D188F60050A0BF /* EGORefreshTableHeaderView.m */; };
+		69376DDD19D188F60050A0BF /* blackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DD319D188F60050A0BF /* blackArrow.png */; };
+		69376DDE19D188F60050A0BF /* blackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DD319D188F60050A0BF /* blackArrow.png */; };
+		69376DDF19D188F60050A0BF /* blackArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DD419D188F60050A0BF /* blackArrow@2x.png */; };
+		69376DE019D188F60050A0BF /* blackArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DD419D188F60050A0BF /* blackArrow@2x.png */; };
+		69376DE119D188F60050A0BF /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DD519D188F60050A0BF /* blueArrow.png */; };
+		69376DE219D188F60050A0BF /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DD519D188F60050A0BF /* blueArrow.png */; };
+		69376DE319D188F60050A0BF /* blueArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DD619D188F60050A0BF /* blueArrow@2x.png */; };
+		69376DE419D188F60050A0BF /* blueArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DD619D188F60050A0BF /* blueArrow@2x.png */; };
+		69376DE519D188F60050A0BF /* grayArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DD719D188F60050A0BF /* grayArrow.png */; };
+		69376DE619D188F60050A0BF /* grayArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DD719D188F60050A0BF /* grayArrow.png */; };
+		69376DE719D188F60050A0BF /* grayArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DD819D188F60050A0BF /* grayArrow@2x.png */; };
+		69376DE819D188F60050A0BF /* grayArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DD819D188F60050A0BF /* grayArrow@2x.png */; };
+		69376DE919D188F60050A0BF /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DD919D188F60050A0BF /* whiteArrow.png */; };
+		69376DEA19D188F60050A0BF /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DD919D188F60050A0BF /* whiteArrow.png */; };
+		69376DEB19D188F60050A0BF /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DDA19D188F60050A0BF /* whiteArrow@2x.png */; };
+		69376DEC19D188F60050A0BF /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69376DDA19D188F60050A0BF /* whiteArrow@2x.png */; };
+		69376DEF19D19E110050A0BF /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69376DEE19D19E110050A0BF /* CircleView.m */; };
+		69376DF019D19E110050A0BF /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69376DEE19D19E110050A0BF /* CircleView.m */; };
+		696AF877197E1FFB00164721 /* WXDNewSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 696AF875197E1FFB00164721 /* WXDNewSettingViewController.m */; };
+		696AF878197E1FFB00164721 /* WXDNewSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 696AF876197E1FFB00164721 /* WXDNewSettingViewController.xib */; };
+		696AF87C197E207400164721 /* WXDSettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 696AF87A197E207400164721 /* WXDSettingTableViewCell.m */; };
+		696AF87D197E207400164721 /* WXDSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 696AF87B197E207400164721 /* WXDSettingTableViewCell.xib */; };
+		69D39DF7197F553F00539D29 /* FeedBackTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D39DF5197F553F00539D29 /* FeedBackTableViewCell.m */; };
+		69D39DF8197F553F00539D29 /* FeedBackTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69D39DF6197F553F00539D29 /* FeedBackTableViewCell.xib */; };
+		69D39DF9197F7F3B00539D29 /* WXDNewSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 696AF875197E1FFB00164721 /* WXDNewSettingViewController.m */; };
+		69D39DFA197F7F4800539D29 /* WXDNewSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 696AF876197E1FFB00164721 /* WXDNewSettingViewController.xib */; };
+		69D39DFB197F7F6100539D29 /* WXDSettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 696AF87A197E207400164721 /* WXDSettingTableViewCell.m */; };
+		69D39DFC197F7F6100539D29 /* FeedBackTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D39DF5197F553F00539D29 /* FeedBackTableViewCell.m */; };
+		69D39DFD197F7F7200539D29 /* WXDSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 696AF87B197E207400164721 /* WXDSettingTableViewCell.xib */; };
+		69D39DFE197F7F7200539D29 /* FeedBackTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69D39DF6197F553F00539D29 /* FeedBackTableViewCell.xib */; };
 		F711872818BB3C2D00D20749 /* Checked.png in Resources */ = {isa = PBXBuildFile; fileRef = F711872618BB3C2D00D20749 /* Checked.png */; };
 		F713AD6C1932E9AD0070C37A /* CTAuthEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1701D18EBF358000111D1 /* CTAuthEngine.m */; };
 		F713AD6D1932E9AD0070C37A /* CTLoginWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1701F18EBF358000111D1 /* CTLoginWebView.m */; };
@@ -384,21 +295,11 @@
 		F7DFADDE184EFD6D00F5E945 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7DFADDD184EFD6D00F5E945 /* Security.framework */; };
 		F7F15680193429DE0092D037 /* WXDAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F1567E193429DE0092D037 /* WXDAboutViewController.m */; };
 		F7F15681193429DE0092D037 /* WXDAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7F1567F193429DE0092D037 /* WXDAboutViewController.xib */; };
-		F7F1568219346E440092D037 /* WXDMainTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D631C91925A2E10065336A /* WXDMainTableView.m */; };
-		F7F1568319346E440092D037 /* WXDMTVLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D631CF1925A47B0065336A /* WXDMTVLoadingView.m */; };
-		F7F1568419346E440092D037 /* WXDAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F1567E193429DE0092D037 /* WXDAboutViewController.m */; };
-		F7F1568519346E440092D037 /* CTAuthEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1701D18EBF358000111D1 /* CTAuthEngine.m */; };
-		F7F1568619346E440092D037 /* CTLoginWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1701F18EBF358000111D1 /* CTLoginWebView.m */; };
-		F7F1568719346E440092D037 /* CTSSOLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1702218EBF358000111D1 /* CTSSOLoginView.m */; };
-		F7F1568819346E440092D037 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1702618EBF358000111D1 /* NSObject+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		F7F1568919346E440092D037 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1702818EBF358000111D1 /* NSString+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		F7F1568A19346E440092D037 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1702A18EBF358000111D1 /* SBJsonBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		F7F1568B19346E440092D037 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1702C18EBF358000111D1 /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		F7F1568C19346E440092D037 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1702E18EBF358000111D1 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		F7F1568D19346E440092D037 /* SSOAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C1703018EBF358000111D1 /* SSOAuthViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06B1DDBC11ED58087214A322 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		1844878D1980EC5C0087A0DC /* libCrittercism_v4_3_4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCrittercism_v4_3_4.a; sourceTree = "<group>"; };
 		35DBCE08DB614B69BFA15144 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		574ECCD21771867A0095CED4 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 		57DA29CD1769C74D002C1F29 /* Protoshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Protoshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -409,23 +310,18 @@
 		57DA29DC1769C74D002C1F29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		57DA29DE1769C74D002C1F29 /* Protoshop-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Protoshop-Prefix.pch"; sourceTree = "<group>"; };
 		57DA2AA91769C7F2002C1F29 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		653AEAD918E19A310052FF74 /* Protoshop copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Protoshop copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		653AEB6C18E19A590052FF74 /* Protoshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Protoshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		653AEB6E18E19B630052FF74 /* Protoshop-Info-AdHoc.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Protoshop-Info-AdHoc.plist"; sourceTree = "<group>"; };
 		653AEB7018E19B6D0052FF74 /* Protoshop-Info-AppStore.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Protoshop-Info-AppStore.plist"; sourceTree = "<group>"; };
 		655B7EE218DC1FC90033FA68 /* CRFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRFilter.h; sourceTree = "<group>"; };
 		655B7EE318DC1FC90033FA68 /* Crittercism.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crittercism.h; sourceTree = "<group>"; };
 		655B7EE418DC1FC90033FA68 /* CrittercismDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrittercismDelegate.h; sourceTree = "<group>"; };
-		655B7EE518DC1FC90033FA68 /* dsym_upload.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = dsym_upload.sh; sourceTree = "<group>"; };
-		655B7EE618DC1FC90033FA68 /* libCrittercism_v4_3_2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCrittercism_v4_3_2.a; sourceTree = "<group>"; };
 		655E452E18C86CDD00CF6348 /* DAProgressOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAProgressOverlayView.h; sourceTree = "<group>"; };
 		655E452F18C86CDD00CF6348 /* DAProgressOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAProgressOverlayView.m; sourceTree = "<group>"; };
 		655E453218C86D6700CF6348 /* WXDGradualView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDGradualView.h; sourceTree = "<group>"; };
 		655E453318C86D6700CF6348 /* WXDGradualView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDGradualView.m; sourceTree = "<group>"; };
 		655E453618C8791700CF6348 /* WXDProjectInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDProjectInfo.h; sourceTree = "<group>"; };
 		655E453718C8791700CF6348 /* WXDProjectInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDProjectInfo.m; sourceTree = "<group>"; };
-		655E453A18C8803200CF6348 /* WXDFileKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDFileKey.h; sourceTree = "<group>"; };
-		655E453B18C8803200CF6348 /* WXDFileKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDFileKey.m; sourceTree = "<group>"; };
 		656FBF5918D69AFD00E1F41E /* WXDConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDConst.h; sourceTree = "<group>"; };
 		656FBF6318D6D9BD00E1F41E /* WXDRequestCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDRequestCommand.h; sourceTree = "<group>"; };
 		656FBF6418D6D9BD00E1F41E /* WXDRequestCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDRequestCommand.m; sourceTree = "<group>"; };
@@ -574,11 +470,33 @@
 		65D712AB18DA8FC9006B4D46 /* WXDChangePswViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDChangePswViewController.h; sourceTree = "<group>"; };
 		65D712AC18DA8FC9006B4D46 /* WXDChangePswViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDChangePswViewController.m; sourceTree = "<group>"; };
 		65D712AD18DA8FC9006B4D46 /* WXDChangePswViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WXDChangePswViewController.xib; sourceTree = "<group>"; };
-		65D712B418DA8FC9006B4D46 /* WXDSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDSettingViewController.h; sourceTree = "<group>"; };
-		65D712B518DA8FC9006B4D46 /* WXDSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDSettingViewController.m; sourceTree = "<group>"; };
-		65D712B618DA8FC9006B4D46 /* WXDSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WXDSettingViewController.xib; sourceTree = "<group>"; };
 		65D712C818DA9003006B4D46 /* WXDBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDBaseViewController.h; sourceTree = "<group>"; };
 		65D712C918DA9003006B4D46 /* WXDBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDBaseViewController.m; sourceTree = "<group>"; };
+		691EE5ED19D94C3500B1FE10 /* XHActivityCircleIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHActivityCircleIndicatorView.h; sourceTree = "<group>"; };
+		691EE5EE19D94C3500B1FE10 /* XHActivityCircleIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHActivityCircleIndicatorView.m; sourceTree = "<group>"; };
+		6924CD5419E66BFD00D7C0CD /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
+		69376DD019D188F60050A0BF /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
+		69376DD119D188F60050A0BF /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
+		69376DD319D188F60050A0BF /* blackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackArrow.png; sourceTree = "<group>"; };
+		69376DD419D188F60050A0BF /* blackArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackArrow@2x.png"; sourceTree = "<group>"; };
+		69376DD519D188F60050A0BF /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
+		69376DD619D188F60050A0BF /* blueArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueArrow@2x.png"; sourceTree = "<group>"; };
+		69376DD719D188F60050A0BF /* grayArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grayArrow.png; sourceTree = "<group>"; };
+		69376DD819D188F60050A0BF /* grayArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grayArrow@2x.png"; sourceTree = "<group>"; };
+		69376DD919D188F60050A0BF /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
+		69376DDA19D188F60050A0BF /* whiteArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteArrow@2x.png"; sourceTree = "<group>"; };
+		69376DED19D19E110050A0BF /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
+		69376DEE19D19E110050A0BF /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
+		696AF874197E1FFB00164721 /* WXDNewSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDNewSettingViewController.h; sourceTree = "<group>"; };
+		696AF875197E1FFB00164721 /* WXDNewSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDNewSettingViewController.m; sourceTree = "<group>"; };
+		696AF876197E1FFB00164721 /* WXDNewSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WXDNewSettingViewController.xib; sourceTree = "<group>"; };
+		696AF879197E207400164721 /* WXDSettingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDSettingTableViewCell.h; sourceTree = "<group>"; };
+		696AF87A197E207400164721 /* WXDSettingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDSettingTableViewCell.m; sourceTree = "<group>"; };
+		696AF87B197E207400164721 /* WXDSettingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WXDSettingTableViewCell.xib; sourceTree = "<group>"; };
+		69D39DF4197F553F00539D29 /* FeedBackTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedBackTableViewCell.h; sourceTree = "<group>"; };
+		69D39DF5197F553F00539D29 /* FeedBackTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedBackTableViewCell.m; sourceTree = "<group>"; };
+		69D39DF6197F553F00539D29 /* FeedBackTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedBackTableViewCell.xib; sourceTree = "<group>"; };
+		B050CFA6D3E5F2880B466197 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F711872618BB3C2D00D20749 /* Checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Checked.png; sourceTree = "<group>"; };
 		F732F721190A2FFE00BF14C6 /* Protoshop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Protoshop.entitlements; sourceTree = "<group>"; };
 		F742F1B319051BE900F00AA6 /* UINavigationController+hlyu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+hlyu.h"; sourceTree = "<group>"; };
@@ -643,7 +561,6 @@
 		F7F1567D193429DE0092D037 /* WXDAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDAboutViewController.h; sourceTree = "<group>"; };
 		F7F1567E193429DE0092D037 /* WXDAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDAboutViewController.m; sourceTree = "<group>"; };
 		F7F1567F193429DE0092D037 /* WXDAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WXDAboutViewController.xib; sourceTree = "<group>"; };
-		FF69D56ABB2241DCBA761319 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -655,6 +572,7 @@
 				F7692B111817B5550076526D /* AudioToolbox.framework in Frameworks */,
 				F7692B0F1817B53E0076526D /* SystemConfiguration.framework in Frameworks */,
 				F7692B0B1817B4D00076526D /* AVFoundation.framework in Frameworks */,
+				1844878E1980EC5C0087A0DC /* libCrittercism_v4_3_4.a in Frameworks */,
 				F7692B091817B4C40076526D /* CFNetwork.framework in Frameworks */,
 				F7BB7AA117F2CE15002B9222 /* Accelerate.framework in Frameworks */,
 				F7BB7A9F17F2CE0C002B9222 /* QuartzCore.framework in Frameworks */,
@@ -663,29 +581,7 @@
 				57DA29D11769C74D002C1F29 /* UIKit.framework in Frameworks */,
 				57DA29D31769C74D002C1F29 /* Foundation.framework in Frameworks */,
 				57DA29D51769C74D002C1F29 /* CoreGraphics.framework in Frameworks */,
-				655B7EE818DC1FC90033FA68 /* libCrittercism_v4_3_2.a in Frameworks */,
 				078160EBCDDB4AAE82406B72 /* libPods.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		653AEAAE18E19A310052FF74 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				653AEAAF18E19A310052FF74 /* Security.framework in Frameworks */,
-				653AEAB018E19A310052FF74 /* AudioToolbox.framework in Frameworks */,
-				653AEAB118E19A310052FF74 /* SystemConfiguration.framework in Frameworks */,
-				653AEAB218E19A310052FF74 /* AVFoundation.framework in Frameworks */,
-				653AEAB318E19A310052FF74 /* CFNetwork.framework in Frameworks */,
-				653AEAB418E19A310052FF74 /* Accelerate.framework in Frameworks */,
-				653AEAB518E19A310052FF74 /* QuartzCore.framework in Frameworks */,
-				653AEAB618E19A310052FF74 /* libxml2.2.dylib in Frameworks */,
-				653AEAB718E19A310052FF74 /* libz.dylib in Frameworks */,
-				653AEAB818E19A310052FF74 /* UIKit.framework in Frameworks */,
-				653AEAB918E19A310052FF74 /* Foundation.framework in Frameworks */,
-				653AEABA18E19A310052FF74 /* CoreGraphics.framework in Frameworks */,
-				653AEABB18E19A310052FF74 /* libCrittercism_v4_3_2.a in Frameworks */,
-				47FC41D8873F4179B3510C5D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -697,6 +593,7 @@
 				653AEB4318E19A590052FF74 /* AudioToolbox.framework in Frameworks */,
 				653AEB4418E19A590052FF74 /* SystemConfiguration.framework in Frameworks */,
 				653AEB4518E19A590052FF74 /* AVFoundation.framework in Frameworks */,
+				1844878F1980EC5C0087A0DC /* libCrittercism_v4_3_4.a in Frameworks */,
 				653AEB4618E19A590052FF74 /* CFNetwork.framework in Frameworks */,
 				653AEB4718E19A590052FF74 /* Accelerate.framework in Frameworks */,
 				653AEB4818E19A590052FF74 /* QuartzCore.framework in Frameworks */,
@@ -705,7 +602,6 @@
 				653AEB4B18E19A590052FF74 /* UIKit.framework in Frameworks */,
 				653AEB4C18E19A590052FF74 /* Foundation.framework in Frameworks */,
 				653AEB4D18E19A590052FF74 /* CoreGraphics.framework in Frameworks */,
-				653AEB4E18E19A590052FF74 /* libCrittercism_v4_3_2.a in Frameworks */,
 				34D73580286F4C8ABB27EF2E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -722,7 +618,7 @@
 				F7692B121817BC220076526D /* resource */,
 				57DA29CF1769C74D002C1F29 /* Frameworks */,
 				57DA29CE1769C74D002C1F29 /* Products */,
-				FF69D56ABB2241DCBA761319 /* Pods.xcconfig */,
+				5A7542B55D49ABC555856183 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -730,7 +626,6 @@
 			isa = PBXGroup;
 			children = (
 				57DA29CD1769C74D002C1F29 /* Protoshop.app */,
-				653AEAD918E19A310052FF74 /* Protoshop copy.app */,
 				653AEB6C18E19A590052FF74 /* Protoshop.app */,
 			);
 			name = Products;
@@ -789,14 +684,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5A7542B55D49ABC555856183 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B050CFA6D3E5F2880B466197 /* Pods.debug.xcconfig */,
+				06B1DDBC11ED58087214A322 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		655B7EE118DC1FC90033FA68 /* CrittercismSDK */ = {
 			isa = PBXGroup;
 			children = (
+				1844878D1980EC5C0087A0DC /* libCrittercism_v4_3_4.a */,
 				655B7EE218DC1FC90033FA68 /* CRFilter.h */,
 				655B7EE318DC1FC90033FA68 /* Crittercism.h */,
 				655B7EE418DC1FC90033FA68 /* CrittercismDelegate.h */,
-				655B7EE518DC1FC90033FA68 /* dsym_upload.sh */,
-				655B7EE618DC1FC90033FA68 /* libCrittercism_v4_3_2.a */,
 			);
 			path = CrittercismSDK;
 			sourceTree = "<group>";
@@ -826,15 +729,6 @@
 				655E453718C8791700CF6348 /* WXDProjectInfo.m */,
 			);
 			path = WXDProjectInfo;
-			sourceTree = "<group>";
-		};
-		655E453918C8803200CF6348 /* WXDFileKey */ = {
-			isa = PBXGroup;
-			children = (
-				655E453A18C8803200CF6348 /* WXDFileKey.h */,
-				655E453B18C8803200CF6348 /* WXDFileKey.m */,
-			);
-			path = WXDFileKey;
 			sourceTree = "<group>";
 		};
 		656FBF6218D6D6B200E1F41E /* command */ = {
@@ -885,6 +779,8 @@
 		65B8857418558B050043C42C /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				691EE5EC19D94C3500B1FE10 /* ios7ActivityIndicator */,
+				69376DCD19D188F60050A0BF /* EGOTableViewPullRefresh */,
 				F7C1701818EBF358000111D1 /* SSOSDK */,
 				655B7EE118DC1FC90033FA68 /* CrittercismSDK */,
 				655E453118C86D6700CF6348 /* WXDGradualView */,
@@ -1198,11 +1094,69 @@
 				65D712AB18DA8FC9006B4D46 /* WXDChangePswViewController.h */,
 				65D712AC18DA8FC9006B4D46 /* WXDChangePswViewController.m */,
 				65D712AD18DA8FC9006B4D46 /* WXDChangePswViewController.xib */,
-				65D712B418DA8FC9006B4D46 /* WXDSettingViewController.h */,
-				65D712B518DA8FC9006B4D46 /* WXDSettingViewController.m */,
-				65D712B618DA8FC9006B4D46 /* WXDSettingViewController.xib */,
+				696AF874197E1FFB00164721 /* WXDNewSettingViewController.h */,
+				696AF875197E1FFB00164721 /* WXDNewSettingViewController.m */,
+				696AF876197E1FFB00164721 /* WXDNewSettingViewController.xib */,
+				696AF879197E207400164721 /* WXDSettingTableViewCell.h */,
+				696AF87A197E207400164721 /* WXDSettingTableViewCell.m */,
+				696AF87B197E207400164721 /* WXDSettingTableViewCell.xib */,
+				69D39DF4197F553F00539D29 /* FeedBackTableViewCell.h */,
+				69D39DF5197F553F00539D29 /* FeedBackTableViewCell.m */,
+				69D39DF6197F553F00539D29 /* FeedBackTableViewCell.xib */,
 			);
 			path = WXDSettingViewController;
+			sourceTree = "<group>";
+		};
+		691EE5EC19D94C3500B1FE10 /* ios7ActivityIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				691EE5ED19D94C3500B1FE10 /* XHActivityCircleIndicatorView.h */,
+				691EE5EE19D94C3500B1FE10 /* XHActivityCircleIndicatorView.m */,
+			);
+			path = ios7ActivityIndicator;
+			sourceTree = "<group>";
+		};
+		69376DCD19D188F60050A0BF /* EGOTableViewPullRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				69376DCE19D188F60050A0BF /* Classes */,
+				69376DD219D188F60050A0BF /* Resources */,
+			);
+			path = EGOTableViewPullRefresh;
+			sourceTree = "<group>";
+		};
+		69376DCE19D188F60050A0BF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				69376DCF19D188F60050A0BF /* View */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		69376DCF19D188F60050A0BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				69376DED19D19E110050A0BF /* CircleView.h */,
+				69376DEE19D19E110050A0BF /* CircleView.m */,
+				69376DD019D188F60050A0BF /* EGORefreshTableHeaderView.h */,
+				69376DD119D188F60050A0BF /* EGORefreshTableHeaderView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		69376DD219D188F60050A0BF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				69376DD319D188F60050A0BF /* blackArrow.png */,
+				69376DD419D188F60050A0BF /* blackArrow@2x.png */,
+				69376DD519D188F60050A0BF /* blueArrow.png */,
+				69376DD619D188F60050A0BF /* blueArrow@2x.png */,
+				69376DD719D188F60050A0BF /* grayArrow.png */,
+				69376DD819D188F60050A0BF /* grayArrow@2x.png */,
+				69376DD919D188F60050A0BF /* whiteArrow.png */,
+				69376DDA19D188F60050A0BF /* whiteArrow@2x.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		F7692B121817BC220076526D /* resource */ = {
@@ -1217,6 +1171,7 @@
 		F7692B131817BC220076526D /* font */ = {
 			isa = PBXGroup;
 			children = (
+				6924CD5419E66BFD00D7C0CD /* ionicons.ttf */,
 				F7B6557B188D025900FD10A2 /* Candara.ttf */,
 				F7692B141817BC220076526D /* FontAwesome.ttf */,
 			);
@@ -1242,7 +1197,6 @@
 			isa = PBXGroup;
 			children = (
 				6585CD6A18D1BA2300F7DB04 /* WXDStringUtility */,
-				655E453918C8803200CF6348 /* WXDFileKey */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1346,25 +1300,6 @@
 			productReference = 57DA29CD1769C74D002C1F29 /* Protoshop.app */;
 			productType = "com.apple.product-type.application";
 		};
-		653AEA4818E19A310052FF74 /* Protoshop For AdHoc */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 653AEAD618E19A310052FF74 /* Build configuration list for PBXNativeTarget "Protoshop For AdHoc" */;
-			buildPhases = (
-				25FA65352C2E453CAB452616 /* Check Pods Manifest.lock */,
-				653AEA4918E19A310052FF74 /* Sources */,
-				653AEAAE18E19A310052FF74 /* Frameworks */,
-				653AEABC18E19A310052FF74 /* Resources */,
-				8E12F4E5D14845FCBAE34108 /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Protoshop For AdHoc";
-			productName = DynamicApp;
-			productReference = 653AEAD918E19A310052FF74 /* Protoshop copy.app */;
-			productType = "com.apple.product-type.application";
-		};
 		653AEADB18E19A590052FF74 /* Protoshop For AppStore */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 653AEB6918E19A590052FF74 /* Build configuration list for PBXNativeTarget "Protoshop For AppStore" */;
@@ -1396,9 +1331,6 @@
 					57DA29CC1769C74D002C1F29 = {
 						DevelopmentTeam = RPQ7NNQCK8;
 					};
-					653AEA4818E19A310052FF74 = {
-						DevelopmentTeam = 9YDSLZ4LXQ;
-					};
 					653AEADB18E19A590052FF74 = {
 						DevelopmentTeam = 9YDSLZ4LXQ;
 					};
@@ -1417,7 +1349,6 @@
 			projectRoot = "";
 			targets = (
 				57DA29CC1769C74D002C1F29 /* Protoshop */,
-				653AEA4818E19A310052FF74 /* Protoshop For AdHoc */,
 				653AEADB18E19A590052FF74 /* Protoshop For AppStore */,
 			);
 		};
@@ -1430,15 +1361,23 @@
 			files = (
 				F7C1703318EBF358000111D1 /* close@2x.png in Resources */,
 				F7692B271817BC220076526D /* FontAwesome.ttf in Resources */,
+				696AF87D197E207400164721 /* WXDSettingTableViewCell.xib in Resources */,
 				F7A1633C188EA63A00C3A984 /* Protoshop-text.png in Resources */,
 				657A95C11835F1B00035E15B /* icon-120.png in Resources */,
 				657A95C41835F1B00035E15B /* icon@2x.png in Resources */,
+				69D39DF8197F553F00539D29 /* FeedBackTableViewCell.xib in Resources */,
+				69376DDF19D188F60050A0BF /* blackArrow@2x.png in Resources */,
 				F711872818BB3C2D00D20749 /* Checked.png in Resources */,
-				655B7EE718DC1FC90033FA68 /* dsym_upload.sh in Resources */,
 				F7DCCB911889105E004BAF65 /* Default-568h@2x.png in Resources */,
+				69376DE319D188F60050A0BF /* blueArrow@2x.png in Resources */,
+				6924CD5519E66BFD00D7C0CD /* ionicons.ttf in Resources */,
+				696AF878197E1FFB00164721 /* WXDNewSettingViewController.xib in Resources */,
+				69376DEB19D188F60050A0BF /* whiteArrow@2x.png in Resources */,
 				F7C1703D18EBF358000111D1 /* SSOAuthViewController.xib in Resources */,
+				69376DE919D188F60050A0BF /* whiteArrow.png in Resources */,
 				F7B65585188D42D900FD10A2 /* icon-dot.png in Resources */,
 				F7B65587188D561900FD10A2 /* goBack.png in Resources */,
+				69376DE719D188F60050A0BF /* grayArrow@2x.png in Resources */,
 				65D712BD18DA8FC9006B4D46 /* WXDProjectsViewController.xib in Resources */,
 				65B8859918558B050043C42C /* SVProgressHUD.bundle in Resources */,
 				F7B6557C188D025900FD10A2 /* Candara.ttf in Resources */,
@@ -1450,39 +1389,11 @@
 				658380E81935B47D0028ED6E /* Default.png in Resources */,
 				F74C5D4118BC763F00C871ED /* Checked@2x.png in Resources */,
 				65D712BA18DA8FC9006B4D46 /* WXDProjectTableViewCell.xib in Resources */,
+				69376DDD19D188F60050A0BF /* blackArrow.png in Resources */,
+				69376DE119D188F60050A0BF /* blueArrow.png in Resources */,
 				65D712B818DA8FC9006B4D46 /* WXDLoginViewController.xib in Resources */,
+				69376DE519D188F60050A0BF /* grayArrow.png in Resources */,
 				657A95C31835F1B00035E15B /* icon.png in Resources */,
-				65D712C718DA8FC9006B4D46 /* WXDSettingViewController.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		653AEABC18E19A310052FF74 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				658380E61935AB230028ED6E /* SSOAuthViewController.xib in Resources */,
-				653AEABF18E19A310052FF74 /* Protoshop-Info.plist in Resources */,
-				653AEAC018E19A310052FF74 /* FontAwesome.ttf in Resources */,
-				653AEAC118E19A310052FF74 /* Protoshop-text.png in Resources */,
-				653AEAC218E19A310052FF74 /* icon-120.png in Resources */,
-				653AEAC318E19A310052FF74 /* icon@2x.png in Resources */,
-				653AEAC518E19A310052FF74 /* Checked.png in Resources */,
-				653AEAC618E19A310052FF74 /* dsym_upload.sh in Resources */,
-				653AEAC718E19A310052FF74 /* Default-568h@2x.png in Resources */,
-				653AEAC818E19A310052FF74 /* icon-dot.png in Resources */,
-				653AEAC918E19A310052FF74 /* goBack.png in Resources */,
-				653AEACA18E19A310052FF74 /* WXDProjectsViewController.xib in Resources */,
-				653AEACB18E19A310052FF74 /* SVProgressHUD.bundle in Resources */,
-				658380E91935B47D0028ED6E /* Default.png in Resources */,
-				653AEACC18E19A310052FF74 /* Candara.ttf in Resources */,
-				653AEACE18E19A310052FF74 /* WXDChangePswViewController.xib in Resources */,
-				653AEACF18E19A310052FF74 /* WXDSignupViewController.xib in Resources */,
-				653AEAD018E19A310052FF74 /* messageBoxViewController.xib in Resources */,
-				653AEAD118E19A310052FF74 /* Checked@2x.png in Resources */,
-				653AEAD218E19A310052FF74 /* WXDProjectTableViewCell.xib in Resources */,
-				653AEAD318E19A310052FF74 /* WXDLoginViewController.xib in Resources */,
-				653AEAD418E19A310052FF74 /* icon.png in Resources */,
-				653AEAD518E19A310052FF74 /* WXDSettingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1490,15 +1401,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69D39DFD197F7F7200539D29 /* WXDSettingTableViewCell.xib in Resources */,
+				69D39DFE197F7F7200539D29 /* FeedBackTableViewCell.xib in Resources */,
+				69D39DFA197F7F4800539D29 /* WXDNewSettingViewController.xib in Resources */,
+				69376DE819D188F60050A0BF /* grayArrow@2x.png in Resources */,
 				653AEB5218E19A590052FF74 /* Protoshop-Info.plist in Resources */,
 				653AEB5318E19A590052FF74 /* FontAwesome.ttf in Resources */,
 				653AEB5418E19A590052FF74 /* Protoshop-text.png in Resources */,
 				653AEB5518E19A590052FF74 /* icon-120.png in Resources */,
+				69376DEA19D188F60050A0BF /* whiteArrow.png in Resources */,
+				69376DDE19D188F60050A0BF /* blackArrow.png in Resources */,
+				6924CD5619E66BFD00D7C0CD /* ionicons.ttf in Resources */,
 				653AEB5618E19A590052FF74 /* icon@2x.png in Resources */,
 				653AEB5818E19A590052FF74 /* Checked.png in Resources */,
-				653AEB5918E19A590052FF74 /* dsym_upload.sh in Resources */,
 				653AEB5A18E19A590052FF74 /* Default-568h@2x.png in Resources */,
 				653AEB5B18E19A590052FF74 /* icon-dot.png in Resources */,
+				69376DE619D188F60050A0BF /* grayArrow.png in Resources */,
+				69376DE019D188F60050A0BF /* blackArrow@2x.png in Resources */,
 				653AEB5C18E19A590052FF74 /* goBack.png in Resources */,
 				653AEB5D18E19A590052FF74 /* WXDProjectsViewController.xib in Resources */,
 				653AEB5E18E19A590052FF74 /* SVProgressHUD.bundle in Resources */,
@@ -1506,11 +1425,13 @@
 				653AEB6118E19A590052FF74 /* WXDChangePswViewController.xib in Resources */,
 				653AEB6218E19A590052FF74 /* WXDSignupViewController.xib in Resources */,
 				653AEB6318E19A590052FF74 /* messageBoxViewController.xib in Resources */,
+				69376DE219D188F60050A0BF /* blueArrow.png in Resources */,
 				653AEB6418E19A590052FF74 /* Checked@2x.png in Resources */,
+				69376DEC19D188F60050A0BF /* whiteArrow@2x.png in Resources */,
 				653AEB6518E19A590052FF74 /* WXDProjectTableViewCell.xib in Resources */,
+				69376DE419D188F60050A0BF /* blueArrow@2x.png in Resources */,
 				653AEB6618E19A590052FF74 /* WXDLoginViewController.xib in Resources */,
 				653AEB6718E19A590052FF74 /* icon.png in Resources */,
-				653AEB6818E19A590052FF74 /* WXDSettingViewController.xib in Resources */,
 				658380EA1935B47D0028ED6E /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1518,21 +1439,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		25FA65352C2E453CAB452616 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		343FE11DFAC64202BF9A523C /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1560,7 +1466,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8911C10D8E35409BB8C190FF /* Check Pods Manifest.lock */ = {
@@ -1578,21 +1484,6 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		8E12F4E5D14845FCBAE34108 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		DE31F403FFAD415B9BF67966 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1605,7 +1496,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1615,7 +1506,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65D712C618DA8FC9006B4D46 /* WXDSettingViewController.m in Sources */,
 				65B886A718558C210043C42C /* wax.m in Sources */,
 				F742F1B519051BE900F00AA6 /* UINavigationController+hlyu.m in Sources */,
 				F7CD13EF18B4AA41003B0D27 /* ModalCloseButton.m in Sources */,
@@ -1625,12 +1515,15 @@
 				65B8869318558C210043C42C /* linit.c in Sources */,
 				65B8868818558C210043C42C /* wax_xml.m in Sources */,
 				65B886DE185594890043C42C /* messageBoxViewController.m in Sources */,
+				69376DEF19D19E110050A0BF /* CircleView.m in Sources */,
 				65B886A518558C210043C42C /* lzio.c in Sources */,
 				F7CD13EE18B4AA41003B0D27 /* DKLiveBlurView.m in Sources */,
+				696AF877197E1FFB00164721 /* WXDNewSettingViewController.m in Sources */,
 				F7D631CA1925A2E10065336A /* WXDMainTableView.m in Sources */,
 				65B8869018558C210043C42C /* ldump.c in Sources */,
 				65B8866518558C210043C42C /* wax_CGContext.m in Sources */,
 				65B886C8185592E60043C42C /* yajl_gen.c in Sources */,
+				691EE5EF19D94C3500B1FE10 /* XHActivityCircleIndicatorView.m in Sources */,
 				655E453818C8791700CF6348 /* WXDProjectInfo.m in Sources */,
 				65B8869918558C210043C42C /* lobject.c in Sources */,
 				65B886CA185592E60043C42C /* yajl_parser.c in Sources */,
@@ -1640,13 +1533,13 @@
 				65B886A418558C210043C42C /* lvm.c in Sources */,
 				65B886E91855973C0043C42C /* WXDAppDelegate.m in Sources */,
 				65B8869418558C210043C42C /* liolib.c in Sources */,
-				655E453C18C8803200CF6348 /* WXDFileKey.m in Sources */,
 				65B886AB18558C210043C42C /* wax_instance.m in Sources */,
 				65B8868A18558C210043C42C /* lauxlib.c in Sources */,
 				65B8869B18558C210043C42C /* loslib.c in Sources */,
 				65B8869E18558C210043C42C /* lstring.c in Sources */,
 				F7D631D01925A47B0065336A /* WXDMTVLoadingView.m in Sources */,
 				F7C1703A18EBF358000111D1 /* SBJsonParser.m in Sources */,
+				696AF87C197E207400164721 /* WXDSettingTableViewCell.m in Sources */,
 				F7CD13F018B4AA41003B0D27 /* UIImage+Blur.m in Sources */,
 				65B886AC18558C210043C42C /* wax_server.m in Sources */,
 				65D712BC18DA8FC9006B4D46 /* WXDProjectsViewController.m in Sources */,
@@ -1684,6 +1577,7 @@
 				F7CD13F118B4AA41003B0D27 /* UIView+Screenshot.m in Sources */,
 				65D712BE18DA8FC9006B4D46 /* WXDSignupViewController.m in Sources */,
 				65D712C018DA8FC9006B4D46 /* WXDChangePswViewController.m in Sources */,
+				69376DDB19D188F60050A0BF /* EGORefreshTableHeaderView.m in Sources */,
 				6585CD6D18D1BA5B00F7DB04 /* WXDStringUtility.m in Sources */,
 				65B886A618558C210043C42C /* print.c in Sources */,
 				65B886A918558C210043C42C /* wax_gc.m in Sources */,
@@ -1703,6 +1597,7 @@
 				65B8869718558C210043C42C /* lmem.c in Sources */,
 				65B886AA18558C210043C42C /* wax_helpers.m in Sources */,
 				65B886C4185592E60043C42C /* yajl.c in Sources */,
+				69D39DF7197F553F00539D29 /* FeedBackTableViewCell.m in Sources */,
 				65B8869818558C210043C42C /* loadlib.c in Sources */,
 				F7C1703C18EBF358000111D1 /* SSOAuthViewController.m in Sources */,
 				F7CD13F218B4AA41003B0D27 /* UIViewController+popUpViewYu.m in Sources */,
@@ -1711,109 +1606,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		653AEA4918E19A310052FF74 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F7F1568219346E440092D037 /* WXDMainTableView.m in Sources */,
-				F7F1568319346E440092D037 /* WXDMTVLoadingView.m in Sources */,
-				F7F1568419346E440092D037 /* WXDAboutViewController.m in Sources */,
-				F7F1568519346E440092D037 /* CTAuthEngine.m in Sources */,
-				F7F1568619346E440092D037 /* CTLoginWebView.m in Sources */,
-				F7F1568719346E440092D037 /* CTSSOLoginView.m in Sources */,
-				F7F1568819346E440092D037 /* NSObject+SBJSON.m in Sources */,
-				F7F1568919346E440092D037 /* NSString+SBJSON.m in Sources */,
-				F7F1568A19346E440092D037 /* SBJsonBase.m in Sources */,
-				F7F1568B19346E440092D037 /* SBJsonParser.m in Sources */,
-				F7F1568C19346E440092D037 /* SBJsonWriter.m in Sources */,
-				F7F1568D19346E440092D037 /* SSOAuthViewController.m in Sources */,
-				653AEA4B18E19A310052FF74 /* WXDSettingViewController.m in Sources */,
-				653AEA4C18E19A310052FF74 /* wax.m in Sources */,
-				653AEA4F18E19A310052FF74 /* ModalCloseButton.m in Sources */,
-				653AEA5018E19A310052FF74 /* main.m in Sources */,
-				653AEA5118E19A310052FF74 /* SVProgressHUD.m in Sources */,
-				653AEA5218E19A310052FF74 /* WXDLoginViewController.m in Sources */,
-				653AEA5318E19A310052FF74 /* linit.c in Sources */,
-				653AEA5418E19A310052FF74 /* wax_xml.m in Sources */,
-				653AEA5518E19A310052FF74 /* messageBoxViewController.m in Sources */,
-				653AEA5718E19A310052FF74 /* lzio.c in Sources */,
-				653AEA5818E19A310052FF74 /* DKLiveBlurView.m in Sources */,
-				653AEA5918E19A310052FF74 /* ldump.c in Sources */,
-				653AEA5A18E19A310052FF74 /* wax_CGContext.m in Sources */,
-				653AEA5B18E19A310052FF74 /* yajl_gen.c in Sources */,
-				653AEA5C18E19A310052FF74 /* WXDProjectInfo.m in Sources */,
-				653AEA5D18E19A310052FF74 /* lobject.c in Sources */,
-				653AEA5E18E19A310052FF74 /* yajl_parser.c in Sources */,
-				653AEA5F18E19A310052FF74 /* lstate.c in Sources */,
-				653AEA6018E19A310052FF74 /* lcode.c in Sources */,
-				653AEA6118E19A310052FF74 /* lvm.c in Sources */,
-				653AEA6318E19A310052FF74 /* WXDAppDelegate.m in Sources */,
-				653AEA6418E19A310052FF74 /* liolib.c in Sources */,
-				653AEA6518E19A310052FF74 /* WXDFileKey.m in Sources */,
-				653AEA6618E19A310052FF74 /* wax_instance.m in Sources */,
-				653AEA6718E19A310052FF74 /* lauxlib.c in Sources */,
-				653AEA6818E19A310052FF74 /* loslib.c in Sources */,
-				653AEA6918E19A310052FF74 /* lstring.c in Sources */,
-				653AEA6A18E19A310052FF74 /* UIImage+Blur.m in Sources */,
-				653AEA6C18E19A310052FF74 /* wax_server.m in Sources */,
-				653AEA6D18E19A310052FF74 /* WXDProjectsViewController.m in Sources */,
-				653AEA6E18E19A310052FF74 /* WXDBaseInfo.m in Sources */,
-				653AEA6F18E19A310052FF74 /* yajl_lex.c in Sources */,
-				653AEA7118E19A310052FF74 /* wax_CGTransform.m in Sources */,
-				653AEA7318E19A310052FF74 /* WXDBaseResultInfo.m in Sources */,
-				653AEA7518E19A310052FF74 /* CTView.m in Sources */,
-				653AEA7618E19A310052FF74 /* llex.c in Sources */,
-				653AEA7818E19A310052FF74 /* wax_CTView.m in Sources */,
-				653AEA7A18E19A310052FF74 /* WXDProjectTableViewCell.m in Sources */,
-				653AEA7B18E19A310052FF74 /* ldo.c in Sources */,
-				653AEA7D18E19A310052FF74 /* lbaselib.c in Sources */,
-				653AEA7F18E19A310052FF74 /* lapi.c in Sources */,
-				653AEA8018E19A310052FF74 /* WXDRequestCommand.m in Sources */,
-				653AEA8118E19A310052FF74 /* lopcodes.c in Sources */,
-				653AEA8318E19A310052FF74 /* lundump.c in Sources */,
-				653AEA8418E19A310052FF74 /* wax_filesystem.m in Sources */,
-				653AEA8518E19A310052FF74 /* wax_json.c in Sources */,
-				653AEA8618E19A310052FF74 /* WXDUserInfo.m in Sources */,
-				653AEA8718E19A310052FF74 /* wax_struct.m in Sources */,
-				653AEA8A18E19A310052FF74 /* lstrlib.c in Sources */,
-				653AEA8B18E19A310052FF74 /* ltm.c in Sources */,
-				653AEA8C18E19A310052FF74 /* lgc.c in Sources */,
-				653AEA8E18E19A310052FF74 /* ltable.c in Sources */,
-				653AEA8F18E19A310052FF74 /* lfunc.c in Sources */,
-				653AEA9118E19A310052FF74 /* WXDBaseViewController.m in Sources */,
-				653AEA9318E19A310052FF74 /* yajl_encode.c in Sources */,
-				653AEA9418E19A310052FF74 /* yajl_alloc.c in Sources */,
-				653AEA9518E19A310052FF74 /* UIView+Screenshot.m in Sources */,
-				653AEA9618E19A310052FF74 /* WXDSignupViewController.m in Sources */,
-				653AEA9718E19A310052FF74 /* WXDChangePswViewController.m in Sources */,
-				653AEA9918E19A310052FF74 /* WXDStringUtility.m in Sources */,
-				653AEA9A18E19A310052FF74 /* print.c in Sources */,
-				653AEA9B18E19A310052FF74 /* wax_gc.m in Sources */,
-				653AEA9C18E19A310052FF74 /* wax_http.m in Sources */,
-				653AEA9D18E19A310052FF74 /* wax_CTViewController.m in Sources */,
-				653AEA9E18E19A310052FF74 /* DAProgressOverlayView.m in Sources */,
-				653AEA9F18E19A310052FF74 /* yajl_buf.c in Sources */,
-				653AEAA018E19A310052FF74 /* ltablib.c in Sources */,
-				653AEAA118E19A310052FF74 /* ldebug.c in Sources */,
-				653AEAA218E19A310052FF74 /* lparser.c in Sources */,
-				653AEAA318E19A310052FF74 /* WXDGradualView.m in Sources */,
-				653AEAA418E19A310052FF74 /* wax_class.m in Sources */,
-				653AEAA518E19A310052FF74 /* CTViewController.m in Sources */,
-				653AEAA618E19A310052FF74 /* ldblib.c in Sources */,
-				653AEAA718E19A310052FF74 /* lmathlib.c in Sources */,
-				653AEAA818E19A310052FF74 /* lmem.c in Sources */,
-				653AEAA918E19A310052FF74 /* wax_helpers.m in Sources */,
-				653AEAAA18E19A310052FF74 /* yajl.c in Sources */,
-				653AEAAB18E19A310052FF74 /* loadlib.c in Sources */,
-				653AEAAC18E19A310052FF74 /* UIViewController+popUpViewYu.m in Sources */,
-				653AEAAD18E19A310052FF74 /* wax_http_connection.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		653AEADC18E19A590052FF74 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69D39DFB197F7F6100539D29 /* WXDSettingTableViewCell.m in Sources */,
+				69D39DFC197F7F6100539D29 /* FeedBackTableViewCell.m in Sources */,
+				69D39DF9197F7F3B00539D29 /* WXDNewSettingViewController.m in Sources */,
 				F713AD7719333CDE0070C37A /* UINavigationController+hlyu.m in Sources */,
 				F713AD7619333B520070C37A /* WXDMTVLoadingView.m in Sources */,
 				F713AD7519333B040070C37A /* WXDMainTableView.m in Sources */,
@@ -1826,7 +1625,6 @@
 				F713AD6C1932E9AD0070C37A /* CTAuthEngine.m in Sources */,
 				F713AD6D1932E9AD0070C37A /* CTLoginWebView.m in Sources */,
 				F713AD6E1932E9AD0070C37A /* CTSSOLoginView.m in Sources */,
-				653AEADE18E19A590052FF74 /* WXDSettingViewController.m in Sources */,
 				653AEADF18E19A590052FF74 /* wax.m in Sources */,
 				653AEAE218E19A590052FF74 /* ModalCloseButton.m in Sources */,
 				653AEAE318E19A590052FF74 /* main.m in Sources */,
@@ -1848,7 +1646,6 @@
 				653AEAF418E19A590052FF74 /* lvm.c in Sources */,
 				653AEAF618E19A590052FF74 /* WXDAppDelegate.m in Sources */,
 				653AEAF718E19A590052FF74 /* liolib.c in Sources */,
-				653AEAF818E19A590052FF74 /* WXDFileKey.m in Sources */,
 				653AEAF918E19A590052FF74 /* wax_instance.m in Sources */,
 				653AEAFA18E19A590052FF74 /* lauxlib.c in Sources */,
 				653AEAFB18E19A590052FF74 /* loslib.c in Sources */,
@@ -1865,11 +1662,13 @@
 				653AEB0B18E19A590052FF74 /* wax_CTView.m in Sources */,
 				653AEB0D18E19A590052FF74 /* WXDProjectTableViewCell.m in Sources */,
 				653AEB0E18E19A590052FF74 /* ldo.c in Sources */,
+				69376DF019D19E110050A0BF /* CircleView.m in Sources */,
 				653AEB1018E19A590052FF74 /* lbaselib.c in Sources */,
 				653AEB1218E19A590052FF74 /* lapi.c in Sources */,
 				653AEB1318E19A590052FF74 /* WXDRequestCommand.m in Sources */,
 				653AEB1418E19A590052FF74 /* lopcodes.c in Sources */,
 				653AEB1618E19A590052FF74 /* lundump.c in Sources */,
+				691EE5F019D94C3500B1FE10 /* XHActivityCircleIndicatorView.m in Sources */,
 				653AEB1718E19A590052FF74 /* wax_filesystem.m in Sources */,
 				653AEB1818E19A590052FF74 /* wax_json.c in Sources */,
 				653AEB1918E19A590052FF74 /* WXDUserInfo.m in Sources */,
@@ -1898,6 +1697,7 @@
 				653AEB3618E19A590052FF74 /* WXDGradualView.m in Sources */,
 				653AEB3718E19A590052FF74 /* wax_class.m in Sources */,
 				653AEB3818E19A590052FF74 /* CTViewController.m in Sources */,
+				69376DDC19D188F60050A0BF /* EGORefreshTableHeaderView.m in Sources */,
 				653AEB3918E19A590052FF74 /* ldblib.c in Sources */,
 				653AEB3A18E19A590052FF74 /* lmathlib.c in Sources */,
 				653AEB3B18E19A590052FF74 /* lmem.c in Sources */,
@@ -1982,7 +1782,7 @@
 		};
 		57DA29F11769C74D002C1F29 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF69D56ABB2241DCBA761319 /* Pods.xcconfig */;
+			baseConfigurationReference = B050CFA6D3E5F2880B466197 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = (
 					armv7,
@@ -1991,8 +1791,8 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Hongli Yu (UU84SHLXC4)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hongli Yu (UU84SHLXC4)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2022,9 +1822,13 @@
 					Security,
 					"-framework",
 					SystemConfiguration,
+					"-l\"Pods-ZipArchive\"",
+					"-l\"Pods-SSAppURLs\"",
+					"-l\"Pods-Reachability\"",
+					"-l\"Pods-AFNetworking\"",
 				);
 				PRODUCT_NAME = Protoshop;
-				PROVISIONING_PROFILE = "3F613A62-5B95-4FFA-9691-3C04053E0F42";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos7.1;
 				VALID_ARCHS = "armv7s armv7";
 				WRAPPER_EXTENSION = app;
@@ -2033,7 +1837,7 @@
 		};
 		57DA29F21769C74D002C1F29 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF69D56ABB2241DCBA761319 /* Pods.xcconfig */;
+			baseConfigurationReference = 06B1DDBC11ED58087214A322 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ARCHS = (
 					armv7,
@@ -2042,8 +1846,8 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Hongli Yu (UU84SHLXC4)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hongli Yu (UU84SHLXC4)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2068,78 +1872,14 @@
 					Security,
 					"-framework",
 					SystemConfiguration,
+					"-l\"Pods-ZipArchive\"",
+					"-l\"Pods-SSAppURLs\"",
+					"-l\"Pods-Reachability\"",
+					"-l\"Pods-AFNetworking\"",
 				);
 				PRODUCT_NAME = Protoshop;
-				PROVISIONING_PROFILE = "3F613A62-5B95-4FFA-9691-3C04053E0F42";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos7.1;
-				VALID_ARCHS = "armv7s armv7";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		653AEAD718E19A310052FF74 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF69D56ABB2241DCBA761319 /* Pods.xcconfig */;
-			buildSettings = {
-				ARCHS = (
-					armv7,
-					armv7s,
-				);
-				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
-				CLANG_CXX_LIBRARY = "compiler-default";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				GCC_C_LANGUAGE_STANDARD = "compiler-default";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DynamicApp/Protoshop-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				HEADER_SEARCH_PATHS = "$(SDK_ROOT)/usr/include/libxml2";
-				INFOPLIST_FILE = "$(SRCROOT)/DynamicApp/Protoshop-Info-AdHoc.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/libs/CrittercismSDK",
-				);
-				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_NAME = "Protoshop copy";
-				PROVISIONING_PROFILE = "4A04ABA3-7099-4B5F-B51E-A2DB4A094007";
-				VALID_ARCHS = "armv7s armv7";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		653AEAD818E19A310052FF74 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF69D56ABB2241DCBA761319 /* Pods.xcconfig */;
-			buildSettings = {
-				ARCHS = (
-					armv7,
-					armv7s,
-				);
-				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
-				CLANG_CXX_LIBRARY = "compiler-default";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				GCC_C_LANGUAGE_STANDARD = "compiler-default";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DynamicApp/Protoshop-Prefix.pch";
-				HEADER_SEARCH_PATHS = "$(SDK_ROOT)/usr/include/libxml2";
-				INFOPLIST_FILE = "$(SRCROOT)/DynamicApp/Protoshop-Info-AdHoc.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/libs/CrittercismSDK",
-				);
-				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_NAME = "Protoshop copy";
-				PROVISIONING_PROFILE = "4A04ABA3-7099-4B5F-B51E-A2DB4A094007";
 				VALID_ARCHS = "armv7s armv7";
 				WRAPPER_EXTENSION = app;
 			};
@@ -2147,7 +1887,7 @@
 		};
 		653AEB6A18E19A590052FF74 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF69D56ABB2241DCBA761319 /* Pods.xcconfig */;
+			baseConfigurationReference = B050CFA6D3E5F2880B466197 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = (
 					armv7,
@@ -2156,14 +1896,13 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: lei guo (9YDSLZ4LXQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: lei guo (9YDSLZ4LXQ)";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DynamicApp/Protoshop-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
 					PROTOSHOP_WWW,
 					"$(inherited)",
 				);
@@ -2176,7 +1915,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Protoshop;
-				PROVISIONING_PROFILE = "22E959B5-5617-4B40-A7A5-3BB8B6BF895E";
+				PROVISIONING_PROFILE = "E545BDED-7F2A-4A34-8573-335E54264ABE";
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)";
 				VALID_ARCHS = "armv7s armv7";
 				WRAPPER_EXTENSION = app;
@@ -2185,7 +1924,7 @@
 		};
 		653AEB6B18E19A590052FF74 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF69D56ABB2241DCBA761319 /* Pods.xcconfig */;
+			baseConfigurationReference = 06B1DDBC11ED58087214A322 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ARCHS = (
 					armv7,
@@ -2194,15 +1933,14 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: lei guo (9YDSLZ4LXQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: lei guo (9YDSLZ4LXQ)";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DynamicApp/Protoshop-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					"COCOAPODS=1",
 					PROTOSHOP_WWW,
 				);
 				HEADER_SEARCH_PATHS = "$(SDK_ROOT)/usr/include/libxml2";
@@ -2214,7 +1952,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = Protoshop;
-				PROVISIONING_PROFILE = "22E959B5-5617-4B40-A7A5-3BB8B6BF895E";
+				PROVISIONING_PROFILE = "E545BDED-7F2A-4A34-8573-335E54264ABE";
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)";
 				VALID_ARCHS = "armv7s armv7";
 				WRAPPER_EXTENSION = app;
@@ -2238,15 +1976,6 @@
 			buildConfigurations = (
 				57DA29F11769C74D002C1F29 /* Debug */,
 				57DA29F21769C74D002C1F29 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		653AEAD618E19A310052FF74 /* Build configuration list for PBXNativeTarget "Protoshop For AdHoc" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				653AEAD718E19A310052FF74 /* Debug */,
-				653AEAD818E19A310052FF74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

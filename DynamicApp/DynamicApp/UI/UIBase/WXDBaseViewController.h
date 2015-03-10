@@ -12,10 +12,16 @@
 #import <UIKit/UIKit.h>
 
 @interface WXDBaseViewController : UIViewController
-
-- (id)initWithNavTitle:(NSString*)title;
-- (void)setBaseNavigationWithTitle:(NSString *)title;
-- (void)initParams;
+{
+@protected
+    BOOL bReachability;
+}
+-(id) initWithNavTitle:(NSString*)title;
+-(void) setBaseNavigationWithTitle:(NSString *)title;
+-(void) initParams;
+-(void) dismissHUD;
+-(void) showHUD;
+-(void) showHUDWithMessage:(NSString *)message;
 
 @property (strong, nonatomic) UILabel *navLabel;
 @property (strong, nonatomic) UINavigationController *WXDNavVC;

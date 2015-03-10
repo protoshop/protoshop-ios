@@ -10,12 +10,17 @@
 //  修改时间：2014年5月13日
 
 #import <UIKit/UIKit.h>
-
+#import "WXDProjectInfo.h"
 @interface WXDProjectTableViewCell : UITableViewCell
+
 @property (strong, nonatomic) IBOutlet UILabel *projectNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *projectCommentLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *projectIconImageView;
 @property (strong, nonatomic) IBOutlet UIImageView *blueDotImageView;
 @property (strong, nonatomic) IBOutlet UIButton *shareBtn;
-@property (strong,nonatomic) NSString *appID;
+@property (assign, nonatomic) WXDProjectInfo *projectInfo;
+
+-(void) downloadProjectPackage;
+-(void) gotoApp;
+
 @end

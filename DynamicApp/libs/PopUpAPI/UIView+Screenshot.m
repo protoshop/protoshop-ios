@@ -10,14 +10,34 @@
 
 @implementation UIView (Screenshot)
 - (UIImage*)screenshot {
-    UIGraphicsBeginImageContext(self.bounds.size);
-    [self.layer renderInContext:UIGraphicsGetCurrentContext()];
+    CGSize imageSize = [[UIScreen mainScreen] bounds].size;
+    
+    UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0);
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    for (UIWindow *window in [[UIApplication sharedApplication] windows]) {
+        if (![window respondsToSelector:@selector(screen)] || [window screen] == [UIScreen mainScreen]) {
+            CGContextSaveGState(context);
+            
+            CGContextTranslateCTM(context, [window center].x, [window center].y);
+            
+            CGContextConcatCTM(context, [window transform]);
+            
+            CGContextTranslateCTM(context,
+                                  -[window bounds].size.width * [[window layer] anchorPoint].x,
+                                  -[window bounds].size.height * [[window layer] anchorPoint].y);
+            
+            [[window layer] renderInContext:context];
+            
+            CGContextRestoreGState(context);
+        }
+    }
+    
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    
     UIGraphicsEndImageContext();
     
-    // hack, helps w/ our colors when blurring
-    NSData *imageData = UIImageJPEGRepresentation(image, 1); // convert to jpeg
-    image = [UIImage imageWithData:imageData];
     return image;
 }
 @end

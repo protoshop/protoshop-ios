@@ -67,4 +67,43 @@ typedef NS_ENUM(NSUInteger, __ENUM_PROTOSHOP_ERROR_CODE) {
  */
 static NSDictionary *__Protoshop_Error_Dictionary = nil;
 
+/**
+ The String of Location Notification
+ */
+static NSString *const __Protoshop_Project_State_Changed = @"PROTOSHOP_PROJECT_STATE_CHANGED";
+
+/**
+ The String of Projects list
+ */
+static NSString *const __Protoshop_Project_List = @"PROTOSHOP_PROJECT_LIST%@";
+
+/**
+ The Notification for reload table cell
+ */
+static NSString *const __Protoshop_Reload_TableCell = @"Protoshop_Reload_TableCell";
+
+/**
+ The Notification for clear cache
+ */
+static NSString *const __Protoshop_Clear_Cache = @"Protoshop_Clear_Cache";
+
+/**
+ The Notification for cancle download
+ */
+static NSString *const __Protoshop_Cancle_Download = @"Protoshop_Cancle_Download";
+
 #endif //__PROTOSHOP_WXDCONST_H__
+
+
+
+
+
+
+
+
+
+
+
+
+
+

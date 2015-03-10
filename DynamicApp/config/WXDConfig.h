@@ -57,6 +57,8 @@
 
 // DOCUMENTS_DIRECTORY
 #define DOCUMENTS_DIRECTORY [[[[NSFileManager defaultManager] URLsForDirectory: NSDocumentDirectory inDomains:NSUserDomainMask] lastObject] relativePath]
+// Caches directory NSCachesDirectory
+#define CACHES_DIRECTORY [[[[NSFileManager defaultManager] URLsForDirectory: NSCachesDirectory inDomains: NSUserDomainMask] lastObject] relativePath]
 
 // Singleton
 #define DEFINE_SINGLETON_FOR_HEADER(className) \

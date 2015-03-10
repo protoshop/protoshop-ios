@@ -13,7 +13,7 @@
 @property (nonatomic, strong, readonly) NSArray *projectResultInfoList;
 @end
 
-@interface WXDProjectInfo : WXDBaseInfo<NSCoding>
+@interface WXDProjectInfo : WXDBaseInfo<NSCoding, NSCopying>
 @property (nonatomic,strong) NSString *appDesc;
 @property (nonatomic,strong) NSString *appID;
 @property (nonatomic,strong) NSString *appIcon;
@@ -24,8 +24,9 @@
 @property (nonatomic,strong) NSString *createTime;
 @property (nonatomic,strong) NSString *editTime;
 @property (nonatomic,strong) NSString *isPublic;
+@property (nonatomic,assign) BOOL bDownload; //是否已经下载完成
+@property (nonatomic,strong) NSString *appPath;
 
-@property (nonatomic,assign) BOOL hasDL;
 -(void)initWithJSONArr;
 -(void)debugPrint;
 @end

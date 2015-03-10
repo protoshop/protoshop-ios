@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#define kDKBlurredBackgroundDefaultLevel 0.8f
+#define kDKBlurredBackgroundDefaultLevel 0.9f
 #define kDKBlurredBackgroundDefaultGlassColor [UIColor grayColor]
 
 @interface DKLiveBlurView : UIImageView

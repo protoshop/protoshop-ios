@@ -11,6 +11,7 @@
 
 #import "WXDSignupViewController.h"
 #import "WXDProjectsViewController.h"
+#import "SVProgressHUD.h"
 
 @interface WXDSignupViewController ()<UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *emailAddressTF;
@@ -75,6 +76,7 @@
 }
 
 -(void)signupAction:(id)sender{
+    [SVProgressHUD showWithStatus:@"请稍后..."];
     WXDRequestCommand *command = [WXDRequestCommand sharedWXDRequestCommand];
     [command command_register:_emailAddressTF.text
                      password:_userPasswordTF.text
@@ -83,10 +85,12 @@
                           [USER_DEFAULT setObject:userInfo.name forKey:@"userEmail"];
                           [USER_DEFAULT setObject:userInfo.token forKey:@"userToken"];
                           [USER_DEFAULT synchronize];
+                          [SVProgressHUD dismiss];
                           WXDProjectsViewController *mainVC = [[WXDProjectsViewController alloc]init];
                           [self.navigationController pushViewController:mainVC animated:NO];
                       }
                       failure:^(NSError *error) {
+                          [SVProgressHUD dismiss];
                           if (error != nil) {
                               SHOW_ALERT(@"提示信息",(NSString *)[error.userInfo objectForKey:NSLocalizedDescriptionKey]);
                           }

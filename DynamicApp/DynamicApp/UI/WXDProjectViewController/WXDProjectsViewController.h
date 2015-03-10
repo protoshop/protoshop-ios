@@ -10,14 +10,11 @@
 //  修改时间：2014年5月13日
 
 #import <UIKit/UIKit.h>
-#import "WXDAppDelegate.h"
-#import "WXDMainTableView.h"
-#import "WXDRequestCommand.h"
+#import "WXDBaseViewController.h"
 
 /** App的主控制器*/
 @interface WXDProjectsViewController : WXDBaseViewController
-/** 清理缓存需要刷新*/
-@property (assign,nonatomic) BOOL clearCacheNeedRefresh;
-/** 判断是否处于正在刷新的状态*/
-@property (nonatomic) BOOL refreshing;
+@property(nonatomic,strong)UIButton *baseView;//背景触发键盘消失
+-(void)reloadTableViewDataSource;
+-(void)doneLoadingTableViewData;
 @end

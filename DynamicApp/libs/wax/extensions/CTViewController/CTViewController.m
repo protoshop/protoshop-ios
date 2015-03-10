@@ -53,6 +53,62 @@
     //self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(backButtonClicked:)];
     // Do any additional setup after loading the view from its nib.
 }
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    [self addPointOutView];
+    
+}
+
+#pragma mark - --------------------添加提示页面--------------------
+-(void)addPointOutView{
+//
+    if ([USER_DEFAULT boolForKey:@"firstLogin"]) {
+        
+        [USER_DEFAULT setBool:NO forKey:@"firstLogin"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        UIView *pointOut = [[UIView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height+100, self.view.frame.size.width, 100)];
+        pointOut.backgroundColor = [UIColor blackColor];
+        pointOut.alpha = 0.7;
+        UILabel *point1 = [[UILabel alloc]initWithFrame:CGRectMake((self.view.frame.size.width-40)/2-20, 18, 40, 40)];
+        UILabel *point2 = [[UILabel alloc]initWithFrame:CGRectMake((self.view.frame.size.width-40)/2+25, 10, 40, 40)];
+        point1.font =  [UIFont fontWithName:@"ionicons" size:42.0f];
+        point1.text = @"";
+        point1.textColor = [UIColor whiteColor];
+        point1.backgroundColor = [UIColor blackColor];
+        point2.backgroundColor = [UIColor blackColor];
+        point2.font =  [UIFont fontWithName:@"ionicons" size:42.0f];
+        point2.text = @"";
+        point2.textColor = [UIColor whiteColor];
+        [pointOut addSubview:point1];
+        [pointOut addSubview:point2];
+        
+        UILabel *textLb = [[UILabel alloc]initWithFrame:CGRectMake(pointOut.frame.origin.x-30, pointOut.frame.size.width - 30,260,20)];
+        textLb.text = @"two finger tap to view player controls";
+        textLb.font = [UIFont systemFontOfSize:14.0];
+        textLb.textColor = [UIColor whiteColor];
+        textLb.textAlignment = UIBaselineAdjustmentAlignCenters;
+        textLb.center = CGPointMake(pointOut.bounds.size.width/2,pointOut.bounds.size.height - 30);
+        //[textLb sizeToFit];
+        
+        [pointOut addSubview:textLb];
+        [self.view addSubview:pointOut];
+        
+        [UIView animateWithDuration:0.7 animations:^{
+            pointOut.frame = CGRectMake(0, self.view.frame.size.height -100, self.view.frame.size.width, 100);
+        } completion:^(BOOL finished) {
+            [UIView animateWithDuration:0.7 delay:2.0 options:UIViewAnimationOptionAllowAnimatedContent animations:^{
+                pointOut.frame = CGRectMake(0, self.view.frame.size.height + 100, self.view.frame.size.width, 100);
+            } completion:^(BOOL finished) {
+                
+            }];
+        }];
+       
+    }
+
+}
+
 -(void)initData
 {
     self.dictViews = [[NSMutableDictionary alloc]initWithCapacity:0];

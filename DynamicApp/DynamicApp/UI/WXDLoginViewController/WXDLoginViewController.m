@@ -15,6 +15,7 @@
 #import "WXDUserInfo.h"
 #import "CTAuthEngine.h"
 #import "WXDRequestCommand.h"
+#import "SVProgressHUD.h"
 
 @interface WXDLoginViewController ()<UITextFieldDelegate,CTSSOAuthDelegate>
 @property (strong, nonatomic) IBOutlet UIButton *SSOLoginBtn;
@@ -43,10 +44,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    if ([USER_DEFAULT objectForKey:@"userEmail"]!=nil && [USER_DEFAULT objectForKey:@"userToken"]!=nil) {
-        WXDProjectsViewController *mainViewController = [[WXDProjectsViewController alloc]init];
-        [self.navigationController pushViewController:mainViewController animated:YES];
-    }
+//    if ([USER_DEFAULT objectForKey:@"userEmail"]!=nil && [USER_DEFAULT objectForKey:@"userToken"]!=nil) {
+//        WXDProjectsViewController *mainViewController = [[WXDProjectsViewController alloc]init];
+//        [self.navigationController pushViewController:mainViewController animated:YES];
+//    }
     if (isSSOLoginHidden == YES) {
         [_SSOLoginBtn setHidden:YES];
     }
@@ -56,7 +57,8 @@
     _userEmailTF.leftView.userInteractionEnabled = NO;
     _userEmailTF.leftViewMode = UITextFieldViewModeAlways;
     _userEmailTF.clearButtonMode = UITextFieldViewModeWhileEditing;
-    
+    [_userEmailTF becomeFirstResponder];
+
     _userPasswordTF.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 16.0, 0)];
     _userPasswordTF.leftView.userInteractionEnabled = NO;
     _userPasswordTF.leftViewMode = UITextFieldViewModeAlways;
@@ -85,19 +87,31 @@
 }
 
 - (void)loginAction:(id)sender {
+    [SVProgressHUD showWithStatus:@"请稍后..."];
     WXDRequestCommand *requestCommand = [WXDRequestCommand sharedWXDRequestCommand];
     [requestCommand command_login:_userEmailTF.text
                          password:_userPasswordTF.text
                           success:^(WXDUserInfo *userInfo) {
+                              [SVProgressHUD dismiss];
                               [USER_DEFAULT setObject:userInfo.email forKey:@"userEmail"];
                               [USER_DEFAULT setObject:userInfo.name forKey:@"userName"];
                               [USER_DEFAULT setObject:userInfo.token forKey:@"userToken"];
                               [USER_DEFAULT setObject:userInfo.nickname forKey:@"userNickname"];
                               [USER_DEFAULT synchronize];
+                              [SVProgressHUD dismiss];
+                              
                               WXDProjectsViewController *mainVC = [[WXDProjectsViewController alloc]init];
-                              [self.navigationController pushViewController:mainVC animated:NO];
+                              if ([((UINavigationController *)(self.view.window.rootViewController)).viewControllers[0] isKindOfClass:[WXDLoginViewController class]]) {
+                                UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:mainVC];
+                                self.view.window.rootViewController = nav;
+                                [USER_DEFAULT setBool:YES forKey:@"firstLogin"];
+                                [USER_DEFAULT synchronize];//用以判断是否是第一次运行
+                              }
+                             [self.navigationController popToRootViewControllerAnimated:YES];
+
                           }
                           failure:^(NSError *error) {
+                              [SVProgressHUD dismiss];
                               [self lockAnimationForView:self.loginView];
                           }];
 }

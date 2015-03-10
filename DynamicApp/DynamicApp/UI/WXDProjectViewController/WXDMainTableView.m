@@ -61,6 +61,7 @@
     [self sendSubviewToBack:self.headerView];
 }
 
+
 #pragma mark - Scroll methods
 - (void)tableViewDidScroll:(UIScrollView *)scrollView {
     if (self.headerView.state == MTVStateLoading) {
